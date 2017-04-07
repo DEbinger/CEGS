@@ -1,5 +1,7 @@
 # CEGS
 Final Project
 
+Chaz
 Coco
-hello
+Gina
+David
