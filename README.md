@@ -1,4 +1,7 @@
 # CEGS
 Final Project
 
-chaz
+Chaz
+Coco
+Gina
+David
