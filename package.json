@@ -1,0 +1,24 @@
+{
+  "name": "cegs",
+  "version": "1.0.0",
+  "description": "Final Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEbinger/CEGS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DEbinger/CEGS/issues"
+  },
+  "homepage": "https://github.com/DEbinger/CEGS#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
