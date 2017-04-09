@@ -1,0 +1,20 @@
+{
+  "request": {
+    "slice": [
+      {
+        "origin": "HNL",
+        "destination": "OSA",
+        "date": "2017-07-05"
+      }
+    ],
+    "passengers": {
+      "adultCount": 5,
+      "infantInLapCount": 0,
+      "infantInSeatCount": 0,
+      "childCount": 2,
+      "seniorCount": 2
+    },
+    "solutions": 20,
+    "refundable": false
+  }
+}

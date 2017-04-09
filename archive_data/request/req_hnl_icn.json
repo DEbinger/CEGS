@@ -1,0 +1,20 @@
+{
+  "request": {
+    "slice": [
+      {
+        "origin": "HNL",
+        "destination": "ICN",
+        "date": "2017-07-05"
+      }
+    ],
+    "passengers": {
+      "adultCount": 1,
+      "infantInLapCount": 0,
+      "infantInSeatCount": 0,
+      "childCount": 0,
+      "seniorCount": 0
+    },
+    "solutions": 20,
+    "refundable": false
+  }
+}
