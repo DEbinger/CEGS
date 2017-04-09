@@ -1,0 +1,2188 @@
+{
+    "results": [
+        {
+            "property_code": "HJLAX697",
+            "property_name": "Howard Johnson Inn And Suites",
+            "location": {
+                "latitude": 33.99825,
+                "longitude": -118.07545
+            },
+            "address": {
+                "line1": "9515 Whittier Blvd",
+                "city": "Pico Rivera",
+                "region": "CA",
+                "postal_code": "90660",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "203.76",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "22.64",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-562-6992600"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-562-6999193"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NQ1S3A",
+                    "room_type_code": "NQ1",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "203.76",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 67.92
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "1 QUEEN BED NON-SMOKING ROOM WITH",
+                        "FREE CONTINENTAL BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HJLAX697?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "TLBUR075",
+            "property_name": "Travelodge Burbank-glendale",
+            "location": {
+                "latitude": 34.16967,
+                "longitude": -118.34779
+            },
+            "address": {
+                "line1": "1112 North Hollywood Way",
+                "city": "Burbank",
+                "region": "CA",
+                "postal_code": "91505",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "226.80",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "25.20",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-818-8452408"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-818-8452840"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "BABY_SITTING",
+                    "ota_code": 8,
+                    "description": "Baby sitting"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "ND1SSR",
+                    "room_type_code": "ND1",
+                    "rate_plan_code": "SRS",
+                    "total_amount": {
+                        "amount": "226.80",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 75.6
+                        }
+                    ],
+                    "descriptions": [
+                        "SENIOR DISCOUNT",
+                        "1 DOUBLE BED NON-SMOKING ROOM WITH",
+                        "FREE CONTINENTAL BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "SRS"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/TLBUR075?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "KGFUL845",
+            "property_name": "Knights Inn Buena Park Anaheim",
+            "location": {
+                "latitude": 33.83777,
+                "longitude": -117.99286
+            },
+            "address": {
+                "line1": "8580 Stanton Ave",
+                "city": "Buena Park",
+                "region": "CA",
+                "postal_code": "90620",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "228.66",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "71.16",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-714-8285211"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-714-7611941"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NK1RAC",
+                    "room_type_code": "NK1",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "228.66",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 71.16
+                        },
+                        {
+                            "start_date": "2017-07-06",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 72
+                        },
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-06",
+                            "currency_code": "USD",
+                            "price": 85.5
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 KING BED NON-SMOKING ROOM WITH",
+                        "FREE WI-FI"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/KGFUL845?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "DIFUL524",
+            "property_name": "Days Inn Whittier Los Angeles",
+            "location": {
+                "latitude": 33.9277,
+                "longitude": -118.02735
+            },
+            "address": {
+                "line1": "14330 Telegraph Road",
+                "city": "Whittier",
+                "region": "CA",
+                "postal_code": "90604",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "254.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "39.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-562-9444760"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-562-9444376"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NK1RAC",
+                    "room_type_code": "NK1",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "254.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 78
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 98
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 KING BED NON-SMOKING ROOM WITH",
+                        "FREE CONTINENTAL BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/DIFUL524?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "DILAX728",
+            "property_name": "Days Inn & Suites Artesia",
+            "location": {
+                "latitude": 33.87148,
+                "longitude": -118.0822
+            },
+            "address": {
+                "line1": "17510 Pioneer Boulevard",
+                "city": "Artesia",
+                "region": "CA",
+                "postal_code": "90701",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "255.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "28.33",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-562-9246700"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-562-9247756"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NQ1RAC",
+                    "room_type_code": "NQ1",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "255.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 85
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 QUEEN BED NON-SMOKING ROOM WITH",
+                        "FREE CONTINENTAL BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/DILAX728?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "ILLGB470",
+            "property_name": "Walls Motel Long Beach",
+            "marketing_text": "Just minutes to downtown Los Angeles, the Walls Motel is close to many local attractions including the world famous Queen Mary, California State University Long Beach, Aquarium of the Pacific, Seal Beach Wildlife Refuge, golfing, shopping, and more. This Magnuson Hotels affiliate offers free wireless internet.",
+            "location": {
+                "latitude": 33.84432,
+                "longitude": -118.19334
+            },
+            "address": {
+                "line1": "4821 Long Beach Blvd",
+                "city": "Long Beach",
+                "region": "CA",
+                "postal_code": "90805",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "255.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "40.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-562-4230620"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-562-4230620"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "A1KRAC",
+                    "room_type_code": "A1K",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "255.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 80
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 95
+                        }
+                    ],
+                    "descriptions": [
+                        "Best Available Rate",
+                        "Standard King Room"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Superior",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/ILLGB470?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "MSLAX757",
+            "property_name": "Garden Inn San Gabriel",
+            "location": {
+                "latitude": 34.09634,
+                "longitude": -118.07303
+            },
+            "address": {
+                "line1": "5318 Rosemead Blvd",
+                "city": "San Gabriel",
+                "region": "CA",
+                "postal_code": "91776",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "256.50",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "28.50",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-626-2858866"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-626-2853799"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "F1KSEN",
+                    "room_type_code": "F1K",
+                    "rate_plan_code": "SEN",
+                    "total_amount": {
+                        "amount": "256.50",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 85.5
+                        }
+                    ],
+                    "descriptions": [
+                        "AARP-ID REQUIRED TO QUALIFY",
+                        "1 king bed,wi-fi,free local calls, cable",
+                        "TV,mini-fridge, alarm clock/radio"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with shower - Moderate",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "SEN"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/MSLAX757?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "YXLAXSGA",
+            "property_name": "Americas Best Value Inn",
+            "location": {
+                "latitude": 33.95121,
+                "longitude": -118.18206
+            },
+            "address": {
+                "line1": "4920 Firestone Blvd",
+                "city": "South Gate",
+                "region": "CA",
+                "postal_code": "90280",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "267.30",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "29.70",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-323-3740413"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-323-3740420"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "N1QSRS",
+                    "room_type_code": "N1Q",
+                    "rate_plan_code": "SRS",
+                    "total_amount": {
+                        "amount": "267.30",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 89.1
+                        }
+                    ],
+                    "descriptions": [
+                        "SENIOR RATE 65 OR OLDER",
+                        "1 Queen Bed-Non-Smoking-Free WiFi-Microwave-Cable TV-Iron-",
+                        "Ironing Board Free Continental Breakfast "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking",
+                        "bed_type": "Queen",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "SRS"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/YXLAXSGA?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "MSLGB153",
+            "property_name": "Rivera Motel - Pico Rivera",
+            "location": {
+                "latitude": 33.97018,
+                "longitude": -118.10263
+            },
+            "address": {
+                "line1": "9118 Slauson Avenue",
+                "city": "Pico Rivera",
+                "region": "CA",
+                "postal_code": "90660",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "277.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "44.50",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "562-948-4044"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "562-801-2008"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "N1KBAR",
+                    "room_type_code": "N1K",
+                    "rate_plan_code": "BAR",
+                    "total_amount": {
+                        "amount": "277.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 89
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 99
+                        }
+                    ],
+                    "descriptions": [
+                        "Best Available Rate",
+                        "One King Bed Non Smoking Room. Free high speed",
+                        "wireless internet access, cable TV with extra"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "BAR"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/MSLGB153?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "UZSNA835",
+            "property_name": "Good Nite Inn Buena Park",
+            "location": {
+                "latitude": 33.85893,
+                "longitude": -118.01071
+            },
+            "address": {
+                "line1": "7032 Orangethorpe Ave",
+                "city": "Buena Park",
+                "region": "CA",
+                "postal_code": "90621",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "277.02",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "37.50",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "7145231488"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "7145238474"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "N1K325",
+                    "room_type_code": "N1K",
+                    "rate_plan_code": "325",
+                    "total_amount": {
+                        "amount": "277.02",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 75
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 93
+                        }
+                    ],
+                    "descriptions": [
+                        "Winter/Spring Promo",
+                        "1 King bed Standard",
+                        "non-smoking room with 1 King Size bed/ flat scr"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "325"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/UZSNA835?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "CIBUR692",
+            "property_name": "Comfort Inn Monterey Park",
+            "location": {
+                "latitude": 34.05548,
+                "longitude": -118.13532
+            },
+            "address": {
+                "line1": "588 S Atlantic Blvd",
+                "city": "Monterey Park",
+                "region": "CA",
+                "postal_code": "91754",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "278.22",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "27.60",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-626-308-9600"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-626-308-1980"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "Z80CSNR",
+                    "room_type_code": "N1Q",
+                    "rate_plan_code": "SNR",
+                    "total_amount": {
+                        "amount": "278.22",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 82.8
+                        }
+                    ],
+                    "descriptions": [
+                        "Senior/AARP Rate Age 60 or Older",
+                        "1Q/NonSmoking/Free Hi-Spd Wireless/Microwave",
+                        "Refrigerator/Work Area/Coffeemaker, In-Room/HBO"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking",
+                        "bed_type": "Queen",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "SNR"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/CIBUR692?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "YXLAX437",
+            "property_name": "Americas Best Value Inn",
+            "location": {
+                "latitude": 33.93108,
+                "longitude": -118.35536
+            },
+            "address": {
+                "line1": "4501 W Imperial Hwy",
+                "city": "Inglewood",
+                "region": "CA",
+                "postal_code": "90304-2709",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "279.97",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "44.99",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-310-6716017"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-310-6716665"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "H1KRAC",
+                    "room_type_code": "H1K",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "279.97",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 89.99
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 99.99
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 King Bed-Accessible-NonSmoking-Free WiFi-Microwave-Mini-Fridge",
+                        "Coffeemaker-Hairdryer-32 Inch Flat Screen TV-HBO-ESPN-Grab Bars "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with shower - Minimum",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/YXLAX437?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "RALAX021",
+            "property_name": "Ramada Hawthorne Lax",
+            "location": {
+                "latitude": 33.9164,
+                "longitude": -118.37232
+            },
+            "address": {
+                "line1": "5250 W El Segundo Blvd",
+                "city": "Hawthorne",
+                "region": "CA",
+                "postal_code": "90250",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "296.97",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "33.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-310-5369800"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-310-5369535"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "BABY_SITTING",
+                    "ota_code": 8,
+                    "description": "Baby sitting"
+                },
+                {
+                    "amenity": "CAR_RENTAL",
+                    "ota_code": 15,
+                    "description": "Car rental desk"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "SPA",
+                    "ota_code": 84,
+                    "description": "Spa"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                },
+                {
+                    "provider": "OHG",
+                    "rating": "Moderate Deluxe"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "C4KAA1",
+                    "room_type_code": "C4K",
+                    "rate_plan_code": "AA1",
+                    "total_amount": {
+                        "amount": "296.97",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 98.99
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "Smoking guest room with 1 king bed "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Standard",
+                        "bed_type": "King",
+                        "number_of_beds": "4"
+                    },
+                    "rate_type_code": "AA1"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/RALAX021?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "YXFUL173",
+            "property_name": "Americas Best Value Inn",
+            "location": {
+                "latitude": 33.83563,
+                "longitude": -117.99293
+            },
+            "address": {
+                "line1": "328 N Stanton Ave",
+                "city": "Anaheim",
+                "region": "CA",
+                "postal_code": "92801-6140",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "297.35",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "95.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-714-2290101"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-714-2360261"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "N1QSRS",
+                    "room_type_code": "N1Q",
+                    "rate_plan_code": "SRS",
+                    "total_amount": {
+                        "amount": "297.35",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-06",
+                            "currency_code": "USD",
+                            "price": 95
+                        },
+                        {
+                            "start_date": "2017-07-06",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 99.75
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 102.6
+                        }
+                    ],
+                    "descriptions": [
+                        "SENIOR RATE ",
+                        "1 Queen Bed-Non-Smoking-Free Wi-Fi-Sofa-Mini-Fridge-Microwave-",
+                        "Satellite TV-HBO-Hairdryer "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking",
+                        "bed_type": "Queen",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "SRS"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/YXFUL173?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "TLLAX030",
+            "property_name": "Travelodge Inn And Suites Gard",
+            "location": {
+                "latitude": 33.86195,
+                "longitude": -118.29897
+            },
+            "address": {
+                "line1": "1390 W 186th Street",
+                "city": "Gardena",
+                "region": "CA",
+                "postal_code": "90248",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "299.97",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "33.33",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-310-5328200"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-310-5326704"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NQ1RAC",
+                    "room_type_code": "NQ1",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "299.97",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 99.99
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 QUEEN BED NON SMOKING ROOM WITH",
+                        "FREE WIFI AND FREE CONTINENTAL"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/TLLAX030?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "OZLAX709",
+            "property_name": "Super 8 Los Angeles Airport",
+            "location": {
+                "latitude": 33.95212,
+                "longitude": -118.38531
+            },
+            "address": {
+                "line1": "9250 Airport Blvd",
+                "city": "Los Angeles",
+                "region": "CA",
+                "postal_code": "90045",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "300.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "33.33",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-310-6702900"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-310-4101787"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NQ1RAC",
+                    "room_type_code": "NQ1",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "300.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 100
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 QUEEN BED NON-SMOKING ROOM WITH",
+                        "FREE SUPERSTART BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/OZLAX709?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "RALGB230",
+            "property_name": "Ramada South El Monte",
+            "location": {
+                "latitude": 34.04095,
+                "longitude": -118.05049
+            },
+            "address": {
+                "line1": "1089 Santa Anita I-605",
+                "city": "South El Monte",
+                "region": "CA",
+                "postal_code": "91733",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "312.30",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "49.05",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-626-3509588"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-626-3503849"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                },
+                {
+                    "amenity": "BALLROOM",
+                    "ota_code": 191,
+                    "description": "Ballroom"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "Mobil",
+                    "rating": "2"
+                },
+                {
+                    "provider": "AAA",
+                    "rating": "1"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "C1KAA1",
+                    "room_type_code": "C1K",
+                    "rate_plan_code": "AA1",
+                    "total_amount": {
+                        "amount": "312.30",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 98.1
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 116.1
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "Smoking suite with 1 king bed "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Standard",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "AA1"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/RALGB230?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "OZLAX109",
+            "property_name": "Super 8 Inglewood-lax Arpt",
+            "location": {
+                "latitude": 33.9454,
+                "longitude": -118.34995
+            },
+            "address": {
+                "line1": "4238 W Century Blvd.",
+                "city": "Inglewood",
+                "region": "CA",
+                "postal_code": "90304",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "342.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "33.33",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-310-6720740"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-310-6721904"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NQ1RAC",
+                    "room_type_code": "NQ1",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "342.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 100
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 QUEEN BED NON-SMOKING ROOM WITH",
+                        "FREE  BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/OZLAX109?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "TLLAX516",
+            "property_name": "Travelodge Inn & Suites Bell L",
+            "location": {
+                "latitude": 33.97605,
+                "longitude": -118.18664
+            },
+            "address": {
+                "line1": "6600 Atlantic Ave",
+                "city": "Bell",
+                "region": "CA",
+                "postal_code": "90201-2524",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "439.97",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "70.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-323-7718888"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-323-7716666"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NK1RAC",
+                    "room_type_code": "NK1",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "439.97",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 139.99
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 159.99
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 KING BED NON-SMOKING ROOM WITH",
+                        "COMPUTER DESK,FLAT SCREEN HDTV,"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/TLLAX516?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "RDLAX606",
+            "property_name": "Radisson La Midtown At Usc",
+            "marketing_text": "In a prime location adjacent to the University of Southern California and just south of downtown Los Angeles and the Los Angeles Convention Center, the Radisson Hotel Los Angeles Midtown At USC is an excellent choice for business and leisure traveler",
+            "location": {
+                "latitude": 34.01964,
+                "longitude": -118.28123
+            },
+            "address": {
+                "line1": "3540 South Figueroa",
+                "city": "Los Angeles",
+                "region": "CA",
+                "postal_code": "90007",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "456.30",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "50.70",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-213-748-4141"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-213-746-3255"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "EXECUTIVE_FLOOR",
+                    "ota_code": 34,
+                    "description": "Executive floor"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "PETS_ALLOWED",
+                    "ota_code": 224,
+                    "description": "Pets allowed"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                },
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "3"
+                },
+                {
+                    "provider": "Mobil",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "IA00754",
+                    "room_type_code": "ROH",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "456.30",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 152.1
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA-CAA RATE",
+                        "DELUXE-KING OR DOUBLE",
+                        "-SPECIAL RATE FOR AAA-CAA MEMBERS-ID REQUIRED"
+                    ],
+                    "room_type_info": {},
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/RDLAX606?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        }
+    ]
+}

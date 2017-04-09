@@ -1,0 +1,2327 @@
+{
+    "results": [
+        {
+            "property_code": "YXLGAFLU",
+            "property_name": "Flushing Ymca",
+            "location": {
+                "latitude": 40.76408,
+                "longitude": -73.82807
+            },
+            "address": {
+                "line1": "138-46 Northern Boulevard",
+                "city": "Flushing",
+                "region": "NY",
+                "postal_code": "11354",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "201.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "22.33",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "718-961-6880"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "718-445-8392"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "SAUNA",
+                    "ota_code": 79,
+                    "description": "Sauna"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                },
+                {
+                    "amenity": "SPA",
+                    "ota_code": 84,
+                    "description": "Spa"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "C1TRAC",
+                    "room_type_code": "C1T",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "201.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 67
+                        }
+                    ],
+                    "descriptions": [
+                        "RACK RATE ",
+                        "Single Room-Twin bed-cable TV-shared bath-access to the gym ",
+                        "sauna and pools-Sleeps 1 Single Room-Twin bed-cable TV-shared "
+                    ],
+                    "room_type_info": {
+                        "bed_type": "Twin",
+                        "number_of_beds": "1",
+                        "room_type": "Room with bath - Standard"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/YXLGAFLU?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "DIEWR231",
+            "property_name": "Days Inn Iselin - Woodbridge",
+            "location": {
+                "latitude": 40.56602,
+                "longitude": -74.29781
+            },
+            "address": {
+                "line1": "893 Us Route 1 South",
+                "city": "Iselin",
+                "region": "NJ",
+                "postal_code": "08830",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "238.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "38.25",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-732-6344200"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-732-6347840"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NK1SSP",
+                    "room_type_code": "NK1",
+                    "rate_plan_code": "SPE",
+                    "total_amount": {
+                        "amount": "238.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 76.5
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 85
+                        }
+                    ],
+                    "descriptions": [
+                        "PLAN AHEAD AND SAVE",
+                        "1 KING BED NON-SMOKING ROOM WITH",
+                        "FREE CONTINENTAL BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "SPE"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/DIEWR231?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "ILEWR380",
+            "property_name": "Airport Hotel Inn & Suites",
+            "location": {
+                "latitude": 40.6604,
+                "longitude": -74.20753
+            },
+            "address": {
+                "line1": "853 Spring Street Us1 And 9 No",
+                "city": "Elizabeth",
+                "region": "NJ",
+                "postal_code": "07201",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "255.82",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "34.99",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-908-3531365"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-908-3532927"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "JACUZZI",
+                    "ota_code": 55,
+                    "description": "Jacuzzi"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "N1QRAC",
+                    "room_type_code": "N1Q",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "255.82",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 69.99
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 74.99
+                        }
+                    ],
+                    "descriptions": [
+                        "Best Available Rate",
+                        "1 queen, ns, 32 inch Flat screen TV,",
+                        "Microwave, Refrigerator, upon request, Coffee"
+                    ],
+                    "room_type_info": {
+                        "bed_type": "Queen",
+                        "number_of_beds": "1",
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/ILEWR380?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "KGEWR380",
+            "property_name": "Knights Inn Newark Airport Eli",
+            "location": {
+                "latitude": 40.66431,
+                "longitude": -74.20576
+            },
+            "address": {
+                "line1": "178 Spring Street",
+                "city": "Elizabeth",
+                "region": "NJ",
+                "postal_code": "07201",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "257.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "45.12",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-908-3533030"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-908-3530358"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "Q11RAC",
+                    "room_type_code": "Q11",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "257.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 90.25
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 76.5
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1 QUEEN BED SMOKING ROOM WITH",
+                        "WORK DESK, ALARM CLOCK"
+                    ],
+                    "room_type_info": {
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/KGEWR380?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "OZNYC578",
+            "property_name": "Super 8 Rahway Newark Area",
+            "location": {
+                "latitude": 40.60268,
+                "longitude": -74.26631
+            },
+            "address": {
+                "line1": "1360 Us Highway 1",
+                "city": "Rahway",
+                "region": "NJ",
+                "postal_code": "07065 5612",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "261.92",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "71.25",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-732-3822700"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-732-3822704"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NK1S3A",
+                    "room_type_code": "NK1",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "261.92",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-06",
+                            "currency_code": "USD",
+                            "price": 71.25
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 76
+                        },
+                        {
+                            "start_date": "2017-07-06",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 80.75
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "1 KING BED NON-SMOKING ROOM WITH FREE",
+                        "SUPERSTART BREAKFAST, FREE WI-FI,"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/OZNYC578?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "OZLGA346",
+            "property_name": "Super 8 N Bergen Nj Nyc Area",
+            "location": {
+                "latitude": 40.77429,
+                "longitude": -74.0395
+            },
+            "address": {
+                "line1": "2800 Columbia Avenue",
+                "city": "North Bergen",
+                "region": "NJ",
+                "postal_code": "07047",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "285.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "89.30",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-201-2557768"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-201-8671490"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NK1S3A",
+                    "room_type_code": "NK1",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "285.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-06",
+                            "currency_code": "USD",
+                            "price": 89.3
+                        },
+                        {
+                            "start_date": "2017-07-06",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 95
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 100.7
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "1 KING BED NON-SMOKING ROOM WITH",
+                        "FREE SUPERSTART BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/OZLGA346?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "BWEWR060",
+            "property_name": "Best Western Riverview Inn Ste",
+            "location": {
+                "latitude": 40.60443,
+                "longitude": -74.26326
+            },
+            "address": {
+                "line1": "1747 Paterson Street",
+                "city": "Rahway",
+                "region": "NJ",
+                "postal_code": "07065",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "287.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "49.50",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-732-381-7650"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-732-381-6753"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "JACUZZI",
+                    "ota_code": 55,
+                    "description": "Jacuzzi"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "A1KMILA",
+                    "room_type_code": "A1K",
+                    "rate_plan_code": "MIL",
+                    "total_amount": {
+                        "amount": "287.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 99
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 89
+                        }
+                    ],
+                    "descriptions": [
+                        "GOVT/MILITARY RATE* GOVERNMENT/MILTARY",
+                        "1 KING BED,NSM,HI SPD NET,2ND BED SOFA,MICRFRG,",
+                        "HAIR,CONTINENTAL BREAKFAST"
+                    ],
+                    "room_type_info": {
+                        "bed_type": "King",
+                        "number_of_beds": "1",
+                        "room_type": "Room with bath - Superior"
+                    },
+                    "rate_type_code": "MIL"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/BWEWR060?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "TLJEC197",
+            "property_name": "Travelodge Jersey City",
+            "location": {
+                "latitude": 40.75895,
+                "longitude": -74.05248
+            },
+            "address": {
+                "line1": "881 Tonnele Ave",
+                "city": "Jersey City",
+                "region": "NJ",
+                "postal_code": "07307-3938",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "292.05",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "40.37",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-201-9633361"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-201-9634276"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NK1S3A",
+                    "room_type_code": "NK1",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "292.05",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 80.74
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 94.99
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "1 KING BED NON-SMOKING ROOM WITH",
+                        "FREE CONTINENTAL BREAKFAST, FREE WI-FI"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/TLJEC197?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "HJLGA379",
+            "property_name": "Howard Johnson North Bergen Nj",
+            "location": {
+                "latitude": 40.76477,
+                "longitude": -74.04786
+            },
+            "address": {
+                "line1": "1300 Tonnelle Avenue",
+                "city": "North Bergen",
+                "region": "NY",
+                "postal_code": "07047",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "303.97",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "47.49",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-201-8636363"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-201-8636310"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NQ1S3A",
+                    "room_type_code": "NQ1",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "303.97",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 94.99
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 113.99
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "1 QUEEN BED NON-SMOKING ROOM WITH",
+                        "FREE HOT CONTINENTAL BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HJLGA379?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "DIEWR091",
+            "property_name": "Days Inn Ridgefield Nj",
+            "location": {
+                "latitude": 40.84472,
+                "longitude": -74.00761
+            },
+            "address": {
+                "line1": "1086 Route 46 West",
+                "city": "Ridgefield",
+                "region": "NJ",
+                "postal_code": "07657",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "336.84",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "32.58",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-201-9455670"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-201-9456540"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "Q11SSP",
+                    "room_type_code": "Q11",
+                    "rate_plan_code": "SPE",
+                    "total_amount": {
+                        "amount": "336.84",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 97.74
+                        }
+                    ],
+                    "descriptions": [
+                        "PLAN AHEAD AND SAVE",
+                        "1 QUEEN BED SMOKING ROOM WITH FREE",
+                        "CONTINENTAL BREAKFAST, FREE WI-FI,"
+                    ],
+                    "room_type_info": {
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "SPE"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/DIEWR091?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "HJJFK010",
+            "property_name": "Howard Johnson Inn Queens",
+            "location": {
+                "latitude": 40.71951,
+                "longitude": -73.73323
+            },
+            "address": {
+                "line1": "220-16 Jamaica Ave",
+                "city": "Queens Village",
+                "region": "NY",
+                "postal_code": "11428",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "341.60",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "51.60",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-718-2646600"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-718-4546255"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NQ1SGV",
+                    "room_type_code": "NQ1",
+                    "rate_plan_code": "GOV",
+                    "total_amount": {
+                        "amount": "341.60",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 103.2
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 135.2
+                        }
+                    ],
+                    "descriptions": [
+                        "GOVERNMENT/ MILITARY",
+                        "1 QUEEN BED NON-SMOKING ROOM WITH",
+                        "FREE CONTINENTAL BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "GOV"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HJJFK010?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "BWEWR067",
+            "property_name": "Bw Plus Robert Treat Hotel",
+            "location": {
+                "latitude": 40.73897,
+                "longitude": -74.16887
+            },
+            "address": {
+                "line1": "50 Park Place",
+                "city": "Newark",
+                "region": "NJ",
+                "postal_code": "07102",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "351.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "39.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-973-622-1000"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-973-622-6210"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "JACUZZI",
+                    "ota_code": 55,
+                    "description": "Jacuzzi"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                },
+                {
+                    "amenity": "FEMALE_TRAVELER_ROOM",
+                    "ota_code": 110,
+                    "description": "Female traveler room/floor"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "B1QSRSB",
+                    "room_type_code": "B1Q",
+                    "rate_plan_code": "SRS",
+                    "total_amount": {
+                        "amount": "351.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 117
+                        }
+                    ],
+                    "descriptions": [
+                        "SENIOR RATE*CITIZENS 55YRS PLUS OR AARP ID",
+                        "1 QUEEN BED,NSMK,REFRIG,HI SPEED,COFMKR,HAIR,",
+                        "IRON,CONTINENTAL BREAKFAST"
+                    ],
+                    "room_type_info": {
+                        "bed_type": "Queen",
+                        "number_of_beds": "1",
+                        "room_type": "Room with bath - Moderate"
+                    },
+                    "rate_type_code": "SRS"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/BWEWR067?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "HJEWR381",
+            "property_name": "Howard Johnson Inn Clifton Nj",
+            "location": {
+                "latitude": 40.83531,
+                "longitude": -74.15024
+            },
+            "address": {
+                "line1": "680 Route 3 West",
+                "city": "Clifton",
+                "region": "NJ",
+                "postal_code": "07012",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "356.85",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "94.05",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-973-4713800"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-973-4712128"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "BEAUTY_SALON",
+                    "ota_code": 107,
+                    "description": "Beauty shop/salon"
+                },
+                {
+                    "amenity": "CAR_RENTAL",
+                    "ota_code": 15,
+                    "description": "Car rental desk"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "QQ1S3A",
+                    "room_type_code": "QQ1",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "356.85",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 94.05
+                        },
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-06",
+                            "currency_code": "USD",
+                            "price": 103.55
+                        },
+                        {
+                            "start_date": "2017-07-06",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 113.05
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "2 QUEEN BEDS SMOKING ROOM WITH FREE",
+                        "WI-FI, REFRIGERATOR, MICROWAVE,"
+                    ],
+                    "room_type_info": {},
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HJEWR381?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "CIEWR177",
+            "property_name": "Comfort Inn Fairfield",
+            "location": {
+                "latitude": 40.87749,
+                "longitude": -74.29824
+            },
+            "address": {
+                "line1": "286 Route 46 East",
+                "city": "Fairfield",
+                "region": "NJ",
+                "postal_code": "07004",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "382.38",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "54.62",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-973-227-4333"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-973-227-5399"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "JACUZZI",
+                    "ota_code": 55,
+                    "description": "Jacuzzi"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "Z321SNR",
+                    "room_type_code": "N2D",
+                    "rate_plan_code": "SNR",
+                    "total_amount": {
+                        "amount": "382.38",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 109.25
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 114
+                        }
+                    ],
+                    "descriptions": [
+                        "Senior/AARP Rate Age 60 or Older",
+                        "2Q/NonSmoking/Free Hi-Spd Wireless/Free Wired",
+                        "High-Speed Internet/Flat panel TV/Clock"
+                    ],
+                    "room_type_info": {
+                        "bed_type": "Double",
+                        "number_of_beds": "2",
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "SNR"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/CIEWR177?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "HJLGA826",
+            "property_name": "Howard Johnson Express Inn Bro",
+            "location": {
+                "latitude": 40.83973,
+                "longitude": -73.88132
+            },
+            "address": {
+                "line1": "1922 Boston Road",
+                "city": "Bronx",
+                "region": "NY",
+                "postal_code": "10460",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "402.94",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "54.62",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-718-5892222"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-718-5897718"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "NK1S3A",
+                    "room_type_code": "NK1",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "402.94",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 109.25
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 123.5
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA DISCOUNT",
+                        "1 KING BED NON-SMOKING ROOM WITH",
+                        "FREE CONTINENTAL BREAKFAST, FREE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Non-smoking"
+                    },
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HJLGA826?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "IQNYC481",
+            "property_name": "Meadowland View Hotel",
+            "location": {
+                "latitude": 40.77442,
+                "longitude": -74.04118
+            },
+            "address": {
+                "line1": "2750 Tonnelle Ave",
+                "city": "North Bergen",
+                "region": "NJ",
+                "postal_code": "07047",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "408.21",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "59.08",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-201-3483600"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-201-3308932"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PETS_ALLOWED",
+                    "ota_code": 224,
+                    "description": "Pets allowed"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "D1THRS",
+                    "room_type_code": "D1T",
+                    "rate_plan_code": "HRS",
+                    "total_amount": {
+                        "amount": "408.21",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-06",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 118.15
+                        },
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-06",
+                            "currency_code": "USD",
+                            "price": 109.65
+                        }
+                    ],
+                    "descriptions": [
+                        "HRS",
+                        "EXECUTIVE QUEEN BED"
+                    ],
+                    "room_type_info": {
+                        "bed_type": "Twin",
+                        "number_of_beds": "1",
+                        "room_type": "Room with bath - Minimum"
+                    },
+                    "rate_type_code": "HRS"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/IQNYC481?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "RDNYC879",
+            "property_name": "Radisson Hotel Jfk Airport",
+            "location": {
+                "latitude": 40.66744,
+                "longitude": -73.7981
+            },
+            "address": {
+                "line1": "135-30 140th Street",
+                "city": "Jamaica",
+                "region": "NY",
+                "postal_code": "11436",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "646.05",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "89.50",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-718-322-2300"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-718-322-6894"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CAR_RENTAL",
+                    "ota_code": 15,
+                    "description": "Car rental desk"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "EXECUTIVE_FLOOR",
+                    "ota_code": 34,
+                    "description": "Executive floor"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "SAUNA",
+                    "ota_code": 79,
+                    "description": "Sauna"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                },
+                {
+                    "provider": "Mobil",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "IA00004",
+                    "room_type_code": "A1K",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "646.05",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 179
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 205
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "1K-NSK-GUEST ROOM-ACCESSIBLE"
+                    ],
+                    "room_type_info": {
+                        "bed_type": "King",
+                        "number_of_beds": "1",
+                        "room_type": "Room with bath - Superior"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/RDNYC879?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "MCNYCWSM",
+            "property_name": "New York Marriott Downtown",
+            "marketing_text": "The marriott new york financial center is located in lower manhattan, minutes away from wall street, statue of liberty, brooklyn bridge, tribeca and much more.",
+            "location": {
+                "latitude": 40.70975,
+                "longitude": -74.01468
+            },
+            "address": {
+                "line1": "85 West Street At Albany Stree",
+                "city": "New York",
+                "region": "NY",
+                "postal_code": "10006",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "712.80",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "68.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-212-3854900"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-212-2278136"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "CURRENCY_EXCHANGE",
+                    "ota_code": 26,
+                    "description": "Currency exchange"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "YBKC00",
+                    "room_type_code": "YBK",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "712.80",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 204
+                        }
+                    ],
+                    "descriptions": [
+                        "Stay for Breakfast rate, includes breakfast for",
+                        "el Restaurant",
+                        "Deluxe Room, 1 King, Mini-fridge, 324sqft/29sqm"
+                    ],
+                    "room_type_info": {
+                        "bed_type": "King"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/MCNYCWSM?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "HINYC4C9",
+            "property_name": "Holiday Inn Exp 5th Avenue",
+            "location": {
+                "latitude": 40.75591,
+                "longitude": -73.98014
+            },
+            "address": {
+                "line1": "13 West 45th Street",
+                "city": "New York",
+                "region": "NY",
+                "postal_code": "10036",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "727.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "119.50",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-212-3029088"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-212-3023088"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "BABY_SITTING",
+                    "ota_code": 8,
+                    "description": "Baby sitting"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "MASSAGE_SERVICES",
+                    "ota_code": 61,
+                    "description": "Massage services"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "PETS_ALLOWED",
+                    "ota_code": 224,
+                    "description": "Pets allowed"
+                },
+                {
+                    "amenity": "SAUNA",
+                    "ota_code": 79,
+                    "description": "Sauna"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "STN013A",
+                    "room_type_code": "*RH",
+                    "rate_plan_code": "013",
+                    "total_amount": {
+                        "amount": "727.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 239
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 249
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST FLEXIBLE RATE ",
+                        "STANDARD ROOM WHEN YOU ARRIVE AT THE HOTEL WE ",
+                        "WILL DO OUR BEST TO MEET YOUR ROOM BED TYPE AND"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Unspecified"
+                    },
+                    "rate_type_code": "013"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HINYC4C9?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "RCNYCRLR",
+            "property_name": "Residence Inn Downtwn Marriott",
+            "location": {
+                "latitude": 40.70953,
+                "longitude": -74.00981
+            },
+            "address": {
+                "line1": "170 Broadway",
+                "city": "New York",
+                "region": "NY",
+                "postal_code": "10007",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "861.84",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "82.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-212-6008900"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-212-6008901"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "XAPA00",
+                    "room_type_code": "XAP",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "861.84",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 246
+                        }
+                    ],
+                    "descriptions": [
+                        "Advance Purchase rate, prepay in full, non-refu",
+                        "es",
+                        "1 King, Fully equipped kitchen, Microwave, 269s"
+                    ],
+                    "room_type_info": {
+                        "bed_type": "Pull-out"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/RCNYCRLR?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-08&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        }
+    ]
+}
