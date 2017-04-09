@@ -1,0 +1,1923 @@
+{
+    "results": [
+        {
+            "property_code": "YXHNLCON",
+            "property_name": "Vive Hotel Waikiki",
+            "location": {
+                "latitude": 21.27676,
+                "longitude": -157.82335
+            },
+            "address": {
+                "line1": "2426 Kuhio Avenue",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "494.64",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "54.96",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-6872000"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-6872050"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "C1QCR1",
+                    "room_type_code": "C1Q",
+                    "rate_plan_code": "CR1",
+                    "total_amount": {
+                        "amount": "494.64",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 164.88
+                        }
+                    ],
+                    "descriptions": [
+                        "CORPORATE RATE ",
+                        "AC -free Wi-Fi -desk -flatscreen HDTV pillowtop mattress -Inc ",
+                        "Cont Breakfast AC -free Wi-Fi -desk -flatscreen HDTV pillowtop "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Standard",
+                        "bed_type": "Queen",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "CR1"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/YXHNLCON?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "ORHNLOMH",
+            "property_name": "Ohana Waikiki Malia",
+            "marketing_text": "The Ohana Waikiki Malia has a Central Waikiki location on Kuhio Avenue with easy access to city bus and trolley routes. A family-friendly hotel with services and amenities suited for families and children.",
+            "location": {
+                "latitude": 21.28413,
+                "longitude": -157.83079
+            },
+            "address": {
+                "line1": "2211 Kuhio Avenue",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "508.68",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "45.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-923-7621"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-921-4804"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "B**TVL",
+                    "room_type_code": "B**",
+                    "rate_plan_code": "TVL",
+                    "total_amount": {
+                        "amount": "508.68",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 135
+                        }
+                    ],
+                    "descriptions": [
+                        "TRAVEL AGENT RATE",
+                        "CITY VIEW ROOM",
+                        "BEDDING INCLUDES 1 KING OR 2 DOUBLE"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Moderate",
+                        "bed_type": "Unspecified",
+                        "number_of_beds": "Unspecified"
+                    },
+                    "rate_type_code": "TVL"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/ORHNLOMH?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "MPHNL466",
+            "property_name": "Ala Moana Hotel By Mantra",
+            "location": {
+                "latitude": 21.29036,
+                "longitude": -157.83952
+            },
+            "address": {
+                "line1": "410 Atkinson Drive",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96814",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "537.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "59.67",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-8554811"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-9442974"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "DISCO",
+                    "ota_code": 195,
+                    "description": "Disco"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "CURRENCY_EXCHANGE",
+                    "ota_code": 26,
+                    "description": "Currency exchange"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "MASSAGE_SERVICES",
+                    "ota_code": 61,
+                    "description": "Massage services"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "SAUNA",
+                    "ota_code": 79,
+                    "description": "Sauna"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                },
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "F1QRAC",
+                    "room_type_code": "F1Q",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "537.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 179
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "STD CITY VW RM 1 QUEEN BD FRIDGE MICROWAVE WIFI"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with shower - Moderate",
+                        "bed_type": "Queen",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/MPHNL466?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "YXHNL200",
+            "property_name": "Manoa Valley Inn",
+            "location": {
+                "latitude": 21.30076,
+                "longitude": -157.82236
+            },
+            "address": {
+                "line1": "2001 Vancouver Drive",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96822",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "540.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "60.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-9476019"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-5964664"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "",
+                    "ota_code": 217,
+                    "description": "Children not allowed"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "2"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "F1KRAC",
+                    "room_type_code": "F1K",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "540.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 180
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE ",
+                        "2nd floor has full size antique bed that anchor s this quaint ",
+                        "and restful room private bathroom 2nd floor has full size "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with shower - Moderate",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/YXHNL200?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "AHHNL850",
+            "property_name": "Aston Waikiki Circle Hotel",
+            "location": {
+                "latitude": 21.27884,
+                "longitude": -157.82767
+            },
+            "address": {
+                "line1": "2464 Kalakaua Avenue",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "550.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "95.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-9231571"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-9231571"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "NON_PORNOGRAPHIC_TV",
+                    "ota_code": 220,
+                    "description": "Hotel does not provide pornographic films/TV"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "A3DSPC",
+                    "room_type_code": "A3D",
+                    "rate_plan_code": "SPC",
+                    "total_amount": {
+                        "amount": "550.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-06",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 190
+                        },
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-06",
+                            "currency_code": "USD",
+                            "price": 170
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "Partial Ocean View-Non-smoking Across Waikiki Beach and nightly ",
+                        "hula show. Hotel Rm Partial Ocean View 2-dbl beds. AC-Clock "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Superior",
+                        "bed_type": "Double",
+                        "number_of_beds": "3"
+                    },
+                    "rate_type_code": "SPC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/AHHNL850?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "ORHNLOEH",
+            "property_name": "Ohana Waikiki East",
+            "location": {
+                "latitude": 21.28055,
+                "longitude": -157.82735
+            },
+            "address": {
+                "line1": "150 Kaiulani Avenue",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "590.73",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "53.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-922-5353"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-954-8800"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "BEAUTY_SALON",
+                    "ota_code": 107,
+                    "description": "Beauty shop/salon"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "",
+                    "ota_code": 46,
+                    "description": "Hairdresser/barber"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "B**TVL",
+                    "room_type_code": "B**",
+                    "rate_plan_code": "TVL",
+                    "total_amount": {
+                        "amount": "590.73",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 159
+                        }
+                    ],
+                    "descriptions": [
+                        "TRAVEL AGENT RATE NC",
+                        "WAIKIKI VIEW ROOM",
+                        "BEDDING INCLUDES 1Q OR 2D OR 1K"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Moderate",
+                        "bed_type": "Unspecified",
+                        "number_of_beds": "Unspecified"
+                    },
+                    "rate_type_code": "TVL"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/ORHNLOEH?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "BCHNLNOK",
+            "property_name": "New Otani Kaimana Beach",
+            "marketing_text": "Located on the quiet preferred edge of Waikiki, nestled between a white sandy beach and a 500 acre Kapiolani Park and near the base of Diamond Head Crater.",
+            "location": {
+                "latitude": 21.26343,
+                "longitude": -157.82138
+            },
+            "address": {
+                "line1": "2863 Kalakaua Avenue",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "615.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "68.33",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-9231555"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-9229404"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "BEAUTY_SALON",
+                    "ota_code": 107,
+                    "description": "Beauty shop/salon"
+                },
+                {
+                    "amenity": "CHILDREN_WELCOME",
+                    "ota_code": 218,
+                    "description": "Children welcome"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "CURRENCY_EXCHANGE",
+                    "ota_code": 26,
+                    "description": "Currency exchange"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "MASSAGE_SERVICES",
+                    "ota_code": 61,
+                    "description": "Massage services"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "",
+                    "ota_code": 46,
+                    "description": "Hairdresser/barber"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "OHG",
+                    "rating": "Moderate Deluxe"
+                },
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "D1DRAC",
+                    "room_type_code": "D1D",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "615.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 205
+                        }
+                    ],
+                    "descriptions": [
+                        "BEST AVAILABLE RATE",
+                        "Moderate-Limited View. ECONOMICALLY PRICE. Fully Renovated. 1 ",
+                        "QUEEN OR 2 TWINS-202 sq. ft Moderate -Limited View. Economically"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Minimum",
+                        "bed_type": "Double",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/BCHNLNOK?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "HHHNL699",
+            "property_name": "Hilton Waikiki Beach",
+            "location": {
+                "latitude": 21.2755,
+                "longitude": -157.82239
+            },
+            "address": {
+                "line1": "2500 Kuhio Avenue",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "620.88",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "68.99",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-922-0811"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-921-5511"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "CURRENCY_EXCHANGE",
+                    "ota_code": 26,
+                    "description": "Currency exchange"
+                },
+                {
+                    "amenity": "EXECUTIVE_FLOOR",
+                    "ota_code": 34,
+                    "description": "Executive floor"
+                },
+                {
+                    "amenity": "JACUZZI",
+                    "ota_code": 55,
+                    "description": "Jacuzzi"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "A0OA7V",
+                    "room_type_code": "C2D",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "620.88",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 206.96
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA STAY AND SAVE",
+                        "2 DOUBLE BEDS CITY VIEW",
+                        "LANAI-42 INCH HDTV-REFRIG-HIGH SPEED-306 SQ F"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Standard",
+                        "bed_type": "Double",
+                        "number_of_beds": "2"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HHHNL699?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "ORHNLRBW",
+            "property_name": "Outrigger Regency On Beachwalk",
+            "marketing_text": "The Outrigger Regency on Beachwalk brings fresh contemporary style into the heart of Waikiki, offering contemporary 1- and 2-bedroom condos.",
+            "location": {
+                "latitude": 21.28024,
+                "longitude": -157.83096
+            },
+            "address": {
+                "line1": "255 Beachwalk",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "682.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "104.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-922-3871"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-922-3887"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "S**A71",
+                    "room_type_code": "S**",
+                    "rate_plan_code": "A71",
+                    "total_amount": {
+                        "amount": "682.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 208
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 266
+                        }
+                    ],
+                    "descriptions": [
+                        "Airline Employee - Airline ID ",
+                        "ONE BEDROOM PARTIAL OCEAN VIEW",
+                        "1 QUEEN BED, 1 DOUBLE SOFA BED"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Suite",
+                        "bed_type": "Unspecified",
+                        "number_of_beds": "Unspecified"
+                    },
+                    "rate_type_code": "A71"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/ORHNLRBW?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "XTHNL802",
+            "property_name": "Pacific Beach Hotel",
+            "marketing_text": "Located directly across from the world-famous Waikiki Beach in Honolulu and boasting stunning views of the Pacific Ocean, the Pacific Beach Hotel features 837 comfortable, family-friendly rooms and a spectacular, three-storey indoor oceanarium.",
+            "location": {
+                "latitude": 21.27464,
+                "longitude": -157.82327
+            },
+            "address": {
+                "line1": "2490 Kalakaua Avenue",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "682.08",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "111.36",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-9221233"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-9262218"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "BEAUTY_SALON",
+                    "ota_code": 107,
+                    "description": "Beauty shop/salon"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "SPA",
+                    "ota_code": 84,
+                    "description": "Spa"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "P2DAAA",
+                    "room_type_code": "P2D",
+                    "rate_plan_code": "AAA",
+                    "total_amount": {
+                        "amount": "682.08",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-07",
+                            "currency_code": "USD",
+                            "price": 222.72
+                        },
+                        {
+                            "start_date": "2017-07-07",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 236.64
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA Member Special Rate",
+                        "New Partial Ocean View 2 Beds                  ",
+                        " Side view of ocean from balcony               "
+                    ],
+                    "room_type_info": {
+                        "room_type": "Executive suite",
+                        "bed_type": "Double",
+                        "number_of_beds": "2"
+                    },
+                    "rate_type_code": "AAA"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/XTHNL802?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "HXHNL705",
+            "property_name": "Hmptn Ste Oahu Kapolei",
+            "location": {
+                "latitude": 21.33447,
+                "longitude": -158.04087
+            },
+            "address": {
+                "line1": "91 5431 Kapolei Parkway Suit",
+                "city": "Kapolei",
+                "region": "HI",
+                "postal_code": "96707",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "731.16",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "107.46",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-628-4900"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-628-4944"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "A07A04",
+                    "room_type_code": "G1K",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "731.16",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-06",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 214.92
+                        },
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-06",
+                            "currency_code": "USD",
+                            "price": 301.32
+                        }
+                    ],
+                    "descriptions": [
+                        "2X POINTS PACKAGE",
+                        "1 KING MOBILITY/HEARING ACC RI SHOWER NOSMOK",
+                        "VIS FIREALRM/DOOR/PHN ALRT/HDTV"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with shower - Standard",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HXHNL705?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "ORHNLORF",
+            "property_name": "Outrigger Reef Waikiki Beach",
+            "marketing_text": "Outrigger Reef has been re-created, a $110 million dollar top-to-bottom transformation. The duluxe full service resort right on Waikiki Beach offers a 24hr fitness center, Serenity Spa, sevaeral restaurants and specialty shops all right on site.",
+            "location": {
+                "latitude": 21.27912,
+                "longitude": -157.83262
+            },
+            "address": {
+                "line1": "2169 Kalia Rd",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "760.92",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "65.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-923-3111"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-924-4957"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "OUTDOOR_POOL",
+                    "ota_code": 66,
+                    "description": "Outdoor pool"
+                },
+                {
+                    "amenity": "BALLROOM",
+                    "ota_code": 191,
+                    "description": "Ballroom"
+                }
+            ],
+            "awards": [],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "C**TVL",
+                    "room_type_code": "C**",
+                    "rate_plan_code": "TVL",
+                    "total_amount": {
+                        "amount": "760.92",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 195
+                        }
+                    ],
+                    "descriptions": [
+                        "TRAVEL AGENT RATE NC",
+                        "MODERATE, NO VIEW ROOM. 340 SQ FT.",
+                        "1 KING OR 2 DOUBLES. MAX 3 PPL. NO LANAI."
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Standard",
+                        "bed_type": "Unspecified",
+                        "number_of_beds": "Unspecified"
+                    },
+                    "rate_type_code": "TVL"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/ORHNLORF?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "ORHNLOWK",
+            "property_name": "Outrigger Waikiki Beach Resort",
+            "marketing_text": "The Outrigger Waikiki is on Waikiki's best beachfront, featuring 525 guest rooms dressed in contemporary island style and the Fee Free Escape program.",
+            "location": {
+                "latitude": 21.28123,
+                "longitude": -157.83066
+            },
+            "address": {
+                "line1": "2335 Kalakaua Avenue",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "812.22",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "70.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-923-0711"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-921-9749"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "ICE_MACHINE",
+                    "ota_code": 52,
+                    "description": "Ice machine"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "BEAUTY_SALON",
+                    "ota_code": 107,
+                    "description": "Beauty shop/salon"
+                },
+                {
+                    "amenity": "CAR_RENTAL",
+                    "ota_code": 15,
+                    "description": "Car rental desk"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "HOTSPOTS",
+                    "ota_code": 221,
+                    "description": "Hotspots"
+                },
+                {
+                    "amenity": "FREE_HIGH_SPEED_INTERNET",
+                    "ota_code": 222,
+                    "description": "Free high speed internet connection"
+                },
+                {
+                    "amenity": "INTERNET_PUBLIC_AREAS",
+                    "ota_code": 178,
+                    "description": "Internet access in public areas"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "MASSAGE_SERVICES",
+                    "ota_code": 61,
+                    "description": "Massage services"
+                },
+                {
+                    "amenity": "SPA",
+                    "ota_code": 84,
+                    "description": "Spa"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "",
+                    "ota_code": 46,
+                    "description": "Hairdresser/barber"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "4"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "E**TVL",
+                    "room_type_code": "E**",
+                    "rate_plan_code": "TVL",
+                    "total_amount": {
+                        "amount": "812.22",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 210
+                        }
+                    ],
+                    "descriptions": [
+                        "TRAVEL AGENT RATE NC",
+                        "CITY VIEW ROOM",
+                        "1Q OR 1K OR 2D MOST WITH SOFABEDS"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with shower - Superior",
+                        "bed_type": "Unspecified",
+                        "number_of_beds": "Unspecified"
+                    },
+                    "rate_type_code": "TVL"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/ORHNLOWK?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "HHHNL728",
+            "property_name": "Hilton Hawaiian Village",
+            "marketing_text": "Hilton hawaiian village beach resort and spa is waikiki*s only true resort destination- offering the perfect mix of exceptional resort accommodations and classic hawaiian hospitality- all nestled on 22 beachfront acres.",
+            "location": {
+                "latitude": 21.28763,
+                "longitude": -157.83827
+            },
+            "address": {
+                "line1": "2005 Kalia Road",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "855.00",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "95.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-949-4321"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-951-5458"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "BABY_SITTING",
+                    "ota_code": 8,
+                    "description": "Baby sitting"
+                },
+                {
+                    "amenity": "BEAUTY_SALON",
+                    "ota_code": 107,
+                    "description": "Beauty shop/salon"
+                },
+                {
+                    "amenity": "CAR_RENTAL",
+                    "ota_code": 15,
+                    "description": "Car rental desk"
+                },
+                {
+                    "amenity": "CURRENCY_EXCHANGE",
+                    "ota_code": 26,
+                    "description": "Currency exchange"
+                },
+                {
+                    "amenity": "GIFT_SHOP",
+                    "ota_code": 45,
+                    "description": "Gift/News stand"
+                },
+                {
+                    "amenity": "JACUZZI",
+                    "ota_code": 55,
+                    "description": "Jacuzzi"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "MASSAGE_SERVICES",
+                    "ota_code": 61,
+                    "description": "Massage services"
+                },
+                {
+                    "amenity": "NON_PORNOGRAPHIC_TV",
+                    "ota_code": 220,
+                    "description": "Hotel does not provide pornographic films/TV"
+                },
+                {
+                    "amenity": "PARKING",
+                    "ota_code": 68,
+                    "description": "Parking"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "",
+                    "ota_code": 46,
+                    "description": "Hairdresser/barber"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "ROOM_SERVICE",
+                    "ota_code": 77,
+                    "description": "Room service"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "AAA",
+                    "rating": "3"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "A0FA7R",
+                    "room_type_code": "D1K",
+                    "rate_plan_code": "RAC",
+                    "total_amount": {
+                        "amount": "855.00",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 285
+                        }
+                    ],
+                    "descriptions": [
+                        "AAA STAY AND SAVE",
+                        "RESORT VIEW - 1KING BED",
+                        "35USD RSRT CHG - LANAI-REFRIGERATOR"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Minimum",
+                        "bed_type": "King",
+                        "number_of_beds": "1"
+                    },
+                    "rate_type_code": "RAC"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/HHHNL728?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        },
+        {
+            "property_code": "UIHNLPRI",
+            "property_name": "Prince Waikiki",
+            "marketing_text": "Hawaii Prince Hotel Waikiki and Golf Club",
+            "location": {
+                "latitude": 21.2722,
+                "longitude": -157.82135
+            },
+            "address": {
+                "line1": "100 Holomoana St",
+                "city": "Honolulu",
+                "region": "HI",
+                "postal_code": "96815",
+                "country": "US"
+            },
+            "total_price": {
+                "amount": "1099.35",
+                "currency": "USD"
+            },
+            "min_daily_rate": {
+                "amount": "98.00",
+                "currency": "USD"
+            },
+            "contacts": [
+                {
+                    "type": "PHONE",
+                    "detail": "1-808-956-1111"
+                },
+                {
+                    "type": "FAX",
+                    "detail": "1-808-946-0811"
+                }
+            ],
+            "amenities": [
+                {
+                    "amenity": "COFFEE_SHOP",
+                    "ota_code": 20,
+                    "description": "Coffee shop"
+                },
+                {
+                    "amenity": "RESTAURANT",
+                    "ota_code": 76,
+                    "description": "Restaurant"
+                },
+                {
+                    "amenity": "ACCESSIBLE_FACILITIES",
+                    "ota_code": 47,
+                    "description": "Accessible facilities"
+                },
+                {
+                    "amenity": "CAR_RENTAL",
+                    "ota_code": 15,
+                    "description": "Car rental desk"
+                },
+                {
+                    "amenity": "ELEVATORS",
+                    "ota_code": 33,
+                    "description": "Elevators"
+                },
+                {
+                    "amenity": "CURRENCY_EXCHANGE",
+                    "ota_code": 26,
+                    "description": "Currency exchange"
+                },
+                {
+                    "amenity": "LAUNDRY_SERVICE",
+                    "ota_code": 58,
+                    "description": "Laundry/Valet service"
+                },
+                {
+                    "amenity": "VALET_PARKING",
+                    "ota_code": 97,
+                    "description": "Valet parking "
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "POOL",
+                    "ota_code": 71,
+                    "description": "Pool"
+                },
+                {
+                    "amenity": "LOUNGE_BARS",
+                    "ota_code": 165,
+                    "description": "Lounges/bars"
+                },
+                {
+                    "amenity": "SAFE_DEPOSIT_BOX",
+                    "ota_code": 78,
+                    "description": "Safe deposit box"
+                }
+            ],
+            "awards": [
+                {
+                    "provider": "Local Star Rating",
+                    "rating": "5"
+                }
+            ],
+            "images": [],
+            "rooms": [
+                {
+                    "booking_code": "D**HD1",
+                    "room_type_code": "D**",
+                    "rate_plan_code": "HD1",
+                    "total_amount": {
+                        "amount": "1099.35",
+                        "currency": "USD"
+                    },
+                    "rates": [
+                        {
+                            "start_date": "2017-07-05",
+                            "end_date": "2017-07-08",
+                            "currency_code": "USD",
+                            "price": 294
+                        }
+                    ],
+                    "descriptions": [
+                        "Hot Deal 1-Best Available Rate",
+                        "Rate is room only plus applicable state taxes",
+                        "Ocean Front Harbor"
+                    ],
+                    "room_type_info": {
+                        "room_type": "Room with bath - Minimum",
+                        "bed_type": "Unspecified",
+                        "number_of_beds": "Unspecified"
+                    },
+                    "rate_type_code": "HD1"
+                }
+            ],
+            "_links": {
+                "more_rooms_at_this_hotel": {
+                    "href": "https://api.sandbox.amadeus.com/v1.2/hotels/UIHNLPRI?apikey=EKLHp0Tg1z4Y6AEUp4kfEjLEHMRwKwaT&check_in=2017-07-05&check_out=2017-07-8&lang=EN&currency=USD&referrer=more_rooms_at_this_hotel"
+                }
+            }
+        }
+    ]
+}
