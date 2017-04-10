@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 9000;
 const bodyParser = require('body-parser');
 
-const fs = require('fs');
+const {HOTEL_CAR_KEY, FLIGHT_KEY} = process.env;
 
 const flightsRoute = require('./routes/flightsRoute.js');
 const carRoute = require('./routes/carRoute.js');
