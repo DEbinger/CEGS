@@ -1,24 +1,3 @@
-//request
-
-{
-  "request": {
-    "passengers": {
-      "adultCount": "1"
-    },
-    "slice": [
-      {
-        "origin": "SFO",
-        "destination": "LAX",
-        "date": "2017-07-05"
-      }
-    ],
-    "solutions": "20"
-  }
-}
-
-
-//results
-
 {
   "kind": "qpxExpress#tripsSearch",
   "trips": {
