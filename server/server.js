@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
-
-const fs = require('fs');
 
 const flightsRoute = require('./routes/flightsRoute.js');
 const carRoute = require('./routes/carRoute.js');
@@ -18,7 +16,7 @@ app.use('/hotels', hotelRoute);
 app.use('/cars', carRoute);
 
 app.use('/', (req, res) => {
-  res.send('hi');
+  res.send('BAD ROUTE');
 });
 
 
