@@ -12,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
         User.hasMany(models.Flight);
         User.hasMany(models.Hotel);
         User.hasMany(models.Car);
+        User.hasMany(models.Gallery);
       }
     }
   });
