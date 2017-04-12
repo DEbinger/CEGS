@@ -5,11 +5,12 @@ module.exports = function(sequelize, DataTypes) {
     pick_up: DataTypes.DATE,
     drop_off: DataTypes.DATE,
     vehicle: DataTypes.STRING,
-    itinerary: DataTypes.INTEGER
+    itinerary: DataTypes.INTEGER,
+    user: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        Hotel.belongsTo(models.User, {foreignKey: 'user'});
       }
     }
   });
