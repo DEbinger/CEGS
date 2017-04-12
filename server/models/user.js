@@ -11,7 +11,6 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         User.hasMany(models.Flight);
         User.hasMany(models.Hotel);
-        User.hasMany(models.Car);
       }
     }
   });
