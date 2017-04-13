@@ -14,6 +14,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        Flight.hasMany(models.Itinerary);
         Flight.belongsTo(models.User, {foreignKey: 'user'});
       }
     }
