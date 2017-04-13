@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         Gallery.belongsTo(models.User, {foreignKey: 'user'});
+        Gallery.belongsTo(models.Itinerary, {foreignKey: 'itinerary'});
       }
     }
   });
