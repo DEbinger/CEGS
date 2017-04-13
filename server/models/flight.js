@@ -9,11 +9,12 @@ module.exports = function(sequelize, DataTypes) {
     infantInSeatCount: DataTypes.INTEGER,
     childCount: DataTypes.INTEGER,
     seniorCount: DataTypes.INTEGER,
-    refundable: DataTypes.BOOLEAN
+    refundable: DataTypes.BOOLEAN,
+    user: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        Flight.belongsTo(models.User, {foreignKey: 'user'});
       }
     }
   });
