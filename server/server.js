@@ -32,7 +32,7 @@ app.use('/', (req, res) => {
   res.send('testing');
 });
 
-require('../routes/routes.js')(app, passport);
+require('../routes/routes.js');
 
 app.listen(PORT, () => {
   console.log("Server listening on", PORT);
