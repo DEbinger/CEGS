@@ -10,6 +10,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        Hotel.hasMany(models.Itinerary);
         Hotel.belongsTo(models.User, {foreignKey: 'user'});
       }
     }
