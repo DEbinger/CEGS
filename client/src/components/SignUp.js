@@ -8,10 +8,23 @@ class SignUp extends Component {
 
         <form>
           <input type='text' placeholder='First Name' autocomplete='off' />
+          <br />
           <input type='text' placeholder='Last Name' autocomplete='off' />
-          <input type='text' placeholder='Password' autocomplete='off' />
-          <input type='text' placeholder='Confirm Password' autocomplete='off' />
-          <input type='text' placeholder='Email Address' autocomplete='off' />
+          <br />
+          <input type='email' placeholder='Email Address' autocomplete='off' />
+          <br />
+          <input type='password' placeholder='Password' autocomplete='off' />
+          <br />
+          <input type='password' placeholder='Confirm Password' autocomplete='off' />
+          <br />
+          <select name="security_question">
+            <option value="color">What is your favorite color?</option>
+            <option value="school">What is the name of the high school you attended?</option>
+            <option value="birthplace">What city were you born in?</option>
+          </select>
+          <br />
+          <input type='text' placeholder='Security Answer' autocomplete='off' />
+          <br />
           <input type='submit' value='Sign Up' />
         </form>
       </div>
