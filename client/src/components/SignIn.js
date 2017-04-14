@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SignIn extends Component {
   render() {
@@ -12,6 +13,7 @@ class SignIn extends Component {
           <input type='password' placeholder='Password' autocomplete='off' />
           <br />
           <input type='submit' value='Login' />
+        	<Link to='/resetpassword'>Reset My Password</Link>
         </form>
       </div>
     );
