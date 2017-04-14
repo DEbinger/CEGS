@@ -13,6 +13,7 @@ class SignIn extends Component {
           <input type='password' placeholder='Password' autocomplete='off' />
           <br />
           <input type='submit' value='Login' />
+          <br />
         	<Link to='/resetpassword'>Reset My Password</Link>
         </form>
       </div>
