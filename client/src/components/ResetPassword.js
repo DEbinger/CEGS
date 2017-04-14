@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class SignUp extends Component {
+class ResetPassword extends Component {
   render() {
     return (
       <div>
@@ -29,4 +29,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default ResetPassword;
