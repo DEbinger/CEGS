@@ -11,11 +11,12 @@ function users(state = initialState, action) {
         users: [
           ...state.users,
           {
-            firstName: action.firstName,
-            lastName: action.lastName,
+            first_name: action.first_name,
+            last_name: action.last_name,
             email: action.email,
             password: action.password,
-            securityQuest: action.securityQuestion
+            security_question: action.security_question,
+            security_answer: action.security_answer
           }
         ]
       });

@@ -1,12 +1,13 @@
 export const ADD_USER = 'ADD_USER';
 
-export function addUser(firstName, lastName, email, password, securityQuestion) {
+export function addUser(first_name, last_name, email, password, security_question, security_answer) {
   return {
     type: ADD_USER,
-    firstName,
-    lastName,
+    first_name,
+    last_name,
     email,
     password,
-    securityQuestion
+    security_question,
+    security_answer
   };
 }
