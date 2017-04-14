@@ -4,7 +4,7 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-        <h1>SIGN UP PAGE</h1>
+        <h1>SIGN UP</h1>
 
         <form>
           <input type='text' placeholder='First Name' autocomplete='off' />
