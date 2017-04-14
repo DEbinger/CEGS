@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import Nav from './components/Nav';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import ResetPassword from './components/ResetPassword';
 import Cars from './components/Cars';
 import Flights from './components/Flights';
 import Hotels from './components/Hotels';
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route exact path='/' component={ App } />
       <Route path='/signin' component={ SignIn } />
       <Route path='/signup' component={ SignUp } />
+      <Route path='/resetpassword' component={ResetPassword} />
       <Route path='/flights' component={ Flights } />
       <Route path='/hotels' component={ Hotels } />
       <Route path='/cars' component={ Cars } />
