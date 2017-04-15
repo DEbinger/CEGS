@@ -16,6 +16,8 @@ class SignIn extends Component {
           <br />
         	<Link to='/resetpassword'>Reset My Password</Link>
         </form>
+        <input type='submit' value='Continue with Google' />
+        <input type='submit' value='Continue with Facebook' />
       </div>
     );
   }
