@@ -5,7 +5,6 @@ class SignUp extends Component {
     return (
       <div>
         <h1>SIGN UP</h1>
-
         <form>
           <input type='text' placeholder='First Name' autocomplete='off' />
           <br />
