@@ -29,7 +29,10 @@ import createHistory from 'history/createBrowserHistory';
 
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Link,
+  Redirect,
+  withRouter
 } from 'react-router-dom';
 
 const history = createHistory();
