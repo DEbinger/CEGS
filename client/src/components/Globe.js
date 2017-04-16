@@ -10,18 +10,9 @@ class Globe extends Component {
 
 export default Globe;
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Earth globe</title>
+import rd3 from 'react-d3-library'
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
-</head>
-<body>
-  <script>
+var node = document.createElement('div')
 
   var width = 600,
   height = 500,
@@ -156,6 +147,3 @@ export default Globe;
     }
 
   }
-  </script>
-</body>
-</html>
