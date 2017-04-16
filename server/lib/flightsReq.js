@@ -25,7 +25,7 @@ function flightsList() {
       });
 
       res.on('end', () => {
-        resolve(JSON.parse(myData));
+        resolve(myData);
       })
       .on('error', (e) => {
         console.log(`Got error: ${e}`);

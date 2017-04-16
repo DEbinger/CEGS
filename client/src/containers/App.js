@@ -3,6 +3,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+
+  componentWillMount() {
+    console.log('mounting in app');
+  }
+
   render() {
     return (
       <h1>HOME PAGE</h1>
