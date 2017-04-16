@@ -1,15 +1,42 @@
+// jshint esversion:6
+
 const express = require('express');
 const app = express();
 const router = express.Router();
 const passport = require('passport');
+const db = require('../models');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+const User = db.User;
 
   router.get('/', function(req, res){
-    res.send('hello world');
+    res.send('In the User Route');
   });
 
   router.get('/login', function(req, res){
-    res.render('', { message: req.flash('loginMessage') });//login button render
+    res.send('Login Test');
   });
+
+  router.post('/login', function(req, res){
+    console.log('req.body');
+    bcrypt.genSalt(saltRounds, function(err, salt) {
+      bcrypt.hash(req.body.password, salt, function(err, hash) {
+        User.create({
+          first_name: req.body.first_name,
+          last_name: req.body.last_name,
+          email: req.body.email,
+          password: hash
+        })
+        .then((users) =>{
+          res.json(users);
+        })
+        .catch(err => {
+          console.log("USER ALREADY EXISTS", err);
+          //redirect to making user again and/or flash the error message
+        });
+      });
+    });
+
   router.post('/login', passport.authenticate('local-login', {
     successRedirect: '/profile',
     failureRedirect: '/login',
@@ -19,7 +46,6 @@ const passport = require('passport');
   router.get('/signup', function(req, res){
     res.render('', { message: req.flash('signupMessage') });//signup button render
   });
-
 
   router.post('/signup', passport.authenticate('local-signup', {
     successRedirect: '/',
@@ -47,12 +73,11 @@ const passport = require('passport');
     failureRedirect: '/'
     }));
 
-
-
   router.get('/logout', function(req, res){
     req.logout();
     res.redirect('/');
   });
+});
 
 function isLoggedIn(req, res, next) {
   if(req.isAuthenticated()){
