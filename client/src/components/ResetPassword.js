@@ -8,7 +8,7 @@ class ResetPassword extends Component {
         <h1>Reset Password</h1>
 
         <form>
-          <input type='email' placeholder='Email Address' autocomplete='off' />
+          <input type='email' placeholder='Email' autocomplete='off' />
           <br />
           <input type='password' placeholder='New Password' autocomplete='off' />
           <br />
