@@ -20,6 +20,7 @@ router.get('/list', (req, res) => {
   .then(results => {
     console.log("IN ROUTE");
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    console.log(results);
     res.send(results);
   });
 });
