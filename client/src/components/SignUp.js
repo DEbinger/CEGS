@@ -1,44 +1,112 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addUser } from '../redux/actions/usersAction';
+import signUpReq from '../../../server/lib/userReq';
 
 class SignUp extends Component {
 
-constructor () {
-  super();
+  constructor () {
+    super();
 
-    this.state = {
-    first_name: '',
-    last_name: '',
-    email: '',
-    password: '',
-    security_question: '',
-    security_answer: ''
-  };
+      this.state = {
+      first_name: '',
+      last_name: '',
+      email: '',
+      password: '',
+      security_question: '',
+      security_answer: ''
+    };
 
-}
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFirstName = this.handleFirstName.bind(this);
+    this.handleLastName = this.handleLastName.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
+    this.handlePassword = this.handlePassword.bind(this);
+    this.handleSecurityQuestion = this.handleSecurityQuestion.bind(this);
+    this.handleSecurityAnswer = this.handleSecurityAnswer.bind(this);
+
+  }
+
+  // XHR Request
+  addUser(user){
+    signUpReq()
+      .then(user => {
+        console.log('User Signed Up: ', user)
+        this.props.onAddUser(user.id, user.first_name, user.last_name, user.email, user.password, user.security_question, user.security_answer);
+      })
+  }
+
+  handleSubmit(event){
+    event.preventDefault();
+    this.addUser({
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      password: this.state.password,
+      security_question: this.state.security_question,
+      security_answer: this.state.security_answer
+    })
+  }
+
+  handleFirstName(event){
+    this.setState({
+      first_name: event.target.value
+    })
+  }
+
+  handleLastName(event){
+    this.setState({
+      last_name: event.target.value
+    })
+  }
+
+  handleEmail(event){
+    this.setState({
+      email: event.target.value
+    })
+  }
+
+  handlePassword(event){
+    this.setState({
+      password: event.target.value
+    })
+  }
+
+  handleSecurityQuestion(event){
+    this.setState({
+      security_question: event.target.value
+    })
+  }
+
+  handleSecurityAnswer(event){
+    this.setState({
+      security_answer: event.target.value
+    })
+  }
 
   render() {
     return (
       <div>
         <h1>SIGN UP</h1>
-        <form>
-          <input type='text' name="first_name" value={this.state.first_name} placeholder='First Name' autoComplete='off' />
+        <form onSubmit={this.handleSubmit}>
+          <input type='text' name="first_name" placeholder='First Name' autoComplete='off' value={this.state.first_name} onChange={this.handleFirstName} />
           <br />
-          <input type='text' name="last_name" value={this.state.last_name} placeholder='Last Name' autoComplete='off' />
+          <input type='text' name="last_name" placeholder='Last Name' autoComplete='off' value={this.state.last_name} onChange={this.handleLastName} />
           <br />
-          <input type='email' name="email" value={this.state.email} placeholder='Email' autoComplete='off' />
+          <input type='email' name="email" placeholder='Email' autoComplete='off' value={this.state.email} onChange={this.handleEmail} />
           <br />
-          <input type='password' name="password" value={this.state.password} placeholder='Password' autoComplete='off' />
+          <input type='password' name="password" placeholder='Password' autoComplete='off' value={this.state.password} onChange={this.handlePassword} />
           <br />
           <input type='password' placeholder='Confirm Password' autoComplete='off' />
           <br />
-          <select name="security_question" value={this.state.security_question}>
-            <option selected disabled>Select a Security Question</option>
+          <select name="security_question" value={this.state.security_question} onChange={this.handleSecurityQuestion} >
+            <option>Select a Security Question</option>
             <option value="color">What is your favorite color?</option>
             <option value="school">What is the name of the high school you attended?</option>
             <option value="birthplace">What city were you born in?</option>
           </select>
           <br />
-          <input type='text' name="security_answer" value={this.state.security_answer} placeholder='Security Answer' autoComplete='off' />
+          <input type='text' name="security_answer" placeholder='Security Answer' autoComplete='off' value={this.state.security_answer} onChange={this.handleSecurityAnswer} />
           <br />
           <input type='submit' value='Sign Up' />
         </form>
@@ -49,4 +117,21 @@ constructor () {
   }
 }
 
-export default SignUp;
+const mapStateToProps = (state) => {
+  return({
+    users: state.users
+  })
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return({
+    onAddUser: (id, first_name, last_name, email, password, security_question, security_answer) => {
+      dispatch(addUser(id, first_name, last_name, email, password, security_question, security_answer));
+    }
+  })
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignUp);
