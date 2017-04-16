@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { listHotels } from '../redux/actions/hotelsAction';
+import { connect } from 'react-redux';
 
 class HotelsForm extends Component {
   constructor() {
@@ -16,7 +18,27 @@ class HotelsForm extends Component {
     console.log('values', values);
     let oReq = new XMLHttpRequest();
     oReq.addEventListener('load', (results) => {
-      console.log(results.target.responseText);
+      let hotels = JSON.parse(results.target.responseText);
+      // console.log('hotels', hotels);
+      // console.log('first hotel', hotels.results[0]);
+      // console.log('second hotel', hotels.results[1]);
+      console.log(hotels);
+      hotels.results.forEach( hotel => {
+        let rating = hotel.awards[0];
+        if ( rating === undefined ) {
+          rating = 'N/A';
+        } else {
+          rating = hotel.awards[0].rating;
+        }
+        this.props.onHotelsSearch(
+          hotel.property_name,
+          rating,
+          hotel.amenities,
+          hotel.total_price.amount
+        );
+      });
+      this.props.history.push('/hotels');
+      // console.log(this.props);
     });
     oReq.open('POST', 'http://localhost:9000/hotels/list', true);
     oReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -25,6 +47,7 @@ class HotelsForm extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
     	<div>
       	<h1>HOTELS FORM PAGE</h1>
@@ -48,4 +71,21 @@ class HotelsForm extends Component {
   }
 }
 
-export default HotelsForm;
+const mapStateToProps = (state) => {
+  return {
+    hotels: state.hotels
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onHotelsSearch: (name, rating, amenities, cost) => {
+      dispatch(listHotels(name, rating, amenities, cost))
+    }
+  }
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HotelsForm);
