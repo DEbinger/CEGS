@@ -18,10 +18,10 @@ class FlightsForm extends Component {
     // let form = document.getElementsByClassName('flight-form');
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (result) => {
-      // this.props.history.push('/flights');
+      this.props.history.push('/flights');
       // console.log(result.target.responseText);
-      let data = JSON.parse(result.target.responseText);
-      console.log(data.trips.tripOption);
+      // let data = JSON.parse  (result.target.responseText);
+      // console.log(data.trips.tripOption);
     });
     oReq.open("GET", "http://localhost:9000/flights/list");
     oReq.send();

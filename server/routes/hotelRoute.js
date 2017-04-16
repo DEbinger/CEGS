@@ -13,9 +13,15 @@ router.get('/', (req, res) => {
 
 
 // GET /hotel/list/:apikey/:location/:check_in/:check_out
-router.get('/list', (req, res) => {
-  request.hotelsList()
+router.post('/list', (req, res) => {
+  const {
+    location,
+    check_in,
+    check_out
+  } = req.body;
+  request.hotelsList(location, check_in, check_out)
   .then(results => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.send(results);
   });
 });

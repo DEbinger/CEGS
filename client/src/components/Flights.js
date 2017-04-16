@@ -54,25 +54,9 @@ class Flights extends Component {
 					<input type="submit" value="Search Flights" />
       	</form>
       </div>
+    </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    flights: state.flights,
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // onFlightsSearch: (origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user) => {
-    //   dispatch(listFlights(origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user))
-    // }
-  }
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Flights);
+export default Flights;
