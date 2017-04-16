@@ -37,14 +37,39 @@ class FlightsForm extends Component {
           <br/>
           <input className='flight-form' type='text' placeholder='destination' autoComplete='off' name='destination' />
           <br/>
-          adultCount:
-          <br/>
-          <input className='flight-form' type='number' min='1' name='adultCount' />
-          <br/>
-          date:
-          <br/>
+          Date:
           <input className='flight-form' type='date' min={ new Date() } name='date' />
           <br/>
+          <label>
+            Adult(s):
+              <input className='flight-form' type='number' min='1' name='adultCount' />
+          </label>
+          <br />
+          <label>
+            Infant(s) in Lap:
+              <input className='flight-form' type='number' min='0' name='infantInLapCount' />
+            </label>
+          <br />
+          <label>
+            Infant(s) in Seat:
+              <input className='flight-form' type='number' min='0' name='infantInSeatCount' />
+          </label>
+          <br />
+          <label>
+            Child:
+              <input className='flight-form' type='number' min='0' name='childCount' />
+          </label>
+          <br />
+          <label>
+            Senior(s):
+              <input className='flight-form' type='number' min='0' name='seniorCount' />
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" name='refundable' />
+            Refundable
+          </label>
+          <br />
           <input  type='submit' value='Search Flights' />
         </form>
       </div>
