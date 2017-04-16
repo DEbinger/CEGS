@@ -40,3 +40,27 @@ select {
   font-size: 14px;
   font-family: sans-serif;
 }
+
+.map {
+  background-color: #87CEFA;
+}
+      
+.background {
+  fill: none;
+}
+      
+.countries {
+  fill: #90EE90;
+  stroke: #FFFFFF;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.plane {
+  fill: #FF7F50;
+  stroke: #D2691E;
+}
+
+path.route {
+  opacity: 0;
+}
