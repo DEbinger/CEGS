@@ -9,10 +9,10 @@ import Nav from './components/Nav';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import ResetPassword from './components/ResetPassword';
-import Cars from './components/Cars';
+import CarsForm from './components/CarsForm';
 import FlightsForm from './components/FlightsForm';
 import Flights from './components/Flights';
-import Hotels from './components/Hotels';
+import HotelsForm from './components/HotelsForm';
 import Itinerary from './components/Itinerary';
 
 //REDUX STUFF
@@ -55,8 +55,8 @@ ReactDOM.render(
         <Route path='/resetpassword' component={ResetPassword} />
         <Route path='/flightsform' component={ FlightsForm } />
         <Route path='/flights' component={ Flights } />
-        <Route path='/hotels' component={ Hotels } />
-        <Route path='/cars' component={ Cars } />
+        <Route path='/hotelsform' component={ HotelsForm } />
+        <Route path='/carsform' component={ CarsForm } />
         <Route path='/itinerary' component={ Itinerary } />
       </div>
     </Router>
