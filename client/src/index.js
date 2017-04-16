@@ -19,7 +19,9 @@ import Itinerary from './components/Itinerary';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Redirect,
+  withRouter
 } from 'react-router-dom';
 
 ReactDOM.render(

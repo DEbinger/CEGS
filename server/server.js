@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const db = require('./models');
 const passport = require('passport');
 const flash = require('connect-flash');
-const LocalStrategy = require('passport-local').Strategy;
 
 require('../auth/passport')(passport);
 
@@ -19,6 +19,7 @@ const {HOTEL_CAR_KEY, FLIGHT_KEY} = process.env;
 const flightsRoute = require('./routes/flightsRoute.js');
 const carRoute = require('./routes/carRoute.js');
 const hotelRoute = require('./routes/hotelRoute.js');
+const userRoute = require('./routes/userRoute.js');
 
 app.use(bodyParser.urlencoded( {
   extended : true
@@ -37,13 +38,14 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 app.use('/flights', flightsRoute);
 app.use('/hotels', hotelRoute);
 app.use('/cars', carRoute);
+app.use('/users', userRoute);
 
 app.use('/', (req, res) => {
   res.send('BAD ROUTE');
 });
 
-require('../routes/routes.js');
 
 app.listen(PORT, () => {
   console.log("Server listening on", PORT);
+  db.sequelize.sync();
 });
