@@ -4,9 +4,10 @@ import './App.css';
 
 class App extends Component {
 
-  componentWillMount() {
-    console.log('mounting in app');
-  }
+  // componentWillMount() {
+  //   console.log('mounting in app');
+
+  // }
 
   render() {
     return (
@@ -14,5 +15,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;

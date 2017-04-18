@@ -5,8 +5,8 @@ import signUpReq from '../../../server/lib/userReq';
 
 class SignUp extends Component {
 
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
 
       this.state = {
       first_name: '',
@@ -28,16 +28,16 @@ class SignUp extends Component {
   }
 
   // XHR Request
-  addUser(user){
-    signUpReq()
-      .then(user => {
-        console.log('User Signed Up: ', user)
-        this.props.onAddUser(user.id, user.first_name, user.last_name, user.email, user.password, user.security_question, user.security_answer);
+  addUser(users){
+    signUpReq(users)
+      .then(users => {
+        console.log('User Signed Up: ', users);
+        this.props.onAddUser(users.id, users.first_name, users.last_name, users.email, users.password, users.security_question, users.security_answer);
       })
   }
 
   handleSubmit(event){
-    event.preventDefault();
+    console.log(this.state);
     this.addUser({
       first_name: this.state.first_name,
       last_name: this.state.last_name,
@@ -46,6 +46,7 @@ class SignUp extends Component {
       security_question: this.state.security_question,
       security_answer: this.state.security_answer
     })
+    event.preventDefault();
   }
 
   handleFirstName(event){
@@ -118,17 +119,17 @@ class SignUp extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return({
+  return{
     users: state.users
-  })
+  }
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return({
+  return{
     onAddUser: (id, first_name, last_name, email, password, security_question, security_answer) => {
       dispatch(addUser(id, first_name, last_name, email, password, security_question, security_answer));
     }
-  })
+  }
 }
 
 export default connect(
