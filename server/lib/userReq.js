@@ -1,15 +1,25 @@
-module.exports= function signUpReq(user){
+// function getUserReq(user){
+// 	return new Promise ( (resolve, reject) => {
+// 		console.log('Req User Displayed: ', this.responseText);
+// 	})
+// }
+
+
+function signUpReq(user){
 	return new Promise ( (resolve, reject) => {
+		console.log('Req User: ', user);
 		function reqListener(){
 			console.log('Signed Up: ', this.responseText);
-			let data = this.responseText;
+			let data = JSON.parse(this.responseText);
 			resolve(data);
 		}
 
 		const oReq = new XMLHttpRequest();
 		oReq.addEventListener('load', reqListener);
-		oReq.open('POST', '/signup', true);
+		oReq.open('POST', '/users/signup', true);
 		oReq.setRequestHeader('Content-Type', 'application/json');
-		oReq.send(user);
+		oReq.send(JSON.stringify(user));
 	});
 };
+
+module.exports = signUpReq;
