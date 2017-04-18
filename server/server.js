@@ -3,7 +3,7 @@
 const express = require('express');
 const session = require('express-session');
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 9000;
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const path = require('path');
@@ -24,6 +24,8 @@ const userRoute = require('./routes/userRoute.js');
 app.use(bodyParser.urlencoded( {
   extended : true
 }));
+
+app.use(bodyParser.json({type: 'application/json'}));
 
 app.use(session({
   secret: 'anystringoftext',
