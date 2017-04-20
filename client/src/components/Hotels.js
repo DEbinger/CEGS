@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Hotels extends Component {
-  constructor(props) {
-    super(props);
-
-  }
   render() {
     console.log(this.props);
     return (
@@ -20,10 +16,6 @@ class Hotels extends Component {
 }
 
 class HotelDiv extends Component {
-  constructor(props){
-    super(props);
-  }
-
   render() {
     return (
       <div>
