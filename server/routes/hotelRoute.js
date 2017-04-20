@@ -21,7 +21,6 @@ router.post('/list', (req, res) => {
   } = req.body;
   request.hotelsList(location, check_in, check_out)
   .then(results => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.send(results);
   });
 });
