@@ -18,6 +18,9 @@ const LocalStrategy = require('passport-local').Strategy;
     res.send('Login Test');
   });
 
+  router.get('/signup', function(req, res){
+    res.render('', { message: req.flash('signupMessage') });//signup button render
+  });
 
   passport.use(new LocalStrategy(
     function (email, password, done) {
@@ -59,7 +62,7 @@ passport.deserializeUser(function(user, done) {
   return done(null, user);
 });
 
-  router.post('/login', function(req, res){
+  router.post('/signup', function(req, res){
     console.log(req.body);
     bcrypt.genSalt(saltRounds, function(err, salt) {
       bcrypt.hash(req.body.password, salt, function(err, hash) {
@@ -72,7 +75,7 @@ passport.deserializeUser(function(user, done) {
           security_answer: req.body.security_answer
         })
         .then((users) =>{
-          res.json(users);
+          res.send(users);
         })
         .catch(err => {
           console.log("USER ALREADY EXISTS", err);
@@ -87,15 +90,10 @@ passport.deserializeUser(function(user, done) {
     failureFlash: true
   }));
 
-  router.get('/signup', function(req, res){
-    res.render('', { message: req.flash('signupMessage') });//signup button render
-  });
 
-  router.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/',
-    failureRedirect: '/signup',
-    failureFlash: true
-  }));
+  router.post('/signup', function(req, res){
+    console.log('sanity check');
+  });
 
   router.get('/profile', isLoggedIn, function(req, res){
     res.render('', { user: req.user });//profile render

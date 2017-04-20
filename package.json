@@ -35,8 +35,9 @@
     "pg": "^6.1.5",
     "pg-hstore": "^2.3.2",
     "react-d3-library": "^1.1.8",
+    "react-faux-dom": "^3.0.1",
     "sequelize": "^3.30.4",
-    "sequelize-cli": "^2.7.0"
-  },
-  "proxy": "http://localhost:9000"
+    "sequelize-cli": "^2.7.0",
+    "topojson": "^3.0.0"
+  }
 }

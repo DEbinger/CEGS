@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
+import { browserHistory } from 'react-router';
 import './index.css';
 
 //COMPONENTS
@@ -14,16 +15,20 @@ import FlightsForm from './components/FlightsForm';
 import Flights from './components/Flights';
 import HotelsForm from './components/HotelsForm';
 import Itinerary from './components/Itinerary';
+import Globe from './components/Globe';
 
 //REDUX STUFF
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import { routerReducer, syncHistoryWithStore, routerActions, routerMiddleware } from 'react-router-redux';
+import { UserAuthWrapper } from 'redux-auth-wrapper';
 
 //REDUCERS
-import users from './redux/reducers/usersReducer'
-import cars from './redux/reducers/carsReducer'
-import hotels from './redux/reducers/hotelsReducer'
-import flights from './redux/reducers/flightsReducer'
+import users from './redux/reducers/usersReducer';
+import cars from './redux/reducers/carsReducer';
+import hotels from './redux/reducers/hotelsReducer';
+import flights from './redux/reducers/flightsReducer';
+import authWrapperUserReducer from './redux/reducers/authWrapperUserReducer';
 
 import createHistory from 'history/createBrowserHistory';
 
@@ -39,12 +44,24 @@ const history = createHistory();
 
 const allReducers = combineReducers({
   users,
+  user: authWrapperUserReducer,
   cars,
   hotels,
   flights
 });
 
-let store = createStore(allReducers);
+const routingMiddleware = routerMiddleware(browserHistory);
+
+let store = createStore(allReducers,
+  applyMiddleware(routingMiddleware));
+
+
+const UserIsAuthenticated = UserAuthWrapper({
+  authSelector: state => state.user, // how to get the user state
+  redirectAction: routerActions.replace, // the redux action to dispatch for redirect
+  wrapperDisplayName: 'UserIsAuthenticated' // a nice name for this auth check
+});
+
 
 ReactDOM.render(
   <Provider store={ store } history={ history }>

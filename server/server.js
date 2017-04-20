@@ -25,6 +25,8 @@ app.use(bodyParser.urlencoded( {
   extended : true
 }));
 
+// app.use(bodyParser.json({type: 'application/json'}));
+
 app.use(session({
   secret: 'anystringoftext',
   saveUninitialized: true,
