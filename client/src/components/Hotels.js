@@ -31,11 +31,11 @@ class HotelDiv extends Component {
         <p>{ this.props.rating }</p>
         <p>{ this.props.amenties }</p>
         <p>{ this.props.cost }</p>
+        <hr/>
       </div>
     );
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {

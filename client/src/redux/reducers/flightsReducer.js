@@ -1,29 +1,39 @@
-import { LIST_FLIGHTS } from '../actions/flightsAction';
+import {
+  LIST_FLIGHTS,
+  SEARCH_FLIGHTS
+} from '../actions/flightsAction';
 
 const initialState = {
-  flights: ['TEST FLIGHT YO']
+  flightsList: ['TEST FLIGHT YO'],
+  searchValues: {
+    origin: '',
+    destination: '',
+    adultCount: '',
+    date: ''
+  }
 };
 
 function flights(state = initialState, action) {
   switch(action.type) {
     case LIST_FLIGHTS:
       return Object.assign({}, state, {
-        flights: [
-          ...state.flights,
+        flightsList: [
           {
-            origin: action.origin,
-            destination: action.destination,
-            date: action.date,
-            adultCount: action.adultCount,
-            infantInLapCount: action.infantInLapCount,
-            infantInSeatCount: action.infantInSeatCount,
-            childCount: action.childCount,
-            seniorCount: action.seniorCount,
-            refundable: action.refundable,
-            user: action.user
+            saleTotal: action.saleTotal,
+            flights: action.flights
           }
         ]
       });
+
+      case SEARCH_FLIGHTS:
+        return Object.assign({}, state, {
+          searchValues: {
+            origin: action.origin,
+            destination: action.destination,
+            adultCount: action.adultCount,
+            date: action.date
+          }
+        });
 
       default:
         return state;

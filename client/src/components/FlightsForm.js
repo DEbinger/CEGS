@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { listFlights } from '../redux/actions/flightsAction';
+import {
+  listFlights,
+  searchFlights
+} from '../redux/actions/flightsAction';
 import { connect } from 'react-redux';
 
 class FlightsForm extends Component {
@@ -15,16 +18,18 @@ class FlightsForm extends Component {
 
   submitHandler(event) {
     event.preventDefault();
-    // let form = document.getElementsByClassName('flight-form');
-    let oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", (result) => {
-      this.props.history.push('/flights');
-      // console.log(result.target.responseText);
-      // let data = JSON.parse  (result.target.responseText);
-      // console.log(data.trips.tripOption);
-    });
-    oReq.open("GET", "http://localhost:9000/flights/list");
-    oReq.send();
+    let form = document.getElementsByClassName('flight-form');
+    // let oReq = new XMLHttpRequest();
+    // oReq.addEventListener("load", (result) => {
+    //   this.props.history.push('/flights');
+    //   console.log(result.target.responseText);
+    //   let data = JSON.parse  (result.target.responseText);
+    //   console.log(data.trips.tripOption);
+    // });
+    // oReq.open("GET", "http://localhost:9000/flights/list");
+    // oReq.send();
+    this.props.onSearchFlights(form.origin.value, form.destination.value, form.adultCount.value, form.date.value);
+    this.props.history.push('/flights');
   }
 
   render() {
@@ -61,8 +66,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onFlightsSearch: (origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user) => {
-      dispatch(listFlights(origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user))
+    onSearchFlights: (origin, destination, adultCount, date) => {
+      dispatch(searchFlights(origin, destination, adultCount, date))
     }
   }
 };
