@@ -15,6 +15,7 @@ function users(state = initialState, action) {
             last_name: action.last_name,
             email: action.email,
             password: action.password,
+            confirm_password: action.confirm_password,
             security_question: action.security_question,
             security_answer: action.security_answer
           }
