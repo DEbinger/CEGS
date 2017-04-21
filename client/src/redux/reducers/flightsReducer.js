@@ -1,7 +1,11 @@
-import { LIST_FLIGHTS } from '../actions/flightsAction';
+import {
+  LIST_FLIGHTS,
+  SEARCH_FLIGHTS
+} from '../actions/flightsAction';
 
 const initialState = {
-  flights: ['TEST FLIGHT YO']
+  flights: [],
+  searchValues: {}
 };
 
 function flights(state = initialState, action) {
@@ -11,18 +15,23 @@ function flights(state = initialState, action) {
         flights: [
           ...state.flights,
           {
-            origin: action.origin,
-            destination: action.destination,
-            date: action.date,
-            adultCount: action.adultCount,
-            infantInLapCount: action.infantInLapCount,
-            infantInSeatCount: action.infantInSeatCount,
-            childCount: action.childCount,
-            seniorCount: action.seniorCount,
-            refundable: action.refundable,
-            user: action.user
+            id: action.id,
+            saleTotal: action.saleTotal,
+            slice: action.slice
           }
         ]
+      });
+
+    case SEARCH_FLIGHTS:
+      return Object.assign({}, state, {
+        searchValues: {
+          origin: action.origin,
+          destination: action.destination,
+          adultCount: action.adultCount,
+          tripType: action.tripType,
+          departureDate: action.departureDate,
+          returnDepartureDate: action.returnDepartureDate
+        }
       });
 
       default:
@@ -31,3 +40,14 @@ function flights(state = initialState, action) {
 }
 
 export default flights;
+
+// flight:
+// -nav bar at top changes (profile, logout)
+// -tabs/buttons below nav (one way, roundtrip, multitrip)
+// -enter departure/arrival info (location, date, time)
+// -enter number of people
+// -search button -> flight options page
+
+// Flight Options:
+// -filter/sort based on price, airlines, stops (default cheapest)
+// -select flight button -> overpage page

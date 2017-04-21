@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { listFlights } from '../redux/actions/flightsAction';
+import {
+  searchFlights,
+  listFlights
+} from '../redux/actions/flightsAction';
 import { connect } from 'react-redux';
 
 class FlightsForm extends Component {
@@ -15,20 +18,36 @@ class FlightsForm extends Component {
 
   submitHandler(event) {
     event.preventDefault();
-    // let form = document.getElementsByClassName('flight-form');
+    let form = document.getElementsByClassName('flight-form');
+      let searchValues = `origin=${form.origin.value}&destination=${form.destination.value}&adultCount=${form.adultCount.value}&tripType=${form.tripType.value}&departureDate=${form.departureDate.value}&returnDepartureDate=${form.returnDepartureDate.value}`;
+      console.log(searchValues);
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (result) => {
+      this.props.onSearchFlights(form.origin.value, form.destination.value, form.adultCount.value, form.tripType.value, form.departureDate.value, form.returnDepartureDate.value);
+
+      let flightsArr = JSON.parse(result.target.responseText).trips.tripOption;
+      // console.log('REQ RESULT', JSON.parse(result.target.responseText).trips.tripOption);
+      flightsArr.forEach( flight => {
+        this.props.onListFlights(
+          flight.id,
+          flight.saleTotal,
+          flight.slice
+        );
+      });
+
+
       this.props.history.push('/flights');
-      // console.log(result.target.responseText);
-      // let data = JSON.parse  (result.target.responseText);
-      // console.log(data.trips.tripOption);
     });
-    oReq.open("GET", "http://localhost:9000/flights/list");
-    oReq.send();
+
+    oReq.open("POST", "/flights/list");
+    oReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    oReq.send(searchValues);
   }
 
+
+
   render() {
-    console.log(this.props);
+    console.log('FLIGHTS FORM PAGE', this.props);
     return (
       <div>
         <h1>FLIGHTS FORM PAGE</h1>
@@ -41,9 +60,17 @@ class FlightsForm extends Component {
           <br/>
           <input className='flight-form' type='number' min='1' name='adultCount' />
           <br/>
-          date:
+          <select className='flight-form' name='tripType'>
+            <option value='oneWay'>one way</option>
+            <option value='roundTrip'>round trip</option>
+          </select>
+          departure date:
           <br/>
-          <input className='flight-form' type='date' min={ new Date() } name='date' />
+          <input className='flight-form' type='date' min={ new Date() } name='departureDate' />
+          <br/>
+          return date:
+          <br/>
+          <input className='flight-form' type='date' name='returnDepartureDate' />
           <br/>
           <input  type='submit' value='Search Flights' />
         </form>
@@ -51,18 +78,19 @@ class FlightsForm extends Component {
     );
   }
 }
-
 const mapStateToProps = (state) => {
   return {
-    flights: state.flights,
-    hotels: state.hotels
+    flights: state.flights
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onFlightsSearch: (origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user) => {
-      dispatch(listFlights(origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user))
+    onSearchFlights: (origin, destination, adultCount, tripType, departureDate, returnDepartureDate) => {
+      dispatch(searchFlights(origin, destination, adultCount, tripType, departureDate, returnDepartureDate))
+    },
+    onListFlights: (id, saleTotal, slice) => {
+      dispatch(listFlights(id, saleTotal, slice))
     }
   }
 };

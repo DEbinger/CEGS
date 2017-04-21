@@ -7,56 +7,59 @@ class Flights extends Component {
   }
 
   render() {
-    console.log('in flights component');
-    console.log(this.props);
+    console.log('FLIGHTS LIST PAGE', this.props);
     return (
-      <div className='flights-list-container'>
-        <h1>Flights List Page</h1>
-    	<div>
-      	<h1>FLIGHTS PAGE</h1>
-      	<form>
-      		<input type="text" value="origin" placeholder="Origin" />
-      		<br />
-      		<input type="text" value="destination" placeholder="Destination" />
-      		<br />
-      		<input type="date" value="date"/>
-      		<br />
-      		<label>
-	      		Adult(s):
-	      			<input type="number" value="adultCount" />
-      		</label>
-      		<br />
-      		<label>
-	      		Infant(s) in Lap:
-	      			<input type="number" value="infantInLapCount" />
-	      		</label>
-	     		<br />
-      		<label>
-	      		Infant(s) in Seat:
-	      			<input type="number" value="infantInSeatCount" />
-      		</label>
-	     		<br />
-	     		<label>
-	     			Child:
-	     				<input type="number" value="childCount" />
-	     		</label>
-	     		<br />
-      		<label>
-	      		Senior(s):
-	      			<input type="number" value="seniorCount" />
-      		</label>
-					<br />
-					<label>
-						<input type="checkbox" value="refundable" />
-						Refundable
-					</label>
-					<br />
-					<input type="submit" value="Search Flights" />
-      	</form>
+      <div>
+        <h1>FLIGHTS LIST PAGE</h1>
+
+        {this.props.flights.flights.map( ({ id, saleTotal, slice }) =>
+            <FlightContainer key={ id } id={ id } saleTotal={ saleTotal } slice={ slice } />
+          )
+        }
       </div>
-    </div>
     );
   }
 }
 
-export default Flights;
+const FlightContainer = ( { id, saleTotal, slice } ) => (
+  <div>
+    <h3>{ id }</h3>
+    <h2>{ saleTotal }</h2>
+    { slice.map( ({ duration, segment }) =>
+      <SliceDiv key= { duration } segment={ segment } />
+    ) }
+  </div>
+);
+
+const SliceDiv = ( { id, segment } ) => (
+  <div className='slice-div'>
+    { segment.map( ({ id, cabin, leg }) => (
+      <SegmentDiv key={ id } cabin={ cabin } leg={ leg } />
+      )
+    ) }
+  </div>
+);
+
+const SegmentDiv = ( { id, cabin, leg } ) => (
+  <div>
+    <p>{ cabin }</p>
+    <p>{ leg[0].origin} to { leg[0].destination }</p>
+  </div>
+);
+
+const mapStateToProps = (state) => {
+  return {
+    flights: state.flights
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Flights);
