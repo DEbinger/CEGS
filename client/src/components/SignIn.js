@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Router, browserHistory } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
-import { addCard } from '../redux/actions/usersAction';
+import { addUser } from '../redux/actions/usersAction';
 
 class SignIn extends Component {
 
