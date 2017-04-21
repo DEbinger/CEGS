@@ -38,6 +38,10 @@ class SignUp extends Component {
 
   handleSubmit(event){
     console.log(this.state);
+
+    event.preventDefault();
+
+
     this.addUser({
       first_name: this.state.first_name,
       last_name: this.state.last_name,
@@ -89,7 +93,7 @@ class SignUp extends Component {
     return (
       <div>
         <h1>SIGN UP</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} ref="rest">
           <input type='text' name="first_name" placeholder='First Name' autoComplete='off' value={this.state.first_name} onChange={this.handleFirstName} />
           <br />
           <input type='text' name="last_name" placeholder='Last Name' autoComplete='off' value={this.state.last_name} onChange={this.handleLastName} />

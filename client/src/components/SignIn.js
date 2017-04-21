@@ -1,45 +1,83 @@
+// jshint esversion:6
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Router, browserHistory } from 'react-router';
+import createHistory from 'history/createBrowserHistory';
+import { addCard } from '../redux/actions/usersAction';
 
 class SignIn extends Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     this.state = {
-      first_name: '',
-      last_name: '',
       email: '',
-      password: '',
-      security_question: '',
-      security_answer: ''
+      password: ''
     };
+    this.handleEmail=this.handleEmail.bind(this);
+    this.handlePassword=this.handlePassword.bind(this);
+    this.handleSubmit=this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    console.log('test function');
+    event.preventDefault();
+    this.userIsLoggedIn({
+      email: this.state.email,
+      password: this.state.password
+    })
+    .then((data) => {
+      console.log("Data",data);
+      if(data){
+        this.props.history.push('/profile');
+      }
+        this.setState = {
+        email: '',
+        password: ''
+    };
+    });
+  }
+
+  handleEmail(event){
+    this.setState({
+      email : event.target.value
+    });
+  }
+
+  handlePassword(event){
+    this.setState({
+      password : event.target.value
+    });
   }
 
 
-  submitHandler(event) {
-    event.preventDefaul();
-    let oReq = new XMLHttpRequest();
-    oReq.addEventListener('load', (user) => {
-      let data = JSON.parse(user.target.responseText);
-      console.log(data);
+  userIsLoggedIn(user){
+    console.log(user);
+    return new Promise(function(resolve,reject){
+      var oReq = new XMLHttpRequest();
+      function reqListener(dataReturn){
+        console.log(dataReturn);
+      }
+      oReq.open('POST', '/users/signin', true);
+      oReq.setRequestHeader('Content-type',
+        'application/json');
+      oReq.addEventListener("load", reqListener);
+      oReq.send(JSON.stringify());
     });
-
-    oReq.open('GET', '/signup');
-    oReq.send();
   }
 
   render() {
     return (
-      <div>
+      <div className ='userSignIn'>
         <h1>SIGN IN</h1>
 
-        <form>
-          <input type='email' placeholder='Email Address' autoComplete='off' />
+        <form onSubmit={this.handleSubmit}>
+          <input type='email' onChange={this.handleEmail} placeholder='Email Address' autoComplete='off' />
           <br />
-          <input type='password' placeholder='Password' autoComplete='off' />
+          <input type='password' onChange={this.handlePassword} placeholder='Password' autoComplete='off' />
           <br />
-          <input type='submit' value='Login' />
+          <input type='submit' value='Sign In' />
           <br />
         	<Link to='/resetpassword'>Reset My Password</Link>
         </form>
