@@ -21,7 +21,7 @@ class SignIn extends Component {
   }
 
   handleSubmit(event) {
-    console.log('test function');
+    console.log('test function of handleSubmit');
     event.preventDefault();
     this.userIsLoggedIn({
       email: this.state.email,
@@ -30,12 +30,12 @@ class SignIn extends Component {
     .then((data) => {
       console.log("Data",data);
       if(data){
-        this.props.history.push('/profile');
+        // this.props.history.push('/profile');
       }
         this.setState = {
         email: '',
         password: ''
-    };
+     };
     });
   }
 
@@ -53,6 +53,7 @@ class SignIn extends Component {
 
 
   userIsLoggedIn(user){
+    user.username = user.email;
     console.log(user);
     return new Promise(function(resolve,reject){
       var oReq = new XMLHttpRequest();
@@ -63,7 +64,7 @@ class SignIn extends Component {
       oReq.setRequestHeader('Content-type',
         'application/json');
       oReq.addEventListener("load", reqListener);
-      oReq.send(JSON.stringify());
+      oReq.send(JSON.stringify(user));
     });
   }
 
