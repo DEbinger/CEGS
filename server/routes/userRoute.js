@@ -129,4 +129,20 @@ function isLoggedIn(req, res, next) {
   res.redirect('/signin');
 }
 
+  router.get('/profile/:id', (req, res) => {
+    console.log('WHAT: ', req.params.id);
+    User.find({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then((user => {
+      res.send(user);
+    }))
+    .catch((err) => {
+      console.log('Error: ', err);
+      res.send('Error', err);
+    });
+  });
+
 module.exports = router;
