@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import ResetPassword from './components/ResetPassword';
+import Profile from './components/Profile';
 import CarsForm from './components/CarsForm';
 import FlightsForm from './components/FlightsForm';
 import Flights from './components/Flights';
@@ -58,7 +59,8 @@ ReactDOM.render(
         <Route exact path='/' component={ App } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
-        <Route path='/resetpassword' component={ResetPassword} />
+        <Route path='/resetpassword' component={ ResetPassword } />
+        <Route path='/profile' component={ Profile } />
         <Route path='/flightsform' component={ FlightsForm } />
         <Route path='/flights' component={ Flights } />
         <Route path='/hotelsform' component={ HotelsForm } />
