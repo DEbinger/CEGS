@@ -16,8 +16,9 @@ import HotelsForm from './components/HotelsForm';
 import Itinerary from './components/Itinerary';
 
 //REDUX STUFF
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 //REDUCERS
 import users from './redux/reducers/usersReducer'
@@ -37,6 +38,8 @@ import {
 
 const history = createHistory();
 
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+
 const allReducers = combineReducers({
   users,
   cars,
@@ -44,7 +47,7 @@ const allReducers = combineReducers({
   flights
 });
 
-let store = createStore(allReducers);
+let store = createStore(allReducers, applyMiddleware(thunk) );
 
 ReactDOM.render(
   <Provider store={ store } history={ history }>

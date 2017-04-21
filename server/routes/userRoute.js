@@ -71,26 +71,35 @@ passport.deserializeUser(function(user, done) {
 
   router.post('/signup', function(req, res){
     console.log('Body ',req.body);
-    bcrypt.genSalt(saltRounds, function(err, salt) {
-      bcrypt.hash(req.body.password, salt, function(err, hash) {
-        User.create({
-          first_name: req.body.first_name,
-          last_name: req.body.last_name,
-          email: req.body.email,
-          password: hash,
-          security_question: req.body.security_question,
-          security_answer: req.body.security_answer
-        })
-        .then((users) =>{
-          console.log('Server User: ', users);
-          res.send(users);
-        })
-        .catch(err => {
-          console.log("USER ALREADY EXISTS", err);
-          //redirect to making user again and/or flash the error message
+    if(req.body.first_name !== '' && req.body.last_name !== '' && req.body.email !== '' && req.body.password !== '' && req.body.confirm_password !== '' && req.body.security_question !== '' && req.body.security_answer !== ''){
+      if(req.body.password === req.body.confirm_password){
+
+        bcrypt.genSalt(saltRounds, function(err, salt) {
+          bcrypt.hash(req.body.password, salt, function(err, hash) {
+            User.create({
+              first_name: req.body.first_name,
+              last_name: req.body.last_name,
+              email: req.body.email,
+              password: hash,
+              confirm_password: hash,
+              security_question: req.body.security_question,
+              security_answer: req.body.security_answer
+            })
+            .then((users) =>{
+              console.log('Server User: ', users);
+                res.send(users);
+            })
+            .catch(err => {
+              console.log('Something went wrong: ', err);
+            });
+          });
         });
-      });
-    });
+      }else{
+        console.log('Passwords don\'t match');
+      }
+    }else{
+      console.log('Must complete form to sign up!');
+    }
 
   // router.post('/login', passport.authenticate('local-signup', {
   //   successRedirect: '/',

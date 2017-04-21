@@ -2,6 +2,7 @@
 
 const express = require('express');
 const session = require('express-session');
+const flash = require('connect-flash');
 const app = express();
 const PORT = process.env.PORT || 9000;
 const bodyParser = require('body-parser');
@@ -9,7 +10,6 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const db = require('./models');
 const passport = require('passport');
-const flash = require('connect-flash');
 
 require('../auth/passport')(passport);
 
@@ -35,7 +35,8 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+
+// app.use(flash()); // use connect-flash for flash messages stored in session	
 
 app.use('/flights', flightsRoute);
 app.use('/hotels', hotelRoute);

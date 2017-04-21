@@ -48,7 +48,7 @@ class SignUp extends Component {
       last_name: this.state.last_name,
       email: this.state.email,
       password: this.state.password,
-      confirm_password: this.state.password,
+      confirm_password: this.state.confirm_password,
       security_question: this.state.security_question,
       security_answer: this.state.security_answer
     })
