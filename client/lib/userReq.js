@@ -20,6 +20,6 @@ function signUpReq(user){
 		oReq.setRequestHeader('Content-Type', 'application/json');
 		oReq.send(JSON.stringify(user));
 	});
-};
+}
 
 module.exports = signUpReq;

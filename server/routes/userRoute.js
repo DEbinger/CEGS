@@ -10,25 +10,29 @@ const saltRounds = 10;
 const User = db.User;
 const LocalStrategy = require('passport-local').Strategy;
 
-  router.get('/', function(req, res){
-    res.send('In the User Route');
-  });
+router.get('/', function(req, res){
+  res.send('In the User Route');
+});
 
-  router.get('/login', function(req, res){
-    res.send('Login Test');
-  });
+router.get('/signup', function(req, res){
+  res.send('Sign Up Route');
+});
+
+router.get('/signin', function(req, res){
+  res.send('Sign In Route');
+});
 
 
-  passport.use(new LocalStrategy(
-    function (email, password, done) {
-      User.findOne({
-        where: {
-          email: email
-        }
-      }).then ( email => {
-        if (email === null) {
-          console.log('email failed');
-          return done(null, false, {message: 'bad email'});
+passport.use(new LocalStrategy(
+  function (email, password, done) {
+    User.findOne({
+      where: {
+        email: email
+      }
+    }).then ( email => {
+      if (email === null) {
+        console.log('email failed');
+        return done(null, false, {message: 'bad email'});
 
       }else {
 
@@ -43,7 +47,7 @@ const LocalStrategy = require('passport-local').Strategy;
 
       }
     }).catch(err => {
-      console.log('error: ', err);
+      res.end();
     });
   })
 );
@@ -59,15 +63,8 @@ passport.deserializeUser(function(user, done) {
   return done(null, user);
 });
 
-  router.post('/login', passport.authenticate('local-login', {
-    successRedirect: '/profile',
-    failureRedirect: '/login',
-    failureFlash: true
-  }));
-
-  router.get('/signup', function(req, res){
-    res.render('', { message: req.flash('signupMessage') });//signup button render
-  });
+  router.post('/signin', passport.authenticate('local', { successRedirect: '/profile',
+    failureRedirect: '/signin' }));
 
   router.post('/signup', function(req, res){
     console.log('Body ',req.body);
@@ -88,9 +85,6 @@ passport.deserializeUser(function(user, done) {
             .then((users) =>{
               console.log('Server User: ', users);
                 res.send(users);
-            })
-            .catch(err => {
-              console.log('Something went wrong: ', err);
             });
           });
         });
@@ -100,14 +94,6 @@ passport.deserializeUser(function(user, done) {
     }else{
       console.log('Must complete form to sign up!');
     }
-
-  // router.post('/login', passport.authenticate('local-signup', {
-  //   successRedirect: '/',
-  //   failureRedirect: '/signup',
-  //   failureFlash: true
-  // })
-
-  // );
 
   router.get('/profile', isLoggedIn, function(req, res){
     res.render('', { user: req.user });//profile render
@@ -140,7 +126,7 @@ function isLoggedIn(req, res, next) {
     return next();
   }
 
-  res.redirect('/login');
+  res.redirect('/signin');
 }
 
 module.exports = router;
