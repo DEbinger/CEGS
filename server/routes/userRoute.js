@@ -71,7 +71,7 @@ passport.deserializeUser(function(user, done) {
 
   router.post('/signup', function(req, res){
     console.log('Body ',req.body);
-    if(req.body.first_name !== null && req.body.last_name !== null && req.body.email !== null && req.body.password !== null && req.body.confirm_password !== null && req.body.security_question !== null && req.body.security_answer !== null){
+    if(req.body.first_name !== '' && req.body.last_name !== '' && req.body.email !== '' && req.body.password !== '' && req.body.confirm_password !== '' && req.body.security_question !== '' && req.body.security_answer !== ''){
       if(req.body.password === req.body.confirm_password){
 
         bcrypt.genSalt(saltRounds, function(err, salt) {
@@ -97,6 +97,8 @@ passport.deserializeUser(function(user, done) {
       }else{
         console.log('Passwords don\'t match');
       }
+    }else{
+      console.log('Must complete form to sign up!');
     }
 
   // router.post('/login', passport.authenticate('local-signup', {
