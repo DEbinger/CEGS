@@ -2,7 +2,7 @@ const API_KEY = process.env.FLIGHT_API_KEY;
 const https = require('https');
 
 
-function flightsList(origin, destination, adultCount, tripType, date, returnDate) {
+function flightsList(origin, destination, adultCount, tripType, departureDate, returnDepartureDate) {
   return new Promise( (resolve, reject) => {
 
     let options = {
@@ -36,14 +36,14 @@ function flightsList(origin, destination, adultCount, tripType, date, returnDate
     let sliceValues = [ {
       origin,
       destination,
-      date
+      date: departureDate
     }];
 
     if ( tripType === 'roundTrip') {
       sliceValues.push( {
         origin: destination,
         destination: origin,
-        date: returnDate
+        date: returnDepartureDate
       });
     }
 

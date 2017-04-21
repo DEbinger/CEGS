@@ -22,10 +22,10 @@ router.post('/list', (req, res) => {
     destination,
     adultCount,
     tripType,
-    date,
-    returnDate
+    departureDate,
+    returnDepartureDate
   } = req.body;
-  request.flightsList(origin, destination, adultCount, tripType, date, returnDate)
+  request.flightsList(origin, destination, adultCount, tripType, departureDate, returnDepartureDate)
   .then(results => {
     res.send(results);
   });
