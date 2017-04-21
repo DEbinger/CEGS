@@ -15,11 +15,18 @@ router.get('/', (req, res) => {
 
 
 //POST /flights/list/:origin/:destination/:date
-router.get('/list', (req, res) => {
-  request.flightsList()
+router.post('/list', (req, res) => {
+  console.log('REQ BODY', req.body);
+  const {
+    origin,
+    destination,
+    adultCount,
+    tripType,
+    date,
+    returnDate
+  } = req.body;
+  request.flightsList(origin, destination, adultCount, tripType, date, returnDate)
   .then(results => {
-    console.log("IN ROUTE");
-    console.log(results);
     res.send(results);
   });
 });
