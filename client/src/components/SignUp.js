@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addUser } from '../redux/actions/usersAction';
-import signUpReq from '../../../server/lib/userReq';
+import signUpReq from '../../lib/userReq';
 
 class SignUp extends Component {
 
@@ -13,6 +13,7 @@ class SignUp extends Component {
       last_name: '',
       email: '',
       password: '',
+      confirm_password: '',
       security_question: '',
       security_answer: ''
     };
@@ -22,6 +23,7 @@ class SignUp extends Component {
     this.handleLastName = this.handleLastName.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
+    this.handleConfirmPassword = this.handleConfirmPassword.bind(this);
     this.handleSecurityQuestion = this.handleSecurityQuestion.bind(this);
     this.handleSecurityAnswer = this.handleSecurityAnswer.bind(this);
 
@@ -32,25 +34,34 @@ class SignUp extends Component {
     signUpReq(users)
       .then(users => {
         console.log('User Signed Up: ', users);
-        this.props.onAddUser(users.id, users.first_name, users.last_name, users.email, users.password, users.security_question, users.security_answer);
+        this.props.onAddUser(users.id, users.first_name, users.last_name, users.email, users.password, users.confirm_password, users.security_question, users.security_answer);
       })
   }
 
   handleSubmit(event){
     console.log(this.state);
-
+    
     event.preventDefault();
-
 
     this.addUser({
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
       password: this.state.password,
+      confirm_password: this.state.confirm_password,
       security_question: this.state.security_question,
       security_answer: this.state.security_answer
     })
-    event.preventDefault();
+
+    this.setState({
+      first_name: '',
+      last_name: '',
+      email: '',
+      password: '',
+      confirm_password: '',
+      security_question: '',
+      security_answer: ''
+    })
   }
 
   handleFirstName(event){
@@ -77,6 +88,12 @@ class SignUp extends Component {
     })
   }
 
+  handleConfirmPassword(event){
+    this.setState({
+      confirm_password: event.target.value
+    })
+  }
+
   handleSecurityQuestion(event){
     this.setState({
       security_question: event.target.value
@@ -93,7 +110,7 @@ class SignUp extends Component {
     return (
       <div>
         <h1>SIGN UP</h1>
-        <form onSubmit={this.handleSubmit} ref="rest">
+        <form onSubmit={this.handleSubmit} ref="reset">
           <input type='text' name="first_name" placeholder='First Name' autoComplete='off' value={this.state.first_name} onChange={this.handleFirstName} />
           <br />
           <input type='text' name="last_name" placeholder='Last Name' autoComplete='off' value={this.state.last_name} onChange={this.handleLastName} />
@@ -102,7 +119,7 @@ class SignUp extends Component {
           <br />
           <input type='password' name="password" placeholder='Password' autoComplete='off' value={this.state.password} onChange={this.handlePassword} />
           <br />
-          <input type='password' placeholder='Confirm Password' autoComplete='off' />
+          <input type='password' name="confirm_password" placeholder='Confirm Password' autoComplete='off' value={this.state.confirm_password} onChange={this.handleConfirmPassword} />
           <br />
           <select name="security_question" value={this.state.security_question} onChange={this.handleSecurityQuestion} >
             <option>Select a Security Question</option>
@@ -130,8 +147,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    onAddUser: (id, first_name, last_name, email, password, security_question, security_answer) => {
-      dispatch(addUser(id, first_name, last_name, email, password, security_question, security_answer));
+    onAddUser: (id, first_name, last_name, email, password, confirm_password, security_question, security_answer) => {
+      dispatch(addUser(id, first_name, last_name, email, password, confirm_password, security_question, security_answer));
     }
   }
 }
