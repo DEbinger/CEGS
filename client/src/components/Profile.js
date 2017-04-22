@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
-// import { addUserToState } from '../actions';
-import { Signin } from './SignIn';
+import { addUser } from '../redux/actions/usersAction';
+import getUserReq from '../../lib/userReq';
+import { SignUp } from './SignUp';
 
 import {
   BrowserRouter as Router,
@@ -41,27 +42,69 @@ class Profile extends Component {
   //   })
   // }
 
-  render(){
-    // if(this.props.loggedInUser) {
-    //   return (
-    //     <div>
-    //       <h1>this Profile</h1>
-    //     </div>
-    //   )
-    // }
-    // return (
-    //   <Redirect to={{
-    //     pathname: '/signin'
-    //   }}/>
-    // )
+   addUser(user){
+   getUserReq(user)
+     .then( user => {
+       console.log('UserProfile getUser', user);
+       this.props.onAddUser(user.id, user.first_name, user.last_name, user.email, user.security_question, user.security_answer);
+     });
+ }
 
-    return (
-      <div>
-        <h1>USER PROFILE</h1>
-      </div>
-    )
+ render(){
+   console.log('this.props: ', this.props.users);
+   return (
+     <div>
+     <h1>USER PROFILE</h1>
+
+     </div>
+
+   )
+ }
+}
+
+const mapStateToProps = (state) => {
+  return{
+    users: state.users
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    onAddUser: (id, first_name, last_name, email, password, security_question, security_answer) => {
+      dispatch(addUser(id, first_name, last_name, email, password, security_question, security_answer));
+    }
   }
 }
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Profile);
+
+//   render(){
+//       console.log('this: ', this.props);
+
+//     // if(this.props.loggedInUser) {
+//     //   return (
+//     //     <div>
+//     //       <h1>this Profile</h1>
+//     //     </div>
+//     //   )
+//     // }
+//     // return (
+//     //   <Redirect to={{
+//     //     pathname: '/signin'
+//     //   }}/>
+//     // )
+
+//     return (
+//       <div>
+//         <h1>USER PROFILE</h1>
+//         <p>{this.props.first_name}</p>
+//       </div>
+//     )
+//   }
+// }
 
 // const mapDispatchToProps = {
 //   onAddUser: addUserToState
@@ -77,4 +120,4 @@ class Profile extends Component {
 // export default connect(
 //   mapStateToProps, mapDispatchToProps)(secret)
 
-export default Profile;
+// export default Profile;
