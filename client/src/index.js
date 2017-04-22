@@ -20,12 +20,13 @@ import Itinerary from './components/Itinerary';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import * as ReduxDevTools from 'redux-devtools';
 
 //REDUCERS
-import users from './redux/reducers/usersReducer'
-import cars from './redux/reducers/carsReducer'
-import hotels from './redux/reducers/hotelsReducer'
-import flights from './redux/reducers/flightsReducer'
+import users from './redux/reducers/usersReducer';
+import cars from './redux/reducers/carsReducer';
+import hotels from './redux/reducers/hotelsReducer';
+import flights from './redux/reducers/flightsReducer';
 
 import createHistory from 'history/createBrowserHistory';
 
@@ -48,7 +49,10 @@ const allReducers = combineReducers({
   flights
 });
 
-let store = createStore(allReducers, applyMiddleware(thunk) );
+let store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk)
+);
+
+console.log('store', store);
 
 ReactDOM.render(
   <Provider store={ store } history={ history }>
