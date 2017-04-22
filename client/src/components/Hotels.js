@@ -22,15 +22,32 @@ class Hotels extends Component {
 class HotelDiv extends Component {
   constructor(props){
     super(props);
+
+  }
+
+  listAmenities() {
+    console.log('listAmenities');
+    let values = '';
+
+    this.props.amenities.forEach( ({ description }, idx) => {
+      console.log(description);
+      if ( idx === this.props.amenities.length - 1) {
+        values += `${description}.`;
+      } else {
+        values += `${description}, `;
+      }
+    });
+
+    return <p>Amenities: { values }</p>;
   }
 
   render() {
     return (
       <div>
         <h3>{ this.props.name }</h3>
-        <p>{ this.props.rating }</p>
-        <p>{ this.props.amenties }</p>
-        <p>{ this.props.cost }</p>
+        <p>Rating: { this.props.rating }</p>
+        { this.listAmenities() }
+        <p>Lowest Total Cost: { this.props.cost }</p>
         <hr/>
       </div>
     );

@@ -40,7 +40,7 @@ class HotelsForm extends Component {
       this.props.history.push('/hotels');
       // console.log(this.props);
     });
-    oReq.open('POST', 'http://localhost:9000/hotels/list', true);
+    oReq.open('POST', '/hotels/list', true);
     oReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     oReq.send(values);
 
