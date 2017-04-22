@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {
   searchFlights,
-  listFlights
+  listFlights,
+  clearState,
+  errorMsg
 } from '../redux/actions/flightsAction';
 import { connect } from 'react-redux';
 
@@ -24,19 +26,28 @@ class FlightsForm extends Component {
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (result) => {
       this.props.onSearchFlights(form.origin.value, form.destination.value, form.adultCount.value, form.tripType.value, form.departureDate.value, form.returnDepartureDate.value);
+      let data = JSON.parse(result.target.responseText);
+      console.log(data);
 
-      let flightsArr = JSON.parse(result.target.responseText).trips.tripOption;
+      this.props.onClearState();
+      if (!data.trips.hasOwnProperty('tripOption')) {
+        this.props.onErrorMsg('Not enough seats available');
+      } else {
+
+        let flightsArr = data.trips.tripOption;
+        flightsArr.forEach( flight => {
+          this.props.onListFlights(
+            flight.id,
+            flight.saleTotal,
+            flight.slice
+          );
+        });
+
+        this.props.history.push('/flights');
+      }
+
+      // console.log('THIS', JSON.parse(result.target.responseText));
       // console.log('REQ RESULT', JSON.parse(result.target.responseText).trips.tripOption);
-      flightsArr.forEach( flight => {
-        this.props.onListFlights(
-          flight.id,
-          flight.saleTotal,
-          flight.slice
-        );
-      });
-
-
-      this.props.history.push('/flights');
     });
 
     oReq.open("POST", "/flights/list");
@@ -74,6 +85,7 @@ class FlightsForm extends Component {
           <br/>
           <input  type='submit' value='Search Flights' />
         </form>
+        <p>{ this.props.flights.errorMsg }</p>
       </div>
     );
   }
@@ -91,6 +103,12 @@ const mapDispatchToProps = (dispatch) => {
     },
     onListFlights: (id, saleTotal, slice) => {
       dispatch(listFlights(id, saleTotal, slice))
+    },
+    onClearState: () => {
+      dispatch(clearState())
+    },
+    onErrorMsg: (errorMessage) => {
+      dispatch(errorMsg(errorMessage))
     }
   }
 };

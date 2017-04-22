@@ -1,11 +1,14 @@
 import {
   LIST_FLIGHTS,
-  SEARCH_FLIGHTS
+  SEARCH_FLIGHTS,
+  CLEAR_FLIGHTS,
+  ERROR_MESSAGE
 } from '../actions/flightsAction';
 
 const initialState = {
   flights: [],
-  searchValues: {}
+  searchValues: {},
+  errorMsg: ''
 };
 
 function flights(state = initialState, action) {
@@ -32,6 +35,17 @@ function flights(state = initialState, action) {
           departureDate: action.departureDate,
           returnDepartureDate: action.returnDepartureDate
         }
+      });
+
+    case CLEAR_FLIGHTS:
+      return Object.assign({}, state, {
+        flights: [],
+        errorMsg: ''
+      });
+
+    case ERROR_MESSAGE:
+      return Object.assign({}, state, {
+        errorMsg: action.errorMessage
       });
 
       default:

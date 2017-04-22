@@ -1,5 +1,7 @@
 export const LIST_FLIGHTS = 'LIST_FLIGHTS';
 export const SEARCH_FLIGHTS = 'SEARCH_FLIGHTS';
+export const CLEAR_STATE = 'CLEAR_STATE';
+export const ERROR_MESSAGE = 'ERROR_MESSAGE';
 
 export function listFlights(id, saleTotal, slice) {
   return {
@@ -19,6 +21,19 @@ export function searchFlights(origin, destination, adultCount, tripType, departu
     tripType,
     departureDate,
     returnDepartureDate
+  };
+}
+
+export function clearState() {
+  return {
+    type: CLEAR_STATE
+  };
+}
+
+export function errorMsg(errorMessage) {
+  return {
+    type: ERROR_MESSAGE,
+    errorMessage
   };
 }
 

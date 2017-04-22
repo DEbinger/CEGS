@@ -26,7 +26,7 @@ const FlightContainer = ( { id, saleTotal, slice } ) => (
     <h3>{ id }</h3>
     <h2>{ saleTotal }</h2>
     { slice.map( ({ duration, segment }) =>
-      <SliceDiv key= { duration } segment={ segment } />
+      <SliceDiv key={ duration } segment={ segment } />
     ) }
   </div>
 );
