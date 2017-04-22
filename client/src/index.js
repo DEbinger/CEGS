@@ -21,6 +21,7 @@ import Itinerary from './components/Itinerary';
 //REDUX STUFF
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 //REDUCERS
 import users from './redux/reducers/usersReducer';

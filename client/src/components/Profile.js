@@ -10,17 +10,17 @@ class Profile extends React.Component {
     super(props);
   }
 
-  xhrLoginCheck(){
+  xhrLoginCheck(user){
     return new Promise(function(resolve,reject){
       function reqListener(){
         resolve(this.responseText);
       }
       let oReq = new XMLHttpRequest();
-      oReq.open('POST', '/users/signin');
+      oReq.open('GET', '/users/profile');
       oReq.setRequestHeader('Content-type',
         'application/json');
       oReq.addEventListener("load", reqListener);
-      oReq.send();
+      oReq.send(JSON.stringify(user));
     });
   }
 

@@ -1,3 +1,5 @@
+// jshint esversion:6
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addUser } from '../redux/actions/usersAction';
@@ -33,7 +35,7 @@ class SignUp extends Component {
       .then(users => {
         console.log('User Signed Up: ', users);
         this.props.onAddUser(users.id, users.first_name, users.last_name, users.email, users.password, users.security_question, users.security_answer);
-      })
+      });
   }
 
   handleSubmit(event){
@@ -49,44 +51,44 @@ class SignUp extends Component {
       password: this.state.password,
       security_question: this.state.security_question,
       security_answer: this.state.security_answer
-    })
+    });
     event.preventDefault();
   }
 
   handleFirstName(event){
     this.setState({
       first_name: event.target.value
-    })
+    });
   }
 
   handleLastName(event){
     this.setState({
       last_name: event.target.value
-    })
+    });
   }
 
   handleEmail(event){
     this.setState({
       email: event.target.value
-    })
+    });
   }
 
   handlePassword(event){
     this.setState({
       password: event.target.value
-    })
+    });
   }
 
   handleSecurityQuestion(event){
     this.setState({
       security_question: event.target.value
-    })
+    });
   }
 
   handleSecurityAnswer(event){
     this.setState({
       security_answer: event.target.value
-    })
+    });
   }
 
   render() {

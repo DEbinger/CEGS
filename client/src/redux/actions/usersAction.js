@@ -13,12 +13,13 @@ export function addUser(first_name, last_name, email, password, security_questio
   };
 }
 
-export function addUserToState(id, firstName, lastName, email){
+export function addUserToState(id, firstName, lastName, email, password){
   return {
     type: ADD_USER_TO_STATE,
     id,
     firstName,
     lastName,
-    email
+    email,
+    password
   };
 }

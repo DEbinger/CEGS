@@ -2,6 +2,8 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addUserToState } from '../redux/actions/usersAction';
 
 class SignIn extends Component {
 
@@ -86,4 +88,22 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+const mapStateToProps = (state) => {
+  console.log(state)
+  return{
+    users: state.users
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    addUserToState: (id, first_name, last_name, email, password) => {
+      dispatch(addUserToState(id, first_name, last_name, email, password));
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignIn);
