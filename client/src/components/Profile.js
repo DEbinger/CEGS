@@ -1,16 +1,11 @@
-import React, {Component} from 'react'
+// jshint esversion:6
+
+import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { addUserToState } from '../actions';
-import { Signin } from './Signin';
+import { addUserToState } from '../redux/actions/usersAction';
+import { Redirect } from 'react-router-dom';
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Link
-} from 'react-router-dom';
-
-class secret extends Component {
+class Profile extends React.Component {
   constructor(props){
     super(props);
   }
@@ -23,22 +18,22 @@ class secret extends Component {
       let oReq = new XMLHttpRequest();
       oReq.open('POST', '/users/signin');
       oReq.setRequestHeader('Content-type',
-        'application/json')
-      oReq.addEventListener("load", reqListener)
-      oReq.send()
-    })
+        'application/json');
+      oReq.addEventListener("load", reqListener);
+      oReq.send();
+    });
   }
 
   componentDidMount(){
     this.xhrLoginCheck()
     .then((userData)=>{
-      console.log(this.props)
-      let user = JSON.parse(userData)
-      this.props.onAddUser(user.id, user.email)
+      console.log(this.props);
+      let user = JSON.parse(userData);
+      this.props.onAddUser(user.id, user.email);
     })
     .catch(function(err){
-      console.log("component will mount error",err)
-    })
+      console.log("component will mount error",err);
+    });
   }
 
   render(){
@@ -69,4 +64,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(
-  mapStateToProps, mapDispatchToProps)(secret)
+  mapStateToProps, mapDispatchToProps)(Profile)

@@ -17,19 +17,18 @@ router.get('/signup', function(req, res){
   res.send('Sign Up Route');
 });
 
-
-router.route("/signin")
+router.route('/signin')
   .get(function(req,res){
     res.send('Sign In Route');
   })
-  // .post(passport.authenticate('local',{
-  //   successRedirect:"/profile",
-  //   failureRedirect:"/signin"
-  // })
-  .post(function(req,res){
+  .post(passport.authenticate('local'),function(req,res){
     res.redirect('/profile');
-  })
-  ;
+  });
+
+router.route('/profile')
+  .get(function(req, res) {
+  res.send('profile test route');
+});
 
 router.post('/signup', function(req, res){
   bcrypt.genSalt(saltRounds, function(err, salt) {
@@ -51,16 +50,13 @@ router.post('/signup', function(req, res){
   });
 });
 
-router.get('/profile', isLoggedIn, function(req, res){
-  res.render('', { user: req.user });//profile render
-});
 
 router.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
 router.get('/auth/facebook/callback',
-  passport.authenticate('facebook',
-    {successRedirect: '/profile',
-    failureRedirect: '/'
+  passport.authenticate('facebook',{
+    successRedirect: '/profile',
+    failureRedirect: '/signin'
     }));
 
 router.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
@@ -68,7 +64,7 @@ router.get('/auth/google', passport.authenticate('google', {scope: ['profile', '
 router.get('/auth/google/callback',
   passport.authenticate('google', {
   successRedirect: '/profile',
-  failureRedirect: '/'
+  failureRedirect: '/signin'
   }));
 
 router.get('/logout', function(req, res){

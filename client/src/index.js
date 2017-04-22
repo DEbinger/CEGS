@@ -1,3 +1,5 @@
+// jshint esversion:6
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
@@ -8,6 +10,7 @@ import Sidebar from './components/Sidebar';
 import Nav from './components/Nav';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import Profile from './components/Profile';
 import ResetPassword from './components/ResetPassword';
 import CarsForm from './components/CarsForm';
 import FlightsForm from './components/FlightsForm';
@@ -20,10 +23,10 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
 //REDUCERS
-import users from './redux/reducers/usersReducer'
-import cars from './redux/reducers/carsReducer'
-import hotels from './redux/reducers/hotelsReducer'
-import flights from './redux/reducers/flightsReducer'
+import users from './redux/reducers/usersReducer';
+import cars from './redux/reducers/carsReducer';
+import hotels from './redux/reducers/hotelsReducer';
+import flights from './redux/reducers/flightsReducer';
 
 import createHistory from 'history/createBrowserHistory';
 
@@ -55,6 +58,7 @@ ReactDOM.render(
         <Route exact path='/' component={ App } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
+        <Route path='/profile' component={ Profile } />
         <Route path='/resetpassword' component={ResetPassword} />
         <Route path='/flightsform' component={ FlightsForm } />
         <Route path='/flights' component={ Flights } />

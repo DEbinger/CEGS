@@ -2,9 +2,6 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Router, browserHistory } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
-import { addCard } from '../redux/actions/usersAction';
 
 class SignIn extends Component {
 
@@ -30,7 +27,7 @@ class SignIn extends Component {
     .then((data) => {
       console.log("Data",data);
       if(data){
-        // this.props.history.push('/profile');
+        this.props.history.push('/profile');
       }
         this.setState = {
         email: '',
@@ -70,7 +67,7 @@ class SignIn extends Component {
 
   render() {
     return (
-      <div className ='userSignIn'>
+      <div className='userSignIn'>
         <h1>SIGN IN</h1>
 
         <form onSubmit={this.handleSubmit}>
