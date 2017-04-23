@@ -30,16 +30,17 @@ class SignUp extends Component {
   }
 
   // XHR Request
-  addUser(users){
-    signUpReq(users)
-      .then(users => {
-        console.log('User Signed Up: ', users);
-        this.props.onAddUser(users.id, users.first_name, users.last_name, users.email, users.password, users.confirm_password, users.security_question, users.security_answer);
+  addUser(user){
+    signUpReq(user)
+      .then(user => {
+        console.log('User Signed Up: ', user);
+        console.log('PROPS: ', this.props)
+        this.props.onAddUser(user);
       })
   }
 
   handleSubmit(event){
-    console.log(this.state);
+    console.log('WHAT THE STATE: ', this.state);
     
     event.preventDefault();
 
@@ -53,15 +54,16 @@ class SignUp extends Component {
       security_answer: this.state.security_answer
     })
 
-    this.setState({
-      first_name: '',
-      last_name: '',
-      email: '',
-      password: '',
-      confirm_password: '',
-      security_question: '',
-      security_answer: ''
-    })
+    // clears form after submit
+    // this.setState({
+    //   first_name: '',
+    //   last_name: '',
+    //   email: '',
+    //   password: '',
+    //   confirm_password: '',
+    //   security_question: '',
+    //   security_answer: ''
+    // })
   }
 
   handleFirstName(event){
@@ -107,6 +109,7 @@ class SignUp extends Component {
   }
 
   render() {
+    // console.log('SIGN UP STATE: ', this.state);
     return (
       <div>
         <h1>SIGN UP</h1>
@@ -147,8 +150,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    onAddUser: (id, first_name, last_name, email, password, confirm_password, security_question, security_answer) => {
-      dispatch(addUser(id, first_name, last_name, email, password, confirm_password, security_question, security_answer));
+    onAddUser: (user) => {
+      dispatch(addUser(user));
     }
   }
 }
