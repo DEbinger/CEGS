@@ -1,13 +1,9 @@
 // jshint esversion:6
 
-import React, {Component} from 'react'
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
 import { addUser } from '../redux/actions/usersAction';
 import getUserReq from '../../lib/userReq';
 import { SignUp } from './SignUp';
-
-
-import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { addUserToState } from '../redux/actions/usersAction';
 import { Redirect } from 'react-router-dom';
@@ -17,34 +13,6 @@ class Profile extends Component {
   constructor(props){
     super(props);
   }
-
-
-  xhrLoginCheck(user){
-    return new Promise(function(resolve,reject){
-      function reqListener(){
-        resolve(this.responseText);
-      }
-      let oReq = new XMLHttpRequest();
-      oReq.open('GET', '/users/profile');
-      oReq.setRequestHeader('Content-type',
-        'application/json');
-      oReq.addEventListener("load", reqListener);
-      oReq.send(JSON.stringify(user));
-    });
-  }
-
-  componentDidMount(){
-    this.xhrLoginCheck()
-    .then((userData)=>{
-      console.log(this.props);
-      let user = JSON.parse(userData);
-      this.props.onAddUser(user.id, user.email);
-    })
-    .catch(function(err){
-      console.log("component will mount error",err);
-    });
-  }
-
 
    addUser(user){
    getUserReq(user)

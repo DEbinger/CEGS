@@ -12,7 +12,6 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Profile from './components/Profile';
 import ResetPassword from './components/ResetPassword';
-import Profile from './components/Profile';
 import CarsForm from './components/CarsForm';
 import FlightsForm from './components/FlightsForm';
 import Flights from './components/Flights';
