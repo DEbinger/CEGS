@@ -15,9 +15,9 @@ class ResetPassword extends Component {
           <input type='password' placeholder='Confirm New Password' autocomplete='off' />
           <br />
           <select name="security_question">
-            <option value="What is your favorite color?">What is your favorite color?</option>
-            <option value="What is the name of the high school you attended?">What is the name of the high school you attended?</option>
-            <option value="What city were you born in?">What city were you born in?</option>
+            <option value="color">What is your favorite color?</option>
+            <option value="school">What is the name of the high school you attended?</option>
+            <option value="birthplace">What city were you born in?</option>
           </select>
           <br />
           <input type='text' placeholder='Security Answer' autocomplete='off' />

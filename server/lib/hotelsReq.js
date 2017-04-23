@@ -1,9 +1,9 @@
 const API_KEY = process.env.HOTEL_API_KEY;
 const https = require('https');
 
-function hotelsList() {
+function hotelsList(location, check_in, check_out) {
   return new Promise( (resolve, reject) => {
-    https.get(`https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=${API_KEY}&location=BOS&check_in=2017-08-15&check_out=2017-08-16`, (res) => {
+    https.get(`https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=${API_KEY}&location=${location}&check_in=${check_in}&check_out=${check_out}`, (res) => {
 
       let myData = '';
 

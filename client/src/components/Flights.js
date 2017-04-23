@@ -7,32 +7,21 @@ class Flights extends Component {
   }
 
   render() {
-    console.log('in flights component');
     console.log(this.props);
     return (
-      <div className='flights-list-container'>
-        <h1>Flights List Page</h1>
-      	<h1>FLIGHTS PAGE</h1>
-      </div>
+
+      <h1>FLIGHTS LIST PAGE</h1>
+
     );
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    flights: state.flights,
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // onFlightsSearch: (origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user) => {
-    //   dispatch(listFlights(origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user))
-    // }
+    flights: state.flights
   }
 };
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(Flights);

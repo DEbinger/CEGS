@@ -1,85 +1,18 @@
-// jshint esversion:6
-
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { addUserToState } from '../redux/actions/usersAction';
-import { Router, browserHistory } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
-import { addUser } from '../redux/actions/usersAction';
 
-
-class SignIn extends React.Component {
-
-  constructor(props){
-    super(props);
-
-    this.state = {
-      email: '',
-      password: ''
-    };
-    this.handleEmail=this.handleEmail.bind(this);
-    this.handlePassword=this.handlePassword.bind(this);
-    this.handleSubmit=this.handleSubmit.bind(this);
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    this.userIsLoggedIn({
-      email: this.state.email,
-      password: this.state.password
-    })
-    .then((data) => {
-      console.log("Data",data);
-      if(data){
-        this.props.history.push('/profile');
-      }
-    });
-  }
-
-  handleEmail(event){
-    this.setState({
-      email : event.target.value
-    });
-  }
-
-  handlePassword(event){
-    this.setState({
-      password : event.target.value
-    });
-  }
-
-
-  userIsLoggedIn(user){
-    user.username = user.email;
-    console.log(user);
-    return new Promise(function(resolve,reject){
-      var oReq = new XMLHttpRequest();
-      function reqListener(dataReturn){
-        let results = this.responseText;
-        console.log(results)
-        resolve(results);
-      }
-      oReq.open('POST', '/users/signin', true);
-      oReq.setRequestHeader('Content-type',
-        'application/json');
-      oReq.addEventListener("load", reqListener);
-      oReq.send(JSON.stringify(user));
-    });
-  }
-
+class SignIn extends Component {
   render() {
     return (
-      <div className='userSignIn'>
+      <div>
         <h1>SIGN IN</h1>
 
-        <form onSubmit={this.handleSubmit}>
-          <input type='email' onChange={this.handleEmail} placeholder='Email Address' autoComplete='off' />
+        <form>
+          <input type='email' placeholder='Email Address' autocomplete='off' />
           <br />
-          <input type='password' onChange={this.handlePassword} placeholder='Password' autoComplete='off' />
+          <input type='password' placeholder='Password' autocomplete='off' />
           <br />
-          <input type='submit' value='Sign In' />
+          <input type='submit' value='Login' />
           <br />
         	<Link to='/resetpassword'>Reset My Password</Link>
         </form>
@@ -90,22 +23,4 @@ class SignIn extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  console.log(state)
-  return{
-    users: state.users
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return{
-    addUserToState: (id, first_name, last_name, email, password) => {
-      dispatch(addUserToState(id, first_name, last_name, email, password));
-    }
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignIn);
+export default SignIn;

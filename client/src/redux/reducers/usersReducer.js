@@ -1,16 +1,25 @@
 import { ADD_USER } from '../actions/usersAction';
 
-const initialState = [];
+const initialState = {
+  users: ['TEST USER YO']
+};
 
 function users(state = initialState, action) {
-  console.log("REDUCER: ", state);
   switch(action.type) {
     case ADD_USER:
-        return [
-              action.user
-          ];
-
-        // return [action.user];
+      return Object.assign({}, state, {
+        users: [
+          ...state.users,
+          {
+            first_name: action.first_name,
+            last_name: action.last_name,
+            email: action.email,
+            password: action.password,
+            security_question: action.security_question,
+            security_answer: action.security_answer
+          }
+        ]
+      });
 
     default:
       return state;
