@@ -1,3 +1,5 @@
+// jshint esversion:6
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
@@ -8,6 +10,7 @@ import Sidebar from './components/Sidebar';
 import Nav from './components/Nav';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import Profile from './components/Profile';
 import ResetPassword from './components/ResetPassword';
 import Profile from './components/Profile';
 import CarsForm from './components/CarsForm';

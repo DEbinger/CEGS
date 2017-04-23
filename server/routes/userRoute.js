@@ -8,7 +8,6 @@ const db = require('../models');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const User = db.User;
-const LocalStrategy = require('passport-local').Strategy;
 
 router.get('/', function(req, res){
   res.send('In the User Route');
@@ -18,50 +17,19 @@ router.get('/signup', function(req, res){
   res.send('Sign Up Route');
 });
 
-router.get('/signin', function(req, res){
-  res.send('Sign In Route');
-});
-
-
-passport.use(new LocalStrategy(
-  function (email, password, done) {
-    User.findOne({
-      where: {
-        email: email
-      }
-    }).then ( email => {
-      if (email === null) {
-        console.log('email failed');
-        return done(null, false, {message: 'bad email'});
-
-      }else {
-
-        bcrypt.compare(password, email.password).then(res => {
-          console.log('This is now the pw and email.pw',password, email.password);
-          if (res) {
-            return done(null, email);
-          }else {
-            return done(null, false);
-          }
-        });
-
-      }
-    }).catch(err => {
-      res.end();
-    });
+router.route('/signin')
+  .get(function(req,res){
+    res.send('Sign In Route');
   })
-);
-
-passport.serializeUser(function(user, done) {
-  return done(null, {
-    id:user.id,
-    email:user.email
+  .post(passport.authenticate('local'),function(req,res){
+    res.redirect('/profile');
   });
+
+router.route('/profile')
+  .get(function(req, res) {
+  res.send('profile test route');
 });
 
-passport.deserializeUser(function(user, done) {
-  return done(null, user);
-});
 
   router.post('/signin', passport.authenticate('local', { successRedirect: '/profile',
     failureRedirect: '/signin' }));
@@ -98,26 +66,28 @@ passport.deserializeUser(function(user, done) {
   router.get('/profile', isLoggedIn, function(req, res){
     res.render('', { user: req.user });//profile render
   });
+});
 
-  router.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
-  router.get('/auth/facebook/callback',
-    passport.authenticate('facebook',
-      {successRedirect: '/profile',
-      failureRedirect: '/'
-      }));
+router.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
-  router.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
-
-  router.get('/auth/google/callback',
-    passport.authenticate('google', {
+router.get('/auth/facebook/callback',
+  passport.authenticate('facebook',{
     successRedirect: '/profile',
-    failureRedirect: '/'
+    failureRedirect: '/signin'
     }));
 
-  router.get('/logout', function(req, res){
-    req.logout();
-    res.redirect('/');
+router.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
+
+router.get('/auth/google/callback',
+  passport.authenticate('google', {
+  successRedirect: '/profile',
+  failureRedirect: '/signin'
+  }));
+
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
   });
 });
 

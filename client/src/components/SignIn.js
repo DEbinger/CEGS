@@ -2,9 +2,12 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addUserToState } from '../redux/actions/usersAction';
 import { Router, browserHistory } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 import { addUser } from '../redux/actions/usersAction';
+
 
 class SignIn extends Component {
 
@@ -21,7 +24,7 @@ class SignIn extends Component {
   }
 
   handleSubmit(event) {
-    console.log('test function');
+    console.log('test function of handleSubmit');
     event.preventDefault();
     this.userIsLoggedIn({
       email: this.state.email,
@@ -35,7 +38,7 @@ class SignIn extends Component {
         this.setState = {
         email: '',
         password: ''
-    };
+     };
     });
   }
 
@@ -53,6 +56,7 @@ class SignIn extends Component {
 
 
   userIsLoggedIn(user){
+    user.username = user.email;
     console.log(user);
     return new Promise(function(resolve,reject){
       var oReq = new XMLHttpRequest();
@@ -63,13 +67,13 @@ class SignIn extends Component {
       oReq.setRequestHeader('Content-type',
         'application/json');
       oReq.addEventListener("load", reqListener);
-      oReq.send(JSON.stringify());
+      oReq.send(JSON.stringify(user));
     });
   }
 
   render() {
     return (
-      <div className ='userSignIn'>
+      <div className='userSignIn'>
         <h1>SIGN IN</h1>
 
         <form onSubmit={this.handleSubmit}>
@@ -88,4 +92,22 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+const mapStateToProps = (state) => {
+  console.log(state)
+  return{
+    users: state.users
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    addUserToState: (id, first_name, last_name, email, password) => {
+      dispatch(addUserToState(id, first_name, last_name, email, password));
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignIn);
