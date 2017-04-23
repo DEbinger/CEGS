@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { listHotels } from '../redux/actions/hotelsAction';
+import {
+  hotelDetails,
+  clearHotels
+} from '../redux/actions/hotelsAction';
 import { connect } from 'react-redux';
 
 class HotelsForm extends Component {
@@ -11,19 +14,17 @@ class HotelsForm extends Component {
   submitHandler(event) {
     event.preventDefault();
     let form = document.getElementsByClassName('hotels-form');
-    console.log('Location:', form.location.value);
-    console.log('Check In:', form.checkIn.value);
-    console.log('Check Out:', form.checkOut.value);
     const values = `location=${form.location.value}&check_in=${form.checkIn.value}&check_out=${form.checkOut.value}`;
-    console.log('values', values);
     let oReq = new XMLHttpRequest();
     oReq.addEventListener('load', (results) => {
+
+      this.props.onClearHotels();
+
       let hotels = JSON.parse(results.target.responseText);
-      // console.log('hotels', hotels);
-      // console.log('first hotel', hotels.results[0]);
-      // console.log('second hotel', hotels.results[1]);
-      console.log(hotels);
+      console.log('HOTELS', hotels);
+
       hotels.results.forEach( hotel => {
+
         let rating = hotel.awards[0];
         if ( rating === undefined ) {
           rating = 'N/A';
@@ -34,7 +35,11 @@ class HotelsForm extends Component {
           hotel.property_name,
           rating,
           hotel.amenities,
-          hotel.total_price.amount
+          hotel.total_price.amount,
+          hotel.property_code,
+          hotel.address,
+          hotel.contacts,
+          hotel.marketing_text
         );
       });
       this.props.history.push('/hotels');
@@ -79,8 +84,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onHotelsSearch: (name, rating, amenities, cost) => {
-      dispatch(listHotels(name, rating, amenities, cost))
+    onHotelsSearch: (name, rating, amenities, cost, propertyCode, address, contacts, marketingText) => {
+      dispatch(hotelDetails(name, rating, amenities, cost, propertyCode, address, contacts, marketingText))
+    },
+    onClearHotels: () => {
+      dispatch(clearHotels())
     }
   }
 };

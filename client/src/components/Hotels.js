@@ -11,26 +11,30 @@ class Hotels extends Component {
     return (
     	<div>
       	<h1>HOTELS LIST</h1>
-        { this.props.hotels.hotels.map( ({ name, rating, amenities, cost }) =>
-          <HotelDiv name={ name } rating={ rating } amenities={ amenities } cost={ cost } />
+        { this.props.hotels.hotels.map( ({ name, rating, amenities, cost, propertyCode, address, contacts, marketingText }) =>
+          <HotelDiv name={ name } rating={ rating } amenities={ amenities } cost={ cost } propertyCode={ propertyCode } address={ address } contacts={ contacts } marketingText={ marketingText } />
           ) }
       </div>
     );
   }
 }
 
+
 class HotelDiv extends Component {
   constructor(props){
     super(props);
 
+    this.hotelsDetailReq = this.hotelsDetailReq.bind(this);
+  }
+
+  hotelsDetailReq() {
+    console.log(this.props);
   }
 
   listAmenities() {
-    console.log('listAmenities');
     let values = '';
 
     this.props.amenities.forEach( ({ description }, idx) => {
-      console.log(description);
       if ( idx === this.props.amenities.length - 1) {
         values += `${description}.`;
       } else {
@@ -48,6 +52,7 @@ class HotelDiv extends Component {
         <p>Rating: { this.props.rating }</p>
         { this.listAmenities() }
         <p>Lowest Total Cost: { this.props.cost }</p>
+        <button onClick={ this.hotelsDetailReq }>Details</button>
         <hr/>
       </div>
     );
