@@ -9,13 +9,13 @@ export function addUser(user) {
   };
 }
 
-export function addUserToState(id, firstName, lastName, email, password){
-  return {
-    type: ADD_USER_TO_STATE,
-    id,
-    firstName,
-    lastName,
-    email,
-    password
-  };
-}
+// export function addUserToState(id, firstName, lastName, email, password){
+//   return {
+//     type: ADD_USER_TO_STATE,
+//     id,
+//     firstName,
+//     lastName,
+//     email,
+//     password
+//   };
+// }
