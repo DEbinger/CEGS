@@ -1,10 +1,19 @@
+/*select {
+  position: absolute;
+  top: 20px;
+  left: 580px;
+  border: solid #ccc 1px;
+  padding: 3px;
+  box-shadow: inset 1px 1px 2px #ddd8dc;
+}*/
+
 .water {
-  fill: #00248F;
+  fill: #87CEFA;
   cursor: move;
 }
 
 .land {
-  fill: #A98B6F;
+  fill: #90EE90;
   stroke: #FFF;
   stroke-width: 0.7px;
   cursor: move;
@@ -19,14 +28,6 @@
   fill: #33CC33;
 }
 
-select {
-  position: absolute;
-  top: 20px;
-  left: 580px;
-  border: solid #ccc 1px;
-  padding: 3px;
-  box-shadow: inset 1px 1px 2px #ddd8dc;
-}
 
 .countryTooltip {
   position: absolute;
@@ -44,11 +45,11 @@ select {
 .map {
   background-color: #87CEFA;
 }
-      
+
 .background {
   fill: none;
 }
-      
+
 .countries {
   fill: #90EE90;
   stroke: #FFFFFF;
