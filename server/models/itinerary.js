@@ -14,7 +14,6 @@ module.exports = function(sequelize, DataTypes) {
         Itinerary.belongsTo(models.Flight, {foreignKey: 'flight'});
         Itinerary.belongsTo(models.Hotel, {foreignKey: 'hotel'});
         Itinerary.belongsTo(models.Car, {foreignKey: 'car'});
-        Itinerary.belongsTo(models.Gallery, {foreignKey: 'gallery'});
       }
     }
   });

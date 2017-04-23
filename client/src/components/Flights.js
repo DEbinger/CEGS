@@ -9,7 +9,9 @@ class Flights extends Component {
   render() {
     console.log(this.props);
     return (
+
       <h1>FLIGHTS LIST PAGE</h1>
+
     );
   }
 }
