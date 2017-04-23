@@ -1,10 +1,3 @@
-// function getUserReq(user){
-// 	return new Promise ( (resolve, reject) => {
-// 		console.log('Req User Displayed: ', this.responseText);
-// 	})
-// }
-
-
 function signUpReq(user){
 	return new Promise ( (resolve, reject) => {
 		console.log('Req User: ', user);

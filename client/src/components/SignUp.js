@@ -130,9 +130,9 @@ class SignUp extends Component {
           <br />
           <select name="security_question" value={this.state.security_question} onChange={this.handleSecurityQuestion} >
             <option>Select a Security Question</option>
-            <option value="color">What is your favorite color?</option>
-            <option value="school">What is the name of the high school you attended?</option>
-            <option value="birthplace">What city were you born in?</option>
+            <option value="What is your favorite color?">What is your favorite color?</option>
+            <option value="What is the name of the high school you attended?">What is the name of the high school you attended?</option>
+            <option value="What city were you born in?">What city were you born in?</option>
           </select>
           <br />
           <input type='text' name="security_answer" placeholder='Security Answer' autoComplete='off' value={this.state.security_answer} onChange={this.handleSecurityAnswer} />
