@@ -2,19 +2,25 @@
 
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { addUser } from '../redux/actions/usersAction';
-import getUserReq from '../../lib/userReq';
-// import { SignUp } from './SignUp';
-// import { addUserToState } from '../redux/actions/usersAction';
 import { Redirect } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import getUserReq from '../../lib/userReq';
+import { addUser } from '../redux/actions/usersAction';
+import { addUserToState } from '../redux/actions/usersAction';
+import { SignUp } from './SignUp';
 
 class Profile extends Component {
   constructor(props){
     super(props);
   }
 
+   addUser(user){
+   getUserReq(user)
+     .then( user => {
+       console.log('UserProfile getUser', user);
+       this.props.onAddUser(user.id, user.first_name, user.last_name, user.email, user.security_question, user.security_answer);
+     });
+ }
 
   // xhrLoginCheck(user){
   //   return new Promise(function(resolve,reject){
@@ -41,15 +47,6 @@ class Profile extends Component {
   //     console.log("component will mount error",err);
   //   });
   // }
-
-
-// addUser(user){
-//  getUserReq(user)
-//    .then( user => {
-//      console.log('UserProfile getUser', user);
-//      this.props.onAddUser(user);
-//    })
-// }
 
  render(){
    console.log('this.props.users: ', this.props.users);

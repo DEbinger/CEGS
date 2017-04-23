@@ -44,7 +44,7 @@ class SignUp extends Component {
 
   handleSubmit(event){
     console.log('WHAT THE STATE: ', this.state);
-    
+
     event.preventDefault();
 
     this.addUser({

@@ -1,6 +1,7 @@
 // jshint esversion:6
 
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addUserToState } from '../redux/actions/usersAction';
@@ -9,7 +10,7 @@ import createHistory from 'history/createBrowserHistory';
 import { addUser } from '../redux/actions/usersAction';
 
 
-class SignIn extends Component {
+class SignIn extends React.Component {
 
   constructor(props){
     super(props);
@@ -24,7 +25,6 @@ class SignIn extends Component {
   }
 
   handleSubmit(event) {
-    console.log('test function of handleSubmit');
     event.preventDefault();
     this.userIsLoggedIn({
       email: this.state.email,
@@ -35,10 +35,6 @@ class SignIn extends Component {
       if(data){
         this.props.history.push('/profile');
       }
-        this.setState = {
-        email: '',
-        password: ''
-     };
     });
   }
 
@@ -61,7 +57,9 @@ class SignIn extends Component {
     return new Promise(function(resolve,reject){
       var oReq = new XMLHttpRequest();
       function reqListener(dataReturn){
-        console.log(dataReturn);
+        let results = this.responseText;
+        console.log(results)
+        resolve(results);
       }
       oReq.open('POST', '/users/signin', true);
       oReq.setRequestHeader('Content-type',
