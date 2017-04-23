@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  hotelDetails,
+  listHotels,
   clearHotels
 } from '../redux/actions/hotelsAction';
 import { connect } from 'react-redux';
@@ -21,7 +21,6 @@ class HotelsForm extends Component {
       this.props.onClearHotels();
 
       let hotels = JSON.parse(results.target.responseText);
-      console.log('HOTELS', hotels);
 
       hotels.results.forEach( hotel => {
 
@@ -31,6 +30,7 @@ class HotelsForm extends Component {
         } else {
           rating = hotel.awards[0].rating;
         }
+
         this.props.onHotelsSearch(
           hotel.property_name,
           rating,
@@ -43,7 +43,6 @@ class HotelsForm extends Component {
         );
       });
       this.props.history.push('/hotels');
-      // console.log(this.props);
     });
     oReq.open('POST', '/hotels/list', true);
     oReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -52,7 +51,6 @@ class HotelsForm extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
     	<div>
       	<h1>HOTELS FORM PAGE</h1>
@@ -85,7 +83,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onHotelsSearch: (name, rating, amenities, cost, propertyCode, address, contacts, marketingText) => {
-      dispatch(hotelDetails(name, rating, amenities, cost, propertyCode, address, contacts, marketingText))
+      dispatch(listHotels(name, rating, amenities, cost, propertyCode, address, contacts, marketingText))
     },
     onClearHotels: () => {
       dispatch(clearHotels())

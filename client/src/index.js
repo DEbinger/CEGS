@@ -14,6 +14,7 @@ import FlightsForm from './components/FlightsForm';
 import Flights from './components/Flights.js';
 import HotelsForm from './components/HotelsForm';
 import Hotels from './components/Hotels';
+import HotelDetail from './components/HotelDetail';
 import Itinerary from './components/Itinerary';
 
 //REDUX STUFF
@@ -58,6 +59,7 @@ ReactDOM.render(
         <Route path='/flights' component={ Flights } />
         <Route path='/hotelsform' component={ HotelsForm } />
         <Route path='/hotels' component={ Hotels } />
+        <Route path='/hoteldetail' component={ HotelDetail } />
         <Route path='/cars' component={ Cars } />
         <Route path='/itinerary' component={ Itinerary } />
       </div>

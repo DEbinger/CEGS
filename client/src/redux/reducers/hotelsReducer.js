@@ -27,7 +27,7 @@ function hotels(state = initialState, action) {
         ]
       });
 
-    case HOTEL_DETAIL:
+    case LIST_HOTELS:
       return Object.assign({}, state, {
         hotels: [
           ...state.hotels,
@@ -44,19 +44,19 @@ function hotels(state = initialState, action) {
         ]
       });
 
-    // case HOTEL_DETAIL:
-    //   return Object.assign({}, state, {
-    //     hotelDetail: {
-    //       name: action.name,
-    //       rating: action.rating,
-    //       cost: action.cost,
-    //       address: action.address,
-    //       phoneNumber: action.phoneNumber,
-    //       description: action.description,
-    //       amenities: action.amenities,
-
-    //     }
-    //   });
+    case HOTEL_DETAIL:
+      return Object.assign({}, state, {
+        hotelDetail: {
+          name: action.name,
+          rating: action.rating,
+          amenities: action.amenities,
+          cost: action.cost,
+          propertyCode: action.propertyCode,
+          address: action.address,
+          contacts: action.contacts,
+          marketingText: action.marketingText
+        }
+      });
 
     case CLEAR_HOTELS:
       return Object.assign({}, state, {

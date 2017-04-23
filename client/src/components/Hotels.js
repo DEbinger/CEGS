@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { hotelDetail } from '../redux/actions/hotelsAction';
 
 class Hotels extends Component {
   constructor(props) {
@@ -7,12 +8,30 @@ class Hotels extends Component {
 
   }
   render() {
-    console.log(this.props);
     return (
     	<div>
       	<h1>HOTELS LIST</h1>
-        { this.props.hotels.hotels.map( ({ name, rating, amenities, cost, propertyCode, address, contacts, marketingText }) =>
-          <HotelDiv name={ name } rating={ rating } amenities={ amenities } cost={ cost } propertyCode={ propertyCode } address={ address } contacts={ contacts } marketingText={ marketingText } />
+        { this.props.hotels.hotels.map( ({
+          name,
+          rating,
+          amenities,
+          cost,
+          propertyCode,
+          address,
+          contacts,
+          marketingText
+        }) =>
+          <HotelDiv
+          name={ name }
+          rating={ rating }
+          amenities={ amenities }
+          cost={ cost }
+          propertyCode={ propertyCode }
+          address={ address }
+          contacts={ contacts }
+          marketingText={ marketingText }
+          onDetail={ this.props.onDetail }
+          history={ this.props.history } />
           ) }
       </div>
     );
@@ -24,25 +43,26 @@ class HotelDiv extends Component {
   constructor(props){
     super(props);
 
+    this.amenitiesValue = '';
     this.hotelsDetailReq = this.hotelsDetailReq.bind(this);
   }
 
   hotelsDetailReq() {
-    console.log(this.props);
+    this.props.onDetail(this.props.name, this.props.rating, this.amenitiesValue, this.props.cost, this.props.propertyCode, this.props.address, this.props.contacts, this.props.marketingText);
+    this.props.history.push('/hoteldetail');
   }
 
   listAmenities() {
-    let values = '';
 
     this.props.amenities.forEach( ({ description }, idx) => {
       if ( idx === this.props.amenities.length - 1) {
-        values += `${description}.`;
+        this.amenitiesValue += `${description}.`;
       } else {
-        values += `${description}, `;
+        this.amenitiesValue += `${description}, `;
       }
     });
 
-    return <p>Amenities: { values }</p>;
+    return <p>Amenities: { this.amenitiesValue }</p>;
   }
 
   render() {
@@ -67,9 +87,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // onHotelsSearch: (name, rating, amenities, cost) => {
-    //   dispatch(listHotels(name, rating, amenities, cost))
+    onDetail: (name, rating, amenities, cost, propertyCode, address, contacts, marketingText) => {
+      dispatch(hotelDetail(name, rating, amenities, cost, propertyCode, address, contacts, marketingText))
     }
+  }
 };
 
 export default connect(
