@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addUser } from '../redux/actions/usersAction';
 import getUserReq from '../../lib/userReq';
 // import { SignUp } from './SignUp';
@@ -56,14 +57,20 @@ class Profile extends Component {
    return (
      <div>
       <h1>USER PROFILE</h1>
+
         {
           // mapping out the users array index 0 object
           this.props.users.map( (users ) => {
             return <div>
+
               <ul>
-                <li> {users.first_name} {users.last_name}</li>
-                <li> {users.email} </li>
+                <li> User: {users.first_name} {users.last_name}</li>
+                <li> Email: {users.email} </li>
+                <li> Security Question: {users.security_question} </li>
+                <li> <Link to='/resetpassword'>Reset My Password</Link>
+                </li>
               </ul>
+
               </div>
           })
         }
