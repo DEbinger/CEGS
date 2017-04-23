@@ -4,6 +4,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addUserToState } from '../redux/actions/usersAction';
+import { Router, browserHistory } from 'react-router';
+import createHistory from 'history/createBrowserHistory';
+import { addUser } from '../redux/actions/usersAction';
+
 
 class SignIn extends Component {
 

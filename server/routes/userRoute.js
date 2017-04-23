@@ -30,23 +30,41 @@ router.route('/profile')
   res.send('profile test route');
 });
 
-router.post('/signup', function(req, res){
-  bcrypt.genSalt(saltRounds, function(err, salt) {
-    bcrypt.hash(req.body.password, salt, function(err, hash) {
-      User.create({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email,
-        password: hash,
-        security_question: req.body.security_question,
-        security_answer: req.body.security_answer
-      })
-      .then((users) =>{
-        res.send(users);
-      })
-      .catch(err => {
-        console.log("USER ALREADY EXISTS", err);
-      });
+
+  router.post('/signin', passport.authenticate('local', { successRedirect: '/profile',
+    failureRedirect: '/signin' }));
+
+  router.post('/signup', function(req, res){
+    console.log('Body ',req.body);
+    if(req.body.first_name !== '' && req.body.last_name !== '' && req.body.email !== '' && req.body.password !== '' && req.body.confirm_password !== '' && req.body.security_question !== '' && req.body.security_answer !== ''){
+      if(req.body.password === req.body.confirm_password){
+
+        bcrypt.genSalt(saltRounds, function(err, salt) {
+          bcrypt.hash(req.body.password, salt, function(err, hash) {
+            User.create({
+              first_name: req.body.first_name,
+              last_name: req.body.last_name,
+              email: req.body.email,
+              password: hash,
+              confirm_password: hash,
+              security_question: req.body.security_question,
+              security_answer: req.body.security_answer
+            })
+            .then((users) =>{
+              console.log('Server User: ', users);
+                res.send(users);
+            });
+          });
+        });
+      }else{
+        console.log('Passwords don\'t match');
+      }
+    }else{
+      console.log('Must complete form to sign up!');
+    }
+
+  router.get('/profile', isLoggedIn, function(req, res){
+    res.render('', { user: req.user });//profile render
   });
 });
 
@@ -80,5 +98,21 @@ function isLoggedIn(req, res, next) {
 
   res.redirect('/signin');
 }
+
+  router.get('/profile/:id', (req, res) => {
+    console.log('WHAT: ', req.params.id);
+    User.find({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then((user => {
+      res.send(user);
+    }))
+    .catch((err) => {
+      console.log('Error: ', err);
+      res.send('Error', err);
+    });
+  });
 
 module.exports = router;

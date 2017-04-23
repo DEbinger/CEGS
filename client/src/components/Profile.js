@@ -1,14 +1,23 @@
 // jshint esversion:6
 
+import React, {Component} from 'react'
+import { connect } from 'react-redux';
+import { addUser } from '../redux/actions/usersAction';
+import getUserReq from '../../lib/userReq';
+import { SignUp } from './SignUp';
+
+
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { addUserToState } from '../redux/actions/usersAction';
 import { Redirect } from 'react-router-dom';
 
-class Profile extends React.Component {
+
+class Profile extends Component {
   constructor(props){
     super(props);
   }
+
 
   xhrLoginCheck(user){
     return new Promise(function(resolve,reject){
@@ -36,30 +45,38 @@ class Profile extends React.Component {
     });
   }
 
-  render(){
-    if(this.props.loggedInUser) {
-      return (
-        <div>
-          <h1>this Profile</h1>
-        </div>
-      )
-    }
-    return (
-      <Redirect to={{
-        pathname: '/signin'
-      }}/>
-    )
-  }
-}
 
-const mapDispatchToProps = {
-  onAddUser: addUserToState
+   addUser(user){
+   getUserReq(user)
+     .then( user => {
+       console.log('UserProfile getUser', user);
+       this.props.onAddUser(user.id, user.first_name, user.last_name, user.email, user.security_question, user.security_answer);
+     });
+ }
+
+ render(){
+   console.log('this.props: ', this.props.users);
+   return (
+     <div>
+     <h1>USER PROFILE</h1>
+
+     </div>
+
+   )
+ }
 }
 
 const mapStateToProps = (state) => {
-  console.log("STATE", state)
-  return {
-    loggedInUser: state.loggedInUser
+  return{
+    users: state.users
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    onAddUser: (id, first_name, last_name, email, password, security_question, security_answer) => {
+      dispatch(addUser(id, first_name, last_name, email, password, security_question, security_answer));
+    }
   }
 }
 
