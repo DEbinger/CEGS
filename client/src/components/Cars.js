@@ -1,33 +1,81 @@
 import React, { Component } from 'react';
+import { listCars, addCar, clearCars } from '../redux/actions/carsAction'
+import { connect } from 'react-redux';
 
 class Cars extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-    	<div>
-      	<h1>CARS PAGE</h1>
-				<form>
-					<input type="text" value="location" placeholder="Location" />
-					<br />
-					<label>
-					Pick Up:
-						<input type="date" value="pick_up" />
-					</label>
-					<br />
-					<label>
-					Drop Off:
-						<input type="date" value="drop_off" />
-					</label>
-					<br />
-					<label>
-					Vehicle:
-						<input type="text" value="vehicle" placeholder="Vehicle" />
-					</label>
-					<br />
-					<input type="submit" value="Search Cars" />
-				</form>
-    	</div>
+      <div>
+        <h1>CARS PAGE</h1>
+        {this.props.cars.cars.map( ({company_name, airport, city, cars}) =>
+          <Dealer company_name={company_name} airport={airport} city={city} cars={cars} />
+        )}
+      </div>
     );
   }
 }
 
-export default Cars;
+class Dealer extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>Company: {this.props.company_name}</h3>
+        <h3>Airport: {this.props.airport}</h3>
+        <h3>City: {this.props.city}</h3>
+        {this.props.cars.map( ({estimated_total, vehicle_info}) => 
+          <Info amount={estimated_total.amount} type={vehicle_info.type} />
+        )}
+      </div>
+    );
+  }
+}
+
+class Info extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Amount: ${this.props.amount}</p>
+        <p>Vehicle: {this.props.type}</p>
+        <button>Details</button>
+        <button>Add Car</button>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    cars: state.cars
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onListCars: (company_name, airport, city, cars) => {
+      dispatch(listCars(company_name, airport, city, cars));
+    },
+    onAddCar: (company_name, airport, city, cars) => {
+      dispatch(addCar(company_name, airport, city, cars));
+    },
+    onClearCars: () => {
+      dispatch(clearCars());
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Cars);
