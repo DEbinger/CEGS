@@ -41,7 +41,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
-// app.use(flash()); // use connect-flash for flash messages stored in session	
+// app.use(flash()); // use connect-flash for flash messages stored in session
 
 passport.use(new LocalStrategy(
   function (username, password, done) {
@@ -57,10 +57,10 @@ passport.use(new LocalStrategy(
 
       }else {
 
-        bcrypt.compare(password, email.password).
-          then(res => {
+        bcrypt.compare(password, email.password)
+        .then(res => {
             console.log(res);
-          console.log('Signin with Email and Password successful',password, email.password);
+          console.log('Signin with Email and Password',password, email.password);
           if (res) {
             return done(null, email);
           }else {
@@ -70,7 +70,7 @@ passport.use(new LocalStrategy(
 
       }
     }).catch(err => {
-      res.end();
+      res.send(err);
     });
   })
 );

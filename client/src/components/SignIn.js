@@ -31,10 +31,13 @@ class SignIn extends React.Component {
       password: this.state.password
     })
     .then((data) => {
-      console.log("Data",data);
+      console.log("Data handle submit",data);
       if(data){
         this.props.history.push('/profile');
       }
+    })
+    .catch(err => {
+      console.log('error not logged in');
     });
   }
 
@@ -50,7 +53,6 @@ class SignIn extends React.Component {
     });
   }
 
-
   userIsLoggedIn(user){
     user.username = user.email;
     console.log(user);
@@ -58,12 +60,15 @@ class SignIn extends React.Component {
       var oReq = new XMLHttpRequest();
       function reqListener(dataReturn){
         let results = this.responseText;
-        console.log(results)
+        console.log('This is the userLoggedIn',results)
+        if (results !== '/profile') {
+        reject(results);
+        } else {
         resolve(results);
+        }
       }
       oReq.open('POST', '/users/signin', true);
-      oReq.setRequestHeader('Content-type',
-        'application/json');
+      oReq.setRequestHeader('Content-type','application/json');
       oReq.addEventListener("load", reqListener);
       oReq.send(JSON.stringify(user));
     });
@@ -81,10 +86,12 @@ class SignIn extends React.Component {
           <br />
           <input type='submit' value='Sign In' />
           <br />
-        	<Link to='/resetpassword'>Reset My Password</Link>
+          <Link to='/resetpassword'>Reset My Password</Link>
         </form>
         <input type='submit' value='Continue with Google' />
+          <br />
         <input type='submit' value='Continue with Facebook' />
+          <br />
       </div>
     );
   }
