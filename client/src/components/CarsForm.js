@@ -73,9 +73,6 @@ class CarsForm extends Component {
         </form>
         </div>
       </div>
-    );
-  }
-}
 
 const mapStateToProps = (state) => {
   return {

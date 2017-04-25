@@ -1,7 +1,7 @@
-import { ADD_USER } from '../actions';
+import { ADD_USER } from '../actions/usersAction';
 
 const initialState = {
-  users: []
+  users: ['TEST USER YO']
 };
 
 function users(state = initialState, action) {
