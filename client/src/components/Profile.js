@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import getUserReq from '../../lib/userReq';
+import SignUpReq from '../../lib/userReq';
 import { addUser } from '../redux/actions/usersAction';
 import { addUserToState } from '../redux/actions/usersAction';
 import { SignUp } from './SignUp';
@@ -15,7 +15,7 @@ class Profile extends Component {
   }
 
    addUser(user){
-   getUserReq(user)
+   SignUpReq(user)
      .then( user => {
        console.log('UserProfile getUser', user);
        this.props.onAddUser(user.id, user.first_name, user.last_name, user.email, user.security_question, user.security_answer);
