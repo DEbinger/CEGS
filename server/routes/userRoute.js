@@ -21,15 +21,12 @@ router.route('/signin')
   .get(function(req,res){
     res.send('Sign In Route');
   })
-  .post(passport.authenticate('local'),
-    function(req,res){
-    console.log('ping');
-    res.json('/profile');
+  .post(passport.authenticate('local'),function(req,res){
+    res.send('/profile');
   });
 
 router.route('/profile')
   .get(function(req, res) {
-    console.log('ping profile get');
   res.send('profile test route');
 });
 
@@ -84,11 +81,11 @@ router.get('/auth/google/callback',
   failureRedirect: '/signin'
   }));
 
-// router.get('/logout', function(req, res){
-//   req.logout();
-//   res.redirect('/');
-//   })
-// }
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+  });
+
 
 function isLoggedIn(req, res, next) {
   if(req.isAuthenticated()){
