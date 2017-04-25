@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { listCars, addCar, clearCars } from '../redux/actions/carsAction'
+import { listCars, addCar, clearCars } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
 
 class Cars extends Component {
@@ -41,15 +41,31 @@ class Dealer extends Component {
 class Info extends Component {
   constructor(props) {
     super(props);
+
+    this.handleDetails = this.handleDetails.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+  }
+
+  handleDetails(event) {
+    event.preventDefault();
+    console.log('detail button clicked');
+    this.props.history.push("/details");
+  }
+
+  handleAdd(event) {
+    event.preventDefault();
+    console.log('add button clicked');
+    this.props.history.push("/itinerary");
   }
 
   render() {
+    console.log('props', this.props)
     return (
       <div>
         <p>Amount: ${this.props.amount}</p>
         <p>Vehicle: {this.props.type}</p>
-        <button>Details</button>
-        <button>Add Car</button>
+        <button onClick={this.handleDetails}>Details</button>
+        <button onClick={this.handleAdd}>Add Car</button>
       </div>
     );
   }

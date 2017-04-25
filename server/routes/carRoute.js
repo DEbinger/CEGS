@@ -15,7 +15,7 @@ router.get('/home', (req, res) => {
   res.send('CAR HOME');
 });
 
-// GET /car/list/:apikey/:location/:pick_up/:drop_off
+// POST /car/list/:apikey/:location/:pick_up/:drop_off
 router.post('/list', (req, res) => {
   const {
     location,
@@ -29,8 +29,14 @@ router.post('/list', (req, res) => {
 });
 
 // GET /car/detail/:apikey/:location/:pick_up/:drop_off
-router.get('/detail', (req, res) => {
-  carsReq()
+router.post('/details', (req, res) => {
+  const {
+    category,
+    type,
+    transmission,
+    amount
+  } = req.body;
+  carsReq(category, type, transmission, amount)
     .then(results => {
       res.send(results);
     });

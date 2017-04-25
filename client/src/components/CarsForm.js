@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { listCars, addCar, clearCars } from '../redux/actions/carsAction'
+import { listCars, addCar, clearCars } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
 
 class CarsForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
