@@ -14,29 +14,18 @@ export function addCar(company_name, airport, city, cars, itinerary, user) {
   };
 }
 
-// export function listCars(company_name, airport, city, cars) {
-//   return {
-//     type: LIST_CARS,
-//     company_name,
-//     airport,
-//     city,
-//     cars
-//   };
-// }
-
-export function listCars(location, pick_up, drop_off, vehicle, itinerary, user) {
+export function listCars(company_name, airport, city, cars) {
   return {
     type: LIST_CARS,
-    location,
-    pick_up,
-    drop_off,
-    vehicle,
-    itinerary,
-    user
-  } ;
+    company_name,
+    airport,
+    city,
+    cars
+  };
 }
 
-// export function clearCars() {
-//   return {
-//     type: CLEAR_CARS
-//   };
+export function clearCars() {
+  return {
+    type: CLEAR_CARS
+  };
+}
