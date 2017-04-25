@@ -6,7 +6,7 @@ class Sidebar extends Component {
     return (
       <ul>
         <li><Link to='/flightsform'>Flight</Link></li>
-        <li><Link to='/hotels'>Hotel</Link></li>
+        <li><Link to='/hotelsform'>Hotel</Link></li>
         <li><Link to='/cars'>Car</Link></li>
         <li><Link to='/itinerary'>Itinerary</Link></li>
       </ul>

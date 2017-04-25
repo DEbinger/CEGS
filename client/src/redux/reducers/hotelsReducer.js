@@ -1,12 +1,18 @@
-import { LIST_HOTELS } from '../actions/hotelsAction';
+import {
+  LIST_HOTELS,
+  ADD_HOTEL,
+  HOTEL_DETAIL,
+  CLEAR_HOTELS
+  } from '../actions/hotelsAction';
 
 const initialState = {
-  hotels: ['TEST HOTEL YO']
+  hotels: [],
+  hotelDetail: {}
 };
 
 function hotels(state = initialState, action) {
   switch(action.type) {
-    case LIST_HOTELS:
+    case ADD_HOTEL:
       return Object.assign({}, state, {
         hotels: [
           ...state.hotels,
@@ -19,6 +25,42 @@ function hotels(state = initialState, action) {
             user: action.user
           }
         ]
+      });
+
+    case LIST_HOTELS:
+      return Object.assign({}, state, {
+        hotels: [
+          ...state.hotels,
+          {
+            name: action.name,
+            rating: action.rating,
+            amenities: action.amenities,
+            cost: action.cost,
+            propertyCode: action.propertyCode,
+            address: action.address,
+            contacts: action.contacts,
+            marketingText: action.marketingText
+          }
+        ]
+      });
+
+    case HOTEL_DETAIL:
+      return Object.assign({}, state, {
+        hotelDetail: {
+          name: action.name,
+          rating: action.rating,
+          amenities: action.amenities,
+          cost: action.cost,
+          propertyCode: action.propertyCode,
+          address: action.address,
+          contacts: action.contacts,
+          marketingText: action.marketingText
+        }
+      });
+
+    case CLEAR_HOTELS:
+      return Object.assign({}, state, {
+        hotels: []
       });
 
       default:
