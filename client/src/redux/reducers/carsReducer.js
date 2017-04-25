@@ -1,12 +1,25 @@
-import { LIST_CARS } from '../actions/carsAction';
+import { LIST_CARS, ADD_CAR, CLEAR_CARS } from '../actions/carsAction';
 
 const initialState = {
-  cars: ['TEST CAR YO']
+  cars: []
 };
 
 function cars(state = initialState, action) {
   switch(action.type) {
     case LIST_CARS:
+      return Object.assign({}, state, {
+        cars: [
+          ...state.cars,
+          {
+            company_name: action.company_name,
+            airport: action.airport,
+            city: action.city,
+            cars: action.cars
+          }
+        ]
+      });
+
+    case ADD_CAR:
       return Object.assign({}, state, {
         cars: [
           ...state.cars,
@@ -19,6 +32,11 @@ function cars(state = initialState, action) {
             user: action.user
           }
         ]
+      });
+
+   case CLEAR_CARS:
+      return Object.assign({}, state, {
+        cars: []
       });
 
       default:
