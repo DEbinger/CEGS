@@ -69,10 +69,8 @@ class SignIn extends React.Component {
       oReq.send(JSON.stringify(user));
     });
   }
->>>>>>> feature/81_profile_route_from_signin
 
-class SignIn extends Component {
-  render() {
+  render(){
     return (
       <div>
         <h1>SIGN IN</h1>
@@ -91,7 +89,7 @@ class SignIn extends Component {
         <input type='submit' value='Continue with Facebook' />
           <br />
       </div>
-    );
+    )
   }
 }
 
