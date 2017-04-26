@@ -3,7 +3,7 @@ function signUpReq(user){
         console.log('Req User: ', user);
         function reqListener(){
             console.log('Signed Up: ', this.responseText);
-            let data = JSON.parse(oReq);
+            let data = JSON.parse(this.responseText);
             resolve(data);
         }
 

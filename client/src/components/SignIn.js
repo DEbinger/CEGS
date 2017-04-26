@@ -76,9 +76,9 @@ class SignIn extends React.Component {
         <h1>SIGN IN</h1>
 
         <form>
-          <input type='email' placeholder='Email Address' autocomplete='off' />
+          <input type='email' placeholder='Email Address' autoComplete='off' />
           <br />
-          <input type='password' placeholder='Password' autocomplete='off' />
+          <input type='password' placeholder='Password' autoComplete='off' />
           <br />
           <input type='submit' value='Login' />
           <br />
