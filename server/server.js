@@ -52,7 +52,7 @@ passport.use(new LocalStrategy(
       }
     }).then ( email => {
       if (email === null) {
-        console.log('This email does not match');
+        console.log('This email does not match a user in database');
         return done(null, false, {message: 'bad email'});
 
       }else {

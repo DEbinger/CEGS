@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import SignUpReq from '../../lib/userReq';
+import getUserReq from '../../lib/userReq';
 import { addUser } from '../redux/actions/usersAction';
 import { addUserToState } from '../redux/actions/usersAction';
 import { SignUp } from './SignUp';
@@ -14,13 +14,13 @@ class Profile extends Component {
     super(props);
   }
 
-   addUser(user){
-   SignUpReq(user)
+  addUser(user){
+    getUserReq(user)
      .then( user => {
        console.log('UserProfile getUser', user);
-       this.props.onAddUser(user.id, user.first_name, user.last_name, user.email, user.security_question, user.security_answer);
+       this.props.onAddUser(user);
      });
- }
+  }
 
   // xhrLoginCheck(user){
   //   return new Promise(function(resolve,reject){
@@ -48,33 +48,31 @@ class Profile extends Component {
   //   });
   // }
 
- render(){
-   console.log('this.props.users: ', this.props.users);
-   console.log('this.props.users[0]: ', this.props.users[0]);
-   return (
-     <div>
-      <h1>USER PROFILE</h1>
+  render(){
+    console.log('this.props.users: ', this.props.users);
+    console.log('this.props.users[0]: ', this.props.users[0]);
+      return (
+       <div>
+        <h1>USER PROFILE</h1>
 
         {
           // mapping out the users array index 0 object
-          this.props.users.map( (users ) => {
+          this.props.users.map( ( users ) => {
             return <div>
 
               <ul>
                 <li> User: {users.first_name} {users.last_name}</li>
-                <li> Email: {users.email} </li>
-                <li> Security Question: {users.security_question} </li>
-                <li> <Link to='/resetpassword'>Reset My Password</Link>
-                </li>
-              </ul>
+                  <li> Email: {users.email} </li>
+                  <li> Security Question: {users.security_question} </li>
+                  <li> <Link to='/resetpassword'>Reset My Password</Link></li>
+                </ul>
 
-              </div>
+            </div>
           })
         }
-     </div>
-
-   )
- }
+       </div>
+      )
+  }
 }
 
 const mapStateToProps = (state) => {

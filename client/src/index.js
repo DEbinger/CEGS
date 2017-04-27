@@ -12,9 +12,9 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Profile from './components/Profile';
 import ResetPassword from './components/ResetPassword';
-import CarsDetails from './components/CarsDetails';
-import CarsForm from './components/CarsForm';
 import Cars from './components/Cars';
+import CarsForm from './components/CarsForm';
+import CarsDetails from './components/CarsDetails';
 import Flights from './components/Flights.js';
 import FlightsForm from './components/FlightsForm';
 import HotelsForm from './components/HotelsForm';
@@ -23,8 +23,8 @@ import HotelDetail from './components/HotelDetail';
 import Itinerary from './components/Itinerary';
 
 //REDUX STUFF
-import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import * as ReduxDevTools from 'redux-devtools';
 

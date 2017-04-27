@@ -73,29 +73,31 @@ class CarsForm extends Component {
         </form>
         </div>
       </div>
-)}
+    )
+  }
 }
-const mapStateToProps = (state) => {
-  return {
-    cars: state.cars
-  }
-};
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onListCars: (company_name, airport, city, cars) => {
-      dispatch(listCars(company_name, airport, city, cars));
-    },
-    onAddCar: (company_name, airport, city, cars) => {
-      dispatch(addCar(company_name, airport, city, cars));
-    },
-    onClearCars: () => {
-      dispatch(clearCars());
+  const mapStateToProps = (state) => {
+    return {
+      cars: state.cars
     }
-  }
-};
+  };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CarsForm);
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      onListCars: (company_name, airport, city, cars) => {
+        dispatch(listCars(company_name, airport, city, cars));
+      },
+      onAddCar: (company_name, airport, city, cars) => {
+        dispatch(addCar(company_name, airport, city, cars));
+      },
+      onClearCars: () => {
+        dispatch(clearCars());
+      }
+    }
+  };
+
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(CarsForm);
