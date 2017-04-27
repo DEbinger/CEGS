@@ -3,7 +3,8 @@ import {
   searchFlights,
   listFlights,
   clearState,
-  errorMsg
+  errorMsg,
+  carrierCodes
 } from '../redux/actions/flightsAction';
 import { connect } from 'react-redux';
 
@@ -34,12 +35,20 @@ class FlightsForm extends Component {
         this.props.onErrorMsg('Not enough seats available');
       } else {
 
+        console.log(data);
+        let carrierData = data.trips.data.carrier;
+
+        carrierData.forEach( carrier => {
+          this.props.onCarrierCodes(carrier.code, carrier.name);
+        });
+
         let flightsArr = data.trips.tripOption;
         flightsArr.forEach( flight => {
           this.props.onListFlights(
             flight.id,
             flight.saleTotal,
-            flight.slice
+            flight.slice,
+            flight.pricing[0]
           );
         });
 
@@ -58,7 +67,7 @@ class FlightsForm extends Component {
 
 
   render() {
-    console.log('FLIGHTS FORM PAGE', this.props);
+    // console.log('FLIGHTS FORM PAGE', this.props);
     return (
       <div>
         <h1>FLIGHTS FORM PAGE</h1>
@@ -101,14 +110,17 @@ const mapDispatchToProps = (dispatch) => {
     onSearchFlights: (origin, destination, adultCount, tripType, departureDate, returnDepartureDate) => {
       dispatch(searchFlights(origin, destination, adultCount, tripType, departureDate, returnDepartureDate))
     },
-    onListFlights: (id, saleTotal, slice) => {
-      dispatch(listFlights(id, saleTotal, slice))
+    onListFlights: (id, saleTotal, slice, pricing) => {
+      dispatch(listFlights(id, saleTotal, slice, pricing))
     },
     onClearState: () => {
       dispatch(clearState())
     },
     onErrorMsg: (errorMessage) => {
       dispatch(errorMsg(errorMessage))
+    },
+    onCarrierCodes: (code, name) => {
+      dispatch(carrierCodes(code, name))
     }
   }
 };

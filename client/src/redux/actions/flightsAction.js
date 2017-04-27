@@ -2,13 +2,15 @@ export const LIST_FLIGHTS = 'LIST_FLIGHTS';
 export const SEARCH_FLIGHTS = 'SEARCH_FLIGHTS';
 export const CLEAR_STATE = 'CLEAR_STATE';
 export const ERROR_MESSAGE = 'ERROR_MESSAGE';
+export const CARRIER_CODE = 'CARRIER_CODE';
 
-export function listFlights(id, saleTotal, slice) {
+export function listFlights(id, saleTotal, slice, pricing) {
   return {
     type: LIST_FLIGHTS,
     id,
     saleTotal,
-    slice
+    slice,
+    pricing
   };
 }
 
@@ -34,6 +36,14 @@ export function errorMsg(errorMessage) {
   return {
     type: ERROR_MESSAGE,
     errorMessage
+  };
+}
+
+export function carrierCodes(code, name) {
+  return {
+    type: CARRIER_CODE,
+    code,
+    name
   };
 }
 

@@ -2,13 +2,15 @@ import {
   LIST_FLIGHTS,
   SEARCH_FLIGHTS,
   CLEAR_FLIGHTS,
-  ERROR_MESSAGE
+  ERROR_MESSAGE,
+  CARRIER_CODE
 } from '../actions/flightsAction';
 
 const initialState = {
   flights: [],
   searchValues: {},
-  errorMsg: ''
+  errorMsg: '',
+  carrierCodes: {}
 };
 
 function flights(state = initialState, action) {
@@ -20,7 +22,8 @@ function flights(state = initialState, action) {
           {
             id: action.id,
             saleTotal: action.saleTotal,
-            slice: action.slice
+            slice: action.slice,
+            pricing: action.pricing
           }
         ]
       });
@@ -47,6 +50,11 @@ function flights(state = initialState, action) {
       return Object.assign({}, state, {
         errorMsg: action.errorMessage
       });
+
+    case CARRIER_CODE:
+      return Object.assign({}, state, {
+        [action.code]: action.name
+        });
 
       default:
         return state;
