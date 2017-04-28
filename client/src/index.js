@@ -26,7 +26,7 @@ import Itinerary from './components/Itinerary';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import * as ReduxDevTools from 'redux-devtools';
+// import * as ReduxDevTools from 'redux-devtools';
 
 //REDUCERS
 import users from './redux/reducers/usersReducer';
@@ -58,7 +58,7 @@ const allReducers = combineReducers({
 let store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk)
 );
 
-console.log('store', store);
+// console.log('store', store);
 
 ReactDOM.render(
   <Provider store={ store } history={ history }>
