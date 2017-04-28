@@ -41,9 +41,23 @@ class SignUp extends Component {
   }
 
   handleSubmit(event){
-    console.log('WHAT THE STATE: ', this.state);
+    // console.log('WHAT THE STATE: ', this.state);
     
     event.preventDefault();
+
+    let password = document.getElementById("password");
+    let confirmPassword = document.getElementById("confirmPassword");
+
+    function validatePassword(){
+      if(password.value !== confirmPassword.value){
+        confirmPassword.setCustomValidity('Passwords Don\'t Match');
+      }else{
+        confirmPassword.setCustomValidity('');
+      }      
+    }
+
+    password.oninput = validatePassword;
+    confirmPassword.oninput = validatePassword;
 
     this.addUser({
       first_name: this.state.first_name,
@@ -55,7 +69,7 @@ class SignUp extends Component {
       security_answer: this.state.security_answer
     });
 
-   // clears form after submit
+    // clears form after submit
     this.setState({
       first_name: '',
       last_name: '',
@@ -65,6 +79,7 @@ class SignUp extends Component {
       security_question: '',
       security_answer: ''
     });
+
   }
 
   handleFirstName(event){
@@ -121,9 +136,9 @@ class SignUp extends Component {
           <br />
           <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Your email is not valid. Please enter a valid email address." placeholder="Email" autoComplete="off" value={this.state.email} onChange={this.handleEmail} required/>
           <br />
-          <input type="password" minLength="8" maxLength="128" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters." placeholder="Password" autoComplete="off" value={this.state.password} onChange={this.handlePassword} required/>
+          <input id="password" type="password" minLength="8" maxLength="128" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters." placeholder="Password" autoComplete="off" value={this.state.password} onChange={this.handlePassword} required/>
           <br />
-          <input type="password" name="confirm_password" placeholder="Confirm Password" autoComplete="off" value={this.state.confirm_password} onChange={this.handleConfirmPassword} required/>
+          <input id="confirmPassword" type="password" name="confirm_password" placeholder="Confirm Password" autoComplete="off" value={this.state.confirm_password} onChange={this.handleConfirmPassword} required/>
           <br />
           <select name="security_question" value={this.state.security_question} onChange={this.handleSecurityQuestion} required>
             <option>Select a Security Question</option>
