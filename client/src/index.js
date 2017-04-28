@@ -58,7 +58,7 @@ const allReducers = combineReducers({
 let store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk)
 );
 
-console.log('store', store);
+// console.log('store', store);
 
 ReactDOM.render(
   <Provider store={ store } history={ history }>

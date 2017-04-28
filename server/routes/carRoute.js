@@ -31,12 +31,16 @@ router.post('/list', (req, res) => {
 // GET /car/detail/:apikey/:location/:pick_up/:drop_off
 router.post('/details', (req, res) => {
   const {
-    category,
+    company_name,
+    airport,
+    city,
+    amount,
     type,
+    category,
     transmission,
-    amount
+    fuel
   } = req.body;
-  carsReq(category, type, transmission, amount)
+  carsReq(company_name, airport, city, amount, type, category, transmission, fuel)
     .then(results => {
       res.send(results);
     });
