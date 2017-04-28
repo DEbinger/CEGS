@@ -26,7 +26,7 @@ import Itinerary from './components/Itinerary';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-// import * as ReduxDevTools from 'redux-devtools';
+import * as ReduxDevTools from 'redux-devtools';
 
 //REDUCERS
 import users from './redux/reducers/usersReducer';
