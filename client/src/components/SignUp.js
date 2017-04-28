@@ -115,13 +115,13 @@ class SignUp extends Component {
       <div>
         <h1>SIGN UP</h1>
         <form onSubmit={this.handleSubmit} ref="reset">
-          <input type="text" name="first_name" pattern="[A-Za-z]" title="Enter your first name. Letters only."placeholder='First Name' autoComplete='off' value={this.state.first_name} onChange={this.handleFirstName} required/>
+          <input type="text" name="first_name" pattern="[A-Za-z]+" title="Enter your first name. Letters only."placeholder='First Name' autoComplete='off' value={this.state.first_name} onChange={this.handleFirstName} required/>
           <br />
-          <input type="text" name="last_name" pattern="[A-Za-z]" title="Enter your last name. Cannot contain numbers, symbols, or special characters."placeholder="Last Name" autoComplete="off" value={this.state.last_name} onChange={this.handleLastName} required/>
+          <input type="text" name="last_name" pattern="[A-Za-z]+" title="Enter your last name. Letters only."placeholder="Last Name" autoComplete="off" value={this.state.last_name} onChange={this.handleLastName} required/>
           <br />
-          <input type="email" name="email" placeholder="Email" autoComplete="off" value={this.state.email} onChange={this.handleEmail} required/>
+          <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Your email is not valid. Please enter a valid email address." placeholder="Email" autoComplete="off" value={this.state.email} onChange={this.handleEmail} required/>
           <br />
-          <input type="password" minLength="8" maxLength="128" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters." placeholder="Password" autoComplete="off" value={this.state.password} onChange={this.handlePassword} required/>
+          <input type="password" minLength="8" maxLength="128" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters." placeholder="Password" autoComplete="off" value={this.state.password} onChange={this.handlePassword} required/>
           <br />
           <input type="password" name="confirm_password" placeholder="Confirm Password" autoComplete="off" value={this.state.confirm_password} onChange={this.handleConfirmPassword} required/>
           <br />
@@ -132,7 +132,7 @@ class SignUp extends Component {
             <option value="What city were you born in?">What city were you born in?</option>
           </select>
           <br />
-          <input type="text" name="security_answer" placeholder="Security Answer" autoComplete="off" value={this.state.security_answer} onChange={this.handleSecurityAnswer} required/>
+          <input type="text" name="security_answer" pattern="[A-Za-z0-9]{4,}" title="Enter a security question. Letters and Numbers only. Must be 4 characters long." maxLength="32" placeholder="Security Answer" autoComplete="off" value={this.state.security_answer} onChange={this.handleSecurityAnswer} required/>
           <br />
           <input type="submit" value="Sign Up" />
         </form>
