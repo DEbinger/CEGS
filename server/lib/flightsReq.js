@@ -2,7 +2,7 @@ const API_KEY = process.env.FLIGHT_API_KEY;
 const https = require('https');
 
 
-function flightsList(origin, destination, adultCount, tripType, departureDate, returnDepartureDate) {
+function flightsList(origin, destination, adultCount, childCount, infantInLapCount, infantInSeatCount, seniorCount, tripType, departureDate, returnDepartureDate, refundable) {
   return new Promise( (resolve, reject) => {
 
     let options = {
@@ -52,9 +52,14 @@ function flightsList(origin, destination, adultCount, tripType, departureDate, r
     req.write(JSON.stringify( {
       request: {
         passengers: {
-          adultCount
+          adultCount,
+          childCount,
+          infantInLapCount,
+          infantInSeatCount,
+          seniorCount
         },
         slice: sliceValues,
+        refundable,
         solutions: '20'
       }
     }));

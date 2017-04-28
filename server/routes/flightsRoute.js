@@ -21,11 +21,18 @@ router.post('/list', (req, res) => {
     origin,
     destination,
     adultCount,
+    childCount,
+    infantInLapCount,
+    infantInSeatCount,
+    seniorCount,
     tripType,
     departureDate,
-    returnDepartureDate
+    returnDepartureDate,
+    refundable
   } = req.body;
-  request.flightsList(origin, destination, adultCount, tripType, departureDate, returnDepartureDate)
+
+  console.log(req.body);
+  request.flightsList(origin, destination, adultCount, childCount, infantInLapCount, infantInSeatCount, seniorCount, tripType, departureDate, returnDepartureDate, refundable)
   .then(results => {
     res.send(results);
   });

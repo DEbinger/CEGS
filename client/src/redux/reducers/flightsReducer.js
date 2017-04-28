@@ -34,13 +34,19 @@ function flights(state = initialState, action) {
           origin: action.origin,
           destination: action.destination,
           adultCount: action.adultCount,
+          childCount: action.childCount,
+          infantInLapCount: action.infantInLapCount,
+          infantInSeatCount: action.infantInSeatCount,
+          seniorCount: action.seniorCount,
           tripType: action.tripType,
           departureDate: action.departureDate,
-          returnDepartureDate: action.returnDepartureDate
+          returnDepartureDate: action.returnDepartureDate,
+          refundable: action.refundable
         }
       });
 
     case CLEAR_FLIGHTS:
+    console.log('cleared flights');
       return Object.assign({}, state, {
         flights: [],
         errorMsg: ''
@@ -51,10 +57,15 @@ function flights(state = initialState, action) {
         errorMsg: action.errorMessage
       });
 
+    // case CARRIER_CODE:
+    //   return Object.assign({}, state, {
+    //     [action.code]: action.name
+    //     });
+
     case CARRIER_CODE:
       return Object.assign({}, state, {
-        [action.code]: action.name
-        });
+        carrierCodes: action.names
+      });
 
       default:
         return state;

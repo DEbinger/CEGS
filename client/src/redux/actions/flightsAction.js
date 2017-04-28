@@ -1,8 +1,9 @@
 export const LIST_FLIGHTS = 'LIST_FLIGHTS';
 export const SEARCH_FLIGHTS = 'SEARCH_FLIGHTS';
-export const CLEAR_STATE = 'CLEAR_STATE';
+export const CLEAR_FLIGHTS = 'CLEAR_FLIGHTS';
 export const ERROR_MESSAGE = 'ERROR_MESSAGE';
 export const CARRIER_CODE = 'CARRIER_CODE';
+export const FLIGHT_DETAILS = 'FLIGHT_DETAILS';
 
 export function listFlights(id, saleTotal, slice, pricing) {
   return {
@@ -14,21 +15,26 @@ export function listFlights(id, saleTotal, slice, pricing) {
   };
 }
 
-export function searchFlights(origin, destination, adultCount, tripType, departureDate, returnDepartureDate) {
+export function searchFlights(origin, destination, adultCount, childCount, infantInLapCount, infantInSeatCount, seniorCount,tripType, departureDate, returnDepartureDate, refundable) {
   return {
     type: SEARCH_FLIGHTS,
     origin,
     destination,
     adultCount,
+    childCount,
+    infantInLapCount,
+    infantInSeatCount,
+    seniorCount,
     tripType,
     departureDate,
-    returnDepartureDate
+    returnDepartureDate,
+    refundable
   };
 }
 
-export function clearState() {
+export function clearFlights() {
   return {
-    type: CLEAR_STATE
+    type: CLEAR_FLIGHTS
   };
 }
 
@@ -39,11 +45,19 @@ export function errorMsg(errorMessage) {
   };
 }
 
-export function carrierCodes(code, name) {
+export function carrierCodes(names) {
   return {
     type: CARRIER_CODE,
-    code,
-    name
+    names
+  };
+}
+
+export function flightDetails(pricing, saleTotal, slice) {
+  return {
+    type: FLIGHT_DETAILS,
+    pricing,
+    saleTotal,
+    slice
   };
 }
 

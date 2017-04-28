@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   searchFlights,
   listFlights,
-  clearState,
+  clearFlights,
   errorMsg,
   carrierCodes
 } from '../redux/actions/flightsAction';
@@ -22,11 +22,10 @@ class FlightsForm extends Component {
   submitHandler(event) {
     event.preventDefault();
     let form = document.getElementsByClassName('flight-form');
-      let searchValues = `origin=${form.origin.value}&destination=${form.destination.value}&adultCount=${form.adultCount.value}&tripType=${form.tripType.value}&departureDate=${form.departureDate.value}&returnDepartureDate=${form.returnDepartureDate.value}`;
-      console.log(searchValues);
+      let searchValues = `origin=${form.origin.value}&destination=${form.destination.value}&adultCount=${form.adultCount.value}&childCount=${form.childCount.value}&infantInLapCount=${form.infantInLapCount.value}&infantInSeatCount=${form.infantInSeatCount.value}&seniorCount=${form.seniorCount.value}&tripType=${form.tripType.value}&departureDate=${form.departureDate.value}&returnDepartureDate=${form.returnDepartureDate.value}&refundable=${form.refundable.value}`;
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (result) => {
-      this.props.onSearchFlights(form.origin.value, form.destination.value, form.adultCount.value, form.tripType.value, form.departureDate.value, form.returnDepartureDate.value);
+      this.props.onSearchFlights(form.origin.value, form.destination.value, form.adultCount.value, form.childCount.value, form.infantInLapCount.value, form.infantInSeatCount.value, form.seniorCount.value,form.tripType.value, form.departureDate.value, form.returnDepartureDate.value, form.refundable.value);
       let data = JSON.parse(result.target.responseText);
       console.log(data);
 
@@ -35,12 +34,19 @@ class FlightsForm extends Component {
         this.props.onErrorMsg('Not enough seats available');
       } else {
 
-        console.log(data);
         let carrierData = data.trips.data.carrier;
 
-        carrierData.forEach( carrier => {
-          this.props.onCarrierCodes(carrier.code, carrier.name);
-        });
+        let codeObj = {};
+
+        carrierData.forEach( carrier => Object.assign(codeObj, {
+          [carrier.code]: carrier.name
+        }));
+
+        this.props.onCarrierCodes(codeObj);
+
+        // carrierData.forEach( carrier => {
+        //   this.props.onCarrierCodes(carrier.code, carrier.name);
+        // });
 
         let flightsArr = data.trips.tripOption;
         flightsArr.forEach( flight => {
@@ -72,18 +78,66 @@ class FlightsForm extends Component {
       <div>
         <h1>FLIGHTS FORM PAGE</h1>
         <form onSubmit={ this.submitHandler }>
-          <input className='flight-form' type='text' placeholder='origin' autoComplete='off' name='origin' />
+          <input className='flight-form' type='text' placeholder='origin' autoComplete='off' name='origin' autoFocus/>
           <br/>
           <input className='flight-form' type='text' placeholder='destination' autoComplete='off' name='destination' />
           <br/>
           adultCount:
+          <select className='flight-form' name='adultCount'>
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
           <br/>
-          <input className='flight-form' type='number' min='1' name='adultCount' />
+          childCount:
+          <select className='flight-form' name='childCount'>
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
           <br/>
+          infantInLapCount:
+          <select className='flight-form' name='infantInLapCount'>
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
+          <br/>
+          infantInSeatCount:
+          <select className='flight-form' name='infantInSeatCount'>
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
+          <br/>
+          seniorCount:
+          <select className='flight-form' name='seniorCount'>
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
+          <br/>
+          tripType:
           <select className='flight-form' name='tripType'>
             <option value='oneWay'>one way</option>
             <option value='roundTrip'>round trip</option>
           </select>
+          <br/>
           departure date:
           <br/>
           <input className='flight-form' type='date' min={ new Date() } name='departureDate' />
@@ -91,6 +145,12 @@ class FlightsForm extends Component {
           return date:
           <br/>
           <input className='flight-form' type='date' name='returnDepartureDate' />
+          <br/>
+          refundable:
+          <select className='flight-form' name='refundable'>
+            <option value='false'>No</option>
+            <option value='true'>Yes</option>
+          </select>
           <br/>
           <input  type='submit' value='Search Flights' />
         </form>
@@ -107,20 +167,20 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSearchFlights: (origin, destination, adultCount, tripType, departureDate, returnDepartureDate) => {
-      dispatch(searchFlights(origin, destination, adultCount, tripType, departureDate, returnDepartureDate))
+    onSearchFlights: (origin, destination, adultCount, childCount, infantInLapCount, infantInSeatCount, seniorCount,tripType, departureDate, returnDepartureDate, refundable) => {
+      dispatch(searchFlights(origin, destination, adultCount, childCount, infantInLapCount, infantInSeatCount, seniorCount,tripType, departureDate, returnDepartureDate, refundable))
     },
     onListFlights: (id, saleTotal, slice, pricing) => {
       dispatch(listFlights(id, saleTotal, slice, pricing))
     },
     onClearState: () => {
-      dispatch(clearState())
+      dispatch(clearFlights())
     },
     onErrorMsg: (errorMessage) => {
       dispatch(errorMsg(errorMessage))
     },
-    onCarrierCodes: (code, name) => {
-      dispatch(carrierCodes(code, name))
+    onCarrierCodes: (names) => {
+      dispatch(carrierCodes(names))
     }
   }
 };
