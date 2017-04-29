@@ -3,11 +3,11 @@
 }
 
 .rsm-wrapper {
-  background-color: #87CEFA; 
+  background-color: #87CEFA;
 }
 
 .rsm-zoomable-group {
-  cursor: none;
+  transform: none;
 }
 
 .rsm-geography {

@@ -11,10 +11,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div class="homepage">
         <h1>HOME PAGE</h1>
         <ReactSimpleMap
           geographyUrl={"../data/countries.topo.json"}
+          styles={{
+
+          }}
         />
       </div>
     );
