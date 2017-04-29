@@ -10,8 +10,9 @@ class Itinerary extends Component {
 
   render() {
   	console.log('HOTEL: ', this.props.hotels.hotelDetail);
+    console.log('CAR: ', this.props.cars.car_details);
   	let hotel = this.props.hotels.hotelDetail;
-  	// let address = this.props.hotels.hotelDetail.address
+    let car = this.props.cars.car_details;
     return (
     	<div>
       	<h1>ITINERARY PAGE</h1>
@@ -32,6 +33,14 @@ class Itinerary extends Component {
 
 					<div>
 						<h3>Car</h3>
+            <p>{car.company_name}</p>
+            <p>{car.airport}</p>
+            <p>{car.city}</p>
+            <p>{car.category}</p>
+            <p>{car.vehicle_type}</p>
+            <p>{car.transmission}</p>
+            <p>{car.amount}</p>
+            <p>{car.fuel}</p>
 					</div>
       </div>
     );
@@ -40,7 +49,8 @@ class Itinerary extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    hotels: state.hotels
+    hotels: state.hotels,
+    cars: state.cars
   }
 };
 
