@@ -18,6 +18,7 @@ class CarsForm extends Component {
     
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (results) => {
+      this.props.onClearCars();
       let cars = JSON.parse(results.target.responseText);
       cars.results.forEach(cars => {
         this.props.onListCars(
