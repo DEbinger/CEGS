@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import ReactDOM from "react-dom";
+import ReactSimpleMap from "react-simple-maps";
 import './App.css';
 
 class App extends Component {
@@ -10,7 +11,12 @@ class App extends Component {
 
   render() {
     return (
-      <h1>HOME PAGE</h1>
+      <div>
+        <h1>HOME PAGE</h1>
+        <ReactSimpleMap
+          geographyUrl={"../data/countries.topo.json"}
+        />
+      </div>
     );
   }
 }
