@@ -3,7 +3,8 @@ import {
   SEARCH_FLIGHTS,
   CLEAR_FLIGHTS,
   ERROR_MESSAGE,
-  CARRIER_CODE
+  CARRIER_CODE,
+  FLIGHT_DETAILS
 } from '../actions/flightsAction';
 
 const initialState = {
@@ -42,6 +43,15 @@ function flights(state = initialState, action) {
           departureDate: action.departureDate,
           returnDepartureDate: action.returnDepartureDate,
           refundable: action.refundable
+        }
+      });
+
+    case FLIGHT_DETAILS:
+      return Object.assign({}, state, {
+        flightDetail: {
+          pricing: action.pricing,
+          saleTotal: action.saleTotal,
+          slice: action.slice
         }
       });
 

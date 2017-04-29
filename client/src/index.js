@@ -12,6 +12,7 @@ import ResetPassword from './components/ResetPassword';
 import Cars from './components/Cars';
 import FlightsForm from './components/FlightsForm';
 import Flights from './components/Flights.js';
+import FlightDetails from './components/FlightDetails.js';
 import HotelsForm from './components/HotelsForm';
 import Hotels from './components/Hotels';
 import Itinerary from './components/Itinerary';
@@ -56,6 +57,7 @@ ReactDOM.render(
         <Route path='/resetpassword' component={ResetPassword} />
         <Route path='/flightsform' component={ FlightsForm } />
         <Route path='/flights' component={ Flights } />
+        <Route path='/flightdetails' component={ FlightDetails } />
         <Route path='/hotelsform' component={ HotelsForm } />
         <Route path='/hotels' component={ Hotels } />
         <Route path='/cars' component={ Cars } />
