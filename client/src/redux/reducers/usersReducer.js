@@ -3,7 +3,7 @@ import { ADD_USER } from '../actions/usersAction';
 const initialState = [];
 
 function users(state = initialState, action) {
-  console.log('REDUCER: ', state);
+  // console.log('REDUCER: ', state);
   switch(action.type) {
     case ADD_USER:
       return [
