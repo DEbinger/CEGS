@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { listCars, addCar, clearCars } from '../redux/actions/carsAction';
+import { listCars, carDetails, addCar, clearCars } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
 
 class CarsForm extends Component {
@@ -20,7 +20,6 @@ class CarsForm extends Component {
     oReq.addEventListener("load", (results) => {
       let cars = JSON.parse(results.target.responseText);
       cars.results.forEach(cars => {
-        console.log('cars', cars)
         this.props.onListCars(
           cars.provider.company_name,
           cars.airport,
@@ -53,22 +52,6 @@ class CarsForm extends Component {
             <input className="cars-form" name="drop_off" type="date" />
           </label>
           <br />
-          <label htmlFor="vehicle">
-          Vehicle:
-            <select id="vehicle">
-              <option value="ACAR">Any Standard Vehicle</option>
-              <option value="ALLC">Two or Four Door</option>
-              <option value="APUP">Any Pickup</option>
-              <option value="ASUV">Any SUV</option>
-              <option value="AVAN">Any Passenger Van</option>
-              <option value="ALMO">Limousine</option>
-              <option value="ASPT">Sport</option>
-              <option value="ACNV">Convertible</option>
-              <option value="AHYB">All Hybrid Vehicles</option>
-              <option value="AELC">All Electric Powered Vehicles</option>
-            </select>
-          </label>
-          <br />
           <input type="submit" value="Search Cars" />
         </form>
         </div>
@@ -87,6 +70,9 @@ class CarsForm extends Component {
     return {
       onListCars: (company_name, airport, city, cars) => {
         dispatch(listCars(company_name, airport, city, cars));
+      },
+      onCarDetails: (company_name, airport, city, amount, vehicle_type, category, transmission, fuel) => {
+        dispatch(carDetails(company_name, airport, city, amount, vehicle_type, category, transmission, fuel));
       },
       onAddCar: (company_name, airport, city, cars) => {
         dispatch(addCar(company_name, airport, city, cars));
