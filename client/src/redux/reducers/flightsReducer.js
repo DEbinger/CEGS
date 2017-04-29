@@ -25,7 +25,8 @@ function flights(state = initialState, action) {
             slice: action.slice,
             pricing: action.pricing
           }
-        });
+        ]
+      });
 
     case SEARCH_FLIGHTS:
       return Object.assign({}, state, {
