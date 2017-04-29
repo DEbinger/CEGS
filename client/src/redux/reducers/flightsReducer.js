@@ -1,16 +1,17 @@
 import {
   LIST_FLIGHTS,
-  SEARCH_FLIGHTS
+  SEARCH_FLIGHTS,
+  CLEAR_FLIGHTS,
+  ERROR_MESSAGE,
+  CARRIER_CODE,
+  FLIGHT_DETAILS
 } from '../actions/flightsAction';
 
 const initialState = {
-  flightsList: ['TEST FLIGHT YO'],
-  searchValues: {
-    origin: '',
-    destination: '',
-    adultCount: '',
-    date: ''
-  }
+  flights: [],
+  searchValues: {},
+  errorMsg: '',
+  carrierCodes: {}
 };
 
 function flights(state = initialState, action) {
@@ -19,21 +20,56 @@ function flights(state = initialState, action) {
       return Object.assign({}, state, {
         flightsList: [
           {
+            id: action.id,
             saleTotal: action.saleTotal,
-            flights: action.flights
+            slice: action.slice,
+            pricing: action.pricing
           }
         ]
       });
 
-      case SEARCH_FLIGHTS:
-        return Object.assign({}, state, {
-          searchValues: {
-            origin: action.origin,
-            destination: action.destination,
-            adultCount: action.adultCount,
-            date: action.date
-          }
-        });
+    case SEARCH_FLIGHTS:
+      return Object.assign({}, state, {
+        searchValues: {
+          origin: action.origin,
+          destination: action.destination,
+          adultCount: action.adultCount,
+          childCount: action.childCount,
+          infantInLapCount: action.infantInLapCount,
+          infantInSeatCount: action.infantInSeatCount,
+          seniorCount: action.seniorCount,
+          tripType: action.tripType,
+          departureDate: action.departureDate,
+          returnDepartureDate: action.returnDepartureDate,
+          refundable: action.refundable
+        }
+      });
+
+    case FLIGHT_DETAILS:
+      return Object.assign({}, state, {
+        flightDetail: {
+          pricing: action.pricing,
+          saleTotal: action.saleTotal,
+          slice: action.slice
+        }
+      });
+
+    case CLEAR_FLIGHTS:
+    console.log('cleared flights');
+      return Object.assign({}, state, {
+        flights: [],
+        errorMsg: ''
+      });
+
+    case ERROR_MESSAGE:
+      return Object.assign({}, state, {
+        errorMsg: action.errorMessage
+      });
+
+    case CARRIER_CODE:
+      return Object.assign({}, state, {
+        carrierCodes: action.names
+      });
 
       default:
         return state;

@@ -15,12 +15,25 @@ router.get('/', (req, res) => {
 
 
 //POST /flights/list/:origin/:destination/:date
-router.get('/list', (req, res) => {
-  request.flightsList()
+router.post('/list', (req, res) => {
+  console.log('REQ BODY', req.body);
+  const {
+    origin,
+    destination,
+    adultCount,
+    childCount,
+    infantInLapCount,
+    infantInSeatCount,
+    seniorCount,
+    tripType,
+    departureDate,
+    returnDepartureDate,
+    refundable
+  } = req.body;
+
+  console.log(req.body);
+  request.flightsList(origin, destination, adultCount, childCount, infantInLapCount, infantInSeatCount, seniorCount, tripType, departureDate, returnDepartureDate, refundable)
   .then(results => {
-    console.log("IN ROUTE");
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-    console.log(results);
     res.send(results);
   });
 });
