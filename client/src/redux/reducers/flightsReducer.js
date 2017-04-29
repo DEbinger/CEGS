@@ -18,16 +18,14 @@ function flights(state = initialState, action) {
   switch(action.type) {
     case LIST_FLIGHTS:
       return Object.assign({}, state, {
-        flights: [
-          ...state.flights,
+        flightsList: [
           {
             id: action.id,
             saleTotal: action.saleTotal,
             slice: action.slice,
             pricing: action.pricing
           }
-        ]
-      });
+        });
 
     case SEARCH_FLIGHTS:
       return Object.assign({}, state, {
@@ -67,11 +65,6 @@ function flights(state = initialState, action) {
         errorMsg: action.errorMessage
       });
 
-    // case CARRIER_CODE:
-    //   return Object.assign({}, state, {
-    //     [action.code]: action.name
-    //     });
-
     case CARRIER_CODE:
       return Object.assign({}, state, {
         carrierCodes: action.names
@@ -83,14 +76,3 @@ function flights(state = initialState, action) {
 }
 
 export default flights;
-
-// flight:
-// -nav bar at top changes (profile, logout)
-// -tabs/buttons below nav (one way, roundtrip, multitrip)
-// -enter departure/arrival info (location, date, time)
-// -enter number of people
-// -search button -> flight options page
-
-// Flight Options:
-// -filter/sort based on price, airlines, stops (default cheapest)
-// -select flight button -> overpage page

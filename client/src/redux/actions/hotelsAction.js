@@ -1,5 +1,7 @@
 export const LIST_HOTELS = 'LIST_HOTELS';
 export const ADD_HOTEL = 'ADD_HOTEL';
+export const HOTEL_DETAIL = 'HOTEL_DETAIL';
+export const CLEAR_HOTELS = 'CLEAR_HOTELS';
 
 export function addHotel(location, check_in, check_out, amenity, itinerary, user) {
   return {
@@ -13,13 +15,37 @@ export function addHotel(location, check_in, check_out, amenity, itinerary, user
   };
 }
 
-export function listHotels(name, rating, amenities, cost) {
+export function listHotels(name, rating, amenities, cost, propertyCode, address, contacts, marketingText) {
   return {
     type: LIST_HOTELS,
     name,
     rating,
     amenities,
-    cost
+    cost,
+    propertyCode,
+    address,
+    contacts,
+    marketingText
+  };
+}
+
+export function hotelDetail(name, rating, amenities, cost, propertyCode, address, contacts, marketingText) {
+  return {
+    type: HOTEL_DETAIL,
+    name,
+    rating,
+    amenities,
+    cost,
+    propertyCode,
+    address,
+    contacts,
+    marketingText
+  };
+}
+
+export function clearHotels() {
+  return {
+    type: CLEAR_HOTELS
   };
 }
 

@@ -1,7 +1,13 @@
-import { LIST_HOTELS, ADD_HOTEL } from '../actions/hotelsAction';
+import {
+  LIST_HOTELS,
+  ADD_HOTEL,
+  HOTEL_DETAIL,
+  CLEAR_HOTELS
+  } from '../actions/hotelsAction';
 
 const initialState = {
-  hotels: []
+  hotels: [],
+  hotelDetail: {}
 };
 
 function hotels(state = initialState, action) {
@@ -29,9 +35,32 @@ function hotels(state = initialState, action) {
             name: action.name,
             rating: action.rating,
             amenities: action.amenities,
-            cost: action.cost
+            cost: action.cost,
+            propertyCode: action.propertyCode,
+            address: action.address,
+            contacts: action.contacts,
+            marketingText: action.marketingText
           }
         ]
+      });
+
+    case HOTEL_DETAIL:
+      return Object.assign({}, state, {
+        hotelDetail: {
+          name: action.name,
+          rating: action.rating,
+          amenities: action.amenities,
+          cost: action.cost,
+          propertyCode: action.propertyCode,
+          address: action.address,
+          contacts: action.contacts,
+          marketingText: action.marketingText
+        }
+      });
+
+    case CLEAR_HOTELS:
+      return Object.assign({}, state, {
+        hotels: []
       });
 
       default:

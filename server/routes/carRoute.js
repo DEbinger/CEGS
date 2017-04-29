@@ -11,27 +11,61 @@ router.get('/', (req, res) => {
 });
 
 // GET /car/home
-
-
-// GET /car/list/:apikey/:location/:pick_up/:drop_off
-router.get('/list', (req, res) => {
-  carsReq()
-  .then(results => {
-    res.send(results);
-  });
+router.get('/home', (req, res) => {
+  res.send('CAR HOME');
 });
 
-
+// POST /car/list/:apikey/:location/:pick_up/:drop_off
+router.post('/list', (req, res) => {
+  const {
+    location,
+    pick_up,
+    drop_off
+    } = req.body;
+  carsReq(location, pick_up, drop_off)
+    .then(results => {
+      res.send(results);
+    });
+});
 
 // GET /car/detail/:apikey/:location/:pick_up/:drop_off
-
+router.post('/details', (req, res) => {
+  const {
+    company_name,
+    airport,
+    city,
+    amount,
+    type,
+    category,
+    transmission,
+    fuel
+  } = req.body;
+  carsReq(company_name, airport, city, amount, type, category, transmission, fuel)
+    .then(results => {
+      res.send(results);
+    });
+});
 
 // POST /car/addcar <= adds to database
-
+router.post('/addcar', (req, res) => {
+  Cars.create({
+    location: req.body.location,
+    pick_up: req.body.pick_up,
+    drop_off: req.body.drop_off,
+    vehicle: req.body.vehicle
+  })
+    .then((itinerary) => {
+      res.redirect('/itinerary');
+    });
+});
 
 // DELETE /car/:id <= removes car from database
-
-
+router.get('/:id', (req, res) => {
+  Cars.findById(req.params.id)
+    .then((cars) => {
+      res.redirect('/cars');
+    });
+});
 
 module.exports = router;
 

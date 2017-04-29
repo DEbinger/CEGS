@@ -60,14 +60,3 @@ export function flightDetails(pricing, saleTotal, slice) {
     slice
   };
 }
-
-// flight:
-// -nav bar at top changes (profile, logout)
-// -tabs/buttons below nav (one way, roundtrip, multitrip)
-// -enter departure/arrival info (location, date, time)
-// -enter number of people
-// -search button -> flight options page
-
-// Flight Options:
-// -filter/sort based on price, airlines, stops (default cheapest)
-// -select flight button -> overpage page
