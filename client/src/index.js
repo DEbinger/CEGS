@@ -16,6 +16,7 @@ import Cars from './components/Cars';
 import CarsForm from './components/CarsForm';
 import CarsDetails from './components/CarsDetails';
 import Flights from './components/Flights.js';
+import FlightDetails from './components/FlightDetails.js';
 import FlightsForm from './components/FlightsForm';
 import HotelsForm from './components/HotelsForm';
 import Hotels from './components/Hotels';
@@ -58,7 +59,7 @@ const allReducers = combineReducers({
 let store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk)
 );
 
-console.log('store', store);
+// console.log('store', store);
 
 ReactDOM.render(
   <Provider store={ store } history={ history }>
@@ -72,6 +73,7 @@ ReactDOM.render(
         <Route path='/resetpassword' component={ResetPassword} />
         <Route path='/profile' component={Profile} />
         <Route path='/flights' component={ Flights } />
+        <Route path='/flightdetails' component={ FlightDetails } />
         <Route path='/flightsform' component={ FlightsForm } />
         <Route path='/hotels' component={ Hotels } />
         <Route path='/hotelsform' component={ HotelsForm } />

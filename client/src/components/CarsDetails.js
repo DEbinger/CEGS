@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { listCars, addCar, clearCars } from '../redux/actions/carsAction';
+import { listCars, carDetails, addCar, clearCars } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
 
 class CarsDetails extends Component {
@@ -10,27 +10,14 @@ class CarsDetails extends Component {
   render() {
     return (
       <div>
-        <h1>CARS DETAILS</h1>
-        {this.props.cars.map( ({estimated_total, vehicle_info}) => 
-          <MoreInfo amount={estimated_total.amount} type={vehicle_info.type} />
-        )}
-      </div>
-    );
-  }
-}
-
-class MoreInfo extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div>
-        <p>Vehicle Category: {this.props.category}</p>
-        <p>Vehicle Type: {this.props.type}</p>
-        <p>Transmission: {this.props.transmission}</p>
-        <p>Weekly Price: ${this.props.amount}</p>
+        <p>Company Name: {this.props.cars.car_details.company_name}</p>
+        <p>Airport: {this.props.cars.car_details.airport}</p>
+        <p>City: {this.props.cars.car_details.city}</p>
+        <p>Vehicle Category: {this.props.cars.car_details.category}</p>
+        <p>Vehicle Type: {this.props.cars.car_details.vehicle_type}</p>
+        <p>Transmission: {this.props.cars.car_details.transmission}</p>
+        <p>Weekly Price: ${this.props.cars.car_details.amount}</p>
+        <p>Fuel: {this.props.cars.car_details.fuel}</p>
       </div>
     );
   }
@@ -46,6 +33,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onListCars: (company_name, airport, city, cars) => {
       dispatch(listCars(company_name, airport, city, cars));
+    },
+    onCarDetails: (company_name, airport, city, amount, vehicle_type, category, transmission, fuel) => {
+      dispatch(carDetails(company_name, airport, city, amount, vehicle_type, category, transmission, fuel));
     },
     onAddCar: (company_name, airport, city, cars) => {
       dispatch(addCar(company_name, airport, city, cars));
