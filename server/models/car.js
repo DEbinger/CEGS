@@ -1,10 +1,12 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Car = sequelize.define('Car', {
-    location: DataTypes.STRING,
+    airport: DataTypes.STRING,
     pick_up: DataTypes.DATE,
     drop_off: DataTypes.DATE,
-    vehicle: DataTypes.STRING,
+    vehicle_type: DataTypes.STRING,
+    amount: DataTypes.INTEGER,
+    company_name: DataTypes.STRING,
     itinerary: DataTypes.INTEGER,
     user: DataTypes.INTEGER
   }, {

@@ -1,9 +1,12 @@
+// jshint esversion:6
+
 export const LIST_CARS = 'LIST_CARS';
 export const CAR_DETAILS = 'CAR_DETAILS';
 export const ADD_CAR = 'ADD_CAR';
 export const CLEAR_CARS = 'CLEAR_CARS';
 
 export function listCars(company_name, airport, city, cars) {
+
   return {
     type: LIST_CARS,
     company_name,

@@ -70,8 +70,8 @@ ReactDOM.render(
         <Route exact path='/' component={ App } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
-        <Route path='/resetpassword' component={ResetPassword} />
-        <Route path='/profile' component={Profile} />
+        <Route path='/resetpassword' component={ ResetPassword } />
+        <Route path='/profile' component={ Profile } />
         <Route path='/flights' component={ Flights } />
         <Route path='/flightdetails' component={ FlightDetails } />
         <Route path='/flightsform' component={ FlightsForm } />
