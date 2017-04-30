@@ -18,10 +18,11 @@ class App extends Component {
           events={{
             geography: {
               onClick: (geography, evt) => {
-                if(`${geography.properties.admin}` === "United States of America") {
-                  alert(`Travel to the ${geography.properties.admin}!`);
+                var countryName = `${geography.properties.admin}`;
+                if(countryName.includes("United") || countryName.includes("Islands") || countryName.includes("Lands") || countryName.includes("Democratic") || countryName.includes("Republic")) {
+                  alert(`Travel to the ${countryName}!`);
                 } else {
-                  alert(`Travel to ${geography.properties.admin}!`);
+                  alert(`Travel to ${countryName}!`);
                 }
               }
             }
