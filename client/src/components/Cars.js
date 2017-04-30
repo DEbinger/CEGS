@@ -52,6 +52,7 @@ class Info extends Component {
   }
 
   handleAdd() {
+    this.props.onCarDetails(this.props.company_name, this.props.airport, this.props.city, this.props.amount, this.props.vehicle_type, this.props.category, this.props.transmission, this.props.fuel);
     this.props.history.push("/itinerary");
   }
 

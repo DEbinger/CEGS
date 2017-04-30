@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import { hotelDetail } from '../redux/actions/hotelsAction';
 
 class Hotels extends Component {
-  constructor(props) {
-    super(props);
-
-  }
   render() {
     return (
     	<div>
