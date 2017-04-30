@@ -18,7 +18,8 @@ function flights(state = initialState, action) {
   switch(action.type) {
     case LIST_FLIGHTS:
       return Object.assign({}, state, {
-        flightsList: [
+        flights: [
+          ...state.flights,
           {
             id: action.id,
             saleTotal: action.saleTotal,

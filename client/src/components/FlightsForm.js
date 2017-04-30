@@ -12,10 +12,6 @@ class FlightsForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      flights: []
-    };
-
     this.submitHandler = this.submitHandler.bind(this);
   }
 
@@ -44,10 +40,6 @@ class FlightsForm extends Component {
 
         this.props.onCarrierCodes(codeObj);
 
-        // carrierData.forEach( carrier => {
-        //   this.props.onCarrierCodes(carrier.code, carrier.name);
-        // });
-
         let flightsArr = data.trips.tripOption;
         flightsArr.forEach( flight => {
           this.props.onListFlights(
@@ -60,9 +52,6 @@ class FlightsForm extends Component {
 
         this.props.history.push('/flights');
       }
-
-      // console.log('THIS', JSON.parse(result.target.responseText));
-      // console.log('REQ RESULT', JSON.parse(result.target.responseText).trips.tripOption);
     });
 
     oReq.open("POST", "/flights/list");
@@ -70,10 +59,7 @@ class FlightsForm extends Component {
     oReq.send(searchValues);
   }
 
-
-
   render() {
-    // console.log('FLIGHTS FORM PAGE', this.props);
     return (
       <div>
         <h1>FLIGHTS FORM PAGE</h1>
