@@ -65,12 +65,23 @@ const submit = ({ firstName = '', lastName = '', email = '', password = '', conf
   }
 
 
-  // firstName validation
+  // securityQuestion validation
   if ( securityQuestion.trim() === '' ) {
     error.securityQuestion = 'Required';
     isError = true;
   }
 
+  // securityAnswer Validation
+  if ( securityAnswer.trim() === '' ) {
+    error.securityAnswer = 'Required';
+    isError = true;
+  } else if ( securityAnswer.length > 32 ) {
+    error.securityAnswer = 'Name exceeds character limit';
+    isError = true;
+  } else if ( securityAnswer.length >= 1  && securityAnswer.length < 4 ) {
+    error.securityAnswer = 'Name must be longer than 4 characters';
+    isError = true;
+  }
   console.log(securityQuestion.trim());
 
   if (isError) {
@@ -89,33 +100,6 @@ const renderInputField = ({input, placeholder, type, meta:{touched, error} }) =>
      <span className="error">{error}</span>}
   </div>
 );
-
-const securityQuestions = [
-  {
-    option: {
-      text: 'Select a Security Question',
-      value: ''
-    }
-  },
-  {
-    option: {
-      text: 'What is your favorite color?',
-      value: 'What is your favorite color?'
-    }
-  },
-  {
-    option: {
-      text: 'What is the name of the high school you attended?',
-      value: 'What is the name of the high school you attended?'
-    }
-  },
-  {
-    option: {
-      text: 'What is the name of the city you were born in?',
-      value: 'What is the name of the city you were born in?'
-    }
-  }
-];
 
 const renderSelectField = ({input, placeholder, type, meta:{touched, error}, children }) => (
   <div className="select-row">
@@ -159,7 +143,10 @@ const SignUpFunc = ({ handleSubmit }) => (
     <br />
     <Field name="securityQuestion"
       component={renderSelectField}>
-      { securityQuestions.map(option => <option value={option.value}>{option.text}</option> ) }
+      <option value="">Select a Security Question</option>
+            <option value="What is your favorite color?">What is your favorite color?</option>
+            <option value="What is the name of the high school you attended?">What is the name of the high school you attended?</option>
+            <option value="What city were you born in?">What city were you born in?</option>
     </Field>
     </div>
     <Field name="securityAnswer"
