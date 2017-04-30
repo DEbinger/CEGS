@@ -9,17 +9,6 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const User = db.User;
 
-router.get('/signout', function(req, res){
-  console.log('userRouter signout');
-  req.logout();
-  res.send('ok');
-  });
-
-router.post('/signout', function (req, res){
-    console.log("signed out");
-    req.logout();
-    res.send('ok');
-  });
 
 router.get('/', function(req, res){
   console.log('get route');
@@ -51,6 +40,17 @@ router.route('/signin')
     .catch(err => {
       console.log('error',err);
     });
+  });
+router.route('signout')
+  .get(function(req, res){
+  console.log('userRouter signout');
+  req.logout();
+  res.send('/');
+  })
+  .post(function (req, res){
+    console.log("signed out");
+    req.logout();
+    res.send('ok');
   });
 
 router.route('/profile')

@@ -1,11 +1,15 @@
+// jshint esversion:6
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import createHistory from 'history/createBrowserHistory';
 import { addUserToState, logOutFromState } from '../redux/actions/usersAction.js';
 
 class Nav extends Component {
     constructor(props){
-    super(props)
+    super(props);
 
     this.logOut = this.logOut.bind(this);
   }
@@ -33,20 +37,6 @@ class Nav extends Component {
     });
   }
 
- //  xhrLogOut() {
- //    let oReq = new XMLHttpRequest();
- //    oReq.open('GET', '/users/signout');
- //    oReq.addEventListener('load', (result) => {
- //      console.log(result);
- //    });
- //    oReq.send();
- // }
-
-  // logOut(event) {
-  //   event.preventDefault();
-  //   xhrLogOut();
-  // }
-
   xhrLogOut(){
     return new Promise(function(resolve,reject){
       function reqListener(){
@@ -55,7 +45,7 @@ class Nav extends Component {
       let oReq = new XMLHttpRequest();
       oReq.open('GET', '/users/signout');
       oReq.addEventListener("load", reqListener);
-      oReq.send(null);
+      oReq.send();
     });
   }
 
@@ -63,7 +53,12 @@ class Nav extends Component {
     event.preventDefault();
     this.xhrLogOut()
     .then(()=>{
+      console.log(this.props);
       this.props.onLogOut();
+      this.props.history.push('/signup');
+    })
+    .catch(err => {
+      console.log('error user not logged in', err);
     });
   }
 
