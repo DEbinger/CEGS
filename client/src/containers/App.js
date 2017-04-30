@@ -19,14 +19,13 @@ class App extends Component {
             geography: {
               onClick: (geography, evt) => {
                 if(`${geography.properties.admin}` === "United States of America") {
-                  confirm(`Travel to the ${geography.properties.admin}!`);
+                  alert(`Travel to the ${geography.properties.admin}!`);
                 } else {
-                  confirm(`Travel to ${geography.properties.admin}!`);
+                  alert(`Travel to ${geography.properties.admin}!`);
                 }
               }
             }
           }}
-
         />
       </div>
     );
