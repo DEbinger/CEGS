@@ -3,7 +3,7 @@
 }
 
 .rsm-wrapper {
-  background-color: #87CEFA;
+  background-color: #6CC3F9;
 }
 
 .rsm-zoomable-group {
@@ -11,5 +11,9 @@
 }
 
 .rsm-geography {
-  fill: #90EE90 !important;
+  fill: #7BEA7B !important;
+}
+
+.rsm-geography:hover {
+  fill: #4FE34F !important;
 }

@@ -15,6 +15,18 @@ class App extends Component {
         <h1>HOME PAGE</h1>
         <ReactSimpleMap
           geographyUrl={"../data/countries.topo.json"}
+          events={{
+            geography: {
+              onClick: (geography, evt) => {
+                if(`${geography.properties.admin}` === "United States of America") {
+                  confirm(`Travel to the ${geography.properties.admin}!`);
+                } else {
+                  confirm(`Travel to ${geography.properties.admin}!`);
+                }
+              }
+            }
+          }}
+
         />
       </div>
     );
