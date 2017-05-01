@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import { Field, reduxForm, SubmissionError } from 'redux-form';
 
+async function submitToServer(data) {
+  try {
+    let response = await fetch('/signup', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    let responseJson = await response.json();
+    return responseJson;
+  } catch(error) {
+    console.error(error);
+  }
+}
 
 const submit = ({ firstName = '', lastName = '', email = '', password = '', confirmPassword = '', securityQuestion = '' , securityAnswer = ''}) => {
   
@@ -64,7 +79,6 @@ const submit = ({ firstName = '', lastName = '', email = '', password = '', conf
     isError = true;
   }
 
-
   // securityQuestion validation
   if ( securityQuestion.trim() === '' ) {
     error.securityQuestion = 'Required';
@@ -82,13 +96,15 @@ const submit = ({ firstName = '', lastName = '', email = '', password = '', conf
     error.securityAnswer = 'Name must be longer than 4 characters';
     isError = true;
   }
-  console.log(securityQuestion.trim());
 
   if (isError) {
     throw new SubmissionError(error);
   }else{
     // submit form to server
     // or something else
+
+    return submitToServer({ firstName, lastName, email, password, confirmPassword, securityQuestion, securityAnswer })
+      .then((data) => console.log(data));
   }
 }
 
