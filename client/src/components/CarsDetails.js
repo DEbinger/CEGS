@@ -9,7 +9,7 @@ class CarsDetails extends Component {
 
   render() {
     return (
-      <div>
+      <div id="carDetail" className="car">
         <p>Company Name: {this.props.cars.car_details.company_name}</p>
         <p>Airport: {this.props.cars.car_details.airport}</p>
         <p>City: {this.props.cars.car_details.city}</p>
