@@ -1,0 +1,21 @@
+#nav{
+	background-color: blue;
+	
+	flex: 0 0 auto;
+	order: 1;
+
+	ul {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	li{
+		display: inline;
+		margin-right: 10px;
+	}
+}
+	
