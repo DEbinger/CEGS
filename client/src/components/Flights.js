@@ -36,7 +36,7 @@ class FlightContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div id="flightList" className="flight">
         <h4>{ this.props.saleTotal }</h4>
         { this.props.slice.map( ({ duration, segment}) =>
           <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierObj } />
