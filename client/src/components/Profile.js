@@ -83,9 +83,7 @@ class Profile extends Component {
    console.log('FROM PROFILE', this.props);
    return (
     <div>
-     <h1>USER PROFILE</h1>
-
-     <button onClick={ this.signOut }>Sign Out</button>
+     <h1>User Profile</h1>
 
     </div>
    );
@@ -108,16 +106,3 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(
  mapStateToProps, mapDispatchToProps)(Profile)
-       // {
-       //   // mapping out the users array index 0 object
-       //     return <div>
-
-       //       <ul>
-       //         <li> User: {users.first_name} {users.last_name}</li>
-       //           <li> Email: {users.email} </li>
-       //           <li> Security Question: {users.security_question} </li>
-       //           <li> <Link to=‘/resetpassword’>Reset My Password</Link></li>
-       //         </ul>
-
-       //     </div>
-       // }
