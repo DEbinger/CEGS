@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   listHotels,
-  clearHotels
+  clearHotels,
+  searchHotels
 } from '../redux/actions/hotelsAction';
 import { connect } from 'react-redux';
 
@@ -15,6 +16,7 @@ class HotelsForm extends Component {
     event.preventDefault();
     let form = document.getElementsByClassName('hotels-form');
     const values = `location=${form.location.value}&check_in=${form.checkIn.value}&check_out=${form.checkOut.value}`;
+    this.props.onSearch(form.location.value, form.checkIn.value, form.checkOut.value);
     let oReq = new XMLHttpRequest();
     oReq.addEventListener('load', (results) => {
 
@@ -55,7 +57,7 @@ class HotelsForm extends Component {
     	<div>
       	<h1>HOTELS FORM PAGE</h1>
 				<form onSubmit={ this.submitHandler }>
-					<input className="hotels-form" type="text" placeholder="Location" autoComplete='off' name="location" />
+					<input className="hotels-form" type="text" placeholder="Location" autoComplete='off' name="location" autoFocus/>
 					<br />
 					<label>
 						Check In:
@@ -87,6 +89,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     onClearHotels: () => {
       dispatch(clearHotels())
+    },
+    onSearch: (airport, check_in, check_out) => {
+      dispatch(searchHotels(airport, check_in, check_out))
     }
   }
 };

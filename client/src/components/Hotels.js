@@ -4,6 +4,7 @@ import { hotelDetail } from '../redux/actions/hotelsAction';
 
 class Hotels extends Component {
   render() {
+    console.log(this.props);
     return (
     	<div>
       	<h1>HOTELS LIST</h1>

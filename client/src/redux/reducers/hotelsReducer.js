@@ -2,7 +2,9 @@ import {
   LIST_HOTELS,
   ADD_HOTEL,
   HOTEL_DETAIL,
-  CLEAR_HOTELS
+  CLEAR_HOTELS,
+  SEARCH_HOTELS,
+  HOTEL_ITINERARY
   } from '../actions/hotelsAction';
 
 const initialState = {
@@ -61,6 +63,26 @@ function hotels(state = initialState, action) {
     case CLEAR_HOTELS:
       return Object.assign({}, state, {
         hotels: []
+      });
+
+    case SEARCH_HOTELS:
+      return Object.assign({}, state, {
+        searchValues: {
+          airport: action.airport,
+          check_in: action.check_in,
+          check_out: action.check_out
+        }
+      });
+
+    case HOTEL_ITINERARY:
+      return Object.assign({}, state, {
+        hotelItinerary: {
+          check_in: action.check_in,
+          check_out: action.check_out,
+          airport: action.airport,
+          hotelName: action.hotelName,
+          saleTotal: action.saleTotal
+        }
       });
 
       default:
