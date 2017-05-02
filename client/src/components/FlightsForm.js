@@ -61,14 +61,14 @@ class FlightsForm extends Component {
 
   render() {
     return (
-      <div>
-        <h1>FLIGHTS FORM PAGE</h1>
+      <div id="flightForm" className="flight">
+        <h1>Find a Flight</h1>
         <form onSubmit={ this.submitHandler }>
           <input className='flight-form' type='text' placeholder='origin' autoComplete='off' name='origin' autoFocus/>
           <br/>
           <input className='flight-form' type='text' placeholder='destination' autoComplete='off' name='destination' />
           <br/>
-          adultCount:
+          <label>Adult: </label>
           <select className='flight-form' name='adultCount'>
             <option value='0'>0</option>
             <option value='1'>1</option>
@@ -78,7 +78,7 @@ class FlightsForm extends Component {
             <option value='5'>5</option>
           </select>
           <br/>
-          childCount:
+          <label>Children: </label>
           <select className='flight-form' name='childCount'>
             <option value='0'>0</option>
             <option value='1'>1</option>
@@ -88,7 +88,7 @@ class FlightsForm extends Component {
             <option value='5'>5</option>
           </select>
           <br/>
-          infantInLapCount:
+          <label>Infant In Lap: </label>
           <select className='flight-form' name='infantInLapCount'>
             <option value='0'>0</option>
             <option value='1'>1</option>
@@ -98,7 +98,7 @@ class FlightsForm extends Component {
             <option value='5'>5</option>
           </select>
           <br/>
-          infantInSeatCount:
+          <label>Infant In Seat: </label>
           <select className='flight-form' name='infantInSeatCount'>
             <option value='0'>0</option>
             <option value='1'>1</option>
@@ -108,7 +108,7 @@ class FlightsForm extends Component {
             <option value='5'>5</option>
           </select>
           <br/>
-          seniorCount:
+          <label>Senior Count: </label>
           <select className='flight-form' name='seniorCount'>
             <option value='0'>0</option>
             <option value='1'>1</option>
@@ -118,21 +118,21 @@ class FlightsForm extends Component {
             <option value='5'>5</option>
           </select>
           <br/>
-          tripType:
+          <label>Trip Type: </label>
           <select className='flight-form' name='tripType'>
             <option value='oneWay'>one way</option>
             <option value='roundTrip'>round trip</option>
           </select>
           <br/>
-          departure date:
+          <label>Departure Date:</label>
           <br/>
           <input className='flight-form' type='date' min={ new Date() } name='departureDate' />
           <br/>
-          return date:
+          <label>Return Date:</label>
           <br/>
           <input className='flight-form' type='date' name='returnDepartureDate' />
           <br/>
-          refundable:
+          <label>Refundable: </label>
           <select className='flight-form' name='refundable'>
             <option value='false'>No</option>
             <option value='true'>Yes</option>
