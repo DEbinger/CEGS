@@ -48,7 +48,7 @@ class Itinerary extends Component {
     console.log('CAR: ', this.props.cars.car_details);
     return (
     	<div>
-      	<h1>ITINERARY PAGE</h1>
+      	<h1>Itinerary</h1>
 
       		<div>
       			<h3>Flight</h3>

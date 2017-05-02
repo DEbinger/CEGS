@@ -6,7 +6,7 @@ class Hotels extends Component {
   render() {
     return (
     	<div>
-      	<h1>HOTELS LIST</h1>
+      	<h1>HOTEL RESULTS</h1>
         { this.props.hotels.hotels.map( ({
           name,
           rating,

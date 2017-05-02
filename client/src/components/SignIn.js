@@ -77,7 +77,7 @@ class SignIn extends React.Component {
   render(){
     return (
       <div>
-        <h1>SIGN IN</h1>
+        <h1>Sign In</h1>
         <form onSubmit={this.handleSubmit} ref="reset">
           <input type='email' name="email" placeholder='Email' autoComplete='off' value={this.state.email} onChange={this.handleEmail} />
           <br />
