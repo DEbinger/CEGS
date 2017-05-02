@@ -10,7 +10,7 @@ class App extends Component {
 
   render() {
     return (
-      <h1>HOME PAGE</h1>
+      <h1>Adventure Awaits!</h1>
     );
   }
 }
