@@ -1,6 +1,7 @@
 // jshint esversion:6
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
@@ -8,8 +9,9 @@ import createHistory from 'history/createBrowserHistory';
 import { addUserToState, logOutFromState } from '../redux/actions/usersAction.js';
 
 class Nav extends Component {
-    constructor(props){
-    super(props);
+    constructor(props, context){
+    super(props, context);
+    console.log(this.context);
 
     this.logOut = this.logOut.bind(this);
   }
@@ -26,7 +28,7 @@ class Nav extends Component {
     });
   }
 
-  componentDidMount(){
+  componentWillMount(){
     this.xhrLoginCheck()
     .then((userData)=>{
       let user = userData;
@@ -52,10 +54,10 @@ class Nav extends Component {
   logOut(event){
     event.preventDefault();
     this.xhrLogOut()
-    .then(()=>{
+    .then(() => {
       console.log(this.props);
       this.props.onLogOut();
-      this.props.history.push('/signup');
+      this.context.router.history.push('/');
     })
     .catch(err => {
       console.log('error user not logged in', err);
@@ -70,7 +72,7 @@ class Nav extends Component {
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/profile'>Profile</Link></li>
-          <a href="#" onClick={this.logOut}>Sign Out</a>
+          <a id="signOutLink" href="#" onClick={this.logOut}>Sign Out</a>
         </ul>
       </div>
     )} else {
@@ -100,6 +102,11 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
+
+Nav.contextTypes = {
+  router: PropTypes.object.isRequired
+};
+
 
 export default connect(
     mapStateToProps,
