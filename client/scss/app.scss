@@ -2,6 +2,11 @@
 @import "./mixins";
 @import "./partials/nav";
 @import "./partials/sidebar";
+@import "./partials/user";
+@import "./partials/flight";
+@import "./partials/hotel";
+@import "./partials/car";
+@import "./partials/itinerary";
 
 
 body {
@@ -16,16 +21,27 @@ body {
 
 	display: flex;
 	flex-flow: row wrap;
+
+	height: 937px;
+
 }
 
 // data-reactroot
 div {
 	background-color: violet;
 
+	flex: 0 0 auto;
+	order: -1;
+
 	width: 100%;
 
 	display: flex;
 	flex-flow: row wrap;
+	align-items: flex-start;
+}
+
+.map {
+	display: hidden;
 }
 
 #home {
@@ -38,9 +54,10 @@ div {
 	flex-flow: column wrap;
 
 	width: 90%;
+	height: 887px;
 }
 
-.user {
+.hotel {
 	background-color: pink;
 
 	flex: 0 0 auto;
@@ -50,6 +67,7 @@ div {
 	flex-flow: column wrap;
 
 	width: 90%;
+	height: 887px;
 }
 
 .forms {
