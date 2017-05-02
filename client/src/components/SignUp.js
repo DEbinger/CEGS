@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addUser } from '../redux/actions/usersAction';
@@ -171,103 +170,6 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(addUser(user));
     }
   }
-=======
-import React from 'react';
-import { Field, reduxForm } from 'redux-form';
-
-const required = value => value ? undefined : ' Required'
-const letters = value => value && !/^[A-Za-z]+[^*0-9]/.test(value) ? 'Letters only' : undefined
-const alphanum = value => value && !/^[A-Za-z0-9 ]{4,}/ ? ' Must be at least 4 characters long and contain only letters and numbers' : undefined
-const email = value =>
-  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,3}$/i.test(value) ?
-  'Invalid email address' : undefined
-const userPassword = value =>
-  value && !/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,32}/.test(value) ? ' Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.' : console.log(value)
-
-const renderInputFields = ({ input, select, placeholder, label, type, meta: { touched, error, warning } }) => (
-  <div>
-    <input {...input} placeholder={placeholder} type={type} />
-    {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
-  </div>
-)
-
-const renderSelectField = ({ input, select, placeholder, label, type, meta: { touched, error, warning }, children }) => (
-  <div>
-    <select { ...input}>
-     {children}
-   </select>
-    {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
-  </div>
-)
-
-const SignUp = (props) => {
-  const { handleSubmit,
-          handleFirstName,
-          handleLastName,
-          handleEmail,
-          handlePassword,
-          handleConfirmPassword,
-          handleSecurityQuestion,
-          handleSecurityAnswer
-   } = props
-  return (
-    <div>
-      <h1>SIGN UP</h1>
-      <form onSubmit={handleSubmit}>
-        <Field name="firstName" type="text"
-          component={renderInputFields} placeholder="First Name"
-          autoComplete='off'
-          validate={[required, letters]}
-        />
-        <br />
-        <Field name="lastName" type="text"
-          component={renderInputFields} placeholder="Last Name"
-          autoComplete="off"
-          validate={[required, letters]}
-        />
-        <br />
-        <Field name="email" type="email"
-          component={renderInputFields} placeholder="Email"
-          autoComplete="off"
-          validate={[required, email]}
-        />
-        <br />
-        <Field name="password" type="password"
-          component={renderInputFields} placeholder="Password"
-          autoComplete="off"
-          validate={[required, userPassword]}
-        />
-        <br />
-        <Field name="confirmPassword" type="password"
-          component={renderInputFields} placeholder="Confirm Password"
-          autoComplete="off"
-          validate={[required]}
-        />
-        <br />
-        <Field name="securityQuestion"
-          component={renderSelectField}
-          validate={[required]}
-        >
-          <option>Select a Security Question</option>
-          <option value="What is your favorite color?">What is your favorite color?</option>
-          <option value="What is the name of the high school you attended?">What is the name of the high school you attended?</option>
-          <option value="What city were you born in?">What city were you born in?</option>
-        </Field>
-        <br />
-        <Field name="securityAnswer" type="text"
-          component={renderInputFields} maxLength="32"
-          placeholder="Security Answer"
-          autoComplete="off"
-          validate={[required, alphanum]}
-        />
-        <br />
-        <button type="submit">Sign Up</button>
-      </form>
-      <input type="submit" value="Sign Up with Google" />
-      <input type="submit" value="Sign Up with Facebook" />
-    </div>
-  )
->>>>>>> Stashed changes
 }
 
 export default connect(
