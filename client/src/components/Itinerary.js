@@ -5,7 +5,7 @@ class Itinerary extends Component {
 
 	constructor(props) {
 		super(props);
-		
+
 	}
 
   hotel(){
@@ -44,6 +44,7 @@ class Itinerary extends Component {
   }
 
   render() {
+    console.log('props from ITINERARY:', this.props);
   	console.log('HOTEL: ', this.props.hotels.hotelDetail);
     console.log('CAR: ', this.props.cars.car_details);
     return (
@@ -72,7 +73,8 @@ class Itinerary extends Component {
 const mapStateToProps = (state) => {
   return {
     hotels: state.hotels,
-    cars: state.cars
+    cars: state.cars,
+    hotelItinerary: state.hotels.hotelItinerary
   }
 };
 
