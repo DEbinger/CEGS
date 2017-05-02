@@ -30,13 +30,15 @@ export function carDetails(company_name, airport, city, amount, vehicle_type, ca
   };
 }
 
-export function addCar(company_name, airport, city, cars, itinerary, user) {
+export function addCar(pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user) {
   return {
     type: ADD_CAR,
-    company_name,
+    pick_up,
+    drop_off,
     airport,
-    city,
-    cars,
+    company_name,
+    vehicle_type,
+    amount,
     itinerary,
     user
   };

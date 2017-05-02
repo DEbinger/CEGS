@@ -37,8 +37,8 @@ const mapDispatchToProps = (dispatch) => {
     onCarDetails: (company_name, airport, city, amount, vehicle_type, category, transmission, fuel) => {
       dispatch(carDetails(company_name, airport, city, amount, vehicle_type, category, transmission, fuel));
     },
-    onAddCar: (company_name, airport, city, cars) => {
-      dispatch(addCar(company_name, airport, city, cars));
+    onAddCar: (pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user) => {
+      dispatch(addCar(pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user));
     },
     onClearCars: () => {
       dispatch(clearCars());

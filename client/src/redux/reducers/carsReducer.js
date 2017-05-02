@@ -40,10 +40,12 @@ function cars(state = initialState, action) {
         cars: [
           ...state.cars,
           {
-            location: action.location,
             pick_up: action.pick_up,
             drop_off: action.drop_off,
-            vehicle: action.vehicle,
+            airport: action.airport,
+            company_name: action.company_name,
+            vehicle_type: action.vehicle_type,
+            amount: action.amount,
             itinerary: action.itinerary,
             user: action.user
           }

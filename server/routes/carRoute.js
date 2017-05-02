@@ -46,13 +46,19 @@ router.post('/details', (req, res) => {
     });
 });
 
+// pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user
+
 // POST /car/addcar <= adds to database
 router.post('/addcar', (req, res) => {
   Cars.create({
-    location: req.body.location,
     pick_up: req.body.pick_up,
     drop_off: req.body.drop_off,
-    vehicle: req.body.vehicle
+    airport: req.body.airport,
+    company_name: req.body.company_name,
+    vehicle_type: req.body.vehicle_type,
+    amount: req.body.amount,
+    itinerary: req.body.itinerary,
+    user: req.body.user
   })
     .then((itinerary) => {
       res.redirect('/itinerary');
