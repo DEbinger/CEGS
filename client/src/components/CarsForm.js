@@ -37,9 +37,8 @@ class CarsForm extends Component {
 
   render() {
     return (
-      <div>
-        <h1>CARS FORM PAGE</h1>
-        <div>
+      <div id="carForm" className="car">
+        <h1>Find a Car</h1>
         <form onSubmit={this.handleSubmit}>
           <input className="cars-form" name="location" type="text" placeholder="Location" />
           <br />
@@ -55,7 +54,6 @@ class CarsForm extends Component {
           <br />
           <input type="submit" value="Search Cars" />
         </form>
-        </div>
       </div>
     )
   }

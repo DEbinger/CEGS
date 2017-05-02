@@ -1,4 +1,4 @@
-.water {
+/*.water {
   fill: #00248F;
   cursor: move;
 }
@@ -17,7 +17,7 @@
 
 .focused {
   fill: #33CC33;
-}
+}*/
 
 /*select {
   position: absolute;
@@ -28,7 +28,7 @@
   box-shadow: inset 1px 1px 2px #ddd8dc;
 }
 */
-.countryTooltip {
+/*.countryTooltip {
   position: absolute;
   display: none;
   pointer-events: none;
@@ -63,4 +63,4 @@
 
 path.route {
   opacity: 0;
-}
+}*/

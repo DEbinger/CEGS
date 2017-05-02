@@ -5,8 +5,8 @@ class FlightDetails extends Component {
   render() {
     console.log('FROM FLIGHTS DETAILS',this.props);
     return (
-      <div>
-        <h1>FLIGHT DETAILS PAGE</h1>
+      <div id="flightDetail" className="flight">
+        <h1>Flight Details</h1>
 
         <h4>Sale Total: { this.props.flightDetails.saleTotal }</h4>
         <h4>Price per ticket: { this.props.flightDetails.pricing.saleTotal }</h4>

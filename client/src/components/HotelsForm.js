@@ -55,7 +55,7 @@ class HotelsForm extends Component {
   render() {
     return (
     	<div>
-      	<h1>HOTELS FORM PAGE</h1>
+      	<h1>Find a Hotel</h1>
 				<form onSubmit={ this.submitHandler }>
 					<input className="hotels-form" type="text" placeholder="Location" autoComplete='off' name="location" autoFocus/>
 					<br />

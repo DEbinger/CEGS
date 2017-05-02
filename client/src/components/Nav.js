@@ -77,7 +77,7 @@ class Nav extends Component {
       </div>
     )} else {
     return (
-      <div>
+      <div id="nav">
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/signin'>Sign In</Link></li>

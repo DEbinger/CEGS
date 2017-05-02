@@ -83,7 +83,7 @@ class Profile extends Component {
    console.log('FROM PROFILE', this.props);
    return (
     <div>
-     <h1>USER PROFILE</h1>
+     <h1>User Profile</h1>
 
     </div>
    );
