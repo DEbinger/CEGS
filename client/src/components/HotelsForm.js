@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   listHotels,
   clearHotels,
   searchHotels
 } from '../redux/actions/hotelsAction';
-import { connect } from 'react-redux';
+import Sidebar from '../components/Sidebar';
 
 class HotelsForm extends Component {
   constructor() {
@@ -54,23 +55,26 @@ class HotelsForm extends Component {
 
   render() {
     return (
-    	<div>
-      	<h1>Find a Hotel</h1>
-				<form onSubmit={ this.submitHandler }>
-					<input className="hotels-form" type="text" placeholder="Location" autoComplete='off' name="location" autoFocus/>
-					<br />
-					<label>
-						Check In:
-						<input className="hotels-form" type="date" name="checkIn" />
-					</label>
-					<br />
-					<label>
-						Check Out:
-						<input className="hotels-form" type="date" name="checkOut" />
-					</label>
-					<br />
-					<input type="submit" value="Search Hotels" />
-				</form>
+      <div className="componentWithSidebar">
+        <Sidebar />
+      	<div id="hotelForm" className="hotel">
+        	<h1>Find a Hotel</h1>
+  				<form onSubmit={ this.submitHandler }>
+  					<input className="hotels-form" type="text" placeholder="Location" autoComplete='off' name="location" autoFocus/>
+  					<br />
+  					<label>
+  						Check In:
+  						<input className="hotels-form" type="date" name="checkIn" />
+  					</label>
+  					<br />
+  					<label>
+  						Check Out:
+  						<input className="hotels-form" type="date" name="checkOut" />
+  					</label>
+  					<br />
+  					<input type="submit" value="Search Hotels" />
+  				</form>
+        </div>
       </div>
     );
   }

@@ -1,35 +1,39 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { hotelDetail } from '../redux/actions/hotelsAction';
+import Sidebar from '../components/Sidebar';
 
 class Hotels extends Component {
   render() {
     console.log(this.props);
     return (
-    	<div>
-      	<h1>HOTEL RESULTS</h1>
-        { this.props.hotels.hotels.map( ({
-          name,
-          rating,
-          amenities,
-          cost,
-          propertyCode,
-          address,
-          contacts,
-          marketingText
-        }) =>
-          <HotelDiv
-          name={ name }
-          rating={ rating }
-          amenities={ amenities }
-          cost={ cost }
-          propertyCode={ propertyCode }
-          address={ address }
-          contacts={ contacts }
-          marketingText={ marketingText }
-          onDetail={ this.props.onDetail }
-          history={ this.props.history } />
-          ) }
+      <div className="componentWithSidebar">
+        <Sidebar />
+      	<div id="hotelList1" className="hotel">
+        	<h1>HOTEL RESULTS</h1>
+          { this.props.hotels.hotels.map( ({
+            name,
+            rating,
+            amenities,
+            cost,
+            propertyCode,
+            address,
+            contacts,
+            marketingText
+          }) =>
+            <HotelDiv
+            name={ name }
+            rating={ rating }
+            amenities={ amenities }
+            cost={ cost }
+            propertyCode={ propertyCode }
+            address={ address }
+            contacts={ contacts }
+            marketingText={ marketingText }
+            onDetail={ this.props.onDetail }
+            history={ this.props.history } />
+            ) }
+        </div>
       </div>
     );
   }
@@ -64,13 +68,14 @@ class HotelDiv extends Component {
 
   render() {
     return (
-      <div>
-        <h3>{ this.props.name }</h3>
-        <p>Rating: { this.props.rating }</p>
-        { this.listAmenities() }
-        <p>Lowest Total Cost: { this.props.cost }</p>
+      <div id="hotelList2" className="hotel">
+        <ul>
+          <li>Hotel: { this.props.name }</li>
+          <li>Rating: { this.props.rating }</li>
+          <li>{ this.listAmenities() }</li>
+          <li>Lowest Total Cost: ${ this.props.cost }</li>
+        </ul>
         <button onClick={ this.hotelsDetailReq }>Details</button>
-        <hr/>
       </div>
     );
   }
