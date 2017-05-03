@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { flightItinerary } from '../redux/actions/flightsAction';
 
 class FlightDetails extends Component {
+  constructor(props) {
+    super(props);
+
+    this.addFlightHandler = this.addFlightHandler.bind(this);
+  }
+
+  addFlightHandler(event) {
+    event.preventDefault();
+    let {
+      origin,
+      destination,
+      departureDate,
+      returnDepartureDate
+    } = this.props.searchValues;
+    let {
+      saleTotal
+    } = this.props.flightDetails;
+    this.props.onAddToItinrary(saleTotal, departureDate, returnDepartureDate, origin, destination);
+    this.props.history.push('/itinerary');
+  }
+
   render() {
     console.log('FROM FLIGHTS DETAILS',this.props);
     return (
@@ -16,6 +38,7 @@ class FlightDetails extends Component {
         { this.props.flightDetails.slice.map( ({ duration, segment }) =>
           <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierCodes } />
         ) }
+        <button onClick={ this.addFlightHandler }>Add Flight</button>
       </div>
     );
   }
@@ -51,7 +74,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-
+    onAddToItinrary: (saleTotal, departureDate, returnDepartureDate, origin, destination) => {
+      dispatch(flightItinerary(saleTotal, departureDate, returnDepartureDate, origin, destination))
+    }
   };
 };
 
@@ -59,3 +84,9 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(FlightDetails);
+
+// saleTotal
+// departuredate
+// returndate
+// origin
+// destination
