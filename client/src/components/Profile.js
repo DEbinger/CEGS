@@ -117,27 +117,29 @@ handleImageUpload(file) {
  render(){
    console.log('FROM PROFILE', this.props);
    return (
-    <form>
-    <h1>USER PROFILE</h1>
-      <div>
-        <div className="FileUpload">
-          <Dropzone
-            multiple={false}
-            accept="image/jpg,image/png"
-            onDrop={this.onImageDrop.bind(this)}>
-            <p>Drop an image or click to select a file to upload.</p>
-          </Dropzone>
-        </div>
+    <div id="userProfile" className="user">
+      <h1>User Profile</h1>
+      <form>
+        <div id="userProfilePicUploader">
+          <div className="FileUpload">
+            <Dropzone
+              multiple={false}
+              accept="image/jpg,image/png"
+              onDrop={this.onImageDrop.bind(this)}>
+              <p>Drop an image or click to select a file to upload.</p>
+            </Dropzone>
+          </div>
 
-        <div>
-          {this.state.uploadedFileCloudinaryUrl === '' ? null :
-          <div>
-            <p>{this.state.uploadedFile.name}</p>
-            <img src={this.state.uploadedFileCloudinaryUrl} />
-          </div>}
+          <div id="userProfilePic">
+            {this.state.uploadedFileCloudinaryUrl === '' ? null :
+            <div>
+              <p>{this.state.uploadedFile.name}</p>
+              <img src={this.state.uploadedFileCloudinaryUrl} />
+            </div>}
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
    );
  }
 }
