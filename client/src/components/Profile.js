@@ -8,6 +8,7 @@ import getUserReq from '../../lib/userReq';
 import { addUser } from '../redux/actions/usersAction';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
+import Sidebar from '../components/Sidebar';
 
 const CLOUDINARY_UPLOAD_PRESET = 'gyfqpzrn';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/hele.io/upload';
@@ -117,28 +118,31 @@ handleImageUpload(file) {
  render(){
    console.log('FROM PROFILE', this.props);
    return (
-    <div id="userProfile" className="user">
-      <h1>User Profile</h1>
-      <form>
-        <div id="userProfilePicUploader">
-          <div className="FileUpload">
-            <Dropzone
-              multiple={false}
-              accept="image/jpg,image/png"
-              onDrop={this.onImageDrop.bind(this)}>
-              <p>Drop an image or click to select a file to upload.</p>
-            </Dropzone>
-          </div>
+    <div className="componentWithSidebar">
+      <Sidebar />
+      <div id="userProfile" className="user">
+        <h1>User Profile</h1>
+        <form>
+          <div id="userProfilePicUploader">
+            <div className="FileUpload">
+              <Dropzone
+                multiple={false}
+                accept="image/jpg,image/png"
+                onDrop={this.onImageDrop.bind(this)}>
+                <p>Drop an image or click to select a file to upload.</p>
+              </Dropzone>
+            </div>
 
-          <div id="userProfilePic">
-            {this.state.uploadedFileCloudinaryUrl === '' ? null :
-            <div>
-              <p>{this.state.uploadedFile.name}</p>
-              <img src={this.state.uploadedFileCloudinaryUrl} />
-            </div>}
+            <div id="userProfilePic">
+              {this.state.uploadedFileCloudinaryUrl === '' ? null :
+              <div>
+                <p>{this.state.uploadedFile.name}</p>
+                <img src={this.state.uploadedFileCloudinaryUrl} />
+              </div>}
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
    );
  }

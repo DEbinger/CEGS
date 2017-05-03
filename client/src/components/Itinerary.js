@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Sidebar from '../components/Sidebar';
 
 class Itinerary extends Component {
 
@@ -41,23 +42,26 @@ class Itinerary extends Component {
   	console.log('HOTEL: ', this.props.hotels.hotelDetail);
     console.log('CAR: ', this.props.cars.car_details);
     return (
-    	<div id="itinerary">
-      	<h1>Itinerary</h1>
+      <div className="componentWithSidebar">
+        <Sidebar />
+      	<div id="itinerary">
+        	<h1>Itinerary</h1>
 
-      		<div className="itineraryResults">
-      			<h3>Flight</h3>
-            <p>No flight selected</p>
-      		</div>
+        		<div className="itineraryResults">
+        			<h3>Flight</h3>
+              <p>No flight selected</p>
+        		</div>
 
-	      	<div className="itineraryResults">
-	      		<h3>Hotel</h3>
-            { this.hotel() }
-					</div>
+  	      	<div className="itineraryResults">
+  	      		<h3>Hotel</h3>
+              { this.hotel() }
+  					</div>
 
-					<div className="itineraryResults">
-						<h3>Car</h3>
-            { this.car() }
-					</div>
+  					<div className="itineraryResults">
+  						<h3>Car</h3>
+              { this.car() }
+  					</div>
+        </div>
       </div>
     );
   }
