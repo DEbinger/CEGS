@@ -72,7 +72,8 @@ const mapStateToProps = (state) => {
   return {
     hotels: state.hotels,
     cars: state.cars,
-    hotelItinerary: state.hotels.hotelItinerary
+    hotelItinerary: state.hotels.hotelItinerary,
+    flightItinerary: state.flights.flightItinerary
   }
 };
 

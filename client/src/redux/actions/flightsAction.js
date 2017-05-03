@@ -4,6 +4,7 @@ export const CLEAR_FLIGHTS = 'CLEAR_FLIGHTS';
 export const ERROR_MESSAGE = 'ERROR_MESSAGE';
 export const CARRIER_CODE = 'CARRIER_CODE';
 export const FLIGHT_DETAILS = 'FLIGHT_DETAILS';
+export const FLIGHT_ITINERARY = 'FLIGHT_ITINERARY';
 
 export function listFlights(id, saleTotal, slice, pricing) {
   return {
@@ -58,5 +59,16 @@ export function flightDetails(pricing, saleTotal, slice) {
     pricing,
     saleTotal,
     slice
+  };
+}
+
+export function flightItinerary(saleTotal, departureDate, returnDepartureDate, origin, destination) {
+  return {
+    type: FLIGHT_ITINERARY,
+    saleTotal,
+    departureDate,
+    returnDepartureDate,
+    origin,
+    destination
   };
 }
