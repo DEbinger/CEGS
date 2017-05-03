@@ -3,9 +3,6 @@ import { listCars, carDetails, addCar, clearCars } from '../redux/actions/carsAc
 import { connect } from 'react-redux';
 
 class Cars extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
@@ -20,10 +17,6 @@ class Cars extends Component {
 }
 
 class Dealer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div id="carList2" className="car">
@@ -31,8 +24,8 @@ class Dealer extends Component {
           <li>Company: {this.props.company_name}</li>
           <li>Airport: {this.props.airport}</li>
           <li>City: {this.props.city}</li>
-        </ul>  
-        {this.props.cars.map( ({estimated_total, vehicle_info}) => 
+        </ul>
+        {this.props.cars.map( ({estimated_total, vehicle_info}) =>
           <Info amount={estimated_total.amount} vehicle_type={vehicle_info.type} company_name={this.props.company_name} airport={this.props.airport} city={this.props.city} category={vehicle_info.category} transmission={vehicle_info.transmission} fuel={vehicle_info.fuel} onCarDetails={this.props.onCarDetails} history={this.props.history} />
         )}
       </div>

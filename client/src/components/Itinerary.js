@@ -3,11 +3,6 @@ import { connect } from 'react-redux';
 
 class Itinerary extends Component {
 
-	constructor(props) {
-		super(props);
-
-	}
-
   hotel(){
     if(Object.keys(this.props.hotels.hotelDetail).length !== 0){
       let hotel = this.props.hotels.hotelDetail;

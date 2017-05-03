@@ -3,9 +3,6 @@ import { connect } from 'react-redux';
 import { flightDetails } from '../redux/actions/flightsAction';
 
 class Flights extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     console.log('FLIGHTS LIST PAGE', this.props);
