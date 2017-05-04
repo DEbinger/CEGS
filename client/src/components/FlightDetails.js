@@ -33,14 +33,16 @@ class FlightDetails extends Component {
         <div id="flightDetail" className="flight">
           <h1>Flight Details</h1>
 
-          <h4>Sale Total: { this.props.flightDetails.saleTotal }</h4>
-          <h4>Price per ticket: { this.props.flightDetails.pricing.saleTotal }</h4>
-          <h4>Latest Ticketing Time: { this.props.flightDetails.pricing.latestTicketingTime }</h4>
-          <p>Refundable: { `${this.props.flightDetails.pricing.refundable}` }</p>
-
+         
           { this.props.flightDetails.slice.map( ({ duration, segment }) =>
             <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierCodes } />
           ) }
+          <ul>
+            <li>Latest Ticketing Time: { this.props.flightDetails.pricing.latestTicketingTime }</li>
+            <li>Price per ticket: { this.props.flightDetails.pricing.saleTotal }</li>
+            <li>Sale Total: { this.props.flightDetails.saleTotal }</li>
+            <li>Refundable: { `${this.props.flightDetails.pricing.refundable}` }</li>
+          </ul>
           <button onClick={ this.addFlightHandler }>Add Flight</button>
         </div>
       </div>
