@@ -7,7 +7,7 @@ import '../public/css/app.css';
 import './index.css';
 
 //COMPONENTS
-import Sidebar from './components/Sidebar';
+// import Sidebar from './components/Sidebar';
 import Nav from './components/Nav';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
@@ -69,7 +69,7 @@ ReactDOM.render(
       <div>
         <Nav />
         <Sidebar />
-        <Route exact path='/' component={ App, Globe } />
+        <Route exact path='/' component={ App } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
         <Route path='/resetpassword' component={ ResetPassword } />

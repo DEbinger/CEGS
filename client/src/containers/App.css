@@ -1,25 +1,19 @@
-/*.App {
+.App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.rsm-wrapper {
+  background-color: #6CC3F9;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.rsm-zoomable-group {
+  transform: none;
 }
 
-.App-intro {
-  font-size: large;
+.rsm-geography {
+  fill: #7BEA7B !important;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.rsm-geography:hover {
+  fill: #4FE34F !important;
 }
-*/
