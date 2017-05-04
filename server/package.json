@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "api": "env $(cat .env | xargs) nodemon ./server/server.js",
-    "start": "env $(cat .env | xargs) node ./server/server.js"
+    "api": "env $(cat .env | xargs) nodemon ./server.js",
+    "start": "env $(cat .env | xargs) node ./server.js"
   },
   "repository": {
     "type": "git",
