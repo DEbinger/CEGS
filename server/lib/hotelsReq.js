@@ -3,7 +3,7 @@ const https = require('https');
 
 function hotelsList(location, check_in, check_out) {
   return new Promise( (resolve, reject) => {
-    https.get(`https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=${API_KEY}&location=${location}&check_in=${check_in}&check_out=${check_out}`, (res) => {
+    https.get(`https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=${API_KEY}&location=${location}&check_in=${check_in}&check_out=${check_out}&radius=40`, (res) => {
 
       let myData = '';
 
@@ -12,6 +12,7 @@ function hotelsList(location, check_in, check_out) {
       });
 
       res.on('end', () => {
+        console.log('HOTEL RESPONSE:', myData);
         resolve(JSON.parse(myData));
       })
       .on('error', (e) => {

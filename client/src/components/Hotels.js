@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { hotelDetail } from '../redux/actions/hotelsAction';
+import {
+  hotelDetail,
+  hotelItinerary
+} from '../redux/actions/hotelsAction';
 import Sidebar from '../components/Sidebar';
 
 class Hotels extends Component {
@@ -31,7 +34,9 @@ class Hotels extends Component {
             contacts={ contacts }
             marketingText={ marketingText }
             onDetail={ this.props.onDetail }
-            history={ this.props.history } />
+            history={ this.props.history }
+            searchValues={ this.props.searchValues }
+            onAddToItinerary={ this.props.onAddToItinerary } />
             ) }
         </div>
       </div>
@@ -46,6 +51,7 @@ class HotelDiv extends Component {
 
     this.amenitiesValue = '';
     this.hotelsDetailReq = this.hotelsDetailReq.bind(this);
+    this.addHotelHandler = this.addHotelHandler.bind(this);
   }
 
   hotelsDetailReq() {
@@ -66,6 +72,21 @@ class HotelDiv extends Component {
     return <p>Amenities: { this.amenitiesValue }</p>;
   }
 
+  addHotelHandler(event) {
+    event.preventDefault();
+    let {
+      check_in,
+      check_out,
+      airport
+    } = this.props.searchValues;
+    let {
+      name,
+      cost
+    } = this.props;
+    this.props.onAddToItinerary(check_in, check_out, airport, name, cost);
+    this.props.history.push('/itinerary');
+  }
+
   render() {
     return (
       <div id="hotelList2" className="hotel">
@@ -76,6 +97,7 @@ class HotelDiv extends Component {
           <li>Lowest Total Cost: ${ this.props.cost }</li>
         </ul>
         <button onClick={ this.hotelsDetailReq }>Details</button>
+        <button onClick={ this.addHotelHandler }>Add Hotel</button>
       </div>
     );
   }
@@ -83,7 +105,8 @@ class HotelDiv extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    hotels: state.hotels
+    hotels: state.hotels,
+    searchValues: state.hotels.searchValues
   }
 };
 
@@ -91,6 +114,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onDetail: (name, rating, amenities, cost, propertyCode, address, contacts, marketingText) => {
       dispatch(hotelDetail(name, rating, amenities, cost, propertyCode, address, contacts, marketingText))
+    },
+    onAddToItinerary: (check_in, check_out, airport, hotelName, saleTotal) => {
+      dispatch(hotelItinerary(check_in, check_out, airport, hotelName, saleTotal))
     }
   }
 };
