@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { flightDetails } from '../redux/actions/flightsAction';
+import Sidebar from '../components/Sidebar';
 
 class Flights extends Component {
 
   render() {
     console.log('FLIGHTS LIST PAGE', this.props);
     return (
-      <div>
-        <h1>FLIGHTS LIST PAGE</h1>
+      <div className="componentWithSidebar">
+        <Sidebar />
+        <div id="flightList" className="flight">
+          <h1>FLIGHTS LIST PAGE</h1>
 
-        {this.props.flights.flights.map( ({ id, saleTotal, slice, pricing }) =>
-            <FlightContainer key={ id } id={ id } saleTotal={ saleTotal } slice={ slice } pricing={ pricing } carrierObj={ this.props.flights.carrierCodes } onFlightDetails={ this.props.onFlightDetails } history={ this.props.history }/>
-          )
-        }
+          {this.props.flights.flights.map( ({ id, saleTotal, slice, pricing }) =>
+              <FlightContainer key={ id } id={ id } saleTotal={ saleTotal } slice={ slice } pricing={ pricing } carrierObj={ this.props.flights.carrierCodes } onFlightDetails={ this.props.onFlightDetails } history={ this.props.history }/>
+            )
+          }
+        </div>
       </div>
     );
   }

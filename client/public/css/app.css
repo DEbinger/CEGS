@@ -1,6 +1,6 @@
 #nav {
   flex: 0 0 auto;
-  order: 0;
+  order: -1;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
@@ -20,10 +20,30 @@
     color: white;
     text-decoration: none; }
 
+#userNav {
+  flex: 0 0 auto;
+  order: -1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  height: 50px;
+  background-color: black;
+  color: white; }
+  #userNav ul {
+    flex: 0 0 auto;
+    align-self: center;
+    margin: 0 12px 0 0;
+    padding: 0;
+    list-style-type: none; }
+  #userNav li {
+    display: inline;
+    margin-right: 10px; }
+  #userNav a {
+    color: white;
+    text-decoration: none; }
+
 #sidebar {
   background: red;
-  flex: 0 0 auto;
-  order: 2;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -38,11 +58,9 @@
 
 .user {
   background-color: pink;
-  flex: 0 0 auto;
-  order: 1;
   display: flex;
   flex-flow: column wrap;
-  width: 90%;
+  width: 100%;
   height: 887px; }
 
 .flight {
@@ -54,10 +72,23 @@
   width: 90%;
   height: 887px; }
 
-.car {
+.hotel {
   background-color: pink;
   flex: 0 0 auto;
   order: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  height: 887px; }
+
+#hotelDetail ul, #hotelList2 ul {
+  padding: 0; }
+
+#hotelList2 {
+  height: auto; }
+
+.car {
+  background-color: pink;
   display: flex;
   flex-flow: column nowrap;
   width: 90%;
@@ -128,20 +159,34 @@ div {
   order: 1;
   display: flex;
   flex-flow: column wrap;
-  width: 90%;
+  width: 100%;
   height: 887px; }
 
-.hotel {
-  background-color: pink;
-  flex: 0 0 auto;
-  order: 1;
+.componentWithSidebar {
   display: flex;
-  flex-flow: column wrap;
-  width: 90%;
-  height: 887px; }
+  flex-flow: row wrap; }
+  .componentWithSidebar #sidebar {
+    flex: 0 0 auto;
+    order: 2; }
+  .componentWithSidebar #userProfile {
+    flex: 0 0 auto;
+    order: 1;
+    width: 90%; }
+  .componentWithSidebar #itinerary {
+    flex: 0 0 auto;
+    order: 1; }
+  .componentWithSidebar .flight {
+    flex: 0 0 auto;
+    order: 1; }
+  .componentWithSidebar .hotel {
+    flex: 0 0 auto;
+    order: 1; }
+  .componentWithSidebar .car {
+    flex: 0 0 auto;
+    order: 1; }
 
 .forms {
-  background-color: pink;
+  background-color: powderblue;
   flex: 0 0 auto;
   order: 2;
   width: 90%; }
