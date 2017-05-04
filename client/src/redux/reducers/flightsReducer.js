@@ -4,7 +4,8 @@ import {
   CLEAR_FLIGHTS,
   ERROR_MESSAGE,
   CARRIER_CODE,
-  FLIGHT_DETAILS
+  FLIGHT_DETAILS,
+  FLIGHT_ITINERARY
 } from '../actions/flightsAction';
 
 const initialState = {
@@ -70,6 +71,17 @@ function flights(state = initialState, action) {
     case CARRIER_CODE:
       return Object.assign({}, state, {
         carrierCodes: action.names
+      });
+
+    case FLIGHT_ITINERARY:
+      return Object.assign({}, state, {
+        flightItinerary: {
+          saleTotal: action.saleTotal,
+          departureDate: action.departureDate,
+          returnDepartureDate: action.returnDepartureDate,
+          origin: action.origin,
+          destination: action.destination
+        }
       });
 
       default:
