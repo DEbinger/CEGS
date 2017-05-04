@@ -23,6 +23,7 @@ import HotelsForm from './components/HotelsForm';
 import Hotels from './components/Hotels';
 import HotelDetail from './components/HotelDetail';
 import Itinerary from './components/Itinerary';
+import Globe from './components/Globe';
 
 //REDUX STUFF
 import { Provider } from 'react-redux';
@@ -68,7 +69,7 @@ ReactDOM.render(
       <div>
         <Nav />
         <Sidebar />
-        <Route exact path='/' component={ App } />
+        <Route exact path='/' component={ App, Globe } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
         <Route path='/resetpassword' component={ ResetPassword } />
