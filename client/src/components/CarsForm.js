@@ -13,11 +13,12 @@ class CarsForm extends Component {
     event.preventDefault();
 
     let form = document.getElementsByClassName('cars-form');
-    
+
     const values = `location=${form.location.value}&pick_up=${form.pick_up.value}&drop_off=${form.drop_off.value}`;
-    
+
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (results) => {
+      this.props.onClearCars();
       let cars = JSON.parse(results.target.responseText);
       cars.results.forEach(cars => {
         this.props.onListCars(
@@ -27,7 +28,7 @@ class CarsForm extends Component {
           cars.cars
         );
       });
-      this.props.history.push("/cars");      
+      this.props.history.push("/cars");
     });
     oReq.open("POST", "/cars/list");
     oReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -36,14 +37,13 @@ class CarsForm extends Component {
 
   render() {
     return (
-      <div>
-        <h1>CARS FORM PAGE</h1>
-        <div>
+      <div id="carForm" className="car">
+        <h1>Find a Car</h1>
         <form onSubmit={this.handleSubmit}>
           <input className="cars-form" name="location" type="text" placeholder="Location" />
           <br />
           <label>
-          Pick Up: 
+          Pick Up:
             <input className="cars-form" name="pick_up" type="date" />
           </label>
           <br />
@@ -54,7 +54,6 @@ class CarsForm extends Component {
           <br />
           <input type="submit" value="Search Cars" />
         </form>
-        </div>
       </div>
     )
   }

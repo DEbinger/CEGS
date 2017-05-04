@@ -11,32 +11,27 @@ router.get('/', (req, res) => {
   res.send('flights route');
 });
 
-// GET /flights/home
 
+router.post('/list', (req, res) => {
+  const {
+    origin,
+    destination,
+    adultCount,
+    childCount,
+    infantInLapCount,
+    infantInSeatCount,
+    seniorCount,
+    tripType,
+    departureDate,
+    returnDepartureDate,
+    refundable
+  } = req.body;
 
-//POST /flights/list/:origin/:destination/:date
-router.get('/list', (req, res) => {
-  request.flightsList()
+  request.flightsList(origin, destination, adultCount, childCount, infantInLapCount, infantInSeatCount, seniorCount, tripType, departureDate, returnDepartureDate, refundable)
   .then(results => {
-    console.log("IN ROUTE");
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-    console.log(results);
     res.send(results);
   });
 });
-
-
-//POST /flights/detail/:origin/:destination/:date/:adultCount/:infantInLapCount/:infantInSeatCount/:childCount/:seniorCount/:refundable
-
-//CANT SEARCH FOR A SPECIFIC FLIGHT FROM LIST IN API, MUST BE DONE ON CLIENT SIDE
-
-
-//POST /flights/details/:price <= posts to database
-
-//PUT /flights/:price/:id <= changes in database
-
-//DELETE /flights/:id <= deletes from database
-
 
 // ROUTE FOR ARCHIVE DATA
 // router.get('/allinfo/:type/:value1/:value2', (req, res) => {

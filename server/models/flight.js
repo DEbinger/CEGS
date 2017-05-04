@@ -3,13 +3,9 @@ module.exports = function(sequelize, DataTypes) {
   var Flight = sequelize.define('Flight', {
     origin: DataTypes.STRING,
     destination: DataTypes.STRING,
-    date: DataTypes.DATE,
-    adultCount: DataTypes.INTEGER,
-    infantInLapCount: DataTypes.INTEGER,
-    infantInSeatCount: DataTypes.INTEGER,
-    childCount: DataTypes.INTEGER,
-    seniorCount: DataTypes.INTEGER,
-    refundable: DataTypes.BOOLEAN,
+    departureDate: DataTypes.DATE,
+    returnDate: DataTypes.DATE,
+    saleTotal: DataTypes.INTEGER,
     user: DataTypes.INTEGER
   }, {
     classMethods: {

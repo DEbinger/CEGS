@@ -52,7 +52,7 @@ passport.use(new LocalStrategy(
       }
     }).then ( email => {
       if (email === null) {
-        console.log('This email does not match');
+        console.log('This email does not match a user in database');
         return done(null, false, {message: 'bad email'});
 
       }else {
@@ -82,9 +82,14 @@ passport.serializeUser(function(user, done) {
   });
 });
 
-passport.deserializeUser(function(id, done) {
-  User.findOne(id, function(err, user) {
-    done(err, user);
+passport.deserializeUser(function(user, done) {
+  User.findOne({
+    where: {
+      id: user.id
+    }
+  })
+  .then(user => {
+    return done(null, user);
   });
 });
 

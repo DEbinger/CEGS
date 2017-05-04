@@ -1,4 +1,4 @@
-.water {
+/*.water {
   fill: #00248F;
   cursor: move;
 }
@@ -17,9 +17,9 @@
 
 .focused {
   fill: #33CC33;
-}
+}*/
 
-select {
+/*select {
   position: absolute;
   top: 20px;
   left: 580px;
@@ -27,8 +27,8 @@ select {
   padding: 3px;
   box-shadow: inset 1px 1px 2px #ddd8dc;
 }
-
-.countryTooltip {
+*/
+/*.countryTooltip {
   position: absolute;
   display: none;
   pointer-events: none;
@@ -44,11 +44,11 @@ select {
 .map {
   background-color: #87CEFA;
 }
-      
+
 .background {
   fill: none;
 }
-      
+
 .countries {
   fill: #90EE90;
   stroke: #FFFFFF;
@@ -63,4 +63,4 @@ select {
 
 path.route {
   opacity: 0;
-}
+}*/

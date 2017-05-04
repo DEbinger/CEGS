@@ -1,37 +1,74 @@
 export const LIST_FLIGHTS = 'LIST_FLIGHTS';
-export const ADD_FLIGHT = 'ADD_FLIGHT';
 export const SEARCH_FLIGHTS = 'SEARCH_FLIGHTS';
+export const CLEAR_FLIGHTS = 'CLEAR_FLIGHTS';
+export const ERROR_MESSAGE = 'ERROR_MESSAGE';
+export const CARRIER_CODE = 'CARRIER_CODE';
+export const FLIGHT_DETAILS = 'FLIGHT_DETAILS';
+export const FLIGHT_ITINERARY = 'FLIGHT_ITINERARY';
 
-export function addFlight(origin, destination, date, adultCount, infantInLapCount, infantInSeatCount, childCount, seniorCount, refundable, user) {
-  return {
-    type: ADD_FLIGHT,
-    origin,
-    destination,
-    date,
-    adultCount,
-    infantInLapCount,
-    infantInSeatCount,
-    childCount,
-    seniorCount,
-    refundable,
-    user
-  };
-}
-
-export function listFlight(saleTotal, flights) {
+export function listFlights(id, saleTotal, slice, pricing) {
   return {
     type: LIST_FLIGHTS,
+    id,
     saleTotal,
-    flights
+    slice,
+    pricing
   };
 }
 
-export function searchFlights(origin, destination, adultCount, date) {
+export function searchFlights(origin, destination, adultCount, childCount, infantInLapCount, infantInSeatCount, seniorCount,tripType, departureDate, returnDepartureDate, refundable) {
   return {
     type: SEARCH_FLIGHTS,
     origin,
     destination,
     adultCount,
-    date
+    childCount,
+    infantInLapCount,
+    infantInSeatCount,
+    seniorCount,
+    tripType,
+    departureDate,
+    returnDepartureDate,
+    refundable
+  };
+}
+
+export function clearFlights() {
+  return {
+    type: CLEAR_FLIGHTS
+  };
+}
+
+export function errorMsg(errorMessage) {
+  return {
+    type: ERROR_MESSAGE,
+    errorMessage
+  };
+}
+
+export function carrierCodes(names) {
+  return {
+    type: CARRIER_CODE,
+    names
+  };
+}
+
+export function flightDetails(pricing, saleTotal, slice) {
+  return {
+    type: FLIGHT_DETAILS,
+    pricing,
+    saleTotal,
+    slice
+  };
+}
+
+export function flightItinerary(saleTotal, departureDate, returnDepartureDate, origin, destination) {
+  return {
+    type: FLIGHT_ITINERARY,
+    saleTotal,
+    departureDate,
+    returnDepartureDate,
+    origin,
+    destination
   };
 }

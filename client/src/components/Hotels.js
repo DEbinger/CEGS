@@ -3,14 +3,11 @@ import { connect } from 'react-redux';
 import { hotelDetail } from '../redux/actions/hotelsAction';
 
 class Hotels extends Component {
-  constructor(props) {
-    super(props);
-
-  }
   render() {
+    console.log(this.props);
     return (
     	<div>
-      	<h1>HOTELS LIST</h1>
+      	<h1>HOTEL RESULTS</h1>
         { this.props.hotels.hotels.map( ({
           name,
           rating,

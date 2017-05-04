@@ -3,6 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
+import '../public/css/app.css';
 import './index.css';
 
 //COMPONENTS
@@ -16,6 +17,7 @@ import Cars from './components/Cars';
 import CarsForm from './components/CarsForm';
 import CarsDetails from './components/CarsDetails';
 import Flights from './components/Flights.js';
+import FlightDetails from './components/FlightDetails.js';
 import FlightsForm from './components/FlightsForm';
 import HotelsForm from './components/HotelsForm';
 import Hotels from './components/Hotels';
@@ -69,9 +71,10 @@ ReactDOM.render(
         <Route exact path='/' component={ App } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
-        <Route path='/resetpassword' component={ResetPassword} />
-        <Route path='/profile' component={Profile} />
+        <Route path='/resetpassword' component={ ResetPassword } />
+        <Route path='/profile' component={ Profile } />
         <Route path='/flights' component={ Flights } />
+        <Route path='/flightdetails' component={ FlightDetails } />
         <Route path='/flightsform' component={ FlightsForm } />
         <Route path='/hotels' component={ Hotels } />
         <Route path='/hotelsform' component={ HotelsForm } />

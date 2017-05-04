@@ -10,8 +10,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>HOME PAGE</h1>
+    	<div id="home">
+      	<h1>Adventure Awaits!</h1>
         <ReactSimpleMap
           geographyUrl={"../data/countries.topo.json"}
           events={{
