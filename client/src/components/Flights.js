@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { flightDetails } from '../redux/actions/flightsAction';
+import {
+  flightDetails,
+  flightItinerary
+} from '../redux/actions/flightsAction';
 import Sidebar from '../components/Sidebar';
 
 class Flights extends Component {
-
   render() {
     console.log('FLIGHTS LIST PAGE', this.props);
     return (
@@ -14,7 +16,18 @@ class Flights extends Component {
           <h1>FLIGHTS LIST PAGE</h1>
 
           {this.props.flights.flights.map( ({ id, saleTotal, slice, pricing }) =>
-              <FlightContainer key={ id } id={ id } saleTotal={ saleTotal } slice={ slice } pricing={ pricing } carrierObj={ this.props.flights.carrierCodes } onFlightDetails={ this.props.onFlightDetails } history={ this.props.history }/>
+              <FlightContainer
+                key={ id }
+                id={ id }
+                saleTotal={ saleTotal }
+                slice={ slice }
+                pricing={ pricing }
+                carrierObj={ this.props.flights.carrierCodes }
+                onFlightDetails={ this.props.onFlightDetails }
+                history={ this.props.history }
+                onAddToItinerary={ this.props.onAddToItinerary }
+                searchValues={ this.props.searchValues }
+              />
             )
           }
         </div>
@@ -28,11 +41,24 @@ class FlightContainer extends Component {
     super(props);
 
     this.detailsHandler = this.detailsHandler.bind(this);
+    this.addFlightHandler = this.addFlightHandler.bind(this);
   }
 
   detailsHandler() {
     this.props.onFlightDetails(this.props.pricing, this.props.saleTotal, this.props.slice);
     this.props.history.push('/flightdetails');
+  }
+
+  addFlightHandler(event) {
+    event.preventDefault();
+    let {
+      origin,
+      destination,
+      departureDate,
+      returnDepartureDate
+    } = this.props.searchValues;
+    this.props.onAddToItinerary(this.props.saleTotal, departureDate, returnDepartureDate, origin, destination);
+    this.props.history.push('/itinerary');
   }
 
   render() {
@@ -43,6 +69,7 @@ class FlightContainer extends Component {
           <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierObj } />
         )}
         <button onClick={ this.detailsHandler }>Details</button>
+        <button onClick={ this.addFlightHandler }>Add Flight</button>
       </div>
     );
   }
@@ -67,7 +94,8 @@ const SegmentDiv = ( { id, cabin, leg, carrier, carrierObj } ) => (
 
 const mapStateToProps = (state) => {
   return {
-    flights: state.flights
+    flights: state.flights,
+    searchValues: state.flights.searchValues
   };
 };
 
@@ -75,6 +103,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onFlightDetails: (pricing, saleTotal, slice) => {
       dispatch(flightDetails(pricing, saleTotal, slice))
+    },
+    onAddToItinerary: (saleTotal, departureDate, returnDepartureDate, origin, destination) => {
+      dispatch(flightItinerary(saleTotal, departureDate, returnDepartureDate, origin, destination))
     }
   };
 };

@@ -21,7 +21,7 @@ class FlightDetails extends Component {
     let {
       saleTotal
     } = this.props.flightDetails;
-    this.props.onAddToItinrary(saleTotal, departureDate, returnDepartureDate, origin, destination);
+    this.props.onAddToItinerary(saleTotal, departureDate, returnDepartureDate, origin, destination);
     this.props.history.push('/itinerary');
   }
 
@@ -78,7 +78,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAddToItinrary: (saleTotal, departureDate, returnDepartureDate, origin, destination) => {
+    onAddToItinerary: (saleTotal, departureDate, returnDepartureDate, origin, destination) => {
       dispatch(flightItinerary(saleTotal, departureDate, returnDepartureDate, origin, destination))
     }
   };
