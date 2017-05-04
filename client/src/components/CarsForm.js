@@ -16,6 +16,8 @@ class CarsForm extends Component {
 
     const values = `location=${form.location.value}&pick_up=${form.pick_up.value}&drop_off=${form.drop_off.value}`;
 
+    this.props.onSearchCars(form.location.value, form.pick_up.value, form.drop_off.value);
+
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (results) => {
       this.props.onClearCars();

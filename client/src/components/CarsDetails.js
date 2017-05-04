@@ -9,8 +9,8 @@ class CarsDetails extends Component {
     this.handleAdd = this.handleAdd.bind(this);
   }
 
-   handleAdd() {
-    this.props.onAddCar(this.props.pick_up, this.props.drop_off, this.props.airport, this.props.company_name, this.props.vehicle_type, this.props.amount);
+  handleAdd() {
+    this.props.onCarItinerary(this.props.cars.search_cars.pick_up, this.props.cars.search_cars.drop_off, this.props.cars.car_details.airport, this.props.cars.car_details.company_name, this.props.cars.car_details.vehicle_type, this.props.cars.car_details.amount);
     this.props.history.push("/itinerary");
   }
 
