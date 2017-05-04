@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from "react-dom";
 import ReactSimpleMap from "react-simple-maps";
 import './App.css';
 
