@@ -68,7 +68,6 @@ ReactDOM.render(
     <Router>
       <div>
         <Nav />
-        <Sidebar />
         <Route exact path='/' component={ App } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
