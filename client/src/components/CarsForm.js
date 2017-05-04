@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { listCars, carDetails, addCar, clearCars, searchCars, carItinerary } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
-import { listCars, carDetails, addCar, clearCars } from '../redux/actions/carsAction';
 import Sidebar from '../components/Sidebar';
 
 class CarsForm extends Component {
@@ -16,6 +16,8 @@ class CarsForm extends Component {
     let form = document.getElementsByClassName('cars-form');
 
     const values = `location=${form.location.value}&pick_up=${form.pick_up.value}&drop_off=${form.drop_off.value}`;
+
+    this.props.onSearchCars(form.location.value, form.pick_up.value, form.drop_off.value);
 
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (results) => {
@@ -80,12 +82,18 @@ class CarsForm extends Component {
       onCarDetails: (company_name, airport, city, amount, vehicle_type, category, transmission, fuel) => {
         dispatch(carDetails(company_name, airport, city, amount, vehicle_type, category, transmission, fuel));
       },
-      onAddCar: (company_name, airport, city, cars) => {
-        dispatch(addCar(company_name, airport, city, cars));
+      onAddCar: (pick_up, drop_off, airport, company_name, vehicle_type, amount) => {
+        dispatch(addCar(pick_up, drop_off, airport, company_name, vehicle_type, amount));
       },
       onClearCars: () => {
         dispatch(clearCars());
-      }
+      },
+      onSearchCars: (location, pick_up, drop_off) => {
+        dispatch(searchCars(location, pick_up, drop_off));
+      },
+      onCarItinerary: (pick_up, drop_off, airport, company_name, vehicle_type, amount) => {
+        dispatch(carItinerary(pick_up, drop_off, airport, company_name, vehicle_type, amount));
+      } 
     }
   };
 
