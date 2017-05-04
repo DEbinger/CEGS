@@ -1,3 +1,5 @@
+// jshint esversion:6
+
 // DEPENDENCIES
 const express = require('express');
 const app = express();
@@ -46,8 +48,6 @@ router.post('/details', (req, res) => {
     });
 });
 
-// pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user
-
 // POST /car/addcar <= adds to database
 router.post('/addcar', (req, res) => {
   Cars.create({
@@ -56,9 +56,7 @@ router.post('/addcar', (req, res) => {
     airport: req.body.airport,
     company_name: req.body.company_name,
     vehicle_type: req.body.vehicle_type,
-    amount: req.body.amount,
-    itinerary: req.body.itinerary,
-    user: req.body.user
+    amount: req.body.amount
   })
     .then((itinerary) => {
       res.redirect('/itinerary');
