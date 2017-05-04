@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { listCars, carDetails, addCar, clearCars } from '../redux/actions/carsAction';
+import { listCars, carDetails, addCar, clearCars, searchCars, carItinerary } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
 
 class Cars extends Component {
@@ -52,7 +52,7 @@ class Info extends Component {
   }
 
   handleAdd() {
-    this.props.onCarDetails(this.props.company_name, this.props.airport, this.props.city, this.props.amount, this.props.vehicle_type, this.props.category, this.props.transmission, this.props.fuel);
+    this.props.onAddCar(this.props.pick_up, this.props.drop_off, this.props.airport, this.props.company_name, this.props.vehicle_type, this.props.amount);
     this.props.history.push("/itinerary");
   }
 
@@ -82,12 +82,18 @@ const mapDispatchToProps = (dispatch) => {
     onCarDetails: (company_name, airport, city, amount, vehicle_type, category, transmission, fuel) => {
       dispatch(carDetails(company_name, airport, city, amount, vehicle_type, category, transmission, fuel));
     },
-    onAddCar: (pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user) => {
-      dispatch(addCar(pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user));
+    onAddCar: (pick_up, drop_off, airport, company_name, vehicle_type, amount) => {
+      dispatch(addCar(pick_up, drop_off, airport, company_name, vehicle_type, amount));
     },
     onClearCars: () => {
       dispatch(clearCars());
-    }
+    },
+    onSearchCars: (location, pick_up, drop_off) => {
+      dispatch(searchCars(location, pick_up, drop_off));
+    },
+    onCarItinerary: (pick_up, drop_off, airport, company_name, vehicle_type, amount) => {
+      dispatch(carItinerary(pick_up, drop_off, airport, company_name, vehicle_type, amount));
+    }  
   }
 }
 

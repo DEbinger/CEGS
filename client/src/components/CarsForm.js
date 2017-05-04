@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { listCars, carDetails, addCar, clearCars } from '../redux/actions/carsAction';
+import { listCars, carDetails, addCar, clearCars, searchCars, carItinerary } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
 
 class CarsForm extends Component {
@@ -75,12 +75,18 @@ class CarsForm extends Component {
       onCarDetails: (company_name, airport, city, amount, vehicle_type, category, transmission, fuel) => {
         dispatch(carDetails(company_name, airport, city, amount, vehicle_type, category, transmission, fuel));
       },
-      onAddCar: (pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user) => {
-        dispatch(addCar(pick_up, drop_off, airport, company_name, vehicle_type, amount, itinerary, user));
+      onAddCar: (pick_up, drop_off, airport, company_name, vehicle_type, amount) => {
+        dispatch(addCar(pick_up, drop_off, airport, company_name, vehicle_type, amount));
       },
       onClearCars: () => {
         dispatch(clearCars());
-      }
+      },
+      onSearchCars: (location, pick_up, drop_off) => {
+        dispatch(searchCars(location, pick_up, drop_off));
+      },
+      onCarItinerary: (pick_up, drop_off, airport, company_name, vehicle_type, amount) => {
+        dispatch(carItinerary(pick_up, drop_off, airport, company_name, vehicle_type, amount));
+      } 
     }
   };
 
