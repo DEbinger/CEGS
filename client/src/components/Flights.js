@@ -10,7 +10,7 @@ class Flights extends Component {
     return (
       <div className="componentWithSidebar">
         <Sidebar />
-        <div id="flightList" className="flight">
+        <div id="flightList1" className="flight">
           <h1>FLIGHTS LIST PAGE</h1>
 
           {this.props.flights.flights.map( ({ id, saleTotal, slice, pricing }) =>
@@ -37,7 +37,7 @@ class FlightContainer extends Component {
 
   render() {
     return (
-      <div id="flightList" className="flight">
+      <div id="flightList2" className="flight">
         <h4>{ this.props.saleTotal }</h4>
         { this.props.slice.map( ({ duration, segment}) =>
           <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierObj } />

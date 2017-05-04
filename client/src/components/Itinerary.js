@@ -4,16 +4,33 @@ import Sidebar from '../components/Sidebar';
 
 class Itinerary extends Component {
 
-  hotel(){
-    if(Object.keys(this.props.hotels.hotelDetail).length !== 0){
-      let hotel = this.props.hotels.hotelDetail;
+  flight(){
+    if(this.props.flightItinerary !== undefined) {
+      let flight = this.props.flightItinerary;
       return <div className="itineraryResults">
-          <p>{hotel.name}</p>
-          <p>{hotel.address.line1}, {hotel.address.city}, {hotel.address.region} {hotel.address.postal_code}</p>
-          { hotel.contacts.map( ({ detail, type }) => <p>{ type }: { detail }</p> )}
-          <p>{hotel.rating}</p>
-          <p>{hotel.amenities}</p>
-          <p>{hotel.cost}</p>
+        <ul>
+          <li>Origin: {flight.origin}</li>
+          <li>Destination: {flight.destination}</li>
+          <li>Departure Date: {flight.departureDate}</li>
+          <li>Return Date: {flight.returnDepartureDate}</li>
+          <li>Amount: {flight.saleTotal}</li>
+        </ul>
+      </div>
+    } else {
+      return <p>No flight selected</p>
+    }
+  }
+
+  hotel(){
+    if(this.props.hotelItinerary !== undefined) {
+      let hotel = this.props.hotelItinerary;
+      return <div className="itineraryResults">
+          <ul>
+            <li>{hotel.hotelName}</li>
+            <li>{hotel.check_in}</li>
+            <li>{hotel.check_out}</li>
+            <li>Amount: ${hotel.saleTotal}</li>
+          </ul>
         </div>
     } else {
       return <p>No hotel selected</p>
@@ -39,8 +56,9 @@ class Itinerary extends Component {
 
   render() {
     console.log('props from ITINERARY:', this.props);
-  	console.log('HOTEL: ', this.props.hotels.hotelDetail);
+  	console.log('HOTEL: ', this.props.hotelItinerary);
     console.log('CAR: ', this.props.cars.car_details);
+    console.log('FLIGHT: ', this.props.flightItinerary);
     return (
       <div className="componentWithSidebar">
         <Sidebar />
@@ -49,7 +67,7 @@ class Itinerary extends Component {
 
         		<div className="itineraryResults">
         			<h3>Flight</h3>
-              <p>No flight selected</p>
+              { this.flight() }
         		</div>
 
   	      	<div className="itineraryResults">

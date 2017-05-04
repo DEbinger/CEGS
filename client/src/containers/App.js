@@ -12,6 +12,7 @@ class App extends Component {
     return (
     	<div id="home">
       	<h1>Adventure Awaits!</h1>
+        <div id="homeMap">
         <ReactSimpleMap
           geographyUrl={"../data/countries.topo.json"}
           events={{
@@ -27,6 +28,7 @@ class App extends Component {
             }
           }}
         />
+        </div>
       </div>
     );
   }

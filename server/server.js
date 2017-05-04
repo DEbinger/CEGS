@@ -20,7 +20,7 @@ const router = express.Router();
 
 app.use(cookieParser());
 
-const {HOTEL_API_KEY, CAR_API_KEY, FLIGHT_KEY} = process.env;
+const {HOTEL_API_KEY, CAR_API_KEY, FLIGHT_API_KEY} = process.env;
 const flightsRoute = require('./routes/flightsRoute.js');
 const carRoute = require('./routes/carRoute.js');
 const hotelRoute = require('./routes/hotelRoute.js');
