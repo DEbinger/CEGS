@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Globe from '@planet/react-globe';
 import { connect } from 'react-redux';
 
-
 class GlobeReact extends React.Component {
  constructor(props){
   super(props);
