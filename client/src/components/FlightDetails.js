@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { flightItinerary } from '../redux/actions/flightsAction';
+import Sidebar from '../components/Sidebar';
 
 class FlightDetails extends Component {
   constructor(props) {
@@ -27,18 +28,21 @@ class FlightDetails extends Component {
   render() {
     console.log('FROM FLIGHTS DETAILS',this.props);
     return (
-      <div id="flightDetail" className="flight">
-        <h1>Flight Details</h1>
+      <div className="componentWithSidebar">
+        <Sidebar />
+        <div id="flightDetail" className="flight">
+          <h1>Flight Details</h1>
 
-        <h4>Sale Total: { this.props.flightDetails.saleTotal }</h4>
-        <h4>Price per ticket: { this.props.flightDetails.pricing.saleTotal }</h4>
-        <h4>Latest Ticketing Time: { this.props.flightDetails.pricing.latestTicketingTime }</h4>
-        <p>Refundable: { `${this.props.flightDetails.pricing.refundable}` }</p>
+          <h4>Sale Total: { this.props.flightDetails.saleTotal }</h4>
+          <h4>Price per ticket: { this.props.flightDetails.pricing.saleTotal }</h4>
+          <h4>Latest Ticketing Time: { this.props.flightDetails.pricing.latestTicketingTime }</h4>
+          <p>Refundable: { `${this.props.flightDetails.pricing.refundable}` }</p>
 
-        { this.props.flightDetails.slice.map( ({ duration, segment }) =>
-          <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierCodes } />
-        ) }
-        <button onClick={ this.addFlightHandler }>Add Flight</button>
+          { this.props.flightDetails.slice.map( ({ duration, segment }) =>
+            <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierCodes } />
+          ) }
+          <button onClick={ this.addFlightHandler }>Add Flight</button>
+        </div>
       </div>
     );
   }

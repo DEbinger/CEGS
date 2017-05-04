@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import { listCars, carDetails, addCar, clearCars } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
+import { listCars, carDetails, addCar, clearCars } from '../redux/actions/carsAction';
+import Sidebar from '../components/Sidebar';
 
 class Cars extends Component {
 
   render() {
     return (
-      <div id="carList1" className="car">
-        <h1>Car Results</h1>
-        {this.props.cars.cars.map( ({company_name, airport, city, cars}) =>
-          <Dealer company_name={company_name} airport={airport} city={city} cars={cars} onCarDetails={this.props.onCarDetails} history={this.props.history} />
-        )}
+      <div className="componentWithSidebar">
+          <Sidebar />
+          <div id="carList1" className="car">
+          <h1>Car Results</h1>
+          {this.props.cars.cars.map( ({company_name, airport, city, cars}) =>
+            <Dealer company_name={company_name} airport={airport} city={city} cars={cars} onCarDetails={this.props.onCarDetails} history={this.props.history} />
+          )}
+        </div>
       </div>
     );
   }
