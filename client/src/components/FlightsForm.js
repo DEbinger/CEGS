@@ -61,85 +61,108 @@ class FlightsForm extends Component {
   }
 
   render() {
+    console.log(this.props.onListFlights);
     return (
       <div className="componentWithSidebar">
         <Sidebar />
         <div id="flightForm" className="flight">
           <h1>Find a Flight</h1>
           <form onSubmit={ this.submitHandler }>
+          <label>
+            From:
             <input className='flight-form' type='text' placeholder='origin' autoComplete='off' name='origin' autoFocus/>
+          </label>
             <br/>
-            <input className='flight-form' type='text' placeholder='destination' autoComplete='off' name='destination' />
+            <label>
+              To:
+              <input className='flight-form' type='text' placeholder='destination' autoComplete='off' name='destination' />
+            </label>
             <br/>
-            <label>Adult: </label>
-            <select className='flight-form' name='adultCount'>
-              <option value='0'>0</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-            </select>
+            <label>
+              Departure Date:
+              <input className='flight-form' type='date' min={ new Date() } name='departureDate' />
+            </label>
             <br/>
-            <label>Children: </label>
-            <select className='flight-form' name='childCount'>
-              <option value='0'>0</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-            </select>
+            <label>
+              Return Date:
+              <input className='flight-form' type='date' name='returnDepartureDate' />
+            </label>
+            <br />
+            <label>
+              Adult:
+              <select className='flight-form' name='adultCount'>
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+            </label>
             <br/>
-            <label>Infant In Lap: </label>
-            <select className='flight-form' name='infantInLapCount'>
-              <option value='0'>0</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-            </select>
+            <label>
+              Children:
+              <select className='flight-form' name='childCount'>
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+            </label>
             <br/>
-            <label>Infant In Seat: </label>
-            <select className='flight-form' name='infantInSeatCount'>
-              <option value='0'>0</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-            </select>
+            <label>
+              Infant In Lap:
+              <select className='flight-form' name='infantInLapCount'>
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+            </label>
             <br/>
-            <label>Senior Count: </label>
-            <select className='flight-form' name='seniorCount'>
-              <option value='0'>0</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-            </select>
+            <label>
+              Infant In Seat:
+              <select className='flight-form' name='infantInSeatCount'>
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+            </label>
             <br/>
-            <label>Trip Type: </label>
-            <select className='flight-form' name='tripType'>
-              <option value='oneWay'>one way</option>
-              <option value='roundTrip'>round trip</option>
-            </select>
+            <label>
+              Senior Count:
+              <select className='flight-form' name='seniorCount'>
+                <option value='0'>0</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+            </label>
             <br/>
-            <label>Departure Date:</label>
+            <label>
+              Trip Type:
+              <select className='flight-form' name='tripType'>
+                <option value='oneWay'>one way</option>
+                <option value='roundTrip'>round trip</option>
+              </select>
+            </label>
             <br/>
-            <input className='flight-form' type='date' min={ new Date() } name='departureDate' />
-            <br/>
-            <label>Return Date:</label>
-            <br/>
-            <input className='flight-form' type='date' name='returnDepartureDate' />
-            <br/>
-            <label>Refundable: </label>
-            <select className='flight-form' name='refundable'>
-              <option value='false'>No</option>
-              <option value='true'>Yes</option>
-            </select>
+            <label>
+              Refundable:
+              <select className='flight-form' name='refundable'>
+                <option value='false'>No</option>
+                <option value='true'>Yes</option>
+              </select>
+            </label>
             <br/>
             <input  type='submit' value='Search Flights' />
           </form>
