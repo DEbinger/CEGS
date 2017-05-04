@@ -43,7 +43,10 @@ class CarsForm extends Component {
         <div id="carForm" className="car">
           <h1>Find a Car</h1>
           <form onSubmit={this.handleSubmit}>
-            <input className="cars-form" name="location" type="text" placeholder="Location" />
+            <label>
+              Destination:
+              <input className="cars-form" name="location" type="text" placeholder="Location" />
+            </label>
             <br />
             <label>
             Pick Up:
