@@ -15,21 +15,7 @@ class Flights extends Component {
         <div id="flightList" className="flight">
           <h1>FLIGHTS LIST PAGE</h1>
 
-          {this.props.flights.flights.map( ({ id, saleTotal, slice, pricing }) =>
-              <FlightContainer
-                key={ id }
-                id={ id }
-                saleTotal={ saleTotal }
-                slice={ slice }
-                pricing={ pricing }
-                carrierObj={ this.props.flights.carrierCodes }
-                onFlightDetails={ this.props.onFlightDetails }
-                history={ this.props.history }
-                onAddToItinerary={ this.props.onAddToItinerary }
-                searchValues={ this.props.searchValues }
-              />
-            )
-          }
+          {this.props.flights.flights.map( ({ id, saleTotal, slice, pricing }) => <FlightContainer key={ id } id={ id } saleTotal={ saleTotal } slice={ slice } pricing={ pricing } carrierObj={ this.props.flights.carrierCodes } onFlightDetails={ this.props.onFlightDetails } history={ this.props.history } onAddToItinerary={ this.props.onAddToItinerary } searchValues={ this.props.searchValues } /> ) }
         </div>
       </div>
     );
