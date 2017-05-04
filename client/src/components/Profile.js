@@ -1,5 +1,3 @@
-// jshint esversion:6
-
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 // import { Redirect } from ‘react-router-dom’;
@@ -115,12 +113,11 @@ handleImageUpload(file) {
 
 
  render(){
-   console.log('FROM PROFILE', this.props);
    return (
     <form>
     <h1>USER PROFILE</h1>
       <div>
-        <div className="FileUpload">
+        <div id="fileUpload">
           <Dropzone
             multiple={false}
             accept="image/jpg,image/png"

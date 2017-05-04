@@ -11,7 +11,6 @@ import { addUserToState, logOutFromState } from '../redux/actions/usersAction.js
 class Nav extends Component {
     constructor(props, context){
     super(props, context);
-    console.log(this.context);
 
     this.logOut = this.logOut.bind(this);
   }
@@ -68,11 +67,11 @@ class Nav extends Component {
   render() {
     if (this.props.users.loggedInUser) {
     return (
-      <div>
+      <div id="nav">
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/profile'>Profile</Link></li>
-          <a id="signOutLink" href="#" onClick={this.logOut}>Sign Out</a>
+          <a href="#" onClick={this.logOut}>Sign Out</a>
         </ul>
       </div>
     )} else {
