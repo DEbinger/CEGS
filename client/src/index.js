@@ -3,10 +3,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
+import '../public/css/app.css';
 import './index.css';
 
 //COMPONENTS
-import Sidebar from './components/Sidebar';
+// import Sidebar from './components/Sidebar';
 import Nav from './components/Nav';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
@@ -22,6 +23,7 @@ import HotelsForm from './components/HotelsForm';
 import Hotels from './components/Hotels';
 import HotelDetail from './components/HotelDetail';
 import Itinerary from './components/Itinerary';
+import Globe from './components/Globe';
 
 //REDUX STUFF
 import { Provider } from 'react-redux';
@@ -66,12 +68,11 @@ ReactDOM.render(
     <Router>
       <div>
         <Nav />
-        <Sidebar />
         <Route exact path='/' component={ App } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
-        <Route path='/resetpassword' component={ResetPassword} />
-        <Route path='/profile' component={Profile} />
+        <Route path='/resetpassword' component={ ResetPassword } />
+        <Route path='/profile' component={ Profile } />
         <Route path='/flights' component={ Flights } />
         <Route path='/flightdetails' component={ FlightDetails } />
         <Route path='/flightsform' component={ FlightsForm } />

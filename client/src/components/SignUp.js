@@ -127,8 +127,8 @@ class SignUp extends Component {
   render() {
     // console.log('SIGN UP STATE: ', this.state);
     return (
-      <div>
-        <h1>SIGN UP</h1>
+      <div id="signUp" className="user">
+        <h1>Sign Up</h1>
         <form onSubmit={this.handleSubmit} ref="reset">
           <input type="text" name="first_name" pattern="[A-Za-z]+" title="Enter your first name. Letters only."placeholder='First Name' autoComplete='off' value={this.state.first_name} onChange={this.handleFirstName} required/>
           <br />

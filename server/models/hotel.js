@@ -1,10 +1,11 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Hotel = sequelize.define('Hotel', {
-    location: DataTypes.STRING,
+    airport: DataTypes.STRING,
     check_in: DataTypes.DATE,
     check_out: DataTypes.DATE,
-    amenity: DataTypes.STRING,
+    saleTotal: DataTypes.INTEGER,
+    hotelName: DataTypes.STRING,
     itinerary: DataTypes.INTEGER,
     user: DataTypes.INTEGER
   }, {

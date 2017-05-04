@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "api": "env $(cat .env | xargs) nodemon ./server/server.js"
+    "api": "env $(cat .env | xargs) nodemon ./server.js",
+    "start": "env $(cat .env | xargs) node ./server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/DEbinger/CEGS#readme",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.1",
     "connect-flash": "^0.1.1",

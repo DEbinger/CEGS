@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   listHotels,
-  clearHotels
+  clearHotels,
+  searchHotels
 } from '../redux/actions/hotelsAction';
-import { connect } from 'react-redux';
+import Sidebar from '../components/Sidebar';
 
 class HotelsForm extends Component {
   constructor() {
@@ -15,6 +17,7 @@ class HotelsForm extends Component {
     event.preventDefault();
     let form = document.getElementsByClassName('hotels-form');
     const values = `location=${form.location.value}&check_in=${form.checkIn.value}&check_out=${form.checkOut.value}`;
+    this.props.onSearch(form.location.value, form.checkIn.value, form.checkOut.value);
     let oReq = new XMLHttpRequest();
     oReq.addEventListener('load', (results) => {
 
@@ -52,23 +55,29 @@ class HotelsForm extends Component {
 
   render() {
     return (
-    	<div>
-      	<h1>HOTELS FORM PAGE</h1>
-				<form onSubmit={ this.submitHandler }>
-					<input className="hotels-form" type="text" placeholder="Location" autoComplete='off' name="location" />
-					<br />
-					<label>
-						Check In:
-						<input className="hotels-form" type="date" name="checkIn" />
-					</label>
-					<br />
-					<label>
-						Check Out:
-						<input className="hotels-form" type="date" name="checkOut" />
-					</label>
-					<br />
-					<input type="submit" value="Search Hotels" />
-				</form>
+      <div className="componentWithSidebar">
+        <Sidebar />
+      	<div id="hotelForm" className="hotel">
+        	<h1>Find a Hotel</h1>
+  				<form onSubmit={ this.submitHandler }>
+            <label>
+              Destination:
+     					<input className="hotels-form" type="text" placeholder="Location" autoComplete='off' name="location" autoFocus/>
+            </label>
+  					<br />
+  					<label>
+              Check In:
+  						<input className="hotels-form" type="date" name="checkIn" />
+  					</label>
+  					<br />
+  					<label>
+              Check Out:
+  						<input className="hotels-form" type="date" name="checkOut" />
+  					</label>
+  					<br />
+  					<input type="submit" value="Search Hotels" />
+  				</form>
+        </div>
       </div>
     );
   }
@@ -87,6 +96,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     onClearHotels: () => {
       dispatch(clearHotels())
+    },
+    onSearch: (airport, check_in, check_out) => {
+      dispatch(searchHotels(airport, check_in, check_out))
     }
   }
 };

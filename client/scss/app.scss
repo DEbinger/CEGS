@@ -1,0 +1,114 @@
+// @import "./partials/reset";
+@import "./mixins";
+@import "./partials/nav";
+@import "./partials/sidebar";
+@import "./partials/user";
+@import "./partials/flight";
+@import "./partials/hotel";
+@import "./partials/car";
+@import "./partials/itinerary";
+
+
+body {
+	background-color: yellow;
+
+	margin: 0;
+	font-family: 'Quicksand', sans-serif !important;
+}
+
+#root {
+	border: 4px solid lime;
+
+	display: flex;
+	flex-flow: row wrap;
+
+	height: 937px;
+
+}
+
+// data-reactroot
+div {
+	background-color: violet;
+
+	flex: 0 0 auto;
+	order: -1;
+
+	width: 100%;
+
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+}
+
+.map {
+	display: hidden;
+}
+
+#home {
+	background-color: pink;
+
+	flex: 0 0 auto;
+	order: 1;
+
+	display: flex;
+	flex-flow: column wrap;
+
+	width: 100%;
+	height: 887px;
+
+	h1 {
+		order: 1;
+	}
+
+	#homeMap {
+		order: 2;
+	}
+
+}
+
+// sets the order of the sidebar and the div components
+.componentWithSidebar {
+	display: flex;
+	flex-flow: row wrap;
+
+	#sidebar {
+		flex: 0 0 auto;
+		order: 2;
+	}
+
+	#userProfile {
+		flex: 0 0 auto;
+		order: 1;
+
+		width: 90%;
+	}
+
+	#itinerary {
+		flex: 0 0 auto;
+		order: 1;
+	}
+
+	.flight {
+		flex: 0 0 auto;
+		order: 1;
+	}
+
+	.hotel {
+		flex: 0 0 auto;
+		order: 1;
+	}
+
+	.car {
+		flex: 0 0 auto;
+		order: 1;
+	}
+}
+
+.forms {
+	background-color: powderblue;
+
+	flex: 0 0 auto;
+	order: 2;
+
+	width: 90%;
+}

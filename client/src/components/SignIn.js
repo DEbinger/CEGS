@@ -1,3 +1,5 @@
+// jshint esversion:6
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -10,6 +12,7 @@ class SignIn extends React.Component {
 
   constructor(props){
     super(props);
+    console.log(this.props);
 
     this.state = {
       email: '',
@@ -27,13 +30,15 @@ class SignIn extends React.Component {
       password: this.state.password
     })
     .then((data) => {
-      console.log("Data handle submit",data);
       if(data){
+        console.log('Data verfication',data);
+        let userInfo = JSON.parse(data);
+        this.props.onSignIn(userInfo.id, userInfo.email, true);
         this.props.history.push('/profile');
       }
     })
     .catch(err => {
-      console.log('error not logged in');
+      console.log('error user not logged in', err);
     });
   }
 
@@ -53,16 +58,16 @@ class SignIn extends React.Component {
     user.username = user.email;
     console.log(user);
     return new Promise(function(resolve,reject){
-      var oReq = new XMLHttpRequest();
       function reqListener(dataReturn){
         let results = this.responseText;
-        console.log('This is the userLoggedIn',results)
-        if (results !== '/profile') {
+        console.log('userIsLoggedIn is: ', results);
+        if (results === null) {
         reject(results);
         } else {
         resolve(results);
         }
       }
+      var oReq = new XMLHttpRequest();
       oReq.open('POST', '/users/signin', true);
       oReq.setRequestHeader('Content-type','application/json');
       oReq.addEventListener("load", reqListener);
@@ -72,25 +77,37 @@ class SignIn extends React.Component {
 
   render(){
     return (
-      <div>
-        <h1>SIGN IN</h1>
-
-        <form>
-          <input type='email' placeholder='Email Address' autoComplete='off' />
+      <div id="signIn" className="user">
+        <h1>Sign In</h1>
+        <form onSubmit={this.handleSubmit} ref="reset">
+          <input type='email' name="email" placeholder='Email' autoComplete='off' value={this.state.email} onChange={this.handleEmail} />
           <br />
-          <input type='password' placeholder='Password' autoComplete='off' />
+          <input type='password' name="password" placeholder='Password' autoComplete='off' value={this.state.password} onChange={this.handlePassword} />
           <br />
-          <input type='submit' value='Login' />
+          <input type='submit' value='Sign In' />
           <br />
           <Link to='/resetpassword'>Reset My Password</Link>
         </form>
-        <input type='submit' value='Continue with Google' />
-          <br />
-        <input type='submit' value='Continue with Facebook' />
-          <br />
       </div>
     )
   }
 }
 
-export default SignIn;
+const mapStateToProps = (state) => {
+  return {
+    users: state.users
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+  onSignIn: (id, email, loggedIn) => {
+    dispatch(addUserToState(id, email, loggedIn))
+    }
+  }
+}
+
+export default connect(
+   mapStateToProps,
+   mapDispatchToProps
+   )(SignIn)

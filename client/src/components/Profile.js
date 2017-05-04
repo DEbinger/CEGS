@@ -2,92 +2,165 @@
 
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+// import { Redirect } from ‘react-router-dom’;
+// import { Link } from ‘react-router-dom’;
 import getUserReq from '../../lib/userReq';
 import { addUser } from '../redux/actions/usersAction';
-import { addUserToState } from '../redux/actions/usersAction';
-import { SignUp } from './SignUp';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
+import Sidebar from '../components/Sidebar';
 
-class Profile extends Component {
-  constructor(props){
-    super(props);
+const CLOUDINARY_UPLOAD_PRESET = 'gyfqpzrn';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/hele.io/upload';
+
+
+class Profile extends React.Component {
+ constructor(props){
+  super(props);
+
+  this.state = {
+    uploadedFileCloudinaryUrl: ''
+  };
+
+  this.signOut = this.signOut.bind(this);
+ }
+
+onImageDrop(files) {
+    this.setState({
+      uploadedFile: files[0]
+    });
+
+    this.handleImageUpload(files[0]);
   }
 
-  addUser(user){
-    getUserReq(user)
-     .then( user => {
-       console.log('UserProfile getUser', user);
-       this.props.onAddUser(user);
-     });
+handleImageUpload(file) {
+    let upload = request.post(CLOUDINARY_UPLOAD_URL)
+      .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+      .field('file', file)
+      .end(file);
+
+    upload.end((err, response) => {
+      if (err) {
+        console.error(err);
+      }
+
+      if (response.body.secure_url !== '') {
+        this.setState({
+          uploadedFileCloudinaryUrl: response.body.secure_url
+        });
+      }
+    });
   }
+ // addUser(user){
+ //   getUserReq(user)
+ //    .then( user => {
+ //      console.log(‘UserProfile getUser’, user);
+ //      this.props.onAddUser(user);
+ //    });
+ // }
 
-  // xhrLoginCheck(user){
-  //   return new Promise(function(resolve,reject){
-  //     function reqListener(){
-  //       resolve(this.responseText);
-  //     }
-  //     let oReq = new XMLHttpRequest();
-  //     oReq.open('GET', '/users/profile');
-  //     // oReq.setRequestHeader('Content-type',
-  //     //   'application/json');
-  //     oReq.addEventListener("load", reqListener);
-  //     oReq.send();
-  //   });
-  // }
+ // xhrLoginCheck(user){
+ //   return new Promise(function(resolve,reject){
+ //     function reqListener(){
+ //       resolve(this.responseText);
+ //     }
+ //     let oReq = new XMLHttpRequest();
+ //     oReq.open(‘FETCH’, ‘/users/profile’);
+ //     oReq.addEventListener(“load”, reqListener);
+ //     oReq.send(user);
+ //   });
+ // }
 
-  // componentDidMount(){
-  //   this.xhrLoginCheck()
-  //   .then((userData)=>{
-  //     console.log(this.props);
-  //     let user = JSON.parse(userData);
-  //     this.props.onAddUser(user.id, user.email);
-  //   })
-  //   .catch(function(err){
-  //     console.log("component will mount error",err);
-  //   });
-  // }
+ // componentWillMount(){
+ //   this.xhrLoginCheck()
+ //   .then((userData)=>{
+ //     console.log(this.props);
+ //     let user = userData;
+ //     this.props.onAddUser(user.id, user.email);
+ //   })
+ //   .catch(function(err){
+ //     console.log(“Profile component will mount error”,err);
+ //   });
+ // }
 
-  render(){
-    console.log('this.props.users: ', this.props.users);
-    console.log('this.props.users[0]: ', this.props.users[0]);
-      return (
-       <div>
-        <h1>USER PROFILE</h1>
 
-        {
-          // mapping out the users array index 0 object
-          this.props.users.map( ( users ) => {
-            return <div>
+//   componentWillMount(){
+//  function xhrLoginTest(){
+//   fetch(‘/users/profile’, {method: ‘GET’})
+//     .then(userData => {
+//       let user = userData;
+//       this.props.onAddUser(user.id, user.email);
+//     })
+//     .catch(function(err){
+//       console.log(“Profile component will mount error”,err);
+//     });
+//   }
+//   xhrLoginTest();
+// }
 
-              <ul>
-                <li> User: {users.first_name} {users.last_name}</li>
-                  <li> Email: {users.email} </li>
-                  <li> Security Question: {users.security_question} </li>
-                  <li> <Link to='/resetpassword'>Reset My Password</Link></li>
-                </ul>
+ signOut(event) {
+   event.preventDefault();
+   console.log('SIGN OUT CLICKED');
 
+   console.log('creating OREQ');
+   let oReq = new XMLHttpRequest();
+   console.log(oReq);
+   oReq.addEventListener('load', (result) => {
+     console.log(result.target.responseText);
+   });
+   console.log('opening request');
+   oReq.open('GET', '/users/signout');
+   console.log('sending request');
+   oReq.send();
+ }
+
+
+ render(){
+   console.log('FROM PROFILE', this.props);
+   return (
+    <div className="componentWithSidebar">
+      <Sidebar />
+      <div id="userProfile" className="user">
+        <h1>User Profile</h1>
+        <form>
+          <div id="userProfilePicUploader">
+            <div className="FileUpload">
+              <Dropzone
+                multiple={false}
+                accept="image/jpg,image/png"
+                onDrop={this.onImageDrop.bind(this)}>
+                <p>Drop an image or click to select a file to upload.</p>
+              </Dropzone>
             </div>
-          })
-        }
-       </div>
-      )
-  }
+
+            <div id="userProfilePic">
+              {this.state.uploadedFileCloudinaryUrl === '' ? null :
+              <div>
+                <p>{this.state.uploadedFile.name}</p>
+                <img src={this.state.uploadedFileCloudinaryUrl} />
+              </div>}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+   );
+ }
 }
 
 const mapStateToProps = (state) => {
-  return{
-    users: state.users
-  }
+ return{
+   users: state.users
+ }
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return{
-    onAddUser: (user) => {
-      dispatch(addUser(user));
-    }
-  }
+ return{
+   onAddUser: (user) => {
+     dispatch(addUser(user));
+   }
+ }
 }
 
 export default connect(
-  mapStateToProps, mapDispatchToProps)(Profile)
+ mapStateToProps, mapDispatchToProps)(Profile)

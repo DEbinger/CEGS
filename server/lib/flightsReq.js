@@ -47,8 +47,6 @@ function flightsList(origin, destination, adultCount, childCount, infantInLapCou
       });
     }
 
-    console.log('SLICE-VALUES', sliceValues);
-
     req.write(JSON.stringify( {
       request: {
         passengers: {
