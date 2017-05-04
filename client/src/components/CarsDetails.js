@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { listCars, carDetails, addCar, clearCars, searchCars, carItinerary } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
+import Sidebar from '../components/Sidebar';
 
 class CarsDetails extends Component {
   constructor(props) {
@@ -16,16 +17,20 @@ class CarsDetails extends Component {
 
   render() {
     return (
-      <div>
-        <p>Company Name: {this.props.cars.car_details.company_name}</p>
-        <p>Airport: {this.props.cars.car_details.airport}</p>
-        <p>City: {this.props.cars.car_details.city}</p>
-        <p>Vehicle Category: {this.props.cars.car_details.category}</p>
-        <p>Vehicle Type: {this.props.cars.car_details.vehicle_type}</p>
-        <p>Transmission: {this.props.cars.car_details.transmission}</p>
-        <p>Weekly Price: ${this.props.cars.car_details.amount}</p>
-        <p>Fuel: {this.props.cars.car_details.fuel}</p>
-        <button onClick={this.handleAdd}>Add Car</button>
+      <div className="componentWithSidebar">
+        <Sidebar />
+        <div id="carDetail" className="car">
+          <h1>Company Name: {this.props.cars.car_details.company_name}</h1>
+          <p>Airport: {this.props.cars.car_details.airport}, {this.props.cars.car_details.city}</p>
+          <ul>Vehicle:
+            <li>{this.props.cars.car_details.category}</li>
+            <li>Vehicle Type: {this.props.cars.car_details.vehicle_type}</li>
+            <li>Transmission: {this.props.cars.car_details.transmission}</li>
+            <li>Fuel: {this.props.cars.car_details.fuel}</li>
+          </ul>
+          <p>Weekly Rate: ${this.props.cars.car_details.amount}</p>
+          <button onClick={this.handleAdd}>Add Car</button>
+        </div>
       </div>
     );
   }

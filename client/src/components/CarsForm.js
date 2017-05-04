@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { listCars, carDetails, addCar, clearCars, searchCars, carItinerary } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
+import Sidebar from '../components/Sidebar';
 
 class CarsForm extends Component {
   constructor(props) {
@@ -39,24 +40,28 @@ class CarsForm extends Component {
 
   render() {
     return (
-      <div>
-        <h1>CARS FORM PAGE</h1>
-        <div>
-        <form onSubmit={this.handleSubmit}>
-          <input className="cars-form" name="location" type="text" placeholder="Location" />
-          <br />
-          <label>
-          Pick Up:
-            <input className="cars-form" name="pick_up" type="date" />
-          </label>
-          <br />
-          <label>
-          Drop Off:
-            <input className="cars-form" name="drop_off" type="date" />
-          </label>
-          <br />
-          <input type="submit" value="Search Cars" />
-        </form>
+      <div className="componentWithSidebar">
+        <Sidebar />
+        <div id="carForm" className="car">
+          <h1>Find a Car</h1>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Destination:
+              <input className="cars-form" name="location" type="text" placeholder="Location" />
+            </label>
+            <br />
+            <label>
+            Pick Up:
+              <input className="cars-form" name="pick_up" type="date" />
+            </label>
+            <br />
+            <label>
+            Drop Off:
+              <input className="cars-form" name="drop_off" type="date" />
+            </label>
+            <br />
+            <input type="submit" value="Search Cars" />
+          </form>
         </div>
       </div>
     )

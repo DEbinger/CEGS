@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class ResetPassword extends Component {
   render() {
     return (
-      <div>
+      <div id="resetPassword" className="user">
         <h1>Reset Password</h1>
 
         <form>

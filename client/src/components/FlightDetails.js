@@ -1,21 +1,50 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { flightItinerary } from '../redux/actions/flightsAction';
+import Sidebar from '../components/Sidebar';
 
 class FlightDetails extends Component {
+  constructor(props) {
+    super(props);
+
+    this.addFlightHandler = this.addFlightHandler.bind(this);
+  }
+
+  addFlightHandler(event) {
+    event.preventDefault();
+    let {
+      origin,
+      destination,
+      departureDate,
+      returnDepartureDate
+    } = this.props.searchValues;
+    let {
+      saleTotal
+    } = this.props.flightDetails;
+    this.props.onAddToItinrary(saleTotal, departureDate, returnDepartureDate, origin, destination);
+    this.props.history.push('/itinerary');
+  }
+
   render() {
     console.log('FROM FLIGHTS DETAILS',this.props);
     return (
-      <div>
-        <h1>FLIGHT DETAILS PAGE</h1>
+      <div className="componentWithSidebar">
+        <Sidebar />
+        <div id="flightDetail" className="flight">
+          <h1>Flight Details</h1>
 
-        <h4>Sale Total: { this.props.flightDetails.saleTotal }</h4>
-        <h4>Price per ticket: { this.props.flightDetails.pricing.saleTotal }</h4>
-        <h4>Latest Ticketing Time: { this.props.flightDetails.pricing.latestTicketingTime }</h4>
-        <p>Refundable: { `${this.props.flightDetails.pricing.refundable}` }</p>
-
-        { this.props.flightDetails.slice.map( ({ duration, segment }) =>
-          <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierCodes } />
-        ) }
+         
+          { this.props.flightDetails.slice.map( ({ duration, segment }) =>
+            <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierCodes } />
+          ) }
+          <ul>
+            <li>Latest Ticketing Time: { this.props.flightDetails.pricing.latestTicketingTime }</li>
+            <li>Price per ticket: { this.props.flightDetails.pricing.saleTotal }</li>
+            <li>Sale Total: { this.props.flightDetails.saleTotal }</li>
+            <li>Refundable: { `${this.props.flightDetails.pricing.refundable}` }</li>
+          </ul>
+          <button onClick={ this.addFlightHandler }>Add Flight</button>
+        </div>
       </div>
     );
   }
@@ -51,7 +80,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-
+    onAddToItinrary: (saleTotal, departureDate, returnDepartureDate, origin, destination) => {
+      dispatch(flightItinerary(saleTotal, departureDate, returnDepartureDate, origin, destination))
+    }
   };
 };
 
@@ -59,3 +90,9 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(FlightDetails);
+
+// saleTotal
+// departuredate
+// returndate
+// origin
+// destination

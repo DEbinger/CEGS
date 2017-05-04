@@ -9,6 +9,7 @@
 
 # server
 server/config
+/config
 
 # production
 /build
