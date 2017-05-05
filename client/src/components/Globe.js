@@ -1,32 +1,3 @@
-// import React, { Component } from 'react';
-// import Globe from '@planet/react-globe';
-// import { connect } from 'react-redux';
-// import Img from 'react-image-load'
-// import 'react-image-load/assets/style.css'
-
-// class GlobeReact extends React.Component {
-//  constructor(props){
-//   super(props);
-// }
-//   render(){
-//     return (
-//       <div id="globe-image">
-//         <Globe
-//         center={[45, -75]}
-//         landColor="#7BEA7B"
-//         diameter={900}
-//         markerColor="clear"
-//         oceanColor="#6CC3F9"
-//         shaded
-//         shadingOpacity={1.5}/>
-//       </div>
-//     );
-//     }
-//   }
-
-// export default GlobeReact;
-
-
 import React, { PropTypes, Component } from 'react';
 import { feature } from 'topojson-client';
 import { geoOrthographic, geoPath } from 'd3-geo';
