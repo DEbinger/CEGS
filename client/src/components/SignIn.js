@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { addUserToState } from '../redux/actions/usersAction';
 import { Router, browserHistory } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
-import { addUser } from '../redux/actions/usersAction';
+import { addUser, userErrorMsg } from '../redux/actions/usersAction';
 
 class SignIn extends React.Component {
 
@@ -25,6 +25,20 @@ class SignIn extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+
+    if (email === '') {
+      return this.props.onUserErrorMsg('Please enter your email to login');
+    } else if ( !email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i)) {
+      return this.props.onUserErrorMsg('Email is invalid');
+    }
+
+    if (password === '') {
+      return this.props.onUserErrorMsg('Please enter your password');
+    }
+
     this.userIsLoggedIn({
       email: this.state.email,
       password: this.state.password
@@ -39,6 +53,7 @@ class SignIn extends React.Component {
     })
     .catch(err => {
       console.log('error user not logged in', err);
+      return this.props.onUserErrorMsg('The email or password you entered is invalid. Please try again or reset your password.');
     });
   }
 
@@ -80,9 +95,10 @@ class SignIn extends React.Component {
       <div id="signIn" className="user">
         <h1>Sign In</h1>
         <form onSubmit={this.handleSubmit} ref="reset">
-          <input type='email' name="email" placeholder='Email' autoComplete='off' value={this.state.email} onChange={this.handleEmail} />
+          <p>{this.props.users.userErrorMsg}</p>
+          <input id="email" type='email' name="email" placeholder='Email' autoComplete='off' value={this.state.email} onChange={this.handleEmail} />
           <br />
-          <input type='password' name="password" placeholder='Password' autoComplete='off' value={this.state.password} onChange={this.handlePassword} />
+          <input id="password" type='password' name="password" placeholder='Password' autoComplete='off' value={this.state.password} onChange={this.handlePassword} />
           <br />
           <input type='submit' value='Sign In' />
           <br />
@@ -103,6 +119,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
   onSignIn: (id, email, loggedIn) => {
     dispatch(addUserToState(id, email, loggedIn))
+    },
+    onUserErrorMsg: (userErrorMessage) => {
+      dispatch(userErrorMsg(userErrorMessage))
     }
   }
 }
