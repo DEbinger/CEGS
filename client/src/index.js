@@ -30,6 +30,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import * as ReduxDevTools from 'redux-devtools';
+import { reducer as formReducer } from 'redux-form';
 
 //REDUCERS
 import users from './redux/reducers/usersReducer';
@@ -55,7 +56,8 @@ const allReducers = combineReducers({
   users,
   cars,
   hotels,
-  flights
+  flights,
+  form: formReducer
 });
 
 let store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk)
