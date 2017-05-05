@@ -69,6 +69,7 @@ ReactDOM.render(
       <div>
         <Nav />
         <Route exact path='/' component={ App } />
+        <Route path='/globe' component={ Globe } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
         <Route path='/resetpassword' component={ ResetPassword } />
