@@ -156,7 +156,7 @@
   width: 1000px; }
 
 .globe__land {
-  fill: #6CC3F9 !important;
+  fill: red !important;
   stroke: none; }
 
 body {
@@ -172,10 +172,6 @@ body {
   display: flex;
   flex-flow: row wrap;
   height: 937px; }
-
-.globe__land {
-  fill: #7BEA73 !important;
-  stroke: none; }
 
 div {
   background-color: violet;
