@@ -95,7 +95,7 @@ class SignIn extends React.Component {
       <div id="signIn" className="user">
         <h1>Sign In</h1>
         <form onSubmit={this.handleSubmit} ref="reset">
-          <p>{this.props.users.userErrorMsg}</p>
+          <p className="errorMsg" >{this.props.users.userErrorMsg}</p>
           <input id="email" type='email' name="email" placeholder='Email' autoComplete='off' value={this.state.email} onChange={this.handleEmail} />
           <br />
           <input id="password" type='password' name="password" placeholder='Password' autoComplete='off' value={this.state.password} onChange={this.handlePassword} />
