@@ -11,7 +11,6 @@ import './index.css';
 import Nav from './components/Nav';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
-import SignUp2 from './components/SignUp2';
 import Profile from './components/Profile';
 import ResetPassword from './components/ResetPassword';
 import Cars from './components/Cars';
@@ -74,7 +73,7 @@ ReactDOM.render(
         <Route exact path='/' component={ App } />
         <Route path='/globe' component={ Globe } />
         <Route path='/signin' component={ SignIn } />
-        <Route path='/signup' component={ SignUp2 } />
+        <Route path='/signup' component={ SignUp } />
         <Route path='/resetpassword' component={ ResetPassword } />
         <Route path='/profile' component={ Profile } />
         <Route path='/flights' component={ Flights } />
