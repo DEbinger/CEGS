@@ -1,0 +1,21 @@
+#sidebar{
+	background: red;
+	
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+
+	width: 10%;
+	height: 887px;
+
+	ul {
+		margin: 0 25px 0 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+	

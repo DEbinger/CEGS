@@ -12,6 +12,7 @@ class SignIn extends React.Component {
 
   constructor(props){
     super(props);
+    console.log(this.props);
 
     this.state = {
       email: '',
@@ -76,8 +77,8 @@ class SignIn extends React.Component {
 
   render(){
     return (
-      <div>
-        <h1>SIGN IN</h1>
+      <div id="signIn" className="user">
+        <h1>Sign In</h1>
         <form onSubmit={this.handleSubmit} ref="reset">
           <input type='email' name="email" placeholder='Email' autoComplete='off' value={this.state.email} onChange={this.handleEmail} />
           <br />
