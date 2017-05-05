@@ -9,7 +9,7 @@
 @import "./partials/itinerary";
 
 body {
-	background-color: yellow;
+	// background-color: yellow;
 
 	margin: 0;
 	font-family: 'Quicksand', sans-serif !important;
@@ -25,15 +25,17 @@ body {
 
 }
 
-//	rotating globe
-.globe__land {
+//	rotating globe - removed from app
+//	will reenter into app once it functions
+/* .globe__land {
   fill: #7BEA73 !important;
   stroke: none;
-}
+} */
 
 // data-reactroot
+//	all components nested in this div
 div {
-	background-color: violet;
+	// background-color: violet;
 
 	flex: 0 0 auto;
 	order: -1;
@@ -43,10 +45,6 @@ div {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
-}
-
-.map {
-	display: hidden;
 }
 
 #home {
@@ -75,6 +73,7 @@ div {
 .componentWithSidebar {
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
 
 	#sidebar {
 		flex: 0 0 auto;
@@ -84,8 +83,6 @@ div {
 	#userProfile {
 		flex: 0 0 auto;
 		order: 1;
-
-		width: 100%;
 	}
 
 	#itinerary {

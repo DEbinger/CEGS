@@ -7,3 +7,23 @@
 	width: 100%;
 	height: 887px;
 }
+
+#userProfile {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	
+	width: 75%;
+	margin: 50px;
+
+	background-color: rgb(255,255,255);
+	box-shadow: 0px 1px 3px rgb(204,204,204);
+}
+
+.FileUpload {
+	p {
+		text-align: center;
+		align-self: center;
+	}
+}

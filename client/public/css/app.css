@@ -88,6 +88,20 @@
   width: 100%;
   height: 887px; }
 
+#userProfile {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px #cccccc; }
+
+.FileUpload p {
+  text-align: center;
+  align-self: center; }
+
 .flight {
   background-color: pink;
   flex: 0 0 auto;
@@ -178,7 +192,6 @@
     list-style-type: none; }
 
 body {
-  background-color: yellow;
   margin: 0;
   font-family: 'Quicksand', sans-serif !important; }
 
@@ -188,21 +201,17 @@ body {
   flex-flow: row wrap;
   height: 937px; }
 
-.globe__land {
+/* .globe__land {
   fill: #7BEA73 !important;
-  stroke: none; }
-
+  stroke: none;
+} */
 div {
-  background-color: violet;
   flex: 0 0 auto;
   order: -1;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start; }
-
-.map {
-  display: hidden; }
 
 #home {
   background-color: pink;
@@ -219,14 +228,14 @@ div {
 
 .componentWithSidebar {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  justify-content: center; }
   .componentWithSidebar #sidebar {
     flex: 0 0 auto;
     order: 0; }
   .componentWithSidebar #userProfile {
     flex: 0 0 auto;
-    order: 1;
-    width: 100%; }
+    order: 1; }
   .componentWithSidebar #itinerary {
     flex: 0 0 auto;
     order: 1; }
