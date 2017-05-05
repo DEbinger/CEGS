@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 import Sidebar from '../components/Sidebar';
 
 class Itinerary extends Component {
+  constructor(props) {
+    super(props);
+
+    this.saveItineraryHandler = this.saveItineraryHandler.bind(this);
+  }
 
   flight(){
     if(this.props.flightItinerary !== undefined) {
@@ -54,6 +59,16 @@ class Itinerary extends Component {
     }
   }
 
+  saveItineraryHandler(event) {
+    event.preventDefault();
+    let oReq = new XMLHttpRequest();
+    oReq.addEventListener('load', (results) => {
+      console.log(results);
+    });
+    oReq.open('POST', '/itinerary/saveItinerary');
+    oReq.send();
+  }
+
   render() {
     console.log('props from ITINERARY:', this.props);
   	console.log('HOTEL: ', this.props.hotelItinerary);
@@ -79,6 +94,8 @@ class Itinerary extends Component {
   						<h3>Car</h3>
               { this.car() }
   					</div>
+
+            <button onClick={ this.saveItineraryHandler }>Save Itinerary</button>
         </div>
       </div>
     );
