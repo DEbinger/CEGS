@@ -7,6 +7,7 @@
 @import "./partials/hotel";
 @import "./partials/car";
 @import "./partials/itinerary";
+@import "./partials/variables";
 
 body {
 	// background-color: yellow;
@@ -16,13 +17,8 @@ body {
 }
 
 #root {
-	border: 4px solid lime;
-
 	display: flex;
 	flex-flow: row wrap;
-
-	height: 937px;
-
 }
 
 //	rotating globe - removed from app
@@ -58,15 +54,6 @@ div {
 
 	width: 100%;
 	height: 887px;
-
-	h1 {
-		order: 1;
-	}
-
-	#homeMap {
-		order: 2;
-	}
-
 }
 
 // sets the order of the sidebar and the div components
@@ -80,27 +67,7 @@ div {
 		order: 0;
 	}
 
-	#userProfile {
-		flex: 0 0 auto;
-		order: 1;
-	}
-
-	#itinerary {
-		flex: 0 0 auto;
-		order: 1;
-	}
-
-	.flight {
-		flex: 0 0 auto;
-		order: 1;
-	}
-
-	.hotel {
-		flex: 0 0 auto;
-		order: 1;
-	}
-
-	.car {
+	#userProfile, #itinerary, .flight, .hotel, .car {
 		flex: 0 0 auto;
 		order: 1;
 	}
