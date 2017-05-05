@@ -70,7 +70,7 @@ ReactDOM.render(
     <Router>
       <div>
         <Nav />
-        <Route exact path='/' component={ App, Globe } />
+        <Route exact path='/' component={ App } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
         <Route path='/resetpassword' component={ ResetPassword } />
