@@ -7,7 +7,6 @@
 @import "./partials/hotel";
 @import "./partials/car";
 @import "./partials/itinerary";
-@import "./partials/globe";
 
 body {
 	background-color: yellow;
@@ -26,10 +25,11 @@ body {
 
 }
 
-// .globe__land {
-//   fill: #7BEA73 !important;
-//   stroke: none;
-// }
+//	rotating globe
+.globe__land {
+  fill: #7BEA73 !important;
+  stroke: none;
+}
 
 // data-reactroot
 div {
