@@ -11,24 +11,6 @@ class App extends Component {
   render() {
     return (
     	<div id="home">
-      	<h1>Adventure Awaits!</h1>
-        <div id="homeMap">
-        <ReactSimpleMap
-          geographyUrl={"../data/countries.topo.json"}
-          events={{
-            geography: {
-              onClick: (geography, evt) => {
-                var countryName = `${geography.properties.admin}`;
-                if(countryName.includes("United") || countryName.includes("Islands") || countryName.includes("Lands") || countryName.includes("Democratic") || countryName.includes("Republic")) {
-                  alert(`Travel to the ${countryName}!`);
-                } else {
-                  alert(`Travel to ${countryName}!`);
-                }
-              }
-            }
-          }}
-        />
-        </div>
       </div>
     );
   }

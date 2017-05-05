@@ -1,3 +1,5 @@
+@import './variables';
+
 .flight {
 	background-color: pink;
 
@@ -7,8 +9,22 @@
 	display: flex;
 	flex-flow: column nowrap;
 
-	width: 90%;
-	height: 887px;
+	width: $width;
+	height: $height;
+}
+
+#flightForm {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
 }
 
 #flightList2 {

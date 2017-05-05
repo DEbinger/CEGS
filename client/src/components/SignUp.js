@@ -190,7 +190,7 @@ class SignUp extends Component {
       <div id="signUp" className="user">
         <h1>Sign Up</h1>
         <form onSubmit={this.handleSubmit} ref="reset">
-          <p>{ this.props.users.userErrorMsg }</p>
+          <p className="errorMsg" >{ this.props.users.userErrorMsg }</p>
           <input id="firstName" type="text" name="first_name" placeholder='First Name' autoComplete='off' maxLength="32" value={this.state.first_name} onChange={this.handleFirstName} />
           <br />
           <input id="lastName" type="text" name="last_name" placeholder="Last Name" autoComplete="off" maxLength="32" value={this.state.last_name} onChange={this.handleLastName} />

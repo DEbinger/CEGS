@@ -3,10 +3,14 @@
   order: -1;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 50px;
   background-color: black;
   color: white; }
+  #nav h1 {
+    flex: 0 0 auto;
+    align-self: center;
+    margin-left: 12px; }
   #nav ul {
     flex: 0 0 auto;
     align-self: center;
@@ -25,10 +29,14 @@
   order: -1;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 50px;
   background-color: black;
   color: white; }
+  #userNav h1 {
+    flex: 0 0 auto;
+    align-self: center;
+    margin-left: 12px; }
   #userNav ul {
     flex: 0 0 auto;
     align-self: center;
@@ -43,25 +51,55 @@
     text-decoration: none; }
 
 #sidebar {
-  background: red;
+  background: black;
+  order: 0;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  width: 10%;
-  height: 887px; }
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px; }
   #sidebar ul {
-    margin: 0 25px 0 0;
+    flex: 0 0 auto;
+    align-self: flex-end;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 35%;
+    height: 30px;
+    margin: 0;
     padding: 0;
-    list-style-type: none; }
+    background-color: green; }
+  #sidebar li {
+    flex: 0 0 auto;
+    align-self: center;
+    display: inline;
+    width: 20%;
+    background-color: purple;
+    text-align: center; }
   #sidebar a {
+    color: white;
     text-decoration: none; }
 
 .user {
-  background-color: pink;
   display: flex;
   flex-flow: column wrap;
   width: 100%;
-  height: 887px; }
+  height: 737px; }
+
+#userProfile {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px #cccccc; }
+
+.FileUpload p {
+  text-align: center;
+  align-self: center; }
 
 .flight {
   background-color: pink;
@@ -69,8 +107,18 @@
   order: 1;
   display: flex;
   flex-flow: column nowrap;
-  width: 90%;
-  height: 887px; }
+  width: 100%;
+  height: 737px; }
+
+#flightForm {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px #cccccc; }
 
 #flightList2 {
   height: auto; }
@@ -100,7 +148,7 @@
   order: 1;
   display: flex;
   flex-flow: column nowrap;
-  width: 90%;
+  width: 100%;
   height: 887px; }
 
 #hotelDetail ul, #hotelList2 ul {
@@ -113,7 +161,7 @@
   background-color: pink;
   display: flex;
   flex-flow: column nowrap;
-  width: 90%;
+  width: 100%;
   height: 887px; }
 
 #carList1, #carList2, #carList3 {
@@ -137,7 +185,7 @@
   order: 1;
   display: flex;
   flex-flow: column nowrap;
-  width: 90%;
+  width: 100%;
   height: 887px; }
 
 .itineraryResults {
@@ -152,38 +200,25 @@
     padding: 0;
     list-style-type: none; }
 
-.globe {
-  width: 1000px; }
-
-.globe__land {
-  fill: red !important;
-  stroke: none; }
-
 body {
-  border: 10px solid red; }
-
-body {
-  background-color: yellow;
   margin: 0;
   font-family: 'Quicksand', sans-serif !important; }
 
 #root {
-  border: 4px solid lime;
   display: flex;
-  flex-flow: row wrap;
-  height: 937px; }
+  flex-flow: row wrap; }
 
+/* .globe__land {
+  fill: #7BEA73 !important;
+  stroke: none;
+} */
 div {
-  background-color: violet;
   flex: 0 0 auto;
   order: -1;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start; }
-
-.map {
-  display: hidden; }
 
 #home {
   background-color: pink;
@@ -193,31 +228,15 @@ div {
   flex-flow: column wrap;
   width: 100%;
   height: 887px; }
-  #home h1 {
-    order: 1; }
-  #home #homeMap {
-    order: 2; }
 
 .componentWithSidebar {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  justify-content: center; }
   .componentWithSidebar #sidebar {
     flex: 0 0 auto;
-    order: 2; }
-  .componentWithSidebar #userProfile {
-    flex: 0 0 auto;
-    order: 1;
-    width: 90%; }
-  .componentWithSidebar #itinerary {
-    flex: 0 0 auto;
-    order: 1; }
-  .componentWithSidebar .flight {
-    flex: 0 0 auto;
-    order: 1; }
-  .componentWithSidebar .hotel {
-    flex: 0 0 auto;
-    order: 1; }
-  .componentWithSidebar .car {
+    order: 0; }
+  .componentWithSidebar #userProfile, .componentWithSidebar #itinerary, .componentWithSidebar .flight, .componentWithSidebar .hotel, .componentWithSidebar .car {
     flex: 0 0 auto;
     order: 1; }
 
