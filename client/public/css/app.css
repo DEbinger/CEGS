@@ -152,6 +152,16 @@
     padding: 0;
     list-style-type: none; }
 
+.globe {
+  width: 1000px; }
+
+.globe__land {
+  fill: #6CC3F9 !important;
+  stroke: none; }
+
+body {
+  border: 10px solid red; }
+
 body {
   background-color: yellow;
   margin: 0;
@@ -162,6 +172,10 @@ body {
   display: flex;
   flex-flow: row wrap;
   height: 937px; }
+
+.globe__land {
+  fill: #7BEA73 !important;
+  stroke: none; }
 
 div {
   background-color: violet;

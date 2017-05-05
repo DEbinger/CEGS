@@ -1,5 +1,5 @@
 // @import "./partials/reset";
-@import "./mixins";
+@import "mixins";
 @import "./partials/nav";
 @import "./partials/sidebar";
 @import "./partials/user";
@@ -7,7 +7,7 @@
 @import "./partials/hotel";
 @import "./partials/car";
 @import "./partials/itinerary";
-
+@import "./partials/globe";
 
 body {
 	background-color: yellow;
@@ -25,6 +25,11 @@ body {
 	height: 937px;
 
 }
+
+// .globe__land {
+//   fill: #7BEA73 !important;
+//   stroke: none;
+// }
 
 // data-reactroot
 div {

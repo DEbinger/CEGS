@@ -1,0 +1,54 @@
+{
+  "srilanka": {
+    "title": "Sri Lanka",
+    "lon": 80.63,
+    "lat": 7.29,
+    "month": "Februar",
+    "year": "2017",
+    "folder": "/srilanka/",
+    "thumb": "thumb.jpg",
+    "preview": "preview.md",
+    "previewImage": "thumb_400.jpg",
+    "post": "post.md",
+    "suggestions": ["cambodia"]
+  },
+  "bali": {
+    "title": "Bali",
+    "lon": 115.26,
+    "lat": -8.52,
+    "month": "Oktober",
+    "year": "2016",
+    "folder": "/bali/",
+    "thumb": "thumb.jpg",
+    "preview": "preview.md",
+    "previewImage": "thumb_400.jpg",
+    "post": "post.md",
+    "suggestions": ["japan", "cambodia"]
+  },
+  "japan": {
+    "title": "Japan",
+    "lon": 139.76,
+    "lat": 35.68,
+    "month": "April",
+    "year": "2016",
+    "folder": "/japan/",
+    "thumb": "thumb.jpg",
+    "preview": "preview.md",
+    "previewImage": "thumb_400.jpg",
+    "post": "post.md",
+    "suggestions": []
+  },
+  "cambodia": {
+    "title": "Kambodscha",
+    "lon": 103.86,
+    "lat": 13.36,
+    "month": "September",
+    "year": "2015",
+    "folder": "/cambodia/",
+    "thumb": "thumb.jpg",
+    "preview": "preview.md",
+    "previewImage": "thumb_400.jpg",
+    "post": "post.md",
+    "suggestions": ["japan", "bali", "srilanka"]
+  }
+}

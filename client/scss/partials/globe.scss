@@ -1,0 +1,15 @@
+@import './colors';
+
+.globe {
+  width: 1000px; //TODO responsive
+}
+
+.globe__land {
+  fill: red !important;
+  stroke: none;
+}
+
+
+body {
+  border: 10px solid red;
+}
