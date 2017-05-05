@@ -68,29 +68,26 @@ class FlightsForm extends Component {
         <div id="flightForm" className="flight">
           <h1>Find a Flight</h1>
           <form onSubmit={ this.submitHandler }>
-          <label>
-            From:
-            <input className='flight-form' type='text' placeholder='origin' autoComplete='off' name='origin' autoFocus/>
-          </label>
+            <label for="tripType" > Trip Type: </label>
+            <select id="tripType" className='flight-form' name='tripType'>
+              <option value='oneWay'>one way</option>
+              <option value='roundTrip'>round trip</option>
+            </select>
             <br/>
-            <label>
-              To:
-              <input className='flight-form' type='text' placeholder='destination' autoComplete='off' name='destination' />
-            </label>
+            <label for="origin"> From </label>
+            <input id="origin" className='flight-form' type='text' placeholder='origin' autoComplete='off' name='origin' autoFocus/>
+            <label for="destination" > To </label>
+              <input id="destination" className='flight-form' type='text' placeholder='destination' autoComplete='off' name='destination' />
             <br/>
-            <label>
-              Departure Date:
-              <input className='flight-form' type='date' min={ new Date() } name='departureDate' />
-            </label>
-            <br/>
-            <label>
-              Return Date:
-              <input className='flight-form' type='date' name='returnDepartureDate' />
-            </label>
+            <label for="departureDate" > Departure Date: </label>
+              <input id="departureDate" className='flight-form' type='date' min={ new Date() } name='departureDate' />
+            <label for="returnDepartureDate" > Return Date: </label>
+              <input id="returnDepartureDate" className='flight-form' type='date' name='returnDepartureDate' />
             <br />
-            <label>
-              Adult:
-              <select className='flight-form' name='adultCount'>
+            <span>
+              <label for="adultCount" > Adult: </label>
+              <br/>
+              <select id="adultCount" className='flight-form' name='adultCount'>
                 <option value='0'>0</option>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
@@ -98,11 +95,11 @@ class FlightsForm extends Component {
                 <option value='4'>4</option>
                 <option value='5'>5</option>
               </select>
-            </label>
-            <br/>
-            <label>
-              Children:
-              <select className='flight-form' name='childCount'>
+            </span>
+            <span>
+              <label for="childCount" > Children: </label>
+              <br/>
+              <select id="childCount" className='flight-form' name='childCount'>
                 <option value='0'>0</option>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
@@ -110,11 +107,10 @@ class FlightsForm extends Component {
                 <option value='4'>4</option>
                 <option value='5'>5</option>
               </select>
-            </label>
-            <br/>
-            <label>
-              Infant In Lap:
-              <select className='flight-form' name='infantInLapCount'>
+            </span>
+            <label for="infantInLapCount" > Infant In Lap: </label>
+              <br/>
+              <select id="infantInLapCount" className='flight-form' name='infantInLapCount'>
                 <option value='0'>0</option>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
@@ -122,11 +118,9 @@ class FlightsForm extends Component {
                 <option value='4'>4</option>
                 <option value='5'>5</option>
               </select>
-            </label>
-            <br/>
-            <label>
-              Infant In Seat:
-              <select className='flight-form' name='infantInSeatCount'>
+            <label for="infantInSeatCount" > Infant In Seat: </label>
+              <br/>
+              <select id="infantInSeatCount" className='flight-form' name='infantInSeatCount'>
                 <option value='0'>0</option>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
@@ -134,11 +128,9 @@ class FlightsForm extends Component {
                 <option value='4'>4</option>
                 <option value='5'>5</option>
               </select>
-            </label>
-            <br/>
-            <label>
-              Senior Count:
-              <select className='flight-form' name='seniorCount'>
+            <label for="seniorCount" > Senior Count: </label>
+              <br/>
+              <select id="seniorCount" className='flight-form' name='seniorCount'>
                 <option value='0'>0</option>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
@@ -146,25 +138,14 @@ class FlightsForm extends Component {
                 <option value='4'>4</option>
                 <option value='5'>5</option>
               </select>
-            </label>
             <br/>
-            <label>
-              Trip Type:
-              <select className='flight-form' name='tripType'>
-                <option value='oneWay'>one way</option>
-                <option value='roundTrip'>round trip</option>
-              </select>
-            </label>
-            <br/>
-            <label>
-              Refundable:
-              <select className='flight-form' name='refundable'>
+            <label for="refundable" > Refundable: </label>
+              <select id="refundable" className='flight-form' name='refundable'>
                 <option value='false'>No</option>
                 <option value='true'>Yes</option>
               </select>
-            </label>
             <br/>
-            <input  type='submit' value='Search Flights' />
+            <input type='submit' value='Search Flights' />
           </form>
           <p>{ this.props.flights.errorMsg }</p>
         </div>
