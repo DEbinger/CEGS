@@ -1,6 +1,7 @@
 // jshint esversion:6
 
 import { ADD_USER } from '../actions/usersAction';
+import { USER_ERROR_MESSAGE } from '../actions/usersAction';
 import { ADD_USER_TO_STATE } from '../actions/usersAction';
 import { LOG_OUT_FROM_STATE } from '../actions/usersAction';
 
@@ -19,6 +20,11 @@ function users(state=initialState , action){
         }
       ]
     });
+
+    case USER_ERROR_MESSAGE:
+      return Object.assign({}, state, {
+        userErrorMsg: action.userErrorMessage
+      });
 
     case ADD_USER_TO_STATE:
     return Object.assign({}, state, {
