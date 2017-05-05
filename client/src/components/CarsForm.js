@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { listCars, carDetails, addCar, clearCars, searchCars, carItinerary } from '../redux/actions/carsAction';
 import { connect } from 'react-redux';
 import Sidebar from '../components/Sidebar';
+// import airports from '../../public/data/airports.json';
+var airports = require('airport-codes');
 
 class CarsForm extends Component {
   constructor(props) {
@@ -15,7 +17,9 @@ class CarsForm extends Component {
 
     let form = document.getElementsByClassName('cars-form');
 
-    const values = `location=${form.location.value}&pick_up=${form.pick_up.value}&drop_off=${form.drop_off.value}`;
+    let location = airports.findWhere({ city: `${form.location.value}` }).get('iata');
+
+    const values = `location=${location}&pick_up=${form.pick_up.value}&drop_off=${form.drop_off.value}`;
 
     this.props.onSearchCars(form.location.value, form.pick_up.value, form.drop_off.value);
 
