@@ -4,11 +4,17 @@
 
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-end;
+	justify-content: space-between;
 
 	height: 50px;
 	background-color: black;
 	color: rgb(255,255,255);
+
+	h1 {
+		flex: 0 0 auto;
+		align-self: center;
+		margin-left: 12px;
+	}
 
 	ul {
 		flex: 0 0 auto;
@@ -35,11 +41,17 @@ order: -1;
 
 display: flex;
 flex-flow: row wrap;
-justify-content: flex-end;
+justify-content: space-between;
 
 height: 50px;
 background-color: black;
 color: rgb(255,255,255);
+
+	h1 {
+		flex: 0 0 auto;
+		align-self: center;
+		margin-left: 12px;
+	}
 
 	ul {
 		flex: 0 0 auto;
