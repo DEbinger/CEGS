@@ -5,7 +5,7 @@
 	
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: center;
 
 	width: 100%;
 	height: 50px;
@@ -17,6 +17,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
+		align-items: baseline;
 		list-style-type: none;
 		width: 35%;
 		height: 30px;
@@ -28,13 +29,21 @@
 	li{
 		flex: 0 0 auto;
 		align-self: center;
-		display: inline;
-		width: 20%;
-		background-color: purple;
+		display: flex-inline;
+		flex-flow: row wrap;
+		width: 25%;
+		height: 30px;
+		border: 1px solid purple;
 		text-align: center;
 	}
 
 	a {
+		flex: 0 0 auto;
+		align-self: flex-end;
+		width: 25%;
+		height: 30px;
+		background-color: yellow;
+		text-align: center;
 		color: rgb(255,255,255);
 		text-decoration: none;
 	}
