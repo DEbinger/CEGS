@@ -19,6 +19,7 @@
 
 	.submitBtn {
 		order: 3;
+		cursor: pointer;
 		border-radius: $button-radius;
 		border: 2px solid $form-color;
 		background-color: $form-color;

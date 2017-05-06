@@ -133,6 +133,7 @@
       height: 25px;
       border: 1px solid #a6a6a6; }
     #signIn form .submitBtn, #signUp form .submitBtn {
+      cursor: pointer;
       border-radius: 1px;
       border: 2px solid #a6a6a6;
       background-color: #a6a6a6;
@@ -231,6 +232,7 @@ select {
         width: 100px;
         height: 25px; }
   #flightForm .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -240,13 +242,16 @@ select {
 
 #flightList1 {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
   height: auto;
   width: 75%;
   margin-top: 50px;
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
+  #flightList1 h1 {
+    margin-bottom: 0; }
 
 #flightList2 {
   display: flex;
@@ -278,6 +283,7 @@ select {
   #flightList2 button:first-of-type {
     margin-right: 1rem; }
   #flightList2 .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -328,6 +334,7 @@ select {
     order: 2;
     text-align: center; }
   #flightDetail .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -366,6 +373,7 @@ select {
     height: 25px;
     border: 1px solid #a6a6a6; }
   #hotelForm .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -375,13 +383,16 @@ select {
 
 #hotelList1 {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
   height: auto;
   width: 75%;
   margin-top: 50px;
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
+  #hotelList1 h1 {
+    margin-bottom: 0; }
 
 #hotelDetail ul, #hotelList2 ul {
   display: flex;
@@ -410,6 +421,7 @@ select {
     #hotelList2 li p {
       margin: 0; }
   #hotelList2 .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -440,6 +452,7 @@ select {
     text-align: center;
     margin: 1rem; }
   #hotelDetail .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -481,6 +494,7 @@ select {
     height: 25px;
     border: 1px solid #a6a6a6; }
   #carForm .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -520,6 +534,7 @@ select {
     padding: 0;
     list-style-type: none; }
   #carList2 .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -574,6 +589,7 @@ select {
     text-align: center;
     margin: 1rem; }
   #carDetail .submitBtn {
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -605,6 +621,7 @@ select {
     color: blue; }
   #itinerary .submitBtn {
     order: 3;
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -668,6 +685,7 @@ div {
     flex: 0 0 auto;
     order: 4;
     align-self: center;
+    cursor: pointer;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
