@@ -25,6 +25,7 @@ const flightsRoute = require('./routes/flightsRoute.js');
 const carRoute = require('./routes/carRoute.js');
 const hotelRoute = require('./routes/hotelRoute.js');
 const userRoute = require('./routes/userRoute.js');
+const itineraryRoute = require('./routes/itineraryRoute.js');
 
 app.use(bodyParser.urlencoded( {
   extended : true
@@ -97,6 +98,7 @@ app.use('/flights', flightsRoute);
 app.use('/hotels', hotelRoute);
 app.use('/cars', carRoute);
 app.use('/users', userRoute);
+app.use('/itinerary', itineraryRoute);
 
 app.use('/', (req, res) => {
   res.send('BAD ROUTE');
