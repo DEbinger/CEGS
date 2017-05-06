@@ -1,7 +1,7 @@
 .car {
 	display: flex;
 	flex-flow: column nowrap;
-
+	
 	width: $width;
 	height: $height;
 }
@@ -12,6 +12,12 @@
 	flex-flow: column wrap;
 	justify-content: flex-start;
 	align-items: center;
+
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
 
 	h1 {
 		margin-bottom: 0;
