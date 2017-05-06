@@ -1,10 +1,7 @@
 // jshint esversion:6
 
-import React, {Component} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-// import { Redirect } from ‘react-router-dom’;
-// import { Link } from ‘react-router-dom’;
-import getUserReq from '../../lib/userReq';
 import { addUser } from '../redux/actions/usersAction';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
@@ -41,7 +38,6 @@ handleImageUpload(file) {
 
     upload.end((err, response) => {
       if (err) {
-        console.error(err);
       }
 
       if (response.body.secure_url !== '') {
@@ -51,72 +47,18 @@ handleImageUpload(file) {
       }
     });
   }
- // addUser(user){
- //   getUserReq(user)
- //    .then( user => {
- //      console.log(‘UserProfile getUser’, user);
- //      this.props.onAddUser(user);
- //    });
- // }
-
- // xhrLoginCheck(user){
- //   return new Promise(function(resolve,reject){
- //     function reqListener(){
- //       resolve(this.responseText);
- //     }
- //     let oReq = new XMLHttpRequest();
- //     oReq.open(‘FETCH’, ‘/users/profile’);
- //     oReq.addEventListener(“load”, reqListener);
- //     oReq.send(user);
- //   });
- // }
-
- // componentWillMount(){
- //   this.xhrLoginCheck()
- //   .then((userData)=>{
- //     console.log(this.props);
- //     let user = userData;
- //     this.props.onAddUser(user.id, user.email);
- //   })
- //   .catch(function(err){
- //     console.log(“Profile component will mount error”,err);
- //   });
- // }
-
-
-//   componentWillMount(){
-//  function xhrLoginTest(){
-//   fetch(‘/users/profile’, {method: ‘GET’})
-//     .then(userData => {
-//       let user = userData;
-//       this.props.onAddUser(user.id, user.email);
-//     })
-//     .catch(function(err){
-//       console.log(“Profile component will mount error”,err);
-//     });
-//   }
-//   xhrLoginTest();
-// }
 
  signOut(event) {
    event.preventDefault();
-   console.log('SIGN OUT CLICKED');
-
-   console.log('creating OREQ');
    let oReq = new XMLHttpRequest();
-   console.log(oReq);
+
    oReq.addEventListener('load', (result) => {
-     console.log(result.target.responseText);
    });
-   console.log('opening request');
    oReq.open('GET', '/users/signout');
-   console.log('sending request');
    oReq.send();
  }
 
-
  render(){
-   console.log('FROM PROFILE', this.props);
    return (
     <div className="componentWithSidebar">
       <Sidebar />
@@ -137,7 +79,7 @@ handleImageUpload(file) {
               {this.state.uploadedFileCloudinaryUrl === '' ? null :
               <div>
                 <p>{this.state.uploadedFile.name}</p>
-                <img src={this.state.uploadedFileCloudinaryUrl} />
+                <img alt='' src={this.state.uploadedFileCloudinaryUrl} />
               </div>}
             </div>
           </div>
