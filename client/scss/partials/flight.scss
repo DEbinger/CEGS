@@ -1,18 +1,19 @@
 @import './variables';
 
+//	General flight component styling
 .flight {
-	background-color: pink;
-
 	flex: 0 0 auto;
 	order: 1;
 
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: row nowrap;
 
 	width: $width;
 	height: $height;
+
 }
 
+//	Flight search form
 #flightForm {
 	display: flex;
 	flex-flow: column nowrap;
@@ -25,10 +26,146 @@
 	background-color: $card-bg-color;
 	box-shadow: $card-box-shadow;
 
+	form {
+		display: flex-inline;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-end;
+		padding: 0 5rem;
+	}
+
+	#tripType, #origin, #destination, #departureDate, #returnDepartureDate, #peopleCount, #refundable {
+		margin-bottom: $form-margin;
+	}
+
+	.location, .dates {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+
+			select {
+				width: $form-field-width;
+				height: $form-field-height;
+			}
+		}
+
+		li:first-of-type {
+			padding-right: 1rem;
+			// margin-right: $form-margin;
+		}
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		margin-top: .25rem;
+		width: 250px;
+		height: $form-field-height;
+		border: $form-border;
+	}
+
+	select {
+		border: $form-border;
+	  -webkit-appearance: none;
+  	-webkit-border-radius: 1px;
+		margin-top: .25rem;
+		padding: 2px 4px;
+		background-color: transparent;
+		width: $form-field-width;
+		height: $form-field-height;
+	}
+
+	//	Selection for adult, children, and senior counts
+	#peopleCount {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			padding-right: 1rem;
+		
+			select {
+				width: $form-field-width;
+				height: $form-field-height;
+			}
+		}
+	}
+
+	.submitBtn {
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		width: $form-field-width;
+		padding: .5rem;
+		font-weight: bold;
+	}
+
+/* 	.submitBtn:hover {
+			background-color: $form-color;
+			color: rgb(0,0,0);
+	} */
+}
+
+//	Flight search results
+#flightList1 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
 }
 
 #flightList2 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+
 	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
+	.price {
+		flex: 0 0 auto;
+		order: 1;
+		margin-top: 0;
+		margin-bottom: $list-margin;
+		width: 100%;
+		text-align: center;
+	}
+
+	div {
+		order: 0;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	button {
+		flex: 0 0 auto;
+		order: 2;
+	}
+
+	button:first-of-type {
+		margin-right: $list-margin;
+	}
 }
 
 /* 
@@ -37,23 +174,56 @@
  */
 .slice-div {
 	div {
-		background-color: pink;
+		flex: 0 0 auto;
+		order: 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+
+		p {
+			margin: 0;
+			margin-bottom: $list-margin;
+		}
 	}
 }
 
 #flightDetail {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+	margin-bottom: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
 	div {
-		background-color: pink;
 		order: 0;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
 	}
 
 	ul {
 		order: 1;
 		list-style-type: none;
-		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		li {
+			padding: 1rem;
+		}
 	}
 
 	button {
 		order: 2;
+		text-align: center;
 	}
 }

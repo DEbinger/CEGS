@@ -6,7 +6,7 @@ $height: 737px;
 $card-width: 75%;
 $card-margin: 50px;
 $card-bg-color: rgb(255,255,255);
-$card-box-shadow: 0px 1px 3px rgb(204,204,204);
+$card-box-shadow: 0px 1px 3px rgba(0,0,0,0.36);
 
 //	form styles
 $form-color: #a6a6a6;
@@ -21,3 +21,7 @@ $form-btn-background-color: $form-color;
 $form-btn-width: auto;
 $form-btn-padding: .5rem;
 $form-btn-font-weight: bold;
+
+//	results styles
+$list-padding: 2rem;
+$list-margin: 1rem;

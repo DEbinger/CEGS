@@ -1,5 +1,5 @@
 // @import "./partials/reset";
-@import "mixins";
+@import "./mixins";
 @import "./partials/nav";
 @import "./partials/sidebar";
 @import "./partials/user";
@@ -40,7 +40,8 @@ div {
 
 	display: flex;
 	flex-flow: row wrap;
-	align-items: flex-start;
+	justify-content: center;
+	// align-items: center;
 }
 
 #home {
@@ -93,13 +94,4 @@ div {
 		flex: 0 0 auto;
 		order: 1;
 	}
-}
-
-.forms {
-	background-color: powderblue;
-
-	flex: 0 0 auto;
-	order: 2;
-
-	width: 90%;
 }

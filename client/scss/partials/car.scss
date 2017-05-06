@@ -1,27 +1,129 @@
 .car {
-	background-color: pink;
-
 	display: flex;
 	flex-flow: column nowrap;
-
-	width: 100%;
-	height: 887px;
+	
+	width: $width;
+	height: $height;
 }
 
-#carList1, #carList2, #carList3 {
+//	hotel form
+#carForm {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	#location, #pickUp, #dropOff {
+		margin-bottom: $form-margin;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		margin-top: .25rem;
+		width: 250px;
+		height: $form-field-height;
+		border: $form-border;
+	}
+
+	.submitBtn {
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		width: $form-field-width;
+		padding: .5rem;
+		font-weight: bold;
+	}
+
+	/* 	.submitBtn:hover {
+			background-color: $form-color;
+			color: rgb(0,0,0);
+	} */
+}
+
+#carList1 {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+
 	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+}
+
+#carDetail, #carList2 {
+	ul {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		order: 0;
+
+		width: 100%;
+
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
 }
 
 #carList2 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	height: auto;
+	width: $card-width;
+
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
 	}
+
+
 }
 
 #carList3 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
+	li {
+		text-align: center;
+		padding: 0;
+		margin-bottom: $list-margin;
+			p {
+				margin: 0;
+			}
+	}
+}
+
+#carList3 {
 	margin: 25px 0;
 
 	ul {
@@ -29,4 +131,41 @@
 		padding: 0;
 		list-style-type: none;
 	}
+}
+
+#carDetailButton, #carAddButton {
+	order: 1;
+}
+
+#carAddButton {
+	margin-left: $list-margin
+}
+
+#carDetail {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
+	h1, p {
+		text-align: center;
+	}
+
+	ul {
+		text-align: center;
+		margin: $list-margin;
+	}
+}
+
+#carDetailAddButton {
+	margin-bottom: $card-margin;
 }

@@ -21,15 +21,15 @@ class CarsDetails extends Component {
         <Sidebar />
         <div id="carDetail" className="car">
           <h1>Company Name: {this.props.cars.car_details.company_name}</h1>
-          <p>Airport: {this.props.cars.car_details.airport}, {this.props.cars.car_details.city}</p>
-          <ul>Vehicle:
-            <li>{this.props.cars.car_details.category}</li>
-            <li>Vehicle Type: {this.props.cars.car_details.vehicle_type}</li>
-            <li>Transmission: {this.props.cars.car_details.transmission}</li>
-            <li>Fuel: {this.props.cars.car_details.fuel}</li>
-          </ul>
+          <p>Location: {this.props.cars.car_details.airport}, {this.props.cars.car_details.city}</p>
+            <ul>
+              <li>Vehicle Type: {this.props.cars.car_details.vehicle_type}</li>
+              <li>Category: {this.props.cars.car_details.category}</li>
+              <li>Transmission: {this.props.cars.car_details.transmission}</li>
+              <li>Fuel: {this.props.cars.car_details.fuel}</li>
+            </ul>
           <p>Weekly Rate: ${this.props.cars.car_details.amount}</p>
-          <button onClick={this.handleAdd}>Add Car</button>
+          <button id="carDetailAddButton" onClick={this.handleAdd}>Add Car</button>
         </div>
       </div>
     );
