@@ -93,14 +93,14 @@ passport.deserializeUser(function(user, done) {
   });
 });
 
-app.use('/api/flights', flightsRoute);
-app.use('/api/hotels', hotelRoute);
-app.use('/api/cars', carRoute);
-app.use('/api/users', userRoute);
+app.use('api/flights', flightsRoute);
+app.use('api/hotels', hotelRoute);
+app.use('api/cars', carRoute);
+app.use('api/users', userRoute);
 
-// app.use('/', (req, res) => {
-//   res.send('BAD ROUTE');
-// });
+app.use('/', (req, res) => {
+  res.send('BAD ROUTE');
+});
 
 app.listen(PORT, () => {
   console.log("Server listening on", PORT);
