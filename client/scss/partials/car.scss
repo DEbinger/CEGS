@@ -1,6 +1,4 @@
 .car {
-	background-color: pink;
-
 	display: flex;
 	flex-flow: column nowrap;
 
@@ -8,8 +6,56 @@
 	height: 887px;
 }
 
-#carList1, #carList2, #carList3 {
+#carList1 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
 	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+}
+
+#carDetail, #carList2{
+	ul {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		order: 0;
+
+		width: 100%;
+
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+#carList2, #carList3 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
+	li {
+		text-align: center;
+		padding: 0;
+		margin-bottom: $list-margin;
+			p {
+				margin: 0;
+			}
+	}
 }
 
 #carList2 {
@@ -21,7 +67,6 @@
 }
 
 #carList3 {
-
 	margin: 25px 0;
 
 	ul {
@@ -29,4 +74,12 @@
 		padding: 0;
 		list-style-type: none;
 	}
+}
+
+#carDetailButton, #carAddButton {
+	order: 1;
+}
+
+#carAddButton {
+	margin-left: $list-margin
 }
