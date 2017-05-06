@@ -9,6 +9,8 @@ const {
   Car
 } = db;
 
+const itineraryList = require('../lib/itineraryList');
+
 router.post('/saveItinerary', (req, res) => {
   console.log(req.body);
   let hotelId, carId, flightId;
@@ -62,6 +64,33 @@ router.post('/saveItinerary', (req, res) => {
       });
     });
   });
+});
+
+router.post('/userItineraries', (req, res) => {
+
+  let { id } = req.body;
+
+  Itinerary.findAll({
+    where: {
+      user: id
+    },
+    include: [
+      {
+        model: Flight
+      },
+      {
+        model: Car
+      },
+      {
+        model: Hotel
+      }
+    ]
+  })
+  // .then(itineraryList)
+  .then(data => {
+      console.log('from THENABLE', JSON.stringify(data));
+      res.json(data);
+    });
 });
 
 

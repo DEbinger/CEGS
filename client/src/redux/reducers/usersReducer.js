@@ -4,9 +4,11 @@ import { ADD_USER } from '../actions/usersAction';
 import { USER_ERROR_MESSAGE } from '../actions/usersAction';
 import { ADD_USER_TO_STATE } from '../actions/usersAction';
 import { LOG_OUT_FROM_STATE } from '../actions/usersAction';
+import { USER_ITINERARY } from '../actions/usersAction';
 
 const initialState = {
-  users: []
+  users: [],
+  userItineraries: []
 };
 
 function users(state=initialState , action){
@@ -40,6 +42,20 @@ function users(state=initialState , action){
     return Object.assign({}, state, {
       loggedInUser: null
     });
+
+    case USER_ITINERARY:
+      return Object.assign({}, state, {
+        userItineraries: [
+          ...state.userItineraries,
+          {
+            itineraryId: action.itineraryId,
+            car: action.car,
+            flight: action.flight,
+            hotel: action.hotel,
+            createdAt: action.createdAt
+          }
+        ]
+      });
 
     default:
       return state;
