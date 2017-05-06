@@ -1,10 +1,10 @@
 module.exports = function itineraryReq(userId, cb) {
-  let reqValues = `id=${userId}`;
-  let oReq = new XMLHttpRequest();
+  var reqValues = 'id=' + userId;
+  var oReq = new XMLHttpRequest();
   oReq.addEventListener('load', (results) => {
     cb(results);
   });
-  oReq.open('POST', '/itinerary/userItineraries');
+  oReq.open('POST', '/api/itinerary/userItineraries');
   oReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   console.log(reqValues);
   oReq.send(reqValues);
