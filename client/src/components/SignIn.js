@@ -1,7 +1,6 @@
 // jshint esversion:6
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addUserToState } from '../redux/actions/usersAction';
 import { userErrorMsg } from '../redux/actions/usersAction';
@@ -97,7 +96,6 @@ class SignIn extends React.Component {
           <br />
           <button className="submitBtn" type='submit'>Sign In</button>
           <br />
-          <Link to='/resetpassword'>Reset My Password</Link>
         </form>
       </div>
     )
