@@ -25,6 +25,70 @@
 	background-color: $card-bg-color;
 	box-shadow: $card-box-shadow;
 
+	form {
+		display: flex-inline;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-end;
+		padding: 0 5rem;
+	}
+
+	#tripType, #origin, #destination, #departureDate, #returnDepartureDate, #peopleCount, #refundable {
+		margin-bottom: $form-margin;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		margin-top: .25rem;
+		width: 250px;
+		height: $form-field-height;
+	}
+
+	select {
+		border: 1px solid rbg(204,204,204);
+	  -webkit-appearance: none;
+  	-webkit-border-radius: 0px;
+		border-radius: 1px;
+		margin-top: .25rem;
+		padding: 2px 4px;
+		background-color: transparent;
+		width: $form-field-width;
+		height: $form-field-height;
+	}
+
+	//	adult, children, senior counts
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			padding-right: 1rem;
+
+			select {
+				width: $form-field-width;
+				height: $form-field-height;
+			}
+		}
+	}
+
+	.submitBtn {
+		border-radius: $button-radius;
+		border: 2px solid #ccc;
+		width: auto;
+		padding: .5rem;
+		background-color: transparent;
+		font-weight: bold;
+	}
+
+	.submitBtn:hover {
+			background-color: #ccc;
+			color: rgb(0,0,0);
+	}
 }
 
 #flightList2 {
