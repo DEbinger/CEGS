@@ -8,7 +8,6 @@ import Sidebar from '../components/Sidebar';
 
 class Hotels extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="componentWithSidebar">
         <Sidebar />

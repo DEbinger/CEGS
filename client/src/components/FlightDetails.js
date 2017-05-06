@@ -26,14 +26,13 @@ class FlightDetails extends Component {
   }
 
   render() {
-    console.log('FROM FLIGHTS DETAILS',this.props);
     return (
       <div className="componentWithSidebar">
         <Sidebar />
         <div id="flightDetail" className="flight">
           <h1>Flight Details</h1>
 
-         
+
           { this.props.flightDetails.slice.map( ({ duration, segment }) =>
             <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierCodes } />
           ) }
