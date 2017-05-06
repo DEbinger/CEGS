@@ -40,7 +40,7 @@ class FlightDetails extends Component {
             <li>Sale Total: { this.props.flightDetails.saleTotal }</li>
             <li>Refundable: { `${this.props.flightDetails.pricing.refundable}` }</li>
           </ul>
-          <button id="flightDetailAddButton" onClick={ this.addFlightHandler }>Add Flight</button>
+          <button id="flightDetailAddButton" className="submitBtn" onClick={ this.addFlightHandler }>Add Flight</button>
         </div>
       </div>
     );

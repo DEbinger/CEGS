@@ -60,8 +60,8 @@ class Info extends Component {
           <li>Vehicle: {this.props.vehicle_type}</li>
         </ul>
         <span>
-          <button id="carDetailButton" onClick={this.handleDetails}>Details</button>
-          <button id="carAddButton" onClick={this.handleAdd}>Add Car</button>
+          <button id="carDetailButton" className="submitBtn" onClick={this.handleDetails}>Details</button>
+          <button id="carAddButton" className="submitBtn" onClick={this.handleAdd}>Add Car</button>
         </span>
       </div>
     );

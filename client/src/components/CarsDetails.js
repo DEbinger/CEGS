@@ -29,7 +29,7 @@ class CarsDetails extends Component {
               <li>Fuel: {this.props.cars.car_details.fuel}</li>
             </ul>
           <p>Weekly Rate: ${this.props.cars.car_details.amount}</p>
-          <button id="carDetailAddButton" onClick={this.handleAdd}>Add Car</button>
+          <button id="carDetailAddButton" className="submitBtn" onClick={this.handleAdd}>Add Car</button>
         </div>
       </div>
     );

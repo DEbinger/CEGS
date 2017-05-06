@@ -277,6 +277,13 @@ select {
     order: 2; }
   #flightList2 button:first-of-type {
     margin-right: 1rem; }
+  #flightList2 .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: 100px;
+    padding: .5rem;
+    font-weight: bold; }
 
 /* 
 	contents are in p-tags nested in a div that is nested in this div class
@@ -320,6 +327,13 @@ select {
   #flightDetail button {
     order: 2;
     text-align: center; }
+  #flightDetail .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: 100px;
+    padding: .5rem;
+    font-weight: bold; }
 
 .hotel {
   flex: 0 0 auto;
@@ -395,6 +409,13 @@ select {
     margin-bottom: 1rem; }
     #hotelList2 li p {
       margin: 0; }
+  #hotelList2 .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: 100px;
+    padding: .5rem;
+    font-weight: bold; }
 
 #hotelDetailButton, #hotelAddButton {
   order: 1; }
@@ -418,6 +439,13 @@ select {
   #hotelDetail ul {
     text-align: center;
     margin: 1rem; }
+  #hotelDetail .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: 100px;
+    padding: .5rem;
+    font-weight: bold; }
 
 #hotelDetailAddButton {
   margin-bottom: 50px; }
@@ -491,6 +519,13 @@ select {
     margin: 0;
     padding: 0;
     list-style-type: none; }
+  #carList2 .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: 100px;
+    padding: .5rem;
+    font-weight: bold; }
 
 #carList3 {
   display: flex;
@@ -538,6 +573,13 @@ select {
   #carDetail ul {
     text-align: center;
     margin: 1rem; }
+  #carDetail .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: 100px;
+    padding: .5rem;
+    font-weight: bold; }
 
 #carDetailAddButton {
   margin-bottom: 50px; }

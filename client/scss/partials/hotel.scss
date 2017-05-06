@@ -102,6 +102,15 @@
 				margin: 0;
 			}
 	}
+
+	.submitBtn {
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		width: $form-field-width;
+		padding: .5rem;
+		font-weight: bold;
+	}
 }
 
 #hotelDetailButton, #hotelAddButton {
@@ -134,6 +143,15 @@
 	ul {
 		text-align: center;
 		margin: $list-margin;
+	}
+
+	.submitBtn {
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		width: $form-field-width;
+		padding: .5rem;
+		font-weight: bold;
 	}
 }
 
