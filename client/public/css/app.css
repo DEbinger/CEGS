@@ -3,10 +3,14 @@
   order: -1;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 50px;
   background-color: black;
   color: white; }
+  #nav h1 {
+    flex: 0 0 auto;
+    align-self: center;
+    margin-left: 12px; }
   #nav ul {
     flex: 0 0 auto;
     align-self: center;
@@ -25,10 +29,14 @@
   order: -1;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 50px;
   background-color: black;
   color: white; }
+  #userNav h1 {
+    flex: 0 0 auto;
+    align-self: center;
+    margin-left: 12px; }
   #userNav ul {
     flex: 0 0 auto;
     align-self: center;
@@ -43,44 +51,167 @@
     text-decoration: none; }
 
 #sidebar {
-  background: red;
+  background: black;
+  order: 0;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  width: 10%;
-  height: 887px; }
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px; }
   #sidebar ul {
-    margin: 0 25px 0 0;
+    flex: 0 0 auto;
+    align-self: flex-end;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 35%;
+    height: 30px;
+    margin: 0;
     padding: 0;
-    list-style-type: none; }
+    background-color: green; }
+  #sidebar li {
+    flex: 0 0 auto;
+    align-self: center;
+    display: inline;
+    width: 20%;
+    background-color: purple;
+    text-align: center; }
   #sidebar a {
+    color: white;
     text-decoration: none; }
 
 .user {
-  background-color: pink;
   display: flex;
   flex-flow: column wrap;
   width: 100%;
-  height: 887px; }
+  height: 737px; }
+
+#userProfile {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
+
+.FileUpload p {
+  text-align: center;
+  align-self: center; }
 
 .flight {
   background-color: pink;
   flex: 0 0 auto;
   order: 1;
   display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 737px; }
+
+#flightForm {
+  display: flex;
   flex-flow: column nowrap;
-  width: 90%;
-  height: 887px; }
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  /* 	.submitBtn:hover {
+			background-color: $form-color;
+			color: rgb(0,0,0);
+	} */ }
+  #flightForm form {
+    display: flex-inline;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 5rem; }
+  #flightForm #tripType, #flightForm #origin, #flightForm #destination, #flightForm #departureDate, #flightForm #returnDepartureDate, #flightForm #peopleCount, #flightForm #refundable {
+    margin-bottom: 15px; }
+  #flightForm label {
+    font-weight: bold; }
+  #flightForm input {
+    margin-top: .25rem;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #a6a6a6; }
+  #flightForm select {
+    border: 1px solid #a6a6a6;
+    -webkit-appearance: none;
+    -webkit-border-radius: 1px;
+    margin-top: .25rem;
+    padding: 2px 4px;
+    background-color: transparent;
+    width: 75px;
+    height: 25px; }
+  #flightForm ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    #flightForm ul li {
+      display: inline-block;
+      padding-right: 1rem; }
+      #flightForm ul li select {
+        width: 75px;
+        height: 25px; }
+  #flightForm .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: auto;
+    padding: .5rem;
+    font-weight: bold; }
+
+#flightList1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
 #flightList2 {
-  height: auto; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  padding: 2rem; }
+  #flightList2 .price {
+    flex: 0 0 auto;
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center; }
+  #flightList2 button {
+    flex: 0 0 auto;
+    order: 2; }
+  #flightList2 button:first-of-type {
+    margin-right: 1rem; }
 
 /* 
 	contents are in p-tags nested in a div that is nested in this div class
 	i.e. slice-div > div > p
  */
 .slice-div div {
-  background-color: pink; }
+  flex: 0 0 auto;
+  order: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  .slice-div div p {
+    margin: 0;
+    margin-bottom: 1rem; }
 
 #flightDetail div {
   background-color: pink;
@@ -95,29 +226,98 @@
   order: 2; }
 
 .hotel {
-  background-color: pink;
   flex: 0 0 auto;
   order: 1;
   display: flex;
   flex-flow: column nowrap;
-  width: 90%;
+  width: 100%;
   height: 887px; }
+
+#hotelList1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px #cccccc; }
 
 #hotelDetail ul, #hotelList2 ul {
-  padding: 0; }
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  order: 0;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
 
 #hotelList2 {
-  height: auto; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px #cccccc;
+  padding: 2rem; }
+  #hotelList2 li {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 1rem; }
+    #hotelList2 li p {
+      margin: 0; }
+
+#hotelDetailButton, #hotelAddButton {
+  order: 1; }
+
+#hotelAddButton {
+  margin-left: 1rem; }
 
 .car {
-  background-color: pink;
   display: flex;
   flex-flow: column nowrap;
-  width: 90%;
+  width: 100%;
   height: 887px; }
 
-#carList1, #carList2, #carList3 {
-  height: auto; }
+#carList1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px #cccccc; }
+
+#carDetail ul, #carList2 ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  order: 0;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+#carList2, #carList3 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px #cccccc;
+  padding: 2rem; }
+  #carList2 li, #carList3 li {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 1rem; }
+    #carList2 li p, #carList3 li p {
+      margin: 0; }
 
 #carList2 ul {
   margin: 0;
@@ -131,13 +331,19 @@
     padding: 0;
     list-style-type: none; }
 
+#carDetailButton, #carAddButton {
+  order: 1; }
+
+#carAddButton {
+  margin-left: 1rem; }
+
 #itinerary {
   background-color: pink;
   flex: 0 0 auto;
   order: 1;
   display: flex;
   flex-flow: column nowrap;
-  width: 90%;
+  width: 100%;
   height: 887px; }
 
 .itineraryResults {
@@ -153,27 +359,24 @@
     list-style-type: none; }
 
 body {
-  background-color: yellow;
   margin: 0;
   font-family: 'Quicksand', sans-serif !important; }
 
 #root {
-  border: 4px solid lime;
   display: flex;
-  flex-flow: row wrap;
-  height: 937px; }
+  flex-flow: row wrap; }
 
+/* .globe__land {
+  fill: #7BEA73 !important;
+  stroke: none;
+} */
 div {
-  background-color: violet;
   flex: 0 0 auto;
   order: -1;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start; }
-
-.map {
-  display: hidden; }
 
 #home {
   background-color: pink;
@@ -183,36 +386,14 @@ div {
   flex-flow: column wrap;
   width: 100%;
   height: 887px; }
-  #home h1 {
-    order: 1; }
-  #home #homeMap {
-    order: 2; }
 
 .componentWithSidebar {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  justify-content: center; }
   .componentWithSidebar #sidebar {
     flex: 0 0 auto;
-    order: 2; }
-  .componentWithSidebar #userProfile {
-    flex: 0 0 auto;
-    order: 1;
-    width: 90%; }
-  .componentWithSidebar #itinerary {
+    order: 0; }
+  .componentWithSidebar #userProfile, .componentWithSidebar #itinerary, .componentWithSidebar .flight, .componentWithSidebar .hotel, .componentWithSidebar .car {
     flex: 0 0 auto;
     order: 1; }
-  .componentWithSidebar .flight {
-    flex: 0 0 auto;
-    order: 1; }
-  .componentWithSidebar .hotel {
-    flex: 0 0 auto;
-    order: 1; }
-  .componentWithSidebar .car {
-    flex: 0 0 auto;
-    order: 1; }
-
-.forms {
-  background-color: powderblue;
-  flex: 0 0 auto;
-  order: 2;
-  width: 90%; }

@@ -12,7 +12,6 @@ import Sidebar from '../components/Sidebar';
 class FlightsForm extends Component {
   constructor(props) {
     super(props);
-
     this.submitHandler = this.submitHandler.bind(this);
   }
 
@@ -31,7 +30,6 @@ class FlightsForm extends Component {
 
       this.props.onSearchFlights(form.origin.value, form.destination.value, form.adultCount.value, form.childCount.value, form.infantInLapCount.value, form.infantInSeatCount.value, form.seniorCount.value,form.tripType.value, form.departureDate.value, returnDepartureDate, form.refundable.value);
       let data = JSON.parse(result.target.responseText);
-      console.log(data);
 
       this.props.onClearState();
       if (!data.trips.hasOwnProperty('tripOption')) {
@@ -68,36 +66,86 @@ class FlightsForm extends Component {
   }
 
   render() {
-    console.log(this.props.onListFlights);
     return (
       <div className="componentWithSidebar">
         <Sidebar />
         <div id="flightForm" className="flight">
           <h1>Find a Flight</h1>
           <form onSubmit={ this.submitHandler }>
-          <label>
-            From:
-            <input className='flight-form' type='text' placeholder='origin' autoComplete='off' name='origin' autoFocus/>
-          </label>
+            <label htmlFor="tripType" > Trip Type </label>
+              <br />
+              <select id="tripType" className='flight-form' name='tripType'>
+                <option value='oneWay'>One Way</option>
+                <option value='roundTrip'>Round Trip</option>
+              </select>
             <br/>
-            <label>
-              To:
-              <input className='flight-form' type='text' placeholder='destination' autoComplete='off' name='destination' />
-            </label>
+            <ul className="location">
+              <li>
+                <label htmlFor="origin"> From </label>
+                <br />
+                <input id="origin" className='flight-form' type='text' placeholder='Airport' autoComplete='off' name='origin' autoFocus/>
+              </li>
+              <li>
+                <label htmlFor="destination" > To </label>
+                  <br />
+                  <input id="destination" className='flight-form' type='text' placeholder='Airport' autoComplete='off' name='destination' />
+              </li>
+            </ul>
             <br/>
-            <label>
-              Departure Date:
-              <input className='flight-form' type='date' min={ new Date() } name='departureDate' />
-            </label>
-            <br/>
-            <label>
-              Return Date:
-              <input className='flight-form' type='date' name='returnDepartureDate' />
-            </label>
+            <ul className="dates">
+              <li>
+              <label htmlFor="departureDate" > Depart </label>
+                <br />
+                <input id="departureDate" className='flight-form' type='date' min={ new Date() } name='departureDate' />
+              </li>
+              <li>
+                <label htmlFor="returnDepartureDate" > Return </label>
+                <br />
+                <input id="returnDepartureDate" className='flight-form' type='date' name='returnDepartureDate' />
+              </li>
+            </ul>
             <br />
-            <label>
-              Adult:
-              <select className='flight-form' name='adultCount'>
+            <ul id="peopleCount">
+              <li>
+                <label htmlFor="adultCount" > Adult </label>
+                <br/>
+                <select id="adultCount" className='flight-form' name='adultCount'>
+                  <option value='0'>0</option>
+                  <option value='1'>1</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5</option>
+                </select>
+              </li>
+              <li>
+                <label htmlFor="seniorCount" > Senior </label>
+                <br/>
+                <select id="seniorCount" className='flight-form' name='seniorCount'>
+                  <option value='0'>0</option>
+                  <option value='1'>1</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5</option>
+                </select>
+              </li>
+              <li>
+                <label htmlFor="childCount" > Children </label>
+                <br/>
+                <select id="childCount" className='flight-form' name='childCount'>
+                  <option value='0'>0</option>
+                  <option value='1'>1</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5</option>
+                </select>
+              </li>
+              <li>
+              <label htmlFor="infantInLapCount" > Infant In Lap </label>
+              <br/>
+              <select id="infantInLapCount" className='flight-form' name='infantInLapCount'>
                 <option value='0'>0</option>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
@@ -105,75 +153,31 @@ class FlightsForm extends Component {
                 <option value='4'>4</option>
                 <option value='5'>5</option>
               </select>
-            </label>
+              </li>
+              <li>
+                <label htmlFor="infantInSeatCount" > Infant In Seat </label>
+                <br/>
+                <select id="infantInSeatCount" className='flight-form' name='infantInSeatCount'>
+                  <option value='0'>0</option>
+                  <option value='1'>1</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5</option>
+                </select>
+              </li>
+            </ul>
             <br/>
-            <label>
-              Children:
-              <select className='flight-form' name='childCount'>
-                <option value='0'>0</option>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-              </select>
-            </label>
-            <br/>
-            <label>
-              Infant In Lap:
-              <select className='flight-form' name='infantInLapCount'>
-                <option value='0'>0</option>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-              </select>
-            </label>
-            <br/>
-            <label>
-              Infant In Seat:
-              <select className='flight-form' name='infantInSeatCount'>
-                <option value='0'>0</option>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-              </select>
-            </label>
-            <br/>
-            <label>
-              Senior Count:
-              <select className='flight-form' name='seniorCount'>
-                <option value='0'>0</option>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-              </select>
-            </label>
-            <br/>
-            <label>
-              Trip Type:
-              <select className='flight-form' name='tripType'>
-                <option value='oneWay'>one way</option>
-                <option value='roundTrip'>round trip</option>
-              </select>
-            </label>
-            <br/>
-            <label>
-              Refundable:
-              <select className='flight-form' name='refundable'>
+            <label htmlFor="refundable" > Refundable </label>
+              <br />
+              <select id="refundable" className='flight-form' name='refundable'>
                 <option value='false'>No</option>
                 <option value='true'>Yes</option>
               </select>
-            </label>
             <br/>
-            <input  type='submit' value='Search Flights' />
+            <button className="submitBtn" type='submit'>Search Flights</button>
           </form>
-          <p>{ this.props.flights.errorMsg }</p>
+          <p className="errorMsg">{ this.props.flights.errorMsg }</p>
         </div>
       </div>
     );

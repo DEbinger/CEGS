@@ -1,0 +1,26 @@
+@import './colors';
+@import './fonts';
+$white: #fff;
+
+.pin__text {
+  transform: translateY(1.2rem);
+  font-family: $font-block;
+  font-size: 1.2rem;
+  text-anchor: middle;
+  fill: $color-text;
+}
+
+.pin__thumb {
+  cursor: pointer;
+  stroke: $white;
+  stroke-width: 3;
+}
+
+.pin__circle {
+  stroke: $color-text;
+  fill: $white;
+}
+
+.pin__line {
+  stroke: $color-text;
+}

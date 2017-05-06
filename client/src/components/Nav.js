@@ -4,14 +4,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
-import { addUserToState, logOutFromState } from '../redux/actions/usersAction.js';
+import { logOutFromState } from '../redux/actions/usersAction.js';
 
 class Nav extends Component {
     constructor(props, context){
     super(props, context);
-    console.log(this.context);
 
     this.logOut = this.logOut.bind(this);
   }
@@ -35,7 +32,6 @@ class Nav extends Component {
       this.props.onAddUser(user.email, user.password, true);
     })
     .catch(function(err){
-      console.log("Nav component will mount error" ,err);
     });
   }
 
@@ -55,7 +51,6 @@ class Nav extends Component {
     event.preventDefault();
     this.xhrLogOut()
     .then(() => {
-      console.log(this.props);
       this.props.onLogOut();
       this.context.router.history.push('/');
     })
@@ -69,6 +64,7 @@ class Nav extends Component {
     if (this.props.users.loggedInUser) {
     return (
       <div id="userNav">
+        <h1>Adventure Awaits!</h1>
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/profile'>Profile</Link></li>
@@ -78,6 +74,7 @@ class Nav extends Component {
     )} else {
     return (
       <div id="nav">
+        <h1>Adventure Awaits!</h1>
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/signin'>Sign In</Link></li>

@@ -84,10 +84,6 @@ class Itinerary extends Component {
   }
 
   render() {
-    console.log('props from ITINERARY:', this.props);
-  	console.log('HOTEL: ', this.props.hotelItinerary);
-    console.log('CAR: ', this.props.cars.car_details);
-    console.log('FLIGHT: ', this.props.flightItinerary);
     return (
       <div className="componentWithSidebar">
         <Sidebar />

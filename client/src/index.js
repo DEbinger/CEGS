@@ -23,13 +23,12 @@ import HotelsForm from './components/HotelsForm';
 import Hotels from './components/Hotels';
 import HotelDetail from './components/HotelDetail';
 import Itinerary from './components/Itinerary';
-import Globe from './components/Globe';
 
 //REDUX STUFF
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import * as ReduxDevTools from 'redux-devtools';
+import { reducer as formReducer } from 'redux-form';
 
 //REDUCERS
 import users from './redux/reducers/usersReducer';
@@ -41,21 +40,17 @@ import createHistory from 'history/createBrowserHistory';
 
 import {
   BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
+  Route
 } from 'react-router-dom';
 
 const history = createHistory();
-
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 const allReducers = combineReducers({
   users,
   cars,
   hotels,
-  flights
+  flights,
+  form: formReducer
 });
 
 let store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk)
@@ -69,7 +64,6 @@ ReactDOM.render(
       <div>
         <Nav />
         <Route exact path='/' component={ App } />
-        <Route path='/globe' component={ Globe } />
         <Route path='/signin' component={ SignIn } />
         <Route path='/signup' component={ SignUp } />
         <Route path='/resetpassword' component={ ResetPassword } />

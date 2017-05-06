@@ -1,20 +1,41 @@
 #sidebar{
-	background: red;
+	background: rgb(0,0,0);
+
+	order: 0;
 	
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-end;
+	flex-flow: row wrap;
+	justify-content: space-between;
 
-	width: 10%;
-	height: 887px;
+	width: 100%;
+	height: 50px;
 
 	ul {
-		margin: 0 25px 0 0;
-		padding: 0;
+		flex: 0 0 auto;
+		align-self: flex-end;
+
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
 		list-style-type: none;
+		width: 35%;
+		height: 30px;
+		margin: 0;
+		padding: 0;
+		background-color: green;
+	}
+
+	li{
+		flex: 0 0 auto;
+		align-self: center;
+		display: inline;
+		width: 20%;
+		background-color: purple;
+		text-align: center;
 	}
 
 	a {
+		color: rgb(255,255,255);
 		text-decoration: none;
 	}
 }
