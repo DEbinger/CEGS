@@ -1,8 +1,6 @@
 function signUpReq(user){
     return new Promise ( (resolve, reject) => {
-        console.log('Req User: ', user);
         function reqListener(){
-            console.log('Signed Up: ', this.responseText);
             let data = JSON.parse(this.responseText);
             resolve(data);
         }

@@ -34,7 +34,6 @@ export function addUserToState(id, email, loggedIn){
 }
 
 export function logOutFromState(){
-  console.log("logging out");
   return {
     type: LOG_OUT_FROM_STATE
   };

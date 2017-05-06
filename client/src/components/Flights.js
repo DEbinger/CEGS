@@ -8,7 +8,6 @@ import Sidebar from '../components/Sidebar';
 
 class Flights extends Component {
   render() {
-    console.log('FLIGHTS LIST PAGE', this.props);
     return (
       <div className="componentWithSidebar">
         <Sidebar />

@@ -26,7 +26,6 @@ class HotelDetail extends Component {
   }
 
   render() {
-    console.log('from details:', this.props);
     let hotel = this.props.hotels.hotelDetail;
 
     return (

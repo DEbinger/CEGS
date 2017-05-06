@@ -4,19 +4,19 @@ import Router from 'react-router';
 
 class EnsureLoggedInContainerKeepSignedIn extends React.Component{
   componentDidMount(){
-    const { dispath, currentURL } = this.props
+    const { dispath, currentURL } = this.props;
 
     if(!isSignedIn){
-      dispatch(setRedirectUrl(currentURL))
-      browserHistory.replace("/signin")
+      dispatch(setRedirectUrl(currentURL));
+      browserHistory.replace("/signin");
     }
   }
 
   render(){
     if(isSignedIn){
-      return this.props.children
+      return this.props.children;
     } else {
-      return null
+      return null;
     }
   }
 }
