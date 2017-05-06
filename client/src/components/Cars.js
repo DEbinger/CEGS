@@ -7,7 +7,6 @@ class Cars extends Component {
 
   render() {
     return (
-
       <div className="componentWithSidebar">
           <Sidebar />
           <div id="carList1" className="car">
@@ -27,8 +26,7 @@ class Dealer extends Component {
       <div id="carList2" className="car">
         <ul>
           <li>Company: {this.props.company_name}</li>
-          <li>Airport: {this.props.airport}</li>
-          <li>City: {this.props.city}</li>
+          <li>Location: {this.props.city}, {this.props.airport}, </li>
         </ul>
         {this.props.cars.map( ({estimated_total, vehicle_info}) => 
           <Info amount={estimated_total.amount} vehicle_type={vehicle_info.type} company_name={this.props.company_name} airport={this.props.airport} city={this.props.city} category={vehicle_info.category} transmission={vehicle_info.transmission} fuel={vehicle_info.fuel} search_cars={this.props.search_cars} car_details={this.props.car_details} onCarDetails={this.props.onCarDetails} onCarItinerary={this.props.onCarItinerary} history={this.props.history} />
@@ -64,8 +62,8 @@ class Info extends Component {
           <li>Vehicle: {this.props.vehicle_type}</li>
         </ul>
         <span>
-          <button onClick={this.handleDetails}>Details</button>
-          <button onClick={this.handleAdd}>Add Car</button>
+          <button id="carDetailButton" onClick={this.handleDetails}>Details</button>
+          <button id="carAddButton" onClick={this.handleAdd}>Add Car</button>
         </span>
       </div>
     );
