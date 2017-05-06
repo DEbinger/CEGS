@@ -5,21 +5,22 @@
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	align-items: center;
 
-	height: 50px;
+	// height: 75px;
 	background-color: black;
 	color: rgb(255,255,255);
 
-	h1 {
-		flex: 0 0 auto;
+	#logo {
 		align-self: center;
-		margin-left: 12px;
+		height: 100px;
+		margin: 1.5rem 0 1.5rem 1.5rem;
 	}
 
 	ul {
 		flex: 0 0 auto;
-		align-self: center;
-		margin: 0 12px 0 0;
+		align-self: flex-end;
+		margin: 1.5rem 1.5rem 1.5rem 0;
 		padding: 0;
 		list-style-type: none;
 	}
@@ -43,23 +44,23 @@ display: flex;
 flex-flow: row wrap;
 justify-content: space-between;
 
-height: 50px;
 background-color: black;
 color: rgb(255,255,255);
 
-	h1 {
-		flex: 0 0 auto;
+	#logo {
 		align-self: center;
-		margin-left: 12px;
+		height: 100px;
+		margin: 1.5rem 0 1.5rem 1.5rem;
 	}
 
 	ul {
 		flex: 0 0 auto;
-		align-self: center;
-		margin: 0 12px 0 0;
+		align-self: flex-end;
+		margin: 1.5rem 1.5rem 1.5rem 0;
 		padding: 0;
 		list-style-type: none;
 	}
+
 
 	li{
 		display: inline;

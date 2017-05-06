@@ -64,7 +64,7 @@ class Nav extends Component {
     if (this.props.users.loggedInUser) {
     return (
       <div id="userNav">
-        <h1>Adventure Awaits!</h1>
+          <img id="logo" src="../assets/Logo.png"/>
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/profile'>Profile</Link></li>
@@ -74,7 +74,7 @@ class Nav extends Component {
     )} else {
     return (
       <div id="nav">
-        <h1>Adventure Awaits!</h1>
+        <img id="logo" src="../assets/Logo.png"/>
         <ul>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/signin'>Sign In</Link></li>
