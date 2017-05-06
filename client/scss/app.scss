@@ -55,6 +55,19 @@ div {
 
 	width: $width;
 	height: $height;
+
+	
+	.submitBtn {
+		flex: 0 0 auto;
+		order: 4;
+		align-self: center;
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		padding: 1rem;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
 }
 
 #homepage-pic {
@@ -71,18 +84,6 @@ div {
 	text-align: center;
 	font-size: 20px;
 	width: 75%;
-}
-
-.submitBtn {
-	flex: 0 0 auto;
-	order: 4;
-	align-self: center;
-	border-radius: $button-radius;
-	border: 2px solid $form-color;
-	background-color: $form-color;
-	padding: 1rem;
-	font-size: 1.5rem;
-	font-weight: bold;
 }
 
 // sets the order of the sidebar and the div components
