@@ -283,6 +283,16 @@
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
+#hotelList1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px #cccccc; }
+
 #hotelDetail ul, #hotelList2 ul {
   display: flex;
   flex-flow: column wrap;

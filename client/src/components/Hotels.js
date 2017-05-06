@@ -8,7 +8,6 @@ import Sidebar from '../components/Sidebar';
 
 class Hotels extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="componentWithSidebar">
         <Sidebar />
@@ -96,8 +95,8 @@ class HotelDiv extends Component {
           <li>{ this.listAmenities() }</li>
           <li>Lowest Total Cost: ${ this.props.cost }</li>
         </ul>
-        <button onClick={ this.hotelsDetailReq }>Details</button>
-        <button onClick={ this.addHotelHandler }>Add Hotel</button>
+        <button id="hotelDetailButton" onClick={ this.hotelsDetailReq }>Details</button>
+        <button id="hotelAddButton" onClick={ this.addHotelHandler }>Add Hotel</button>
       </div>
     );
   }

@@ -12,7 +12,6 @@ function hotelsList(location, check_in, check_out) {
       });
 
       res.on('end', () => {
-        console.log('HOTEL RESPONSE:', myData);
         resolve(JSON.parse(myData));
       })
       .on('error', (e) => {

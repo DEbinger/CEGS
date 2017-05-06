@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 import Sidebar from '../components/Sidebar';
 
 class Itinerary extends Component {
+  constructor(props) {
+    super(props);
+
+    this.saveItineraryHandler = this.saveItineraryHandler.bind(this);
+  }
 
   flight(){
     if(this.props.flightItinerary !== undefined) {
@@ -38,8 +43,8 @@ class Itinerary extends Component {
   }
 
   car(){
-    if(Object.keys(this.props.cars.car_details).length !== 0){
-      let car = this.props.cars.car_details;
+    if(this.props.carItinerary !== undefined){
+      let car = this.props.carItinerary;
 
       return <div className="itineraryResults">
         <ul>
@@ -54,11 +59,31 @@ class Itinerary extends Component {
     }
   }
 
+  saveItineraryHandler(event) {
+    event.preventDefault();
+
+    let hotelInfo = this.props.hotelItinerary;
+    let carInfo = this.props.carItinerary;
+    let flightInfo = this.props.flightItinerary;
+    let userInfo = this.props.userInfo.loggedInUser;
+
+    let itinerary = {
+      hotelInfo,
+      carInfo,
+      flightInfo,
+      userInfo
+    };
+
+    let oReq = new XMLHttpRequest();
+    oReq.addEventListener('load', (results) => {
+      console.log(results);
+    });
+    oReq.open('POST', '/itinerary/saveItinerary');
+    oReq.setRequestHeader('Content-Type', 'application/json');
+    oReq.send(JSON.stringify(itinerary));
+  }
+
   render() {
-    console.log('props from ITINERARY:', this.props);
-  	console.log('HOTEL: ', this.props.hotelItinerary);
-    console.log('CAR: ', this.props.cars.car_details);
-    console.log('FLIGHT: ', this.props.flightItinerary);
     return (
       <div className="componentWithSidebar">
         <Sidebar />
@@ -79,6 +104,8 @@ class Itinerary extends Component {
   						<h3>Car</h3>
               { this.car() }
   					</div>
+
+            <button onClick={ this.saveItineraryHandler }>Save Itinerary</button>
         </div>
       </div>
     );
@@ -90,7 +117,9 @@ const mapStateToProps = (state) => {
     hotels: state.hotels,
     cars: state.cars,
     hotelItinerary: state.hotels.hotelItinerary,
-    flightItinerary: state.flights.flightItinerary
+    flightItinerary: state.flights.flightItinerary,
+    carItinerary: state.cars.carItinerary,
+    userInfo: state.users
   }
 };
 

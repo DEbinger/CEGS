@@ -13,12 +13,6 @@
 	justify-content: flex-start;
 	align-items: center;
 
-	width: $card-width;
-	margin-top: $card-margin;
-
-	background-color: $card-bg-color;
-	box-shadow: $card-box-shadow;
-
 	h1 {
 		margin-bottom: 0;
 	}
@@ -52,7 +46,6 @@
 			color: rgb(0,0,0);
 	} */
 }
-
 
 #carList1 {
 	display: flex;

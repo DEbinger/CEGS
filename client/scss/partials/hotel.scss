@@ -67,6 +67,19 @@
 	box-shadow: $card-box-shadow;
 }
 
+#hotelList1 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+}
+
 #hotelDetail, #hotelList2{
 	ul {
 		display: flex;
