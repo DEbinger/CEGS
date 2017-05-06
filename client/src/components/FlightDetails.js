@@ -31,8 +31,6 @@ class FlightDetails extends Component {
         <Sidebar />
         <div id="flightDetail" className="flight">
           <h1>Flight Details</h1>
-
-
           { this.props.flightDetails.slice.map( ({ duration, segment }) =>
             <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierCodes } />
           ) }
@@ -42,7 +40,7 @@ class FlightDetails extends Component {
             <li>Sale Total: { this.props.flightDetails.saleTotal }</li>
             <li>Refundable: { `${this.props.flightDetails.pricing.refundable}` }</li>
           </ul>
-          <button onClick={ this.addFlightHandler }>Add Flight</button>
+          <button id="flightDetailAddButton" onClick={ this.addFlightHandler }>Add Flight</button>
         </div>
       </div>
     );
@@ -89,9 +87,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(FlightDetails);
-
-// saleTotal
-// departuredate
-// returndate
-// origin
-// destination
