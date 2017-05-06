@@ -2,7 +2,10 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { addUser } from '../redux/actions/usersAction';
+import {
+  addUser,
+  userItinerary
+} from '../redux/actions/usersAction';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import Sidebar from '../components/Sidebar';
@@ -52,10 +55,19 @@ class Profile extends React.Component {
 
   componentWillMount() {
     let userId = this.props.users.loggedInUser.id;
+
     itineraryReq(userId, (results) => {
       let itineraries = JSON.parse(results.target.responseText);
       console.log('ITINERARIES:', itineraries);
+
+      itineraries.forEach( itinerary => {
+        this.props.onUserItinerary(itinerary.id, itinerary.Car, itinerary.Flight, itinerary.Hotel, itinerary.createdAt);
+      })
     });
+  }
+
+  itineraryList(itinerary) {
+
   }
 
   signOut(event) {
@@ -75,6 +87,18 @@ class Profile extends React.Component {
         <Sidebar />
         <div id="userProfile" className="user">
           <h1>User Profile</h1>
+
+          <ul>
+            {
+            this.props.users.userItineraries.map( itinerary => {
+              return <li>
+                <p>Itinerary: { itinerary.itineraryId }</p>
+                <p>Origin: { itinerary.flight.origin }</p>
+                <p>Destination: { itinerary.flight.destination }</p>
+              </li>;
+            })
+            }
+          </ul>
         </div>
       </div>
     );
@@ -111,6 +135,9 @@ const mapDispatchToProps = (dispatch) => {
  return{
    onAddUser: (user) => {
      dispatch(addUser(user));
+   },
+   onUserItinerary: (itineraryId, car, flight, hotel, createdAt) => {
+    dispatch(userItinerary(itineraryId, car, flight, hotel, createdAt))
    }
  }
 }
