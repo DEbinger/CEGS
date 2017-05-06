@@ -55,8 +55,9 @@
 
 #carList1 {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 	justify-content: center;
+	align-items: center;
 
 	height: auto;
 	width: $card-width;
@@ -129,4 +130,33 @@
 
 #carAddButton {
 	margin-left: $list-margin
+}
+
+#carDetail {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
+	h1, p {
+		text-align: center;
+	}
+
+	ul {
+		text-align: center;
+		margin: $list-margin;
+	}
+}
+
+#carDetailAddButton {
+	margin-bottom: $card-margin;
 }

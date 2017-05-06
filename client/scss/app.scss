@@ -40,7 +40,8 @@ div {
 
 	display: flex;
 	flex-flow: row wrap;
-	align-items: flex-start;
+	justify-content: center;
+	// align-items: center;
 }
 
 #home {

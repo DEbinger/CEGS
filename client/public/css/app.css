@@ -87,6 +87,57 @@
   width: 100%;
   height: 737px; }
 
+#signIn, #signUp {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
+  #signIn h1, #signUp h1 {
+    margin-bottom: 0; }
+  #signIn .errorMsg, #signUp .errorMsg {
+    overflow: visible;
+    text-overflow: clip;
+    color: red; }
+  #signIn form, #signUp form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+    /* 	.submitBtn:hover {
+				background-color: $form-color;
+				color: rgb(0,0,0);
+		} */ }
+    #signIn form label, #signUp form label {
+      align-self: flex-start;
+      font-weight: bold; }
+    #signIn form input, #signUp form input {
+      margin-top: .25rem;
+      width: 250px;
+      height: 25px;
+      border: 1px solid #a6a6a6; }
+    #signIn form .submitBtn, #signUp form .submitBtn {
+      border-radius: 1px;
+      border: 2px solid #a6a6a6;
+      background-color: #a6a6a6;
+      width: 100px;
+      padding: .5rem;
+      font-weight: bold; }
+
+select {
+  border: 1px solid #a6a6a6;
+  -webkit-appearance: none;
+  -webkit-border-radius: 1px;
+  margin-top: .25rem;
+  padding: 2px 4px;
+  background-color: transparent;
+  width: 250px;
+  height: 25px; }
+
 #userProfile {
   display: flex;
   flex-flow: column nowrap;
@@ -171,7 +222,7 @@
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
-    width: auto;
+    width: 100px;
     padding: .5rem;
     font-weight: bold; }
 
@@ -283,16 +334,6 @@
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
-#hotelList1 {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  height: auto;
-  width: 75%;
-  margin-top: 50px;
-  background-color: white;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
-
 #hotelDetail ul, #hotelList2 ul {
   display: flex;
   flex-flow: column wrap;
@@ -325,6 +366,26 @@
 
 #hotelAddButton {
   margin-left: 1rem; }
+
+#hotelDetail {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  padding: 2rem; }
+  #hotelDetail h1, #hotelDetail p {
+    text-align: center; }
+  #hotelDetail ul {
+    text-align: center;
+    margin: 1rem; }
+
+#hotelDetailAddButton {
+  margin-bottom: 50px; }
 
 .car {
   display: flex;
@@ -366,8 +427,9 @@
 
 #carList1 {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
   height: auto;
   width: 75%;
   margin-top: 50px;
@@ -419,14 +481,35 @@
 #carAddButton {
   margin-left: 1rem; }
 
+#carDetail {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  padding: 2rem; }
+  #carDetail h1, #carDetail p {
+    text-align: center; }
+  #carDetail ul {
+    text-align: center;
+    margin: 1rem; }
+
+#carDetailAddButton {
+  margin-bottom: 50px; }
+
 #itinerary {
   order: 0;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 737px;
+  height: auto;
   width: 75%;
+  padding-bottom: 2rem;
   margin-top: 50px;
   margin-bottom: 50px;
   background-color: white;
@@ -435,10 +518,8 @@
 				background-color: $form-color;
 				color: rgb(0,0,0);
 		} */ }
-  #itinerary h1 {
-    margin-top: 0; }
   #itinerary .submitBtn {
-    order: 2;
+    order: 3;
     border-radius: 1px;
     border: 2px solid #a6a6a6;
     background-color: #a6a6a6;
@@ -460,9 +541,14 @@
   .itineraryResults h3 {
     text-align: center;
     padding: 0;
-    margin-bottom: 50px; }
+    margin-bottom: 0; }
     .itineraryResults h3 p {
       margin: 0; }
+
+.itinerarySections {
+  order: 2; }
+  .itinerarySections ul {
+    list-style-type: none; }
 
 body {
   margin: 0;
@@ -482,7 +568,7 @@ div {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-start; }
+  justify-content: center; }
 
 #home {
   background-color: pink;
