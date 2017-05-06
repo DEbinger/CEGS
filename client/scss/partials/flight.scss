@@ -101,7 +101,7 @@
 		border-radius: $button-radius;
 		border: 2px solid $form-color;
 		background-color: $form-color;
-		width: auto;
+		width: $form-field-width;
 		padding: .5rem;
 		font-weight: bold;
 	}
