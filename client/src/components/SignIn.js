@@ -87,13 +87,15 @@ class SignIn extends React.Component {
     return (
       <div id="signIn" className="user">
         <h1>Sign In</h1>
+        <p className="errorMsg" >{this.props.users.userErrorMsg}</p>
         <form onSubmit={this.handleSubmit} ref="reset">
-          <p className="errorMsg" >{this.props.users.userErrorMsg}</p>
+          <label htmlFor="email">Email</label>
           <input id="email" type='email' name="email" placeholder='Email' autoComplete='off' value={this.state.email} onChange={this.handleEmail} />
           <br />
+          <label htmlFor="password">Password</label>
           <input id="password" type='password' name="password" placeholder='Password' autoComplete='off' value={this.state.password} onChange={this.handlePassword} />
           <br />
-          <input type='submit' value='Sign In' />
+          <button className="submitBtn" type='submit'>Sign In</button>
           <br />
           <Link to='/resetpassword'>Reset My Password</Link>
         </form>

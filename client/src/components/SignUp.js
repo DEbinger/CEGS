@@ -93,7 +93,7 @@ class SignUp extends Component {
     } else if (!password.value.match(/^(?=.{8,16})/)) {
       return this.props.onUserErrorMsg('Password must be at least 8 characters but no more than 16 characters');
     } else if (!password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/)) {
-      return this.props.onUserErrorMsg('Must contain at least one Uppercase letter, one lowercase letter, one special character, and one number.');
+      return this.props.onUserErrorMsg('Must contain at least one uppercase letter, one lowercase letter, one special character, and one number.');
     }
 
     //  confirm passwords match
@@ -187,18 +187,24 @@ class SignUp extends Component {
     return (
       <div id="signUp" className="user">
         <h1>Sign Up</h1>
+        <p className="errorMsg" >{ this.props.users.userErrorMsg }</p>
         <form onSubmit={this.handleSubmit} ref="reset">
-          <p className="errorMsg" >{ this.props.users.userErrorMsg }</p>
+          <label htmlFor="firstName" >First Name </label>
           <input id="firstName" type="text" name="first_name" placeholder='First Name' autoComplete='off' maxLength="32" value={this.state.first_name} onChange={this.handleFirstName} />
           <br />
+          <label htmlFor="lastName">Last Name</label>
           <input id="lastName" type="text" name="last_name" placeholder="Last Name" autoComplete="off" maxLength="32" value={this.state.last_name} onChange={this.handleLastName} />
           <br />
+          <label htmlFor="email">Email</label>
           <input id="email" type="email" name="email" placeholder="Email" autoComplete="off" value={this.state.email} onChange={this.handleEmail} />
           <br />
+          <label htmlFor="password">Password</label>
           <input id="password" type="password" name="password" placeholder="Password" autoComplete="off" maxLength="16" value={this.state.password} onChange={this.handlePassword} />
           <br />
+          <label htmlFor="confirmPassword">Confirm Password</label>
           <input id="confirmPassword" type="password" name="confirm_password" placeholder="Confirm Password" autoComplete="off" value={this.state.confirm_password} onChange={this.handleConfirmPassword} />
           <br />
+          <label htmlFor="securityQuestion">Security Question</label>
           <select id="securityQuestion" name="security_question" value={this.state.security_question} onChange={this.handleSecurityQuestion} >
             <option value="">Select a Security Question</option>
             <option value="What is your favorite color?">What is your favorite color?</option>
@@ -206,9 +212,10 @@ class SignUp extends Component {
             <option value="What city were you born in?">What city were you born in?</option>
           </select>
           <br />
+          <label htmlFor="securityAnswer">Security Answer</label>
           <input id="securityAnswer" type="text" name="security_answer" placeholder="Security Answer" autoComplete="off" maxLength="32" value={this.state.security_answer} onChange={this.handleSecurityAnswer}/>
           <br />
-          <input type="submit" value="Sign Up" />
+          <button className="submitBtn" type="submit">Sign Up</button>
         </form>
       </div>
     );

@@ -1,23 +1,20 @@
 #itinerary {
 	order: 0;
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
 
-	height: $height;
+	height: auto;
 	width: $card-width;
+	padding-bottom: $list-padding;
 	margin-top: $card-margin;
 	margin-bottom: $card-margin;
 	background-color: $card-bg-color;
 	box-shadow: $card-box-shadow;
-	
-	h1 {
-		margin-top: 0;
-	}
 
 	.submitBtn {
-		order: 2;
+		order: 3;
 		border-radius: $button-radius;
 		border: 2px solid $form-color;
 		background-color: $form-color;
@@ -48,9 +45,18 @@
 	h3 {
 		text-align: center;
 		padding: 0;
-		margin-bottom: $card-margin;
+		margin-bottom: 0;
 			p {
 				margin: 0;
 			}
+	}
+}
+
+.itinerarySections{
+	order:2;
+	// background-color: pink;
+
+	ul {
+		list-style-type: none;
 	}
 }
