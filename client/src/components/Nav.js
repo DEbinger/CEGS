@@ -19,7 +19,7 @@ class Nav extends Component {
         resolve(this.responseText);
       }
       let oReq = new XMLHttpRequest();
-      oReq.open('GET', '/users/checkLogin');
+      oReq.open('GET', '/api/users/checkLogin');
       oReq.addEventListener("load", reqListener);
       oReq.send();
     });
@@ -41,7 +41,7 @@ class Nav extends Component {
         resolve(this.responseText);
       }
       let oReq = new XMLHttpRequest();
-      oReq.open('GET', '/users/signout');
+      oReq.open('GET', '/api/users/signout');
       oReq.addEventListener("load", reqListener);
       oReq.send();
     });

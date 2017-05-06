@@ -33,7 +33,7 @@ class CarsForm extends Component {
       });
       this.props.history.push("/cars");
     });
-    oReq.open("POST", "/cars/list");
+    oReq.open("POST", "/api/cars/list");
     oReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     oReq.send(values);
   }
@@ -91,7 +91,7 @@ class CarsForm extends Component {
       },
       onCarItinerary: (pick_up, drop_off, airport, company_name, vehicle_type, amount) => {
         dispatch(carItinerary(pick_up, drop_off, airport, company_name, vehicle_type, amount));
-      } 
+      }
     }
   };
 

@@ -60,7 +60,7 @@ class FlightsForm extends Component {
       }
     });
 
-    oReq.open("POST", "/flights/list");
+    oReq.open("POST", "/api/flights/list");
     oReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     oReq.send(searchValues);
   }

@@ -78,7 +78,7 @@ class Itinerary extends Component {
     oReq.addEventListener('load', (results) => {
       console.log(results);
     });
-    oReq.open('POST', '/itinerary/saveItinerary');
+    oReq.open('POST', '/api/itinerary/saveItinerary');
     oReq.setRequestHeader('Content-Type', 'application/json');
     oReq.send(JSON.stringify(itinerary));
   }

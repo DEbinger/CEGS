@@ -76,7 +76,7 @@ class SignIn extends React.Component {
         }
       }
       var oReq = new XMLHttpRequest();
-      oReq.open('POST', '/users/signin', true);
+      oReq.open('POST', '/api/users/signin', true);
       oReq.setRequestHeader('Content-type','application/json');
       oReq.addEventListener("load", reqListener);
       oReq.send(JSON.stringify(user));

@@ -47,7 +47,7 @@ class HotelsForm extends Component {
       });
       this.props.history.push('/hotels');
     });
-    oReq.open('POST', '/hotels/list', true);
+    oReq.open('POST', '/api/hotels/list', true);
     oReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     oReq.send(values);
 
