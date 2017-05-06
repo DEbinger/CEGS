@@ -97,7 +97,7 @@
   display: flex;
   flex-flow: column wrap;
   width: 100%;
-  height: 737px; }
+  height: 700px; }
 
 #signIn, #signUp {
   display: flex;
@@ -170,7 +170,7 @@ select {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  height: 737px; }
+  height: 700px; }
 
 #flightForm {
   display: flex;
@@ -327,7 +327,7 @@ select {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  height: 737px; }
+  height: 700px; }
 
 #hotelForm {
   display: flex;
@@ -426,7 +426,7 @@ select {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  height: 737px; }
+  height: 700px; }
 
 #carForm {
   display: flex;
@@ -619,7 +619,7 @@ div {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 737px; }
+  height: 700px; }
   #home .submitBtn {
     flex: 0 0 auto;
     order: 4;
@@ -637,7 +637,7 @@ div {
   height: 600px;
   width: 100%;
   object-fit: cover;
-  margin-top: 2.5rem; }
+  margin-top: 4.75rem; }
 
 #description {
   order: 3;
