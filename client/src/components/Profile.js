@@ -58,11 +58,10 @@ class Profile extends React.Component {
 
     itineraryReq(userId, (results) => {
       let itineraries = JSON.parse(results.target.responseText);
-      console.log('ITINERARIES:', itineraries);
 
       itineraries.forEach( itinerary => {
         this.props.onUserItinerary(itinerary.id, itinerary.Car, itinerary.Flight, itinerary.Hotel, itinerary.createdAt);
-      })
+      });
     });
   }
 
@@ -95,6 +94,7 @@ class Profile extends React.Component {
                 <p>Itinerary: { itinerary.itineraryId }</p>
                 <p>Origin: { itinerary.flight.origin }</p>
                 <p>Destination: { itinerary.flight.destination }</p>
+                <p>Departure Date: { itinerary.flight.departureDate }</p>
               </li>;
             })
             }
