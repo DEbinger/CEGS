@@ -22,7 +22,14 @@ class FlightsForm extends Component {
     let searchValues = `origin=${form.origin.value}&destination=${form.destination.value}&adultCount=${form.adultCount.value}&childCount=${form.childCount.value}&infantInLapCount=${form.infantInLapCount.value}&infantInSeatCount=${form.infantInSeatCount.value}&seniorCount=${form.seniorCount.value}&tripType=${form.tripType.value}&departureDate=${form.departureDate.value}&returnDepartureDate=${form.returnDepartureDate.value}&refundable=${form.refundable.value}`;
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", (result) => {
-      this.props.onSearchFlights(form.origin.value, form.destination.value, form.adultCount.value, form.childCount.value, form.infantInLapCount.value, form.infantInSeatCount.value, form.seniorCount.value,form.tripType.value, form.departureDate.value, form.returnDepartureDate.value, form.refundable.value);
+      let returnDepartureDate;
+      if (form.returnDepartureDate.value === '') {
+        returnDepartureDate = null;
+      } else {
+        returnDepartureDate = form.returnDepartureDate.value;
+      }
+
+      this.props.onSearchFlights(form.origin.value, form.destination.value, form.adultCount.value, form.childCount.value, form.infantInLapCount.value, form.infantInSeatCount.value, form.seniorCount.value,form.tripType.value, form.departureDate.value, returnDepartureDate, form.refundable.value);
       let data = JSON.parse(result.target.responseText);
       console.log(data);
 
