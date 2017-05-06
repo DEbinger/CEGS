@@ -283,16 +283,6 @@
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
-#hotelList1 {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  height: auto;
-  width: 75%;
-  margin-top: 50px;
-  background-color: white;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
-
 #hotelDetail ul, #hotelList2 ul {
   display: flex;
   flex-flow: column wrap;
@@ -325,6 +315,26 @@
 
 #hotelAddButton {
   margin-left: 1rem; }
+
+#hotelDetail {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  padding: 2rem; }
+  #hotelDetail h1, #hotelDetail p {
+    text-align: center; }
+  #hotelDetail ul {
+    text-align: center;
+    margin: 1rem; }
+
+#hotelDetailAddButton {
+  margin-bottom: 50px; }
 
 .car {
   display: flex;
@@ -366,8 +376,9 @@
 
 #carList1 {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
   height: auto;
   width: 75%;
   margin-top: 50px;
@@ -418,6 +429,26 @@
 
 #carAddButton {
   margin-left: 1rem; }
+
+#carDetail {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  padding: 2rem; }
+  #carDetail h1, #carDetail p {
+    text-align: center; }
+  #carDetail ul {
+    text-align: center;
+    margin: 1rem; }
+
+#carDetailAddButton {
+  margin-bottom: 50px; }
 
 #itinerary {
   order: 0;

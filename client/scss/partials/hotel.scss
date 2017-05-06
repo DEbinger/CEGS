@@ -52,21 +52,6 @@
 	} */
 }
 
-
-
-#hotelList1 {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-
-	height: auto;
-	width: $card-width;
-	margin-top: $card-margin;
-
-	background-color: $card-bg-color;
-	box-shadow: $card-box-shadow;
-}
-
 #hotelList1 {
 	display: flex;
 	flex-flow: row wrap;
@@ -125,4 +110,33 @@
 
 #hotelAddButton {
 	margin-left: $list-margin
+}
+
+#hotelDetail {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
+	h1, p {
+		text-align: center;
+	}
+
+	ul {
+		text-align: center;
+		margin: $list-margin;
+	}
+}
+
+#hotelDetailAddButton {
+	margin-bottom: $card-margin;
 }
