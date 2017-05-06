@@ -45,22 +45,20 @@ class CarsForm extends Component {
         <div id="carForm" className="car">
           <h1>Find a Car</h1>
           <form onSubmit={this.handleSubmit}>
-            <label>
-              Destination:
-              <input className="cars-form" name="location" type="text" placeholder="Location" />
-            </label>
             <br />
-            <label>
-            Pick Up:
-              <input className="cars-form" name="pick_up" type="date" />
-            </label>
+            <label htmlFor="location"> Pick Up Location </label>
+              <br />
+              <input id="location" className="cars-form" name="location" type="text" placeholder="Airport" />
             <br />
-            <label>
-            Drop Off:
-              <input className="cars-form" name="drop_off" type="date" />
-            </label>
+            <label htmlFor="pickUp" > Pick Up </label>
+              <br />
+              <input id="pickUp" className="cars-form" name="pick_up" type="date" />
             <br />
-            <input type="submit" value="Search Cars" />
+            <label htmlFor="dropOff" > Drop Off </label>
+              <br />
+              <input id="dropOff" className="cars-form" name="drop_off" type="date" />
+            <br />
+            <button className="submitBtn" type="submit">Search Cars</button>
           </form>
         </div>
       </div>

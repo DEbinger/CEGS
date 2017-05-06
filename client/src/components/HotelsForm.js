@@ -60,22 +60,19 @@ class HotelsForm extends Component {
       	<div id="hotelForm" className="hotel">
         	<h1>Find a Hotel</h1>
   				<form onSubmit={ this.submitHandler }>
-            <label>
-              Destination:
-     					<input className="hotels-form" type="text" placeholder="Location" autoComplete='off' name="location" autoFocus/>
-            </label>
+            <label htmlFor="destination"> Destination </label>
+              <br />
+     					<input id="destination" className="hotels-form" type="text" placeholder="Airport" autoComplete='off' name="location" autoFocus/>
   					<br />
-  					<label>
-              Check In:
-  						<input className="hotels-form" type="date" name="checkIn" />
-  					</label>
+  					<label htmlFor="checkIn"> Check In </label>
+              <br />
+  						<input id="checkIn" className="hotels-form" type="date" name="checkIn" />
   					<br />
-  					<label>
-              Check Out:
-  						<input className="hotels-form" type="date" name="checkOut" />
-  					</label>
+  					<label htmlFor="checkOut" > Check Out </label>
+              <br />
+  						<input id="checkOut" className="hotels-form" type="date" name="checkOut" />
   					<br />
-  					<input type="submit" value="Search Hotels" />
+  					<button className="submitBtn" type="submit">Search Hotels</button>
   				</form>
         </div>
       </div>
