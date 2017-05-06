@@ -166,6 +166,15 @@
 	button:first-of-type {
 		margin-right: $list-margin;
 	}
+
+	.submitBtn {
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		width: $form-field-width;
+		padding: .5rem;
+		font-weight: bold;
+	}
 }
 
 /* 
@@ -225,5 +234,14 @@
 	button {
 		order: 2;
 		text-align: center;
+	}
+
+	.submitBtn {
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		width: $form-field-width;
+		padding: .5rem;
+		font-weight: bold;
 	}
 }

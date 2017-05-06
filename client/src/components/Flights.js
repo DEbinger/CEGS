@@ -53,8 +53,8 @@ class FlightContainer extends Component {
         { this.props.slice.map( ({ duration, segment}) =>
           <SliceDiv key={ duration } segment={ segment } carrierObj={ this.props.carrierObj } />
         )}
-        <button onClick={ this.detailsHandler }>Details</button>
-        <button onClick={ this.addFlightHandler }>Add Flight</button>
+        <button className="submitBtn" onClick={ this.detailsHandler }>Details</button>
+        <button className="submitBtn" onClick={ this.addFlightHandler }>Add Flight</button>
       </div>
     );
   }

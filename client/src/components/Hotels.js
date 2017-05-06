@@ -95,8 +95,8 @@ class HotelDiv extends Component {
           <li>{ this.listAmenities() }</li>
           <li>Lowest Total Cost: ${ this.props.cost }</li>
         </ul>
-        <button id="hotelDetailButton" onClick={ this.hotelsDetailReq }>Details</button>
-        <button id="hotelAddButton" onClick={ this.addHotelHandler }>Add Hotel</button>
+        <button id="hotelDetailButton" className="submitBtn" onClick={ this.hotelsDetailReq }>Details</button>
+        <button id="hotelAddButton" className="submitBtn" onClick={ this.addHotelHandler }>Add Hotel</button>
       </div>
     );
   }
