@@ -291,7 +291,7 @@
   width: 75%;
   margin-top: 50px;
   background-color: white;
-  box-shadow: 0px 1px 3px #cccccc; }
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
 #hotelDetail ul, #hotelList2 ul {
   display: flex;
@@ -420,25 +420,35 @@
   margin-left: 1rem; }
 
 #itinerary {
-  background-color: pink;
-  flex: 0 0 auto;
-  order: 1;
+  order: 0;
   display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  height: 887px; }
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
 .itineraryResults {
-  background-color: pink;
-  flex: 0 0 auto;
   order: 1;
   display: flex;
   flex-flow: column wrap;
-  width: 90%; }
-  .itineraryResults ul {
-    margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-bottom: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
+  .itineraryResults h3 {
+    text-align: center;
     padding: 0;
-    list-style-type: none; }
+    margin-bottom: 50px; }
+    .itineraryResults h3 p {
+      margin: 0; }
 
 body {
   margin: 0;
