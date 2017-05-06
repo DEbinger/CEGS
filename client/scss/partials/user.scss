@@ -8,6 +8,75 @@
 	height: $height;
 }
 
+#signIn, #signUp {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	
+	width: $card-width;
+	margin-top: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	.errorMsg {
+		overflow: visible;
+		text-overflow: clip;
+		color: rgb(255,0,0);
+	}
+
+	form {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+
+		width: auto;
+		align-items: center;
+
+		label {
+			align-self: flex-start;
+			font-weight: bold;
+		}
+
+		input {
+			margin-top: .25rem;
+			width: 250px;
+			height: $form-field-height;
+			border: $form-border;
+		}
+
+	.submitBtn {
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		width: $form-field-width;
+		padding: .5rem;
+		font-weight: bold;
+	}
+
+	/* 	.submitBtn:hover {
+				background-color: $form-color;
+				color: rgb(0,0,0);
+		} */
+	}
+}
+
+	select {
+		border: $form-border;
+	  -webkit-appearance: none;
+  	-webkit-border-radius: 1px;
+		margin-top: .25rem;
+		padding: 2px 4px;
+		background-color: transparent;
+		width: 250px;
+		height: $form-field-height;
+	}
+
 #userProfile {
 	display: flex;
 	flex-flow: column nowrap;

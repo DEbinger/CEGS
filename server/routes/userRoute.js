@@ -35,12 +35,13 @@ router.route('/signin')
         id:result.dataValues.id,
         email:result.dataValues.email
     });
-      // console.log('results',result);
+
     })
     .catch(err => {
       console.log('error',err);
     });
   });
+
 router.route('signout')
   .get(function(req, res){
   console.log('userRouter signout');
@@ -120,22 +121,5 @@ router.post('/signup', function(req, res){
       res.send('Error', err);
     });
   });
-
-
-// router.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
-
-// router.get('/auth/facebook/callback',
-//   passport.authenticate('facebook',{
-//     successRedirect: '/profile',
-//     failureRedirect: '/signin'
-//     }));
-
-// router.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
-
-// router.get('/auth/google/callback',
-//   passport.authenticate('google', {
-//   successRedirect: '/profile',
-//   failureRedirect: '/signin'
-//   }));
 
 module.exports = router;

@@ -43,7 +43,7 @@ class HotelDetail extends Component {
           </ul>
           <ul>Contact:{ hotel.contacts.map( ({ detail, type }) => <li>{ type }: { detail }</li> )}
           </ul>
-          <button onClick={ this.addHotelHandler }>Add Hotel</button>
+          <button id="hotelDetailAddButton" onClick={ this.addHotelHandler }>Add Hotel</button>
         </div>
       </div>
     );

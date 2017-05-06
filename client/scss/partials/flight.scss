@@ -1,8 +1,7 @@
 @import './variables';
 
+//	General flight component styling
 .flight {
-	background-color: pink;
-
 	flex: 0 0 auto;
 	order: 1;
 
@@ -11,8 +10,10 @@
 
 	width: $width;
 	height: $height;
+
 }
 
+//	Flight search form
 #flightForm {
 	display: flex;
 	flex-flow: column nowrap;
@@ -37,6 +38,26 @@
 		margin-bottom: $form-margin;
 	}
 
+	.location, .dates {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+
+			select {
+				width: $form-field-width;
+				height: $form-field-height;
+			}
+		}
+
+		li:first-of-type {
+			padding-right: 1rem;
+			// margin-right: $form-margin;
+		}
+	}
+
 	label {
 		font-weight: bold;
 	}
@@ -59,8 +80,8 @@
 		height: $form-field-height;
 	}
 
-	//	adult, children, senior counts
-	ul {
+	//	Selection for adult, children, and senior counts
+	#peopleCount {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -68,7 +89,7 @@
 		li {
 			display: inline-block;
 			padding-right: 1rem;
-
+		
 			select {
 				width: $form-field-width;
 				height: $form-field-height;
@@ -80,7 +101,7 @@
 		border-radius: $button-radius;
 		border: 2px solid $form-color;
 		background-color: $form-color;
-		width: auto;
+		width: $form-field-width;
 		padding: .5rem;
 		font-weight: bold;
 	}
@@ -91,6 +112,7 @@
 	} */
 }
 
+//	Flight search results
 #flightList1 {
 	display: flex;
 	flex-flow: row wrap;
@@ -128,6 +150,14 @@
 		text-align: center;
 	}
 
+	div {
+		order: 0;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
 	button {
 		flex: 0 0 auto;
 		order: 2;
@@ -155,22 +185,45 @@
 			margin-bottom: $list-margin;
 		}
 	}
-
 }
 
 #flightDetail {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+	margin-bottom: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
 	div {
-		background-color: pink;
 		order: 0;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
 	}
 
 	ul {
 		order: 1;
 		list-style-type: none;
-		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		li {
+			padding: 1rem;
+		}
 	}
 
 	button {
 		order: 2;
+		text-align: center;
 	}
 }

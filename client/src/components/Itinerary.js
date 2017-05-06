@@ -12,7 +12,7 @@ class Itinerary extends Component {
   flight(){
     if(this.props.flightItinerary !== undefined) {
       let flight = this.props.flightItinerary;
-      return <div className="itineraryResults">
+      return <div className="itinerarySections">
         <ul>
           <li>Origin: {flight.origin}</li>
           <li>Destination: {flight.destination}</li>
@@ -29,11 +29,11 @@ class Itinerary extends Component {
   hotel(){
     if(this.props.hotelItinerary !== undefined) {
       let hotel = this.props.hotelItinerary;
-      return <div className="itineraryResults">
+      return <div className="itinerarySections">
           <ul>
             <li>{hotel.hotelName}</li>
-            <li>{hotel.check_in}</li>
-            <li>{hotel.check_out}</li>
+            <li>Check In: {hotel.check_in}</li>
+            <li>Check Out: {hotel.check_out}</li>
             <li>Amount: ${hotel.saleTotal}</li>
           </ul>
         </div>
@@ -46,7 +46,7 @@ class Itinerary extends Component {
     if(this.props.carItinerary !== undefined){
       let car = this.props.carItinerary;
 
-      return <div className="itineraryResults">
+      return <div className="itinerarySections">
         <ul>
           <li>{car.company_name}</li>
           <li>Airport: {car.airport}, {car.city}</li>
@@ -78,7 +78,7 @@ class Itinerary extends Component {
     oReq.addEventListener('load', (results) => {
       console.log(results);
     });
-    oReq.open('POST', '/itinerary/saveItinerary');
+    oReq.open('POST', '/api/itinerary/saveItinerary');
     oReq.setRequestHeader('Content-Type', 'application/json');
     oReq.send(JSON.stringify(itinerary));
   }
@@ -105,7 +105,7 @@ class Itinerary extends Component {
               { this.car() }
   					</div>
 
-            <button onClick={ this.saveItineraryHandler }>Save Itinerary</button>
+            <button className="submitBtn" onClick={ this.saveItineraryHandler }>Save Itinerary</button>
         </div>
       </div>
     );
