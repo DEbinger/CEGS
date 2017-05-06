@@ -50,6 +50,7 @@ div {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
+	align-items: center;
 
 	width: $width;
 	height: $height;
@@ -62,6 +63,7 @@ div {
 #description {
 	text-align: center;
 	font-size: 20px;
+	width: 75%;
 }
 
 #plan-button {
