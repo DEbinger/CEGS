@@ -254,6 +254,12 @@ select {
     margin-bottom: 1rem;
     width: 100%;
     text-align: center; }
+  #flightList2 div {
+    order: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
   #flightList2 button {
     flex: 0 0 auto;
     order: 2; }
@@ -274,17 +280,34 @@ select {
     margin: 0;
     margin-bottom: 1rem; }
 
-#flightDetail div {
-  background-color: pink;
-  order: 0; }
-
-#flightDetail ul {
-  order: 1;
-  list-style-type: none;
-  padding: 0; }
-
-#flightDetail button {
-  order: 2; }
+#flightDetail {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  padding: 2rem; }
+  #flightDetail div {
+    order: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
+  #flightDetail ul {
+    order: 1;
+    list-style-type: none;
+    margin: 0;
+    text-align: center; }
+    #flightDetail ul li {
+      padding: 1rem; }
+  #flightDetail button {
+    order: 2;
+    text-align: center; }
 
 .hotel {
   flex: 0 0 auto;
@@ -446,7 +469,18 @@ select {
   padding: 0;
   margin: 0; }
 
-#carList2, #carList3 {
+#carList2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%; }
+  #carList2 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+
+#carList3 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -456,17 +490,12 @@ select {
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
   padding: 2rem; }
-  #carList2 li, #carList3 li {
+  #carList3 li {
     text-align: center;
     padding: 0;
     margin-bottom: 1rem; }
-    #carList2 li p, #carList3 li p {
+    #carList3 li p {
       margin: 0; }
-
-#carList2 ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
 
 #carList3 {
   margin: 25px 0; }

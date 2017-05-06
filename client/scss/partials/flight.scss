@@ -150,6 +150,14 @@
 		text-align: center;
 	}
 
+	div {
+		order: 0;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
 	button {
 		flex: 0 0 auto;
 		order: 2;
@@ -177,22 +185,45 @@
 			margin-bottom: $list-margin;
 		}
 	}
-
 }
 
 #flightDetail {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	height: auto;
+	width: $card-width;
+	margin-top: $card-margin;
+	margin-bottom: $card-margin;
+
+	background-color: $card-bg-color;
+	box-shadow: $card-box-shadow;
+
+	padding: $list-padding;
+
 	div {
-		background-color: pink;
 		order: 0;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
 	}
 
 	ul {
 		order: 1;
 		list-style-type: none;
-		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		li {
+			padding: 1rem;
+		}
 	}
 
 	button {
 		order: 2;
+		text-align: center;
 	}
 }

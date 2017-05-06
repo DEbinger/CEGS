@@ -67,7 +67,7 @@
 	box-shadow: $card-box-shadow;
 }
 
-#carDetail, #carList2{
+#carDetail, #carList2 {
 	ul {
 		display: flex;
 		flex-flow: column wrap;
@@ -82,7 +82,24 @@
 	}
 }
 
-#carList2, #carList3 {
+#carList2 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	height: auto;
+	width: $card-width;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+
+}
+
+#carList3 {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -103,14 +120,6 @@
 			p {
 				margin: 0;
 			}
-	}
-}
-
-#carList2 {
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
 	}
 }
 
