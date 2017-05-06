@@ -34,15 +34,13 @@ class SignUp extends Component {
   addUser(user){
     signUpReq(user)
       .then(user => {
-        // console.log('User Signed Up: ', user);
         this.props.onAddUser(user);
-        this.props.history.push('/signin');          
+        this.props.history.push('/signin');
       });
   }
 
   handleSubmit(event){
-    // console.log('WHAT THE STATE: ', this.state);
-    
+
     event.preventDefault();
 
     let firstName = document.getElementById("firstName");
@@ -65,7 +63,7 @@ class SignUp extends Component {
       return this.props.onUserErrorMsg('First name is required');
     } else if ( firstName.value.length > 32 ) {
       return this.props.onUserErrorMsg('First name exceeds character limit');
-    } else if (firstName.value.length >= 1 && firstName.value.length < 4 ) {
+    } else if (firstName.value.length >= 1 && firstName.value.length < 3 ) {
       return this.props.onUserErrorMsg('First name must be at least 4 characters');
     } else if (firstName.value.match(/\d+/)) {
       return this.props.onUserErrorMsg('First name cannot contain numbers');
@@ -76,7 +74,7 @@ class SignUp extends Component {
       return this.props.onUserErrorMsg('Last name is required');
     } else if ( lastName.value.length > 32 ) {
       return this.props.onUserErrorMsg('Last name exceeds character limit');
-    } else if (lastName.value.length >= 1 && lastName.value.length < 4 ) {
+    } else if (lastName.value.length >= 1 && lastName.value.length < 3 ) {
       return this.props.onUserErrorMsg('Last name must be at least 4 characters');
     } else if (lastName.value.match(/\d+/)) {
       return this.props.onUserErrorMsg('Last name cannot contain numbers');
@@ -94,7 +92,7 @@ class SignUp extends Component {
       return this.props.onUserErrorMsg('Password required');
     } else if (!password.value.match(/^(?=.{8,16})/)) {
       return this.props.onUserErrorMsg('Password must be at least 8 characters but no more than 16 characters');
-    } else if (!password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/)) {
+    } else if (!password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/)) {
       return this.props.onUserErrorMsg('Must contain at least one Uppercase letter, one lowercase letter, one special character, and one number.');
     }
 
@@ -115,7 +113,7 @@ class SignUp extends Component {
       return this.props.onUserErrorMsg('Must enter a security answer');
     } else if ( securityAnswer.value.length > 32 ) {
       return this.props.onUserErrorMsg('Security answer exceeds character limit');
-    } else if ( securityAnswer.value.length >= 1  && securityAnswer.value.length < 4 ) {
+    } else if ( securityAnswer.value.length >= 1  && securityAnswer.value.length < 3 ) {
       return this.props.onUserErrorMsg('Security answer must be at least 4 characters');
     }
 

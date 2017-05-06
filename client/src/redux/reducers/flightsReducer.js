@@ -57,7 +57,6 @@ function flights(state = initialState, action) {
       });
 
     case CLEAR_FLIGHTS:
-    console.log('cleared flights');
       return Object.assign({}, state, {
         flights: [],
         errorMsg: ''

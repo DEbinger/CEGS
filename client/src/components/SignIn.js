@@ -1,18 +1,15 @@
 // jshint esversion:6
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addUserToState } from '../redux/actions/usersAction';
-import { Router, browserHistory } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
-import { addUser, userErrorMsg } from '../redux/actions/usersAction';
+import { userErrorMsg } from '../redux/actions/usersAction';
 
 class SignIn extends React.Component {
 
   constructor(props){
     super(props);
-    console.log(this.props);
 
     this.state = {
       email: '',
@@ -25,7 +22,7 @@ class SignIn extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    
+
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
 
@@ -45,14 +42,12 @@ class SignIn extends React.Component {
     })
     .then((data) => {
       if(data){
-        console.log('Data verfication',data);
         let userInfo = JSON.parse(data);
         this.props.onSignIn(userInfo.id, userInfo.email, true);
         this.props.history.push('/profile');
       }
     })
     .catch(err => {
-      console.log('error user not logged in', err);
       return this.props.onUserErrorMsg('The email or password you entered is invalid. Please try again or reset your password.');
     });
   }
@@ -71,11 +66,9 @@ class SignIn extends React.Component {
 
   userIsLoggedIn(user){
     user.username = user.email;
-    console.log(user);
     return new Promise(function(resolve,reject){
       function reqListener(dataReturn){
         let results = this.responseText;
-        console.log('userIsLoggedIn is: ', results);
         if (results === null) {
         reject(results);
         } else {
