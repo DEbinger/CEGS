@@ -35,7 +35,7 @@ class HotelDetail extends Component {
           <h1>{ hotel.name }</h1>
           { this.hotelDescription() }
           <p>Amenities: { hotel.amenities }</p>
-          <p>Lowest Total Cost: { hotel.cost }</p>
+          <p>Lowest Total Cost: ${ hotel.cost }</p>
           <p>Rating: { hotel.rating }</p>
           <ul>Address:
             <li>{ hotel.address.line1 }</li>

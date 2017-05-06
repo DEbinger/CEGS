@@ -38,6 +38,7 @@
 	}
 
 	.submitBtn {
+		cursor: pointer;
 		border-radius: $button-radius;
 		border: 2px solid $form-color;
 		background-color: $form-color;
@@ -54,8 +55,9 @@
 
 #hotelList1 {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 	justify-content: center;
+	align-items: center;
 
 	height: auto;
 	width: $card-width;
@@ -63,6 +65,10 @@
 
 	background-color: $card-bg-color;
 	box-shadow: $card-box-shadow;
+
+	h1 {
+		margin-bottom: 0;
+	}
 }
 
 #hotelDetail, #hotelList2{
@@ -104,6 +110,7 @@
 	}
 
 	.submitBtn {
+		cursor: pointer;
 		border-radius: $button-radius;
 		border: 2px solid $form-color;
 		background-color: $form-color;
@@ -146,6 +153,7 @@
 	}
 
 	.submitBtn {
+		cursor: pointer;
 		border-radius: $button-radius;
 		border: 2px solid $form-color;
 		background-color: $form-color;

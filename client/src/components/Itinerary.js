@@ -39,7 +39,7 @@ class Itinerary extends Component {
           </ul>
         </div>
     } else {
-      return <p><Link to='/flightsform'>Search Hotels</Link></p>
+      return <p><Link to='/hotelsform'>Search Hotels</Link></p>
     }
   }
 
@@ -56,7 +56,7 @@ class Itinerary extends Component {
         </ul>
         </div>
     } else {
-      return <p><Link to='/flightsform'>Search Cars</Link></p>
+      return <p><Link to='/carsform'>Search Cars</Link></p>
     }
   }
 
