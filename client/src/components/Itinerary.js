@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 
 class Itinerary extends Component {
@@ -22,7 +23,7 @@ class Itinerary extends Component {
         </ul>
       </div>
     } else {
-      return <p>No flight selected</p>
+      return <p><Link to='/flightsform'>Search Flights</Link></p>
     }
   }
 
@@ -38,7 +39,7 @@ class Itinerary extends Component {
           </ul>
         </div>
     } else {
-      return <p>No hotel selected</p>
+      return <p><Link to='/flightsform'>Search Hotels</Link></p>
     }
   }
 
@@ -55,7 +56,7 @@ class Itinerary extends Component {
         </ul>
         </div>
     } else {
-      return <p>No car selected</p>
+      return <p><Link to='/flightsform'>Search Cars</Link></p>
     }
   }
 

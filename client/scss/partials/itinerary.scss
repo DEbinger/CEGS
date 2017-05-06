@@ -13,6 +13,10 @@
 	background-color: $card-bg-color;
 	box-shadow: $card-box-shadow;
 
+	a, a:link, a:visited {
+		color: blue;
+	}
+
 	.submitBtn {
 		order: 3;
 		border-radius: $button-radius;

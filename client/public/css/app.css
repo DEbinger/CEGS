@@ -559,6 +559,8 @@ select {
 				background-color: $form-color;
 				color: rgb(0,0,0);
 		} */ }
+  #itinerary a, #itinerary a:link, #itinerary a:visited {
+    color: blue; }
   #itinerary .submitBtn {
     order: 3;
     border-radius: 1px;
