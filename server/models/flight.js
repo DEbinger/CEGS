@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     destination: DataTypes.STRING,
     departureDate: DataTypes.DATE,
     returnDate: DataTypes.DATE,
-    saleTotal: DataTypes.INTEGER,
+    saleTotal: DataTypes.STRING,
     user: DataTypes.INTEGER
   }, {
     classMethods: {

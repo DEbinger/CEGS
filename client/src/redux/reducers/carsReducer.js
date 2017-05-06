@@ -74,7 +74,7 @@ function cars(state = initialState, action) {
 
     case CAR_ITINERARY:
       return Object.assign({}, state, {
-        car_itinerary: {
+        carItinerary: {
           pick_up: action.pick_up,
           drop_off: action.drop_off,
           airport: action.airport,

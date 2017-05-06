@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     pick_up: DataTypes.DATE,
     drop_off: DataTypes.DATE,
     vehicle_type: DataTypes.STRING,
-    amount: DataTypes.INTEGER,
+    amount: DataTypes.STRING,
     company_name: DataTypes.STRING,
     itinerary: DataTypes.INTEGER,
     user: DataTypes.INTEGER
