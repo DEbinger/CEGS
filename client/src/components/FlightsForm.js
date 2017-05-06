@@ -171,7 +171,7 @@ class FlightsForm extends Component {
                 <option value='true'>Yes</option>
               </select>
             <br/>
-            <button className="submitBtn" type='submit'>Search Flight</button>
+            <button className="submitBtn" type='submit'>Search Flights</button>
           </form>
           <p className="errorMsg">{ this.props.flights.errorMsg }</p>
         </div>

@@ -95,7 +95,7 @@
   width: 75%;
   margin-top: 50px;
   background-color: white;
-  box-shadow: 0px 1px 3px #cccccc; }
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
 .FileUpload p {
   text-align: center;
@@ -106,7 +106,7 @@
   flex: 0 0 auto;
   order: 1;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   width: 100%;
   height: 737px; }
 
@@ -118,17 +118,100 @@
   width: 75%;
   margin-top: 50px;
   background-color: white;
-  box-shadow: 0px 1px 3px #cccccc; }
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  /* 	.submitBtn:hover {
+			background-color: $form-color;
+			color: rgb(0,0,0);
+	} */ }
+  #flightForm form {
+    display: flex-inline;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 5rem; }
+  #flightForm #tripType, #flightForm #origin, #flightForm #destination, #flightForm #departureDate, #flightForm #returnDepartureDate, #flightForm #peopleCount, #flightForm #refundable {
+    margin-bottom: 15px; }
+  #flightForm label {
+    font-weight: bold; }
+  #flightForm input {
+    margin-top: .25rem;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #a6a6a6; }
+  #flightForm select {
+    border: 1px solid #a6a6a6;
+    -webkit-appearance: none;
+    -webkit-border-radius: 1px;
+    margin-top: .25rem;
+    padding: 2px 4px;
+    background-color: transparent;
+    width: 75px;
+    height: 25px; }
+  #flightForm ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    #flightForm ul li {
+      display: inline-block;
+      padding-right: 1rem; }
+      #flightForm ul li select {
+        width: 75px;
+        height: 25px; }
+  #flightForm .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: auto;
+    padding: .5rem;
+    font-weight: bold; }
+
+#flightList1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
 #flightList2 {
-  height: auto; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  padding: 2rem; }
+  #flightList2 .price {
+    flex: 0 0 auto;
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center; }
+  #flightList2 button {
+    flex: 0 0 auto;
+    order: 2; }
+  #flightList2 button:first-of-type {
+    margin-right: 1rem; }
 
 /* 
 	contents are in p-tags nested in a div that is nested in this div class
 	i.e. slice-div > div > p
  */
 .slice-div div {
-  background-color: pink; }
+  flex: 0 0 auto;
+  order: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  .slice-div div p {
+    margin: 0;
+    margin-bottom: 1rem; }
 
 #flightDetail div {
   background-color: pink;
@@ -239,9 +322,3 @@ div {
   .componentWithSidebar #userProfile, .componentWithSidebar #itinerary, .componentWithSidebar .flight, .componentWithSidebar .hotel, .componentWithSidebar .car {
     flex: 0 0 auto;
     order: 1; }
-
-.forms {
-  background-color: powderblue;
-  flex: 0 0 auto;
-  order: 2;
-  width: 90%; }
