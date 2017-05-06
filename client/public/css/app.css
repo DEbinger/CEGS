@@ -102,7 +102,6 @@
   align-self: center; }
 
 .flight {
-  background-color: pink;
   flex: 0 0 auto;
   order: 1;
   display: flex;
@@ -131,6 +130,17 @@
     padding: 0 5rem; }
   #flightForm #tripType, #flightForm #origin, #flightForm #destination, #flightForm #departureDate, #flightForm #returnDepartureDate, #flightForm #peopleCount, #flightForm #refundable {
     margin-bottom: 15px; }
+  #flightForm .location, #flightForm .dates {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    #flightForm .location li, #flightForm .dates li {
+      display: inline-block; }
+      #flightForm .location li select, #flightForm .dates li select {
+        width: 100px;
+        height: 25px; }
+    #flightForm .location li:first-of-type, #flightForm .dates li:first-of-type {
+      padding-right: 1rem; }
   #flightForm label {
     font-weight: bold; }
   #flightForm input {
@@ -145,17 +155,17 @@
     margin-top: .25rem;
     padding: 2px 4px;
     background-color: transparent;
-    width: 75px;
+    width: 100px;
     height: 25px; }
-  #flightForm ul {
+  #flightForm #peopleCount {
     list-style-type: none;
     margin: 0;
     padding: 0; }
-    #flightForm ul li {
+    #flightForm #peopleCount li {
       display: inline-block;
       padding-right: 1rem; }
-      #flightForm ul li select {
-        width: 75px;
+      #flightForm #peopleCount li select {
+        width: 100px;
         height: 25px; }
   #flightForm .submitBtn {
     border-radius: 1px;
@@ -231,7 +241,37 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  height: 887px; }
+  height: 737px; }
+
+#hotelForm {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  /* 	.submitBtn:hover {
+			background-color: $form-color;
+			color: rgb(0,0,0);
+	} */ }
+  #hotelForm #destination, #hotelForm #checkIn, #hotelForm #checkOut {
+    margin-bottom: 15px; }
+  #hotelForm label {
+    font-weight: bold; }
+  #hotelForm input {
+    margin-top: .25rem;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #a6a6a6; }
+  #hotelForm .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: 100px;
+    padding: .5rem;
+    font-weight: bold; }
 
 #hotelList1 {
   display: flex;
@@ -241,7 +281,17 @@
   width: 75%;
   margin-top: 50px;
   background-color: white;
-  box-shadow: 0px 1px 3px #cccccc; }
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
+
+#hotelList1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
 #hotelDetail ul, #hotelList2 ul {
   display: flex;
@@ -261,7 +311,7 @@
   width: 75%;
   margin-top: 50px;
   background-color: white;
-  box-shadow: 0px 1px 3px #cccccc;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
   padding: 2rem; }
   #hotelList2 li {
     text-align: center;
@@ -280,7 +330,39 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  height: 887px; }
+  height: 737px; }
+
+#carForm {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
+  /* 	.submitBtn:hover {
+			background-color: $form-color;
+			color: rgb(0,0,0);
+	} */ }
+  #carForm h1 {
+    margin-bottom: 0; }
+  #carForm #location, #carForm #pickUp, #carForm #dropOff {
+    margin-bottom: 15px; }
+  #carForm label {
+    font-weight: bold; }
+  #carForm input {
+    margin-top: .25rem;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #a6a6a6; }
+  #carForm .submitBtn {
+    border-radius: 1px;
+    border: 2px solid #a6a6a6;
+    background-color: #a6a6a6;
+    width: 100px;
+    padding: .5rem;
+    font-weight: bold; }
 
 #carList1 {
   display: flex;
@@ -290,7 +372,7 @@
   width: 75%;
   margin-top: 50px;
   background-color: white;
-  box-shadow: 0px 1px 3px #cccccc; }
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
 #carDetail ul, #carList2 ul {
   display: flex;
@@ -310,7 +392,7 @@
   width: 75%;
   margin-top: 50px;
   background-color: white;
-  box-shadow: 0px 1px 3px #cccccc;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36);
   padding: 2rem; }
   #carList2 li, #carList3 li {
     text-align: center;
@@ -338,25 +420,35 @@
   margin-left: 1rem; }
 
 #itinerary {
-  background-color: pink;
-  flex: 0 0 auto;
-  order: 1;
+  order: 0;
   display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  height: 887px; }
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
 
 .itineraryResults {
-  background-color: pink;
-  flex: 0 0 auto;
   order: 1;
   display: flex;
   flex-flow: column wrap;
-  width: 90%; }
-  .itineraryResults ul {
-    margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 75%;
+  margin-bottom: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.36); }
+  .itineraryResults h3 {
+    text-align: center;
     padding: 0;
-    list-style-type: none; }
+    margin-bottom: 50px; }
+    .itineraryResults h3 p {
+      margin: 0; }
 
 body {
   margin: 0;
