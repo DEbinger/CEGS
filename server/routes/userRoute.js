@@ -41,6 +41,7 @@ router.route('/signin')
       console.log('error',err);
     });
   });
+
 router.route('signout')
   .get(function(req, res){
   console.log('userRouter signout');

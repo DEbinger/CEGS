@@ -51,19 +51,19 @@ passport.use(new LocalStrategy(
       where: {
         email:username
       }
-    }).then ( email => {
-      if (email === null) {
+    }).then ( user => {
+      if (user === null) {
         console.log('This email does not match a user in database');
         return done(null, false, {message: 'bad email'});
 
       }else {
 
-        bcrypt.compare(password, email.password)
+        bcrypt.compare(password, user.password)
         .then(res => {
             console.log(res);
-          console.log('Signin with Email and Password',password, email.password);
+          console.log('Signin with Email and Password',password, user.password);
           if (res) {
-            return done(null, email);
+            return done(null, user);
           }else {
             return done(null, false);
           }
@@ -94,11 +94,11 @@ passport.deserializeUser(function(user, done) {
   });
 });
 
-app.use('/flights', flightsRoute);
-app.use('/hotels', hotelRoute);
-app.use('/cars', carRoute);
-app.use('/users', userRoute);
-app.use('/itinerary', itineraryRoute);
+app.use('/api/flights', flightsRoute);
+app.use('/api/hotels', hotelRoute);
+app.use('/api/cars', carRoute);
+app.use('/api/users', userRoute);
+app.use('/api/itinerary', itineraryRoute);
 
 app.use('/', (req, res) => {
   res.send('BAD ROUTE');
