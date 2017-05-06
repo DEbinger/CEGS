@@ -5,12 +5,31 @@
 	justify-content: center;
 	align-items: center;
 
-	height: auto;
+	height: $height;
 	width: $card-width;
 	margin-top: $card-margin;
 	margin-bottom: $card-margin;
 	background-color: $card-bg-color;
 	box-shadow: $card-box-shadow;
+	
+	h1 {
+		margin-top: 0;
+	}
+
+	.submitBtn {
+		order: 2;
+		border-radius: $button-radius;
+		border: 2px solid $form-color;
+		background-color: $form-color;
+		width: auto;
+		padding: .5rem;
+		font-weight: bold;
+	}
+
+	/* 	.submitBtn:hover {
+				background-color: $form-color;
+				color: rgb(0,0,0);
+		} */
 }
 
 .itineraryResults {

@@ -105,7 +105,7 @@ class Itinerary extends Component {
               { this.car() }
   					</div>
 
-            <button onClick={ this.saveItineraryHandler }>Save Itinerary</button>
+            <button className="submitBtn" onClick={ this.saveItineraryHandler }>Save Itinerary</button>
         </div>
       </div>
     );
