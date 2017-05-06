@@ -93,14 +93,17 @@ passport.deserializeUser(function(user, done) {
   });
 });
 
+
 app.use('/flights', flightsRoute);
 app.use('/hotels', hotelRoute);
 app.use('/cars', carRoute);
 app.use('/users', userRoute);
 
+
 app.use('/', (req, res) => {
   res.send('BAD ROUTE');
 });
+
 
 app.listen(PORT, () => {
   console.log("Server listening on", PORT);
